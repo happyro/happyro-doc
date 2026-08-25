@@ -1,0 +1,23 @@
+/* Match the VitePress homepage's gradient title and hero-image treatment. */
+html {
+  overflow-y: scroll;
+}
+
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+  --vp-home-hero-image-background-image: none;
+  --vp-home-hero-image-filter: none;
+}
+
+.VPHero .image-src {
+  max-width: 25rem;
+  max-height: 18rem;
+}
+
+@media (max-width: 959px) {
+  .VPHero .image-src {
+    max-width: 22rem;
+    max-height: 16rem;
+  }
+}
