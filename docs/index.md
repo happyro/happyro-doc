@@ -13,7 +13,7 @@ hero:
       link: /architecture
     - theme: alt
       text: 开始部署
-      link: /deployment
+      link: /installation/docker
 features:
   - icon: 🧩
     title: 分层架构

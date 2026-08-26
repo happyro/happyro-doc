@@ -1,5 +1,9 @@
 # Windows
 
+::: tip
+kRO 客户端资源属于第三方版权内容，未经授权不得分发，可通过[联系方式](/community/contact)交流。
+:::
+
 HappyRO 当前的构建与运行脚本依赖 Bash、Linux 工具链、Docker Compose 和 systemd，因此 Windows 平台使用 WSL2 运行完整服务。浏览器仍直接使用 Windows 上的 Chrome、Edge 或 Firefox，不需要安装传统 RO 桌面客户端。
 
 ## 安装 WSL2
