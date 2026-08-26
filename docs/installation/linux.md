@@ -1,25 +1,34 @@
-# 安装部署
+# Linux
 
-本页适用于带有 systemd 的 Linux 环境。Windows 请使用 [WSL2 安装指南](/windows-installation)。
+本页介绍使用 HappyRO 物理机脚本在 Linux 上部署。macOS 请使用 [macOS 安装指南](/installation/macos)，Windows 请使用 [WSL2 安装指南](/installation/windows)，Docker 请使用 [Docker 安装指南](/installation/docker)。
 
 ## 环境依赖
 
 需要 Git、GNU Make、CMake、C++ 编译器、Node.js 22 或更高版本、npm、Docker Compose、OpenSSL、ripgrep、jq、curl、`ss` 和 systemd。安装完成后可用 `make doctor` 检查环境，但该命令不会安装依赖或启动服务。
 
+Debian 或 Ubuntu 可以先安装系统依赖：
+
+```bash
+sudo apt update
+sudo apt install -y git make build-essential cmake pkg-config \
+  libmariadb-dev libpcre3-dev zlib1g-dev \
+  curl jq ripgrep iproute2 openssl ca-certificates
+```
+
+然后安装 Node.js 22 或更高版本、Docker Engine 和 Docker Compose v2，并确保当前用户可以运行 `docker compose` 和 `systemctl`。
+
 ## 准备源码
 
-HappyRO 由三个独立仓库组成，网关使用锁定版本的 RemoteClient-JS：
+HappyRO 由四个独立仓库组成，网关使用 HappyRO Gateway 的锁定版本：
 
 ```bash
 git clone https://github.com/happyro/happyro.git
 cd happyro
 git clone https://github.com/happyro/happyro-client.git repos/happyro-client
 git clone https://github.com/happyro/happyro-server.git repos/happyro-server
-git clone https://github.com/FranciscoWallison/roBrowserLegacy-RemoteClient-JS.git vendor/robrowserlegacy-remote-client-js
+git clone https://github.com/happyro/happyro-gateway.git repos/happyro-gateway
 source versions/sources.lock
-git -C vendor/robrowserlegacy-remote-client-js checkout "$REMOTE_CLIENT_JS_UPSTREAM_COMMIT"
-git -C vendor/robrowserlegacy-remote-client-js apply ../../patches/remote-client-js/0001-disable-unavailable-esrgan-dependency.patch
-git -C vendor/robrowserlegacy-remote-client-js apply ../../patches/remote-client-js/0002-proxy-rathena-web-api.patch
+git -C repos/happyro-gateway checkout "$HAPPYRO_GATEWAY_COMMIT"
 ```
 
 ## 修改配置
