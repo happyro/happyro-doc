@@ -12,7 +12,7 @@ kRO 客户端资源属于第三方版权内容，未经授权不得分发，可�
 
 ```bash
 mkdir -p happyro/kro-client
-mkdir -p happyro/data/db
+mkdir -p happyro/data/database
 mkdir -p happyro/data/gateway
 mkdir -p happyro/data/server
 ```
@@ -32,7 +32,7 @@ curl -fsSL $COMPOSE_URL -o happyro/compose.yml
 
 ```bash
 cd happyro
-export DB_DATA_DIR=./data/db
+export DB_DATA_DIR=./data/database
 export GATEWAY_LOG_DIR=./data/gateway
 export SERVER_LOG_DIR=./data/server
 ```
@@ -75,4 +75,15 @@ http://127.0.0.1:3338/applications/pwa/index.html
 curl --fail http://127.0.0.1:3338/api/health
 docker compose -f compose.yml logs --tail=100 gateway
 docker compose -f compose.yml down
+```
+
+## 常见问题
+
+### Gateway 无法读取资源目录
+
+Gateway 使用非 root 用户读取资源。若资源目录由 root 创建或从其他机器复制，请调整读取权限：
+
+```bash
+find happyro/kro-client -type d -exec chmod 755 {} +
+find happyro/kro-client -type f -exec chmod 644 {} +
 ```
