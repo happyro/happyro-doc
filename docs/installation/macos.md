@@ -19,7 +19,7 @@ brew services start mariadb
 
 ## 准备源码和资源
 
-按照 [Linux 安装页的“准备源码”步骤](/installation/linux#准备源码)克隆根仓库、客户端、服务端和 HappyRO Gateway，再将合法取得的 kRO 资源放入：
+按照 [Linux 安装页的“准备源码”步骤](/installation/linux#准备源码)克隆根仓库、客户端、服务端和 HappyRO Gateway，再将 kRO 资源放入：
 
 ```text
 inputs/runtime/kro-20211105/client/
