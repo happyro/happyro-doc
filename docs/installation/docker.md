@@ -4,7 +4,7 @@ Docker 方式使用仓库中的 Compose 配置运行数据库、rAthena 服务�
 
 ## 环境要求
 
-需要 Git、Docker Engine 或 Docker Desktop，以及 Docker Compose v2。首次启动还需要准备 kRO 运行时资源；资源不会随镜像构建，也不会自动下载。
+需要 Git、Docker Engine 或 Docker Desktop、Docker Compose v2、curl 和 jq。首次启动还需要准备 kRO 运行时资源；资源不会随镜像构建，也不会自动下载。
 
 ## 使用已构建镜像
 
