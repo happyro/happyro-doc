@@ -12,7 +12,7 @@ kRO 客户端资源属于第三方版权内容，未经授权不得分发，可�
 
 ```bash
 mkdir -p happyro/kro-client
-mkdir -p happyro/data/db
+mkdir -p happyro/data/database
 mkdir -p happyro/data/gateway
 mkdir -p happyro/data/server
 ```
@@ -32,7 +32,7 @@ curl -fsSL $COMPOSE_URL -o happyro/compose.yml
 
 ```bash
 cd happyro
-export DB_DATA_DIR=./data/db
+export DB_DATA_DIR=./data/database
 export GATEWAY_LOG_DIR=./data/gateway
 export SERVER_LOG_DIR=./data/server
 ```

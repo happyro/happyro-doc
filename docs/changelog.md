@@ -2,6 +2,7 @@
 
 ## 2026-08-27
 
+- 将 Docker 部署的数据库持久化目录统一为 `data/database`。
 - 增加文档仓库 README，并将 AGENTS.md 更新为文档站专用规则。
 - 删除与 Docker 安装重复的生产部署页面，首页部署入口改为直接打开 Docker 安装指南。
 - 更新项目架构，补充 HappyRO Gateway 职责并移除旧的 `vendor/RemoteClient-JS` 目录说明。
