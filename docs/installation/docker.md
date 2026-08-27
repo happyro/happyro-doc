@@ -33,6 +33,16 @@ export GATEWAY_LOG_DIR=./data/gateway
 export SERVER_LOG_DIR=./data/server
 ```
 
+拉取镜像并运行容器：
+
+```bash
+docker compose -f compose.yml pull
+docker compose -f compose.yml up -d --no-build
+docker compose -f compose.yml ps
+```
+
+## 数据库配置
+
 默认数据库信息如下：
 
 | 项目 | 默认值 |
@@ -47,18 +57,18 @@ export SERVER_LOG_DIR=./data/server
 
 部署到生产环境前，请通过同名环境变量修改密码。
 
-拉取镜像并运行容器：
+## 验证和停止
 
-```bash
-docker compose -f compose.yml pull
-docker compose -f compose.yml up -d --no-build
-docker compose -f compose.yml ps
+浏览器访问以下地址进入游戏：
+
+```text
+http://127.0.0.1:3338/applications/pwa/index.html
 ```
 
-## 验证和停止
+局域网内访问时，将 `127.0.0.1` 替换为部署主机的局域网 IP。网关健康检查地址为 `http://127.0.0.1:3338/api/health`。
 
 ```bash
 curl --fail http://127.0.0.1:3338/api/health
-docker compose -f deploy/docker/compose.yml logs --tail=100 gateway
-docker compose -f deploy/docker/compose.yml down
+docker compose -f compose.yml logs --tail=100 gateway
+docker compose -f compose.yml down
 ```
