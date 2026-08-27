@@ -1,6 +1,6 @@
 # 项目架构
 
-HappyRO 由三个独立 Git 仓库和一个固定版本的网关依赖组成。根仓库负责配置、中文运行时覆盖、构建脚本和运行编排；`happyro-client` 维护 roBrowserLegacy 派生客户端；`happyro-server` 维护 rAthena 派生服务端。
+HappyRO 由一个编排仓库和三个应用仓库组成。根仓库负责配置、中文运行时覆盖、构建脚本和运行编排；`happyro-client` 维护 roBrowserLegacy 派生客户端；`happyro-server` 维护 rAthena 派生服务端；`happyro-gateway` 维护浏览器客户端与服务端之间的 Node.js 网关。
 
 ## 请求链路
 
@@ -14,7 +14,7 @@ HappyRO 由三个独立 Git 仓库和一个固定版本的网关依赖组成。�
 HappyRO Gateway
       ├── PWA 与 kRO 运行资源
       ├── WebSocket ──────────────┐
-      └── 同源 HTTP API ──────────┤
+      └── HTTP API ───────────────┤
                                   ▼
                        rAthena login / char / map / web
                                   │
@@ -22,26 +22,55 @@ HappyRO Gateway
                               MariaDB
 ```
 
-浏览器只访问网关或其前方的反向代理。网关发布 `repos/happyro-client/dist/Web` 中的 PWA，通过 WebSocket 连接 rAthena，并在同一来源代理 rAthena Web API。生产环境应只公开反向代理的 HTTP/HTTPS 端口，数据库、rAthena 和网关端口均限制在本机或受控网络中。
+浏览器只访问 Gateway 或其前方的反向代理。Gateway 发布 `happyro-client` 构建的 PWA，读取 kRO 资源和中文覆盖文件，将浏览器 WebSocket 请求转发到 rAthena 的 login、char 和 map 服务，并在同一来源代理 rAthena Web API。生产环境应只公开 Gateway 或反向代理的 HTTP/HTTPS 端口，数据库和 rAthena 端口限制在容器网络、本机或受控网络中。
 
-## 仓库与目录
+## Gateway
+
+[happyro-gateway](https://github.com/happyro/happyro-gateway) 基于 [RemoteClient-JS](https://github.com/FranciscoWallison/roBrowserLegacy-RemoteClient-JS) 维护，主要负责：
+
+- 发布 PWA、GRF、AI、BGM、System 和中文覆盖资源。
+- 将浏览器 WebSocket 连接转发到 rAthena 游戏端口。
+- 将 rAthena Web API 代理到与游戏页面相同的来源。
+- 处理 kRO 资源中的混合编码路径，并提供健康检查和资源诊断。
+
+物理部署从 `repos/happyro-gateway/` 直接运行；Docker 部署则将 Gateway、PWA 和中文覆盖文件打包到 `happyro-gateway` 镜像中，运行时只挂载 kRO 资源和日志目录。
+
+## Git 仓库
+
+| 仓库 | 职责 |
+| --- | --- |
+| [happyro](https://github.com/happyro/happyro) | 配置、部署编排、资源覆盖和维护脚本 |
+| [happyro-client](https://github.com/happyro/happyro-client) | roBrowserLegacy 派生客户端和 PWA |
+| [happyro-server](https://github.com/happyro/happyro-server) | rAthena 派生服务端 |
+| [happyro-gateway](https://github.com/happyro/happyro-gateway) | Node.js 静态资源、WebSocket 和 Web API 网关 |
+
+四个仓库分别维护自己的 Git 历史，并只推送到各自的 `origin`。
+
+## 根仓库目录
 
 | 路径 | 职责 |
 | --- | --- |
 | `configs/` | 客户端运行配置 |
-| `deploy/` | MariaDB、rAthena、网关及演示环境配置 |
+| `deploy/` | Docker、MariaDB、rAthena 和 Gateway 部署配置 |
 | `inputs/official/` | 只读的官方输入材料 |
 | `inputs/runtime/kro-20211105/client/` | 本地准备且不进入 Git 的 kRO 运行资源 |
 | `localization/client/data/` | 当前发布使用的客户端中文覆盖 |
 | `repos/happyro-client/` | HappyRO roBrowserLegacy 派生仓库与 PWA 构建产物 |
 | `repos/happyro-server/` | HappyRO rAthena 派生仓库 |
-| `vendor/robrowserlegacy-remote-client-js/` | 固定上游版本并应用 HappyRO 补丁的网关 |
+| `repos/happyro-gateway/` | HappyRO Gateway 独立仓库 |
+| `deploy/docker/` | 数据库、服务端和 Gateway 镜像及 Compose 配置 |
+| `deploy/mariadb/` | 物理部署使用的 MariaDB 配置和初始化脚本 |
+| `deploy/rathena/` | 物理部署使用的 rAthena 运行配置 |
+| `deploy/remote-client/` | 物理部署使用的 Gateway 环境配置 |
 | `scripts/` | 配置、构建、启动、停止和验证脚本 |
-| `work/` | 数据库数据、日志及其他本地生成内容 |
+| `tools/` | 翻译、资源审计和维护工具 |
+| `versions/` | 客户端、服务端和 Gateway 的锁定基线 |
+| `changelog/` | 根仓库的变更记录 |
+| `artifacts/` | 可交付的生成结果 |
+| `work/` | 物理部署的数据库数据、构建目录、日志和运行时密钥 |
 
-`repos/`、`vendor/`、`inputs/runtime/` 和 `work/` 均不由根仓库提交。根仓库、客户端和服务端分别推送到各自的 `origin`。
+`repos/`、`inputs/runtime/`、`artifacts/` 和 `work/` 均不由根仓库提交。
 
 ## 固定基线
 
 客户端与服务端固定使用 `PACKETVER=20211103`、Renewal 模式和一致的封包设置。官方 kRO 2021-11-05 输入资源保持只读，产品翻译只维护在客户端、服务端和 `localization/client/data/` 的当前源码中。
-
