@@ -1,4 +1,4 @@
-# Windows 安装
+# Windows
 
 HappyRO 当前的构建与运行脚本依赖 Bash、Linux 工具链、Docker Compose 和 systemd，因此 Windows 平台使用 WSL2 运行完整服务。浏览器仍直接使用 Windows 上的 Chrome、Edge 或 Firefox，不需要安装传统 RO 桌面客户端。
 
