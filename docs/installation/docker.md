@@ -11,14 +11,14 @@ Docker 方式使用仓库中的 Compose 配置运行数据库、rAthena 服务�
 这是推荐方式。使用预构建镜像时只需要 Compose 文件和 kRO 资源目录，不需要克隆任何源码仓库：
 
 ```bash
-mkdir -p happyro/kro-client happyro/data/db happyro/data/gateway happyro/data/server
-cd happyro
-curl -fsSL https://raw.githubusercontent.com/happyro/happyro/main/deploy/docker/compose.yml -o compose.yml
+mkdir -p happyro/kro-client
+mkdir -p happyro/data/db
+mkdir -p happyro/data/gateway
+mkdir -p happyro/data/server
+curl -fsSL https://raw.githubusercontent.com/happyro/happyro/main/deploy/docker/compose.yml -o happyro/compose.yml
 ```
 
 将合法取得的 kRO 资源放入 `kro-client/`，至少包含 `data.grf` 和 `DATA.INI`；如有 `AI/`、`BGM/`、`System/` 目录也一并放入。
-
-## 配置
 
 Compose 默认使用 `./kro-client` 作为资源目录。部署时将数据库、Gateway 日志和 rAthena 日志分别保存到 `./data/db`、`./data/gateway` 和 `./data/server`。默认密码仅适合本地测试；生产环境请通过环境变量覆盖 `MARIADB_ROOT_PASSWORD`、`DB_PASSWORD` 和 `INTERSERVER_PASSWORD`。
 
@@ -33,6 +33,7 @@ kugarocks/happyro-database:latest
 拉取镜像并启动服务，不在本机重新构建：
 
 ```bash
+cd happyro
 export DB_DATA_DIR=./data/db
 export GATEWAY_LOG_DIR=./data/gateway
 export SERVER_LOG_DIR=./data/server
