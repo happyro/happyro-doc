@@ -2,8 +2,8 @@
 layout: home
 hero:
   name: HappyRO
-  text: Ragnarok Online 局域网 Web 栈
-  tagline: 用 roBrowserLegacy、rAthena 与 MariaDB 组成的可复现开发环境
+  text: 简单易用、中文友好的《仙境传说》网页端
+  tagline: 基于 rAthena、roBrowserLegacy
   image:
     src: /images/ro-logo-1.png
     alt: Ragnarok Online 标志
