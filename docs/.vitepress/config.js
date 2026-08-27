@@ -27,7 +27,7 @@ export default defineConfig({
             {
               text: '文档',
               items: [
-                { text: '项目架构', link: '/intro' },
+                { text: '项目简介', link: '/intro' },
                 { text: '关于翻译', link: '/translation' },
                 { text: '更新日志', link: '/changelog' },
               ],
@@ -78,7 +78,7 @@ export default defineConfig({
       {
         text: '文档',
         items: [
-          { text: '项目架构', link: '/intro' },
+          { text: '项目简介', link: '/intro' },
           { text: '关于翻译', link: '/translation' },
           { text: '更新日志', link: '/changelog' },
         ],
