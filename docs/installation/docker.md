@@ -18,8 +18,8 @@ mkdir -p happyro/data/server
 下载 `compose.yml`：
 
 ```bash
-COMPOSE_URL=
-curl -fsSL https://raw.githubusercontent.com/happyro/happyro/main/deploy/docker/compose.yml -o happyro/compose.yml
+COMPOSE_URL=https://raw.githubusercontent.com/happyro/happyro/main/deploy/docker/compose.yml
+curl -fsSL $COMPOSE_URL -o happyro/compose.yml
 ```
 
 把你的 kRO 资源放到 `kro-client` 里面，Compose 默认使用 `./kro-client` 作为资源目录。
