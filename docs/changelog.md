@@ -2,6 +2,7 @@
 
 ## 2026-08-27
 
+- 更新项目架构，补充 HappyRO Gateway 职责并移除旧的 `vendor/RemoteClient-JS` 目录说明。
 - 复核 Docker、Linux、macOS 和 Windows 安装流程，补齐 macOS 内部服务账号、Gateway 依赖和跨平台构建说明。
 - 新增 Docker、Linux、macOS 和 Windows 安装分类，补充 macOS 原生启动流程、Docker 预构建镜像和本地构建方式，并改用独立的 HappyRO Gateway 仓库（锁定 `400dad7`）。
 - 将社区文档整理到独立的 `docs/community/` 目录。

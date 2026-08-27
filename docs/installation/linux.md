@@ -1,5 +1,9 @@
 # Linux
 
+::: tip
+kRO 客户端资源属于第三方版权内容，未经授权不得分发，可通过[联系方式](/community/contact)交流。
+:::
+
 本页介绍使用 HappyRO 物理机脚本在 Linux 上部署。macOS 请使用 [macOS 安装指南](/installation/macos)，Windows 请使用 [WSL2 安装指南](/installation/windows)，Docker 请使用 [Docker 安装指南](/installation/docker)。
 
 ## 环境依赖

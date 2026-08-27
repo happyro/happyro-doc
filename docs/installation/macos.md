@@ -1,5 +1,9 @@
 # macOS
 
+::: tip
+kRO 客户端资源属于第三方版权内容，未经授权不得分发，可通过[联系方式](/community/contact)交流。
+:::
+
 macOS 可以原生编译和运行 HappyRO。下面的流程不使用 systemd 或 Docker，数据库、rAthena 和 Gateway 都由当前用户直接启动。
 
 ## 安装依赖
