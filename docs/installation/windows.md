@@ -44,7 +44,7 @@ systemctl is-system-running
 
 将源码放在 WSL 的 Linux 文件系统中，例如 `~/src/happyro`，不要放在 `/mnt/c` 下。这样可以避免跨文件系统访问拖慢前端依赖安装、服务端编译和大量资源读取，也能保证符号链接与权限行为一致。
 
-按照 [Linux 安装页的“准备源码”步骤](/installation#准备源码)克隆根仓库、客户端、服务端和网关。然后将 kRO 资源放入：
+按照 [Linux 安装页的“准备源码”步骤](/installation/linux#准备源码)克隆根仓库、客户端、服务端和网关。然后将 kRO 资源放入：
 
 ```text
 ~/src/happyro/inputs/runtime/kro-20211105/client/
