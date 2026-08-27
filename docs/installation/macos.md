@@ -1,4 +1,4 @@
-# macOS 安装
+# macOS
 
 macOS 可以原生编译和运行 HappyRO。下面的流程不使用 systemd 或 Docker，数据库、rAthena 和 Gateway 都由当前用户直接启动。
 

@@ -52,7 +52,7 @@ docker compose -f compose.yml ps
 | 数据库用户 | `happyro` |
 | 数据库密码 | `happyro` |
 | MariaDB root 密码 | `happyro` |
-| 服务间通信用户 | `happyro` |
+| 服务间通信用户 | `happyro_interserver` |
 | 服务间通信密码 | `happyro` |
 
 部署到生产环境前，请通过同名环境变量修改密码。
