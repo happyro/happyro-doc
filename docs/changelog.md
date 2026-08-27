@@ -8,6 +8,7 @@
 - 删除与 Docker 安装重复的生产部署页面，首页部署入口改为直接打开 Docker 安装指南。
 - 更新项目架构，补充 HappyRO Gateway 职责并移除旧的 `vendor/RemoteClient-JS` 目录说明。
 - 将项目简介页面从 `architecture.md` 重命名为 `intro.md`，并同步更新站内导航链接。
+- 将项目简介页面的侧栏名称从“项目架构”更新为“项目简介”。
 - 复核 Docker、Linux、macOS 和 Windows 安装流程，补齐 macOS 内部服务账号、Gateway 依赖和跨平台构建说明。
 - 新增 Docker、Linux、macOS 和 Windows 安装分类，补充 macOS 原生启动流程、Docker 预构建镜像和本地构建方式，并改用独立的 HappyRO Gateway 仓库（锁定 `400dad7`）。
 - 将社区文档整理到独立的 `docs/community/` 目录。
