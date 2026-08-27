@@ -9,11 +9,11 @@ hero:
     alt: Ragnarok Online 标志
   actions:
     - theme: brand
-      text: 了解项目架构
-      link: /intro
+      text: 在线演示
+      link: /demo
     - theme: alt
-      text: 开始部署
-      link: /installation/docker
+      text: 项目简介
+      link: /intro
 features:
   - icon: 🧩
     title: 分层架构
