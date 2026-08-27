@@ -6,6 +6,17 @@
 
 需要 Git、GNU Make、CMake、C++ 编译器、Node.js 22 或更高版本、npm、Docker Compose、OpenSSL、ripgrep、jq、curl、`ss` 和 systemd。安装完成后可用 `make doctor` 检查环境，但该命令不会安装依赖或启动服务。
 
+Debian 或 Ubuntu 可以先安装系统依赖：
+
+```bash
+sudo apt update
+sudo apt install -y git make build-essential cmake pkg-config \
+  libmariadb-dev libpcre3-dev zlib1g-dev \
+  curl jq ripgrep iproute2 openssl ca-certificates
+```
+
+然后安装 Node.js 22 或更高版本、Docker Engine 和 Docker Compose v2，并确保当前用户可以运行 `docker compose` 和 `systemctl`。
+
 ## 准备源码
 
 HappyRO 由四个独立仓库组成，网关使用 HappyRO Gateway 的锁定版本：
