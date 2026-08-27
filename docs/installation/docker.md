@@ -4,48 +4,38 @@ Docker 方式使用仓库中的 Compose 配置运行数据库、rAthena 服务�
 
 ## 环境要求
 
-需要 Git、Docker Engine 或 Docker Desktop、Docker Compose v2、curl 和 jq。首次启动还需要准备 kRO 运行时资源；资源不会随镜像构建，也不会自动下载。
+需要 Docker Engine 或 Docker Desktop，以及 Docker Compose v2。首次启动还需要准备 kRO 运行时资源；资源不会随镜像构建，也不会自动下载。
 
 ## 使用已构建镜像
 
-这是推荐方式。使用预构建镜像时不需要下载完整的 HappyRO 源码，只需准备 Compose 文件、数据库初始化脚本、服务端 SQL 和汉化覆盖文件：
+这是推荐方式。使用预构建镜像时只需要 Compose 文件和 kRO 资源目录，不需要克隆任何源码仓库：
 
 ```bash
-mkdir -p happyro-docker/deploy/docker happyro-docker/deploy/mariadb/init \
-  happyro-docker/repos/happyro-server/sql-files happyro-docker/localization/client/data
+mkdir -p happyro-docker/kro-client
 cd happyro-docker
-curl -fsSL https://raw.githubusercontent.com/happyro/happyro/main/deploy/docker/compose.yml \
-  -o deploy/docker/compose.yml
-curl -fsSL https://raw.githubusercontent.com/happyro/happyro/main/deploy/mariadb/init/20-happyro-databases.sh \
-  -o deploy/mariadb/init/20-happyro-databases.sh
-curl -fsSL https://api.github.com/repos/happyro/happyro/contents/localization/client/data \
-  | jq -r '.[].download_url' \
-  | while read -r url; do curl -fsSL "$url" \
-      -o "localization/client/data/$(basename "$url")"; done
-git clone --filter=blob:none --no-checkout https://github.com/happyro/happyro-server.git repos/happyro-server
-git -C repos/happyro-server sparse-checkout set sql-files
-git -C repos/happyro-server checkout main
+curl -fsSL https://raw.githubusercontent.com/happyro/happyro/main/deploy/docker/compose.yml -o compose.yml
 ```
 
-将合法取得的 kRO 资源放到独立目录，并设置 `KRO_CLIENT_DIR` 指向包含 `data.grf`、`DATA.INI`、`AI/`、`BGM/` 和 `System/` 的目录。
+将合法取得的 kRO 资源放入 `kro-client/`，至少包含 `data.grf` 和 `DATA.INI`；如有 `AI/`、`BGM/`、`System/` 目录也一并放入。
 
 ## 配置
 
-在仓库根目录准备 Compose 环境变量，至少设置数据库密码、跨服务密码、`KRO_CLIENT_DIR` 和 `GATEWAY_PORT`。`KRO_CLIENT_DIR` 必须指向包含 `data.grf`、`DATA.INI` 及可选资源目录的 kRO 客户端目录。
+Compose 默认使用 `./kro-client` 作为资源目录，并使用 `./work/runtime/docker-mariadb` 保存数据库。默认密码仅适合本地测试；生产环境请通过环境变量覆盖 `MARIADB_ROOT_PASSWORD`、`DB_PASSWORD` 和 `INTERSERVER_PASSWORD`。
 
 Compose 使用以下已发布镜像：
 
 ```text
 kugarocks/happyro-server:latest
 kugarocks/happyro-gateway:latest
+kugarocks/happyro-database:latest
 ```
 
 拉取镜像并启动服务，不在本机重新构建：
 
 ```bash
-docker compose -f deploy/docker/compose.yml pull
-docker compose -f deploy/docker/compose.yml up -d --no-build
-docker compose -f deploy/docker/compose.yml ps
+docker compose -f compose.yml pull
+docker compose -f compose.yml up -d --no-build
+docker compose -f compose.yml ps
 ```
 
 ## 自行构建镜像
@@ -59,7 +49,7 @@ git clone https://github.com/happyro/happyro-client.git repos/happyro-client
 git clone https://github.com/happyro/happyro-server.git repos/happyro-server
 git clone https://github.com/happyro/happyro-gateway.git repos/happyro-gateway
 source versions/sources.lock
-git -C repos/happyro-gateway checkout "$HAPPYRO_GATEWAY_COMMIT" docker compose -f deploy/docker/compose.yml build
+git -C repos/happyro-gateway checkout "$HAPPYRO_GATEWAY_COMMIT"
 docker compose -f deploy/docker/compose.yml build
 docker compose -f deploy/docker/compose.yml up -d
 docker compose -f deploy/docker/compose.yml ps
