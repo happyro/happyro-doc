@@ -2,8 +2,6 @@
 
 这是最方便的部署方式，适合作为封包部署到生产环境。如果需要进行二次开发，建议采用物理部署。
 
-需要 Docker Engine 或 Docker Desktop、Docker Compose v2 和 curl。
-
 ## 准备工作
 
 创建必要的目录：
