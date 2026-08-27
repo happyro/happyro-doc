@@ -76,3 +76,14 @@ curl --fail http://127.0.0.1:3338/api/health
 docker compose -f compose.yml logs --tail=100 gateway
 docker compose -f compose.yml down
 ```
+
+## 常见问题
+
+### Gateway 无法读取资源目录
+
+Gateway 使用非 root 用户读取资源。若资源目录由 root 创建或从其他机器复制，请调整读取权限：
+
+```bash
+find happyro/kro-client -type d -exec chmod 755 {} +
+find happyro/kro-client -type f -exec chmod 644 {} +
+```

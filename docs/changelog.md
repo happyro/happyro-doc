@@ -2,6 +2,7 @@
 
 ## 2026-08-27
 
+- 补充 Docker kRO 资源目录权限设置，避免 Gateway 因非 root 用户无法读取资源而启动失败。
 - 将 Docker 部署的数据库持久化目录统一为 `data/database`。
 - 增加文档仓库 README，并将 AGENTS.md 更新为文档站专用规则。
 - 删除与 Docker 安装重复的生产部署页面，首页部署入口改为直接打开 Docker 安装指南。
