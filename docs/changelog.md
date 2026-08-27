@@ -3,6 +3,7 @@
 ## 2026-08-28
 
 - 增加 GitHub Pages 自动构建部署，并配置 `happyro.org` 自定义域名。
+- 将 Pages 工作流依赖更新到兼容 Node.js 24 的 Actions 版本。
 
 ## 2026-08-27
 
