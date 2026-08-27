@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: 在线演示
-      link: /demo
+      link: https://happyro-demo.kugarocks.com/applications/pwa/index.html
     - theme: alt
       text: 项目简介
       link: /intro

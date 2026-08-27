@@ -20,7 +20,7 @@ export default defineConfig({
               { text: '联系方式', link: '/community/contact' },
             ],
           },
-          { text: '在线演示', link: '/demo' },
+          { text: '在线演示', link: 'https://happyro-demo.kugarocks.com/applications/pwa/index.html' },
         ],
         sidebar: {
           '/': [
@@ -72,7 +72,7 @@ export default defineConfig({
           { text: 'Windows', link: '/installation/windows' },
         ],
       },
-      { text: '在线演示', link: '/demo' },
+      { text: '在线演示', link: 'https://happyro-demo.kugarocks.com/applications/pwa/index.html' },
     ],
     sidebar: [
       {
