@@ -2,6 +2,8 @@
 
 这是最方便的部署方式，适合作为封包部署到生产环境。如果需要进行二次开发，建议采用物理部署。
 
+需要 Docker Engine 或 Docker Desktop、Docker Compose v2 和 curl。
+
 ## 准备工作
 
 创建必要的目录：
@@ -16,6 +18,7 @@ mkdir -p happyro/data/server
 下载 `compose.yml`：
 
 ```bash
+COMPOSE_URL=
 curl -fsSL https://raw.githubusercontent.com/happyro/happyro/main/deploy/docker/compose.yml -o happyro/compose.yml
 ```
 
@@ -24,7 +27,7 @@ curl -fsSL https://raw.githubusercontent.com/happyro/happyro/main/deploy/docker/
 
 ## 运行容器
 
-配置环境变量：
+配置环境变量（只对当前终端会话生效）：
 
 ```bash
 cd happyro

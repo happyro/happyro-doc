@@ -7,7 +7,7 @@ macOS 可以原生编译和运行 HappyRO。下面的流程不使用 systemd 或
 使用 Homebrew 安装工具链和 MariaDB：
 
 ```bash
-brew install git make cmake node@22 mariadb jq ripgrep
+brew install git make cmake pkg-config node@22 mariadb pcre jq ripgrep
 brew services start mariadb
 ```
 
@@ -50,9 +50,29 @@ mariadb -u happyro -p happyro < repos/happyro-server/sql-files/main.sql
 mariadb -u happyro -p happyro < repos/happyro-server/sql-files/web.sql
 mariadb -u happyro -p happyro < repos/happyro-server/sql-files/roulette_default_data.sql
 mariadb -u happyro -p happyro_log < repos/happyro-server/sql-files/logs.sql
+
+mariadb -u happyro -p happyro <<'SQL'
+UPDATE login
+SET userid = 'happyro_interserver',
+    user_pass = 'change-this-interserver-password',
+    sex = 'S'
+WHERE account_id = 1;
+SQL
 ```
 
-将示例密码替换为实际密码，并在 `work/runtime/mariadb-10.11/secrets.env` 中写入相同的 `DB_PASSWORD`、`INTERSERVER_USER` 和 `INTERSERVER_PASSWORD`，再执行：
+将两个示例密码替换为实际密码，并创建服务端配置所需的密钥文件：
+
+```bash
+mkdir -p work/runtime/mariadb-10.11
+cat > work/runtime/mariadb-10.11/secrets.env <<'EOF'
+DB_PASSWORD=change-this-password
+INTERSERVER_USER=happyro_interserver
+INTERSERVER_PASSWORD=change-this-interserver-password
+EOF
+chmod 600 work/runtime/mariadb-10.11/secrets.env
+```
+
+`INTERSERVER_PASSWORD` 必须与前面写入 `login` 表的密码一致。然后生成 rAthena 配置：
 
 ```bash
 bash scripts/server/configure-server.sh
@@ -63,7 +83,8 @@ bash scripts/server/configure-server.sh
 ```bash
 npm --prefix repos/happyro-client install
 npm --prefix repos/happyro-client run build:pwa
-bash scripts/server/build-server.sh
+npm --prefix repos/happyro-gateway install --ignore-scripts
+make build-server
 ```
 
 ## 启动服务
