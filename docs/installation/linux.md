@@ -50,7 +50,7 @@ git -C repos/happyro-gateway checkout "$HAPPYRO_GATEWAY_COMMIT"
 
 ## 准备 kRO 资源
 
-将合法取得并与项目兼容的 kRO 资源放在下列位置。`data.grf` 和 `DATA.INI` 必需，其余目录按需提供：
+将 kRO 资源放在下列位置。`data.grf` 和 `DATA.INI` 必需，其余目录按需提供：
 
 ```text
 inputs/runtime/kro-20211105/client/
