@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: 了解项目架构
-      link: /architecture
+      link: /intro
     - theme: alt
       text: 开始部署
       link: /installation/docker

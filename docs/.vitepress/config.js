@@ -12,7 +12,7 @@ export default defineConfig({
         langMenuLabel: '切换语言',
         nav: [
           { text: '首页', link: '/' },
-          { text: '文档', link: '/architecture' },
+          { text: '文档', link: '/intro' },
           {
             text: '社区',
             items: [
@@ -27,7 +27,7 @@ export default defineConfig({
             {
               text: '文档',
               items: [
-                { text: '项目架构', link: '/architecture' },
+                { text: '项目架构', link: '/intro' },
                 { text: '关于翻译', link: '/translation' },
                 { text: '更新日志', link: '/changelog' },
               ],
@@ -62,7 +62,7 @@ export default defineConfig({
     siteTitle: 'HappyRO',
     nav: [
       { text: '首页', link: '/' },
-      { text: '文档', link: '/architecture' },
+      { text: '文档', link: '/intro' },
       {
         text: '安装',
         items: [
@@ -78,7 +78,7 @@ export default defineConfig({
       {
         text: '文档',
         items: [
-          { text: '项目架构', link: '/architecture' },
+          { text: '项目架构', link: '/intro' },
           { text: '关于翻译', link: '/translation' },
           { text: '更新日志', link: '/changelog' },
         ],
