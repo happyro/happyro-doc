@@ -1,5 +1,10 @@
 # 更新日志
 
+## 2026-08-27
+
+- 新增 Docker、Linux、macOS 和 Windows 安装分类，补充 macOS 原生启动流程、Docker 预构建镜像和本地构建方式，并改用独立的 HappyRO Gateway 仓库（锁定 `400dad7`）。
+- 将社区文档整理到独立的 `docs/community/` 目录。
+
 ## 2026-08-26
 
 - 按当前三仓库、HappyRO Gateway、rAthena 和 MariaDB 架构重写文档。
@@ -11,5 +16,5 @@
 ## 2026-08-23
 
 - 建立 HappyRO VitePress 文档站点。
-- 增加中英文页面、本地搜索和项目导航。
+- 增加中文页面、本地搜索和项目导航。
 - 接入 Ragnarok Online 图标与透明 Logo。

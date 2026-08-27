@@ -13,7 +13,7 @@ HappyRO 由三个独立 Git 仓库和一个固定版本的网关依赖组成。�
       ▼
 HappyRO Gateway
       ├── PWA 与 kRO 运行资源
-      ├── WebSocket ───────────────┐
+      ├── WebSocket ──────────────┐
       └── 同源 HTTP API ──────────┤
                                   ▼
                        rAthena login / char / map / web
@@ -41,10 +41,7 @@ HappyRO Gateway
 
 `repos/`、`vendor/`、`inputs/runtime/` 和 `work/` 均不由根仓库提交。根仓库、客户端和服务端分别推送到各自的 `origin`。
 
-## 固定协议
+## 固定基线
 
 客户端与服务端固定使用 `PACKETVER=20211103`、Renewal 模式和一致的封包设置。官方 kRO 2021-11-05 输入资源保持只读，产品翻译只维护在客户端、服务端和 `localization/client/data/` 的当前源码中。
 
-## 运行方式
-
-本地开发使用 Docker Compose 启动 MariaDB，并使用 systemd transient units 管理 rAthena 与网关。演示发布使用 `demo` 分支生成生产包，在目标 Linux 主机上由持久化 systemd unit、物理 MariaDB 和反向代理管理。

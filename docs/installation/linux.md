@@ -1,6 +1,6 @@
-# 安装部署
+# Linux 安装
 
-本页适用于带有 systemd 的 Linux 环境。Windows 请使用 [WSL2 安装指南](/windows-installation)。
+本页介绍使用 HappyRO 物理机脚本在 Linux 上部署。macOS 请使用 [macOS 安装指南](/installation/macos)，Windows 请使用 [WSL2 安装指南](/installation/windows)，Docker 请使用 [Docker 安装指南](/installation/docker)。
 
 ## 环境依赖
 
@@ -8,18 +8,16 @@
 
 ## 准备源码
 
-HappyRO 由三个独立仓库组成，网关使用锁定版本的 RemoteClient-JS：
+HappyRO 由四个独立仓库组成，网关使用 HappyRO Gateway 的锁定版本：
 
 ```bash
 git clone https://github.com/happyro/happyro.git
 cd happyro
 git clone https://github.com/happyro/happyro-client.git repos/happyro-client
 git clone https://github.com/happyro/happyro-server.git repos/happyro-server
-git clone https://github.com/FranciscoWallison/roBrowserLegacy-RemoteClient-JS.git vendor/robrowserlegacy-remote-client-js
+git clone https://github.com/happyro/happyro-gateway.git repos/happyro-gateway
 source versions/sources.lock
-git -C vendor/robrowserlegacy-remote-client-js checkout "$REMOTE_CLIENT_JS_UPSTREAM_COMMIT"
-git -C vendor/robrowserlegacy-remote-client-js apply ../../patches/remote-client-js/0001-disable-unavailable-esrgan-dependency.patch
-git -C vendor/robrowserlegacy-remote-client-js apply ../../patches/remote-client-js/0002-proxy-rathena-web-api.patch
+git -C repos/happyro-gateway checkout "$HAPPYRO_GATEWAY_COMMIT"
 ```
 
 ## 修改配置

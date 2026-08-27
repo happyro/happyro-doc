@@ -12,23 +12,15 @@ export default defineConfig({
         langMenuLabel: '切换语言',
         nav: [
           { text: '首页', link: '/' },
-          {
-            text: '文档',
-            items: [
-              { text: '项目架构', link: '/architecture' },
-              { text: '安装文档', link: '/installation' },
-              { text: '关于翻译', link: '/translation' },
-            ],
-          },
+          { text: '文档', link: '/architecture' },
           {
             text: '社区',
             items: [
-              { text: '贡献指南', link: '/contributing' },
-              { text: '联系方式', link: '/contact' },
+              { text: '贡献指南', link: '/community/contributing' },
+              { text: '联系方式', link: '/community/contact' },
             ],
           },
           { text: '在线演示', link: '/demo' },
-          { text: '更新日志', link: '/changelog' },
         ],
         sidebar: {
           '/': [
@@ -36,67 +28,27 @@ export default defineConfig({
               text: '文档',
               items: [
                 { text: '项目架构', link: '/architecture' },
-                { text: '安装文档', link: '/installation' },
                 { text: '关于翻译', link: '/translation' },
+                { text: '更新日志', link: '/changelog' },
+              ],
+            },
+            {
+              text: '安装',
+              items: [
+                { text: 'Docker', link: '/installation/docker' },
+                { text: 'Linux', link: '/installation/linux' },
+                { text: 'macOS', link: '/installation/macos' },
+                { text: 'Windows', link: '/installation/windows' },
               ],
             },
             {
               text: '社区',
               items: [
-                { text: '贡献指南', link: '/contributing' },
-                { text: '联系方式', link: '/contact' },
+                { text: '贡献指南', link: '/community/contributing' },
+                { text: '联系方式', link: '/community/contact' },
               ],
             },
           ],
-        },
-      },
-    },
-    en: {
-      label: 'English',
-      lang: 'en',
-      themeConfig: {
-        langMenuLabel: 'Change language',
-        nav: [
-          { text: 'Home', link: '/en/' },
-          {
-            text: 'Docs',
-            items: [
-              { text: 'Architecture', link: '/en/architecture' },
-              { text: 'Installation', link: '/en/installation' },
-              { text: 'Translation', link: '/en/translation' },
-            ],
-          },
-          {
-            text: 'Community',
-            items: [
-              { text: 'Contributing', link: '/en/contributing' },
-              { text: 'Contact', link: '/en/contact' },
-            ],
-          },
-          { text: 'Demo', link: '/en/demo' },
-          { text: 'Changelog', link: '/en/changelog' },
-        ],
-        sidebar: {
-          '/en/': [
-            {
-              text: 'Docs',
-              items: [
-                { text: 'Architecture', link: '/en/architecture' },
-                { text: 'Installation', link: '/en/installation' },
-                { text: 'Translation', link: '/en/translation' },
-              ],
-            },
-            {
-              text: 'Community',
-              items: [
-                { text: 'Contributing', link: '/en/contributing' },
-                { text: 'Contact', link: '/en/contact' },
-              ],
-            },
-          ],
-        },
-        footer: {
-          message: 'HappyRO is for personal study and research only; users assume all responsibility for any commercial use.',
         },
       },
     },
@@ -111,23 +63,40 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '文档', link: '/architecture' },
+      {
+        text: '安装',
+        items: [
+          { text: 'Docker', link: '/installation/docker' },
+          { text: 'Linux', link: '/installation/linux' },
+          { text: 'macOS', link: '/installation/macos' },
+          { text: 'Windows', link: '/installation/windows' },
+        ],
+      },
       { text: '在线演示', link: '/demo' },
-      { text: '更新日志', link: '/changelog' },
     ],
     sidebar: [
       {
         text: '文档',
         items: [
           { text: '项目架构', link: '/architecture' },
-          { text: '安装文档', link: '/installation' },
           { text: '关于翻译', link: '/translation' },
+          { text: '更新日志', link: '/changelog' },
+        ],
+      },
+      {
+        text: '安装',
+        items: [
+          { text: 'Docker', link: '/installation/docker' },
+          { text: 'Linux', link: '/installation/linux' },
+          { text: 'macOS', link: '/installation/macos' },
+          { text: 'Windows', link: '/installation/windows' },
         ],
       },
       {
         text: '社区',
         items: [
-          { text: '贡献指南', link: '/contributing' },
-          { text: '联系方式', link: '/contact' },
+          { text: '贡献指南', link: '/community/contributing' },
+          { text: '联系方式', link: '/community/contact' },
         ],
       },
     ],
