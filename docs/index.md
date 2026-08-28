@@ -12,8 +12,8 @@ hero:
       text: 在线演示
       link: https://happyro-demo.kugarocks.com/applications/pwa/index.html
     - theme: alt
-      text: GitHub
-      link: https://github.com/happyro/happyro
+      text: 项目简介
+      link: /intro
 features:
   - icon: 🚀
     title: 简单易用
@@ -24,4 +24,6 @@ features:
   - icon: 🆓
     title: 开放自由
     details: 遵循 GNU GPL v3
+    link: https://github.com/happyro/happyro
+    linkText: GitHub
 ---
