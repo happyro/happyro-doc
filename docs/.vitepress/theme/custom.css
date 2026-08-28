@@ -15,6 +15,12 @@ html {
   max-height: 18rem;
 }
 
+.feature-github-link {
+  color: var(--vp-c-brand-1);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 @media (max-width: 959px) {
   .VPHero .image-src {
     max-width: 22rem;

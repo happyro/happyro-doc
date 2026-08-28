@@ -23,5 +23,5 @@ features:
     details: 对源码进行整体扫描，筛选出需要汉化的文件，汉化范围大（问题也多🐛）。
   - icon: 🆓
     title: 开放自由
-    details: '遵循 GNU GPL v3，项目代码托管在 <a href="https://github.com/happyro/happyro" target="_blank" rel="noreferrer">GitHub</a>。'
+    details: '遵循 GNU GPL v3，项目代码托管在 <a class="feature-github-link" href="https://github.com/happyro/happyro" target="_blank" rel="noreferrer">GitHub</a>。'
 ---
