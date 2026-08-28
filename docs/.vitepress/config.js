@@ -104,7 +104,7 @@ export default defineConfig({
       provider: 'local',
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/kugarocks' },
+      { icon: 'github', link: 'https://github.com/happyro/happyro' },
     ],
     footer: {
       message: 'HappyRO 仅供个人学习与研究，任何商业用途均须自行承担相应责任。',
