@@ -1,6 +1,9 @@
-# HappyRO 文档
+# HappyRO
 
-这是 [HappyRO](https://github.com/happyro/happyro) 的文档站，线上地址为 [happyro.kugarocks.com](https://happyro.kugarocks.com)。
+[HappyRO](https://github.com/happyro/happyro) 文档：
+
+- 阿里云：[happyro.kugarocks.com](https://happyro.kugarocks.com)
+- GitHub Pages：[happyro.org](https://happyro.org)
 
 ## 本地运行
 

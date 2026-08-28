@@ -2,6 +2,7 @@
 
 ## 2026-08-28
 
+- 在 README 中补充阿里云和 GitHub Pages 两个文档站地址。
 - 更新首页项目特色，并将首页和页头的 GitHub 入口指向 HappyRO 仓库。
 - 增加 GitHub Pages 自动构建部署，并配置 `happyro.org` 自定义域名。
 - 将 Pages 工作流和构建环境更新到 Node.js 24。
