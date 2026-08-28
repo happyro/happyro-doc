@@ -12,16 +12,16 @@ hero:
       text: 在线演示
       link: https://happyro-demo.kugarocks.com/applications/pwa/index.html
     - theme: alt
-      text: 项目简介
-      link: /intro
+      text: GitHub
+      link: https://github.com/happyro/happyro
 features:
-  - icon: 🧩
-    title: 分层架构
-    details: 浏览器客户端、网关、rAthena 服务端和 MariaDB 各司其职，边界清晰。
-  - icon: 🔒
-    title: 局域网优先
-    details: 不依赖公共 GRF、WebSocket 或 GitHub 运行时服务，资源与接口均在内网提供。
-  - icon: 🔁
-    title: 可复现部署
-    details: 版本、运行时资源和启动顺序均由 Makefile 与脚本统一管理。
+  - icon: 🚀
+    title: 简单易用
+    details: 浏览器运行，跨平台，支持 Docker 部署，无需繁杂的客户端安装包。
+  - icon: 🇨🇳
+    title: 中文友好
+    details: 对源码进行整体扫描，筛选出需要汉化的文件，汉化范围大（问题也多🐛）。
+  - icon: 🆓
+    title: 开放自由
+    details: 遵循 GNU GPL v3
 ---
