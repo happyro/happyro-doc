@@ -6,22 +6,20 @@
 
 ## Docker 镜像
 
-当前最新版本为 `v0.1.2`。
-
 ### Server
 
 ```bash
-docker pull kugarocks/happyro-server:v0.1.2
+docker pull kugarocks/happyro-server:latest
 ```
 
 ### Gateway
 
 ```bash
-docker pull kugarocks/happyro-gateway:v0.1.2
+docker pull kugarocks/happyro-gateway:latest
 ```
 
 ### Database
 
 ```bash
-docker pull kugarocks/happyro-database:v0.1.2
+docker pull kugarocks/happyro-database:latest
 ```
