@@ -31,7 +31,6 @@ export default defineConfig({
                 { text: '项目简介', link: '/intro' },
                 { text: '资源下载', link: '/downloads' },
                 { text: '关于翻译', link: '/translation' },
-                { text: '更新日志', link: '/changelog' },
               ],
             },
             {
@@ -48,6 +47,25 @@ export default defineConfig({
               items: [
                 { text: '贡献指南', link: '/community/contributing' },
                 { text: '联系方式', link: '/community/contact' },
+              ],
+            },
+            {
+              text: '更新日志',
+              collapsed: true,
+              items: [
+                {
+                  text: '2026-08',
+                  collapsed: true,
+                  items: [
+                    { text: '2026-08-30', link: '/changelog/2026/08/2026-08-30' },
+                    { text: '2026-08-29', link: '/changelog/2026/08/2026-08-29' },
+                    { text: '2026-08-28', link: '/changelog/2026/08/2026-08-28' },
+                    { text: '2026-08-27', link: '/changelog/2026/08/2026-08-27' },
+                    { text: '2026-08-26', link: '/changelog/2026/08/2026-08-26' },
+                    { text: '2026-08-25', link: '/changelog/2026/08/2026-08-25' },
+                    { text: '2026-08-24', link: '/changelog/2026/08/2026-08-24' },
+                  ],
+                },
               ],
             },
           ],
@@ -84,7 +102,6 @@ export default defineConfig({
           { text: '项目简介', link: '/intro' },
           { text: '资源下载', link: '/downloads' },
           { text: '关于翻译', link: '/translation' },
-          { text: '更新日志', link: '/changelog' },
         ],
       },
       {
@@ -101,6 +118,25 @@ export default defineConfig({
         items: [
           { text: '贡献指南', link: '/community/contributing' },
           { text: '联系方式', link: '/community/contact' },
+        ],
+      },
+      {
+        text: '更新日志',
+        collapsed: true,
+        items: [
+          {
+            text: '2026-08',
+            collapsed: true,
+            items: [
+              { text: '2026-08-30', link: '/changelog/2026/08/2026-08-30' },
+              { text: '2026-08-29', link: '/changelog/2026/08/2026-08-29' },
+              { text: '2026-08-28', link: '/changelog/2026/08/2026-08-28' },
+              { text: '2026-08-27', link: '/changelog/2026/08/2026-08-27' },
+              { text: '2026-08-26', link: '/changelog/2026/08/2026-08-26' },
+              { text: '2026-08-25', link: '/changelog/2026/08/2026-08-25' },
+              { text: '2026-08-24', link: '/changelog/2026/08/2026-08-24' },
+            ],
+          },
         ],
       },
     ],
