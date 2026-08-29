@@ -1,9 +1,5 @@
 # Windows
 
-::: tip
-kRO 客户端资源属于第三方版权内容，未经授权不得分发，可通过[联系方式](/community/contact)交流。
-:::
-
 HappyRO 当前的构建与运行脚本依赖 Bash、Linux 工具链、Docker Compose 和 systemd，因此 Windows 平台使用 WSL2 运行完整服务。浏览器仍直接使用 Windows 上的 Chrome、Edge 或 Firefox，不需要安装传统 RO 桌面客户端。
 
 ## 安装 WSL2
@@ -48,7 +44,7 @@ systemctl is-system-running
 
 将源码放在 WSL 的 Linux 文件系统中，例如 `~/src/happyro`，不要放在 `/mnt/c` 下。这样可以避免跨文件系统访问拖慢前端依赖安装、服务端编译和大量资源读取，也能保证符号链接与权限行为一致。
 
-按照 [Linux 安装页的“准备源码”步骤](/installation/linux#准备源码)克隆根仓库、客户端、服务端和网关。然后将 kRO 资源放入：
+按照 [Linux 安装页的“准备源码”步骤](/installation/linux#准备源码)克隆根仓库、客户端、服务端和网关。然后将下载的 [kRO 资源](/downloads#kro-客户端)放入：
 
 ```text
 ~/src/happyro/inputs/runtime/kro-20211105/client/

@@ -13,6 +13,7 @@ export default defineConfig({
         nav: [
           { text: '首页', link: '/' },
           { text: '文档', link: '/intro' },
+          { text: '资源下载', link: '/downloads' },
           {
             text: '社区',
             items: [
@@ -28,6 +29,7 @@ export default defineConfig({
               text: '文档',
               items: [
                 { text: '项目简介', link: '/intro' },
+                { text: '资源下载', link: '/downloads' },
                 { text: '关于翻译', link: '/translation' },
                 { text: '更新日志', link: '/changelog' },
               ],
@@ -63,6 +65,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '文档', link: '/intro' },
+      { text: '资源下载', link: '/downloads' },
       {
         text: '安装',
         items: [
@@ -79,6 +82,7 @@ export default defineConfig({
         text: '文档',
         items: [
           { text: '项目简介', link: '/intro' },
+          { text: '资源下载', link: '/downloads' },
           { text: '关于翻译', link: '/translation' },
           { text: '更新日志', link: '/changelog' },
         ],

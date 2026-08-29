@@ -1,9 +1,5 @@
 # Docker
 
-::: tip
-kRO 客户端资源属于第三方版权内容，未经授权不得分发，可通过[联系方式](/community/contact)交流。
-:::
-
 这是最简单的部署方式，适合生产环境。如需二次开发，建议使用物理部署。
 
 ## 准备工作
@@ -24,7 +20,7 @@ COMPOSE_URL=https://raw.githubusercontent.com/happyro/happyro/main/deploy/docker
 curl -fsSL $COMPOSE_URL -o happyro/compose.yml
 ```
 
-把你的 kRO 资源放到 `kro-client` 里面，Compose 默认使用 `./kro-client` 作为资源目录。
+把下载的 [kRO 资源](/downloads#kro-客户端)放到 `kro-client` 里面，Compose 默认使用 `./kro-client` 作为资源目录。
 
 ## 运行容器
 
