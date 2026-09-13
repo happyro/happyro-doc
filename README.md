@@ -1,15 +1,18 @@
-# HappyRO 文档
+# HappyRO 文档站
 
-这是 [HappyRO](https://github.com/happyro/happyro) 的文档站，线上地址为 [happyro.kugarocks.com](https://happyro.kugarocks.com)。
+[HappyRO](https://github.com/happyro/happyro) 的公开产品与安装文档，使用 VitePress 构建。
 
-## 本地运行
+- 项目站点：[happyro.kugarocks.com](https://happyro.kugarocks.com)
+- GitHub Pages：[happyro.org](https://happyro.org)
+
+## 本地开发
 
 ```bash
-npm install
+npm ci
 npm run docs:dev
 ```
 
-构建静态站点：
+构建检查：
 
 ```bash
 npm run docs:build

@@ -2,26 +2,34 @@
 layout: home
 hero:
   name: HappyRO
-  text: Ragnarok Online 局域网 Web 栈
-  tagline: 用 roBrowserLegacy、rAthena 与 MariaDB 组成的可复现开发环境
+  text: 简单易用、中文友好的《仙境传说》网页端
+  tagline: 基于 rAthena、roBrowserLegacy
   image:
     src: /images/ro-logo-1.png
     alt: Ragnarok Online 标志
   actions:
     - theme: brand
-      text: 了解项目架构
-      link: /architecture
+      text: 在线演示
+      link: https://happyro-demo.kugarocks.com/applications/pwa/index.html
     - theme: alt
-      text: 开始部署
+      text: Docker 安装
       link: /installation/docker
+    - theme: alt
+      text: 查看源码
+      link: https://github.com/happyro/happyro
 features:
-  - icon: 🧩
-    title: 分层架构
-    details: 浏览器客户端、网关、rAthena 服务端和 MariaDB 各司其职，边界清晰。
-  - icon: 🔒
-    title: 局域网优先
-    details: 不依赖公共 GRF、WebSocket 或 GitHub 运行时服务，资源与接口均在内网提供。
-  - icon: 🔁
-    title: 可复现部署
-    details: 版本、运行时资源和启动顺序均由 Makefile 与脚本统一管理。
+  - icon: 🚀
+    title: 简单易用
+    details: 浏览器运行，跨平台，支持 Docker 部署，无需繁杂的客户端安装包。
+  - icon: 📖
+    title: 冒险工具
+    details: 在游戏内查询地图、魔物、NPC 和物品，并完成导航与角色维护。
+  - icon: ⚙️
+    title: 管理后台
+    details: 统一维护游戏资料、用户、运营发放、在线控制和服务器参数。
+  - icon: 📦
+    title: 开放自由
+    details: '项目托管在 <a class="feature-github-link" href="https://github.com/happyro/happyro" target="_blank" rel="noreferrer">GitHub</a>，遵循 GNU GPL v3。'
 ---
+
+<HomeGallery />
