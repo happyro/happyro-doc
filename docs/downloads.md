@@ -6,11 +6,7 @@
 
 > 下载地址将在文件上传后公布。
 
-下载后应同时获取发布方提供的 SHA-256 文件，并在解压前核对：
-
-```bash
-shasum -a 256 happyro-v0.2.0.tar.gz
-```
+离线包文件名为 `happyro-v0.2.0.zip`，ZIP 内包含唯一的 `happyro-v0.2.0/` 根目录。
 
 完整安装步骤见 [Docker 安装](/installation/docker)。
 
