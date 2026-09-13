@@ -12,10 +12,7 @@ hero:
       text: 在线演示
       link: https://happyro-demo.kugarocks.com/applications/pwa/index.html
     - theme: alt
-      text: Docker 安装
-      link: /installation/docker
-    - theme: alt
-      text: 查看源码
+      text: GitHub
       link: https://github.com/happyro/happyro
 features:
   - icon: 🚀
@@ -27,7 +24,7 @@ features:
   - icon: ⚙️
     title: 管理后台
     details: 统一维护游戏资料、用户、运营发放、在线控制和服务器参数。
-  - icon: 📦
+  - icon: 🆓
     title: 开放自由
     details: '项目托管在 <a class="feature-github-link" href="https://github.com/happyro/happyro" target="_blank" rel="noreferrer">GitHub</a>，遵循 GNU GPL v3。'
 ---
