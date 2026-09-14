@@ -1,16 +1,19 @@
 # Docker 安装
 
-Docker 是 HappyRO 的推荐部署方式。完整离线包包含应用镜像、运行资源、配置、校验清单和管理工具，可在目标机器不连接镜像仓库的情况下安装。Docker Hub 镜像适合镜像同步与检查，但不能替代离线包中的资源和配置。
+Docker 离线包是 HappyRO 的推荐安装方式。目标机器只需要 Docker 与 Python，不需要源码或镜像仓库。
 
 ## 系统要求
 
-- Docker Engine 与 Docker Compose v2；macOS、Windows 可使用 Docker Desktop。
-- Python 3.11 或更高版本。
+- 容器运行环境：
+  - Linux：Docker Engine 与 Docker Compose v2
+  - macOS：OrbStack 或 Docker Desktop
+  - Windows：Docker Desktop
+- Python 3.9 或更高版本。
 - 足够空间保存约数 GB 的压缩包、解压目录、Docker 镜像和数据库。
 
 ## 获取离线包
 
-从[下载页](/downloads)获取 `happyro-v0.2.0.zip`。下载地址公布前，本页命令可用于已经拿到离线包的环境。
+从[下载页](/downloads)获取 `happyro-v0.2.0.zip`。
 
 ```bash
 unzip happyro-v0.2.0.zip
@@ -29,51 +32,62 @@ python3 tools/deployment/manage.py import-images --directory .
 python3 tools/deployment/manage.py initialize --directory .
 ```
 
-`verify` 检查配置、36,000 余个资源文件及两个架构的镜像归档；`import-images` 根据 Docker daemon 架构只导入所需的四个镜像；`initialize` 创建 `.env` 和随机运行密钥，不启动服务。
+`verify` 检查配置、资源和两个架构的镜像归档；`import-images` 根据 Docker daemon 架构只导入所需的四个镜像；`initialize` 创建 `.env` 和随机运行密钥，不启动服务。
 
 ## 配置访问地址
 
-编辑 `.env`，将以下值改为部署机器当前的局域网地址：
+默认仅允许部署机器本机访问。编辑 `.env`，需要局域网访问时再将以下值同步改为部署机器的局域网地址：
 
 ```dotenv
-GAME_PUBLIC_URL=http://192.168.1.20:3338
-ADMIN_PUBLIC_URL=http://192.168.1.20:8000
-ADMIN_STATEFUL_DOMAINS=192.168.1.20:8000
+GAME_PUBLIC_URL=http://127.0.0.1:3338
+ADMIN_PUBLIC_URL=http://127.0.0.1:8000
+ADMIN_STATEFUL_DOMAINS=127.0.0.1:8000
 ```
 
 不要修改包内四个镜像变量、`RELEASE_VERSION`、`RESOURCE_DIR` 或 `DATA_DIR`，除非你明确调整了对应目录。
 
-## 启动
+## 启动游戏
 
 ```bash
 python3 tools/deployment/manage.py deploy --directory .
 docker compose ps -a
 ```
 
-正常状态为七个长期服务 `healthy`，`happyro-admin-init` 退出码为 `0`。Compose 使用 `pull_policy=never`，部署不会从 Docker Hub 拉取镜像，也不会现场构建。
+部署从包内导入镜像，不会拉取或现场构建。启动完成后，可按下面几项检查运行状态。
 
-访问入口：
+### 服务状态
 
-- 游戏：`http://<主机IP>:3338/applications/pwa/index.html`
-- 后台：`http://<主机IP>:8000`
+以下七个服务应显示为 `healthy`：
 
-首次空库初始化会创建：
+| 服务 | 容器 | 用途 |
+| --- | --- | --- |
+| Database | `happyro-database` | 游戏与后台数据库 |
+| Login | `happyro-login` | 游戏账号登录 |
+| Char | `happyro-char` | 角色选择与角色数据 |
+| Map | `happyro-map` | 地图、战斗和 NPC |
+| Web API | `happyro-web-api` | 游戏控制与资料接口 |
+| Gateway | `happyro-gateway` | 游戏网页、资源与 WebSocket 入口 |
+| Admin | `happyro-admin` | 游戏后台 |
 
-- 游戏 GM：`happyro / happyro`
-- 后台超级管理员：`admin / admin`
+初始化容器 `happyro-admin-init` 应执行完成并以状态码 `0` 退出。
 
-## Docker Hub
+### 访问入口
 
-发布镜像为：
+默认仅限部署机器本机访问：
 
-```bash
-docker pull kugarocks/happyro-gateway:v0.2.0
-docker pull kugarocks/happyro-server:v0.2.0
-docker pull kugarocks/happyro-admin:v0.2.0
-docker pull kugarocks/happyro-database:v0.2.0
-```
+- 游戏：`http://127.0.0.1:3338/applications/pwa/index.html`
+- 游戏后台：`http://127.0.0.1:8000`
 
-每个标签都包含 `linux/amd64` 与 `linux/arm64`。镜像不包含 kRO GRF、BGM、System、图鉴图片和部署密钥，不能只用四条 `docker run` 命令组成完整环境；Compose、资源和初始化流程以同版本离线包为准。
+需要让局域网其他设备访问时，将 `.env` 中的公开地址和 `ADMIN_STATEFUL_DOMAINS` 同步改为部署机器的局域网 IP。
+
+### 默认账号
+
+首次使用空数据库启动时会创建：
+
+| 用途 | 用户名 | 密码 | 权限 |
+| --- | --- | --- | --- |
+| 游戏 | `happyro` | `happyro` | GM |
+| 游戏后台 | `admin` | `admin` | 超级管理员 |
 
 ## 日常维护
 

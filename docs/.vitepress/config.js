@@ -53,10 +53,20 @@ export default defineConfig({
       {
         text: '安装',
         items: [
-          { text: 'Docker', link: '/installation/docker' },
-          { text: 'Linux', link: '/installation/linux' },
-          { text: 'macOS', link: '/installation/macos' },
-          { text: 'Windows', link: '/installation/windows' },
+          {
+            text: '容器化部署',
+            items: [
+              { text: 'Docker', link: '/installation/docker' },
+            ],
+          },
+          {
+            text: '原生部署',
+            items: [
+              { text: 'Linux', link: '/installation/linux' },
+              { text: 'macOS', link: '/installation/macos' },
+              { text: 'Windows', link: '/installation/windows' },
+            ],
+          },
         ],
       },
       {
@@ -80,9 +90,14 @@ export default defineConfig({
         ],
       },
       {
-        text: '安装',
+        text: '容器化部署',
         items: [
           { text: 'Docker', link: '/installation/docker' },
+        ],
+      },
+      {
+        text: '原生部署',
+        items: [
           { text: 'Linux', link: '/installation/linux' },
           { text: 'macOS', link: '/installation/macos' },
           { text: 'Windows', link: '/installation/windows' },
