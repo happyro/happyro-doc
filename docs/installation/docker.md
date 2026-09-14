@@ -10,20 +10,14 @@ Docker 是 HappyRO 的推荐部署方式。完整离线包包含应用镜像、�
 
 ## 获取离线包
 
-从[下载页](/downloads)获取 `happyro-v0.2.0.tar.gz` 和对应 SHA-256。下载地址公布前，本页命令可用于已经拿到离线包的环境。
+从[下载页](/downloads)获取 `happyro-v0.2.0.zip`。下载地址公布前，本页命令可用于已经拿到离线包的环境。
 
 ```bash
-shasum -a 256 happyro-v0.2.0.tar.gz
-tar -xzf happyro-v0.2.0.tar.gz
+unzip happyro-v0.2.0.zip
 cd happyro-v0.2.0
 ```
 
-macOS 解压包含非 ASCII 文件名的归档时建议使用 GNU tar：
-
-```bash
-brew install gnu-tar
-gtar -xzf happyro-v0.2.0.tar.gz
-```
+Linux 和 macOS 可以使用上述命令；Windows 可以在文件资源管理器中解压 ZIP。解压后应保留唯一的 `happyro-v0.2.0/` 根目录及其中的空 `data/` 子目录。
 
 ## 校验并导入镜像
 
