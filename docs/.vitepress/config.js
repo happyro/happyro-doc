@@ -30,19 +30,13 @@ export default defineConfig({
   cleanUrls: true,
   head: [['link', { rel: 'icon', href: '/images/ro-icon-1.jpg' }]],
   themeConfig: {
+    docFooter: { prev: false, next: false },
     logo: '/images/ro-icon-1.jpg',
     siteTitle: 'HappyRO',
     nav: [
       { text: '首页', link: '/' },
-      {
-        text: '文档',
-        items: [
-          { text: '游戏体验', link: '/features/game' },
-          { text: '管理后台', link: '/features/admin' },
-          { text: '关于汉化', link: '/translation' },
-          { text: '资源下载', link: '/downloads' },
-        ],
-      },
+      { text: '文档', link: '/intro' },
+      { text: '资源下载', link: '/downloads' },
       {
         text: '安装',
         items: [
@@ -52,14 +46,21 @@ export default defineConfig({
           { text: 'Windows', link: '/installation/windows' },
         ],
       },
+      {
+        text: '社区',
+        items: [
+          { text: '贡献指南', link: '/community/contributing' },
+          { text: '联系方式', link: '/community/contact' },
+        ],
+      },
       { text: '在线演示', link: 'https://happyro-demo.kugarocks.com/applications/pwa/index.html' },
     ],
     sidebar: [
       {
-        text: 'HappyRO',
+        text: '文档',
         items: [
-          { text: '项目概览', link: '/' },
-          { text: '游戏体验', link: '/features/game' },
+          { text: '项目简介', link: '/intro' },
+          { text: '游戏画面', link: '/features/game' },
           { text: '管理后台', link: '/features/admin' },
           { text: '关于汉化', link: '/translation' },
           { text: '资源下载', link: '/downloads' },
