@@ -8,7 +8,7 @@ HappyRO Client 在浏览器中运行完整 PWA，并通过游戏内冒险工具�
 
 登录界面直接连接 HappyRO Gateway 转发的登录、角色和地图服务。离线部署首次初始化会创建游戏 GM 账号 `happyro / happyro`。
 
-## 地图图鉴与导航
+## 地图图鉴
 
 ![HappyRO 游戏内地图图鉴](/images/features/happyro-game-map.png)
 
