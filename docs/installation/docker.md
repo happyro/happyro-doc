@@ -1,85 +1,93 @@
-# Docker
+# Docker 安装
 
-这是最简单的部署方式，适合生产环境。如需二次开发，建议使用物理部署。
+Docker 是 HappyRO 的推荐部署方式。完整离线包包含应用镜像、运行资源、配置、校验清单和管理工具，可在目标机器不连接镜像仓库的情况下安装。Docker Hub 镜像适合镜像同步与检查，但不能替代离线包中的资源和配置。
 
-## 准备工作
+## 系统要求
 
-创建必要的目录：
+- Docker Engine 与 Docker Compose v2；macOS、Windows 可使用 Docker Desktop。
+- Python 3.11 或更高版本。
+- 足够空间保存约数 GB 的压缩包、解压目录、Docker 镜像和数据库。
 
-```bash
-mkdir -p happyro/kro-client
-mkdir -p happyro/data/database
-mkdir -p happyro/data/gateway
-mkdir -p happyro/data/server
-```
+## 获取离线包
 
-下载 `compose.yml`：
+从[下载页](/downloads)获取 `happyro-v0.2.0.tar.gz` 和对应 SHA-256。下载地址公布前，本页命令可用于已经拿到离线包的环境。
 
 ```bash
-COMPOSE_URL=https://raw.githubusercontent.com/happyro/happyro/main/deploy/docker/compose.yml
-curl -fsSL $COMPOSE_URL -o happyro/compose.yml
+shasum -a 256 happyro-v0.2.0.tar.gz
+tar -xzf happyro-v0.2.0.tar.gz
+cd happyro-v0.2.0
 ```
 
-把下载的 [kRO 资源](/downloads#kro-客户端)放到 `kro-client` 里面，Compose 默认使用 `./kro-client` 作为资源目录。
-
-## 运行容器
-
-配置环境变量（只对当前终端会话生效）：
+macOS 解压包含非 ASCII 文件名的归档时建议使用 GNU tar：
 
 ```bash
-cd happyro
-export DB_DATA_DIR=./data/database
-export GATEWAY_LOG_DIR=./data/gateway
-export SERVER_LOG_DIR=./data/server
+brew install gnu-tar
+gtar -xzf happyro-v0.2.0.tar.gz
 ```
 
-拉取镜像并运行容器：
+## 校验并导入镜像
+
+所有命令都在解压后的包根目录执行：
 
 ```bash
-docker compose -f compose.yml pull
-docker compose -f compose.yml up -d --no-build
-docker compose -f compose.yml ps
+python3 tools/deployment/manage.py verify --directory .
+python3 tools/deployment/manage.py import-images --directory .
+python3 tools/deployment/manage.py initialize --directory .
 ```
 
-## 数据库配置
+`verify` 检查配置、36,000 余个资源文件及两个架构的镜像归档；`import-images` 根据 Docker daemon 架构只导入所需的四个镜像；`initialize` 创建 `.env` 和随机运行密钥，不启动服务。
 
-默认数据库信息如下：
+## 配置访问地址
 
-| 项目 | 默认值 |
-| --- | --- |
-| 数据库主库 | `happyro` |
-| 数据库日志库 | `happyro_log` |
-| 数据库用户 | `happyro` |
-| 数据库密码 | `happyro` |
-| MariaDB root 密码 | `happyro` |
-| 服务间通信用户 | `happyro_interserver` |
-| 服务间通信密码 | `happyro` |
+编辑 `.env`，将以下值改为部署机器当前的局域网地址：
 
-部署到生产环境前，请通过同名环境变量修改密码。
-
-## 验证和停止
-
-浏览器访问以下地址进入游戏：
-
-```text
-http://127.0.0.1:3338/applications/pwa/index.html
+```dotenv
+GAME_PUBLIC_URL=http://192.168.1.20:3338
+ADMIN_PUBLIC_URL=http://192.168.1.20:8000
+ADMIN_STATEFUL_DOMAINS=192.168.1.20:8000
 ```
 
-局域网内访问时，将 `127.0.0.1` 替换为部署主机的局域网 IP。网关健康检查地址为 `http://127.0.0.1:3338/api/health`。
+不要修改包内四个镜像变量、`RELEASE_VERSION`、`RESOURCE_DIR` 或 `DATA_DIR`，除非你明确调整了对应目录。
+
+## 启动
 
 ```bash
-curl --fail http://127.0.0.1:3338/api/health
-docker compose -f compose.yml logs --tail=100 gateway
-docker compose -f compose.yml down
+python3 tools/deployment/manage.py deploy --directory .
+docker compose ps -a
 ```
 
-## 常见问题
+正常状态为七个长期服务 `healthy`，`happyro-admin-init` 退出码为 `0`。Compose 使用 `pull_policy=never`，部署不会从 Docker Hub 拉取镜像，也不会现场构建。
 
-### Gateway 无法读取资源目录
+访问入口：
 
-Gateway 使用非 root 用户读取资源。若资源目录由 root 创建或从其他机器复制，请调整读取权限：
+- 游戏：`http://<主机IP>:3338/applications/pwa/index.html`
+- 后台：`http://<主机IP>:8000`
+
+首次空库初始化会创建：
+
+- 游戏 GM：`happyro / happyro`
+- 后台超级管理员：`admin / admin`
+
+## Docker Hub
+
+发布镜像为：
 
 ```bash
-find happyro/kro-client -type d -exec chmod 755 {} +
-find happyro/kro-client -type f -exec chmod 644 {} +
+docker pull kugarocks/happyro-gateway:v0.2.0
+docker pull kugarocks/happyro-server:v0.2.0
+docker pull kugarocks/happyro-admin:v0.2.0
+docker pull kugarocks/happyro-database:v0.2.0
 ```
+
+每个标签都包含 `linux/amd64` 与 `linux/arm64`。镜像不包含 kRO GRF、BGM、System、图鉴图片和部署密钥，不能只用四条 `docker run` 命令组成完整环境；Compose、资源和初始化流程以同版本离线包为准。
+
+## 日常维护
+
+```bash
+docker compose ps -a
+docker compose logs --tail=100 gateway admin web-api
+docker compose restart
+docker compose down
+```
+
+`docker compose down` 不删除 bind mount 到包内 `data/` 的数据库和设置。完整升级、备份和恢复流程以离线包内 `README.md` 为准。

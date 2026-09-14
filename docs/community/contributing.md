@@ -1,13 +1,23 @@
 # 贡献指南
 
-HappyRO 欢迎文档、汉化、脚本和兼容性修复。修改前请阅读对应仓库根目录的 `AGENTS.md`，并确认变更属于根仓库、客户端、服务端还是 Gateway；四个仓库拥有独立的 Git 历史。
+HappyRO 接受客户端、服务端、Gateway、Admin、部署、文档和中文本地化改进。开始修改前先确认代码归属，避免把一个产品变更拆到错误仓库。
+
+## 仓库
+
+| 仓库 | 内容 |
+| --- | --- |
+| [happyro](https://github.com/happyro/happyro) | 跨仓库编排、部署、资源、本地化和文档 |
+| [happyro-client](https://github.com/happyro/happyro-client) | 浏览器客户端和冒险工具 |
+| [happyro-server](https://github.com/happyro/happyro-server) | rAthena 服务端 |
+| [happyro-gateway](https://github.com/happyro/happyro-gateway) | HTTP、WebSocket 和资源网关 |
+| [happyro-admin](https://github.com/happyro/happyro-admin) | 管理后台 |
 
 ## 基本流程
 
-1. 从目标仓库的 `main` 分支创建主题分支。
-2. 保持一次提交只处理一个逻辑变更。
-3. 运行与变更对应的检查和测试。
-4. 产品变更与对应 changelog 放在同一提交中。
-5. 提交前检查工作区，避免加入 kRO 资源、密钥、数据库数据、日志或生成文件。
+1. 从目标仓库 `main` 创建主题分支。
+2. 阅读目标仓库的 `AGENTS.md` 和相关设计文档。
+3. 一次提交只处理一个逻辑变更，并补充对应 changelog。
+4. 运行相关测试、构建和真实交互验收。
+5. 检查工作区，避免提交 kRO 资源、密钥、数据库、日志和中间产物。
 
-HappyRO 自有提交使用 `type(scope): subject` 格式。客户端和服务端的上游同步应保留上游提交历史；产品日志与调试日志保留英文，只有玩家可见文本进入中文翻译范围。
+HappyRO 自有提交使用 `type(scope): subject` 格式。玩家可见文本使用中文；代码标识、技术日志和上游内容保持其约定语言。

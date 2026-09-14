@@ -2,8 +2,8 @@
 layout: home
 hero:
   name: HappyRO
-  text: 简单易用、中文友好的《仙境传说》网页端
-  tagline: 基于 rAthena、roBrowserLegacy
+  text: 开源中文《仙境传说 Online》Web 项目
+  tagline: 浏览器直接进入游戏，配套完整冒险工具、管理后台与离线部署
   image:
     src: /images/ro-logo-1.png
     alt: Ragnarok Online 标志
@@ -12,16 +12,24 @@ hero:
       text: 在线演示
       link: https://happyro-demo.kugarocks.com/applications/pwa/index.html
     - theme: alt
-      text: 项目简介
-      link: /intro
+      text: Docker 安装
+      link: /installation/docker
+    - theme: alt
+      text: 查看源码
+      link: https://github.com/happyro/happyro
 features:
   - icon: 🚀
-    title: 简单易用
-    details: 浏览器运行，跨平台，支持 Docker 部署，无需繁杂的客户端安装包。
+    title: 浏览器游戏
+    details: 完整 PWA 提供登录、选角、地图、聊天、音效与查看器入口。
   - icon: 🇨🇳
-    title: 中文友好
-    details: 对源码进行整体扫描，筛选出需要汉化的文件，汉化范围大（问题也多🐛）。
-  - icon: 🆓
-    title: 开放自由
-    details: '项目托管在 <a class="feature-github-link" href="https://github.com/happyro/happyro" target="_blank" rel="noreferrer">GitHub</a>，遵循 GNU GPL v3。'
+    title: 中文冒险工具
+    details: 在游戏内查询地图、魔物、NPC 和物品，并完成导航与角色维护。
+  - icon: ⚙️
+    title: 管理后台
+    details: 统一维护游戏资料、用户、运营发放、在线控制和服务器参数。
+  - icon: 📦
+    title: 完整离线部署
+    details: 一个包交付双架构镜像、kRO 运行资源、配置、校验和管理工具。
 ---
+
+<HomeGallery />
