@@ -2,6 +2,8 @@
 
 HappyRO Admin 是独立的 Laravel API 与 Ant Design Pro 应用，面向服务器管理人员，提供资料查询、用户管理、运营发放、在线控制、参数修改和审计记录。
 
+在线体验后台：[happyro-admin.kugarocks.com](https://happyro-admin.kugarocks.com)。
+
 ## 后台登录
 
 ![HappyRO 管理后台登录](/images/features/happyro-admin-login.png)

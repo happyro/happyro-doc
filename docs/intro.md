@@ -7,7 +7,7 @@ HappyRO 是一个基于 [roBrowserLegacy](https://github.com/MrAntares/roBrowser
 - 浏览器 PWA：登录、角色选择、地图渲染、音效与完整查看器启动页。
 - 中文本地化：客户端 UI、系统消息、物品、技能、魔物、地图和 NPC。
 - 冒险工具：在游戏内查询地图、魔物、NPC、物品，并进行导航和角色维护。
-- 管理后台：用户管理、运营发放、在线控制、参数修改和审计记录。
+- 管理后台：用户管理、运营发放、在线控制、参数修改和审计记录；在线体验见 [happyro-admin.kugarocks.com](https://happyro-admin.kugarocks.com)。
 - 离线部署：同时提供 `linux/amd64` 与 `linux/arm64` 镜像、运行资源、校验、备份和恢复工具。
 
 ## 项目组成

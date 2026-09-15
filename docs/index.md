@@ -9,8 +9,11 @@ hero:
     alt: Ragnarok Online 标志
   actions:
     - theme: brand
-      text: 在线演示
+      text: 游戏演示
       link: https://happyro-demo.kugarocks.com/applications/pwa/index.html
+    - theme: alt
+      text: 后台演示
+      link: https://happyro-admin.kugarocks.com
     - theme: alt
       text: GitHub
       link: https://github.com/happyro/happyro
@@ -23,7 +26,7 @@ features:
     details: 在游戏内查询地图、魔物、NPC 和物品，并完成导航与角色维护。
   - icon: ⚙️
     title: 管理后台
-    details: 统一维护游戏资料、用户、运营发放、在线控制和服务器参数。
+    details: '统一维护游戏资料、用户、运营发放、在线控制和服务器参数。可访问 <a class="feature-github-link" href="https://happyro-admin.kugarocks.com" target="_blank" rel="noreferrer">后台演示</a>。'
   - icon: 🆓
     title: 开放自由
     details: '项目托管在 <a class="feature-github-link" href="https://github.com/happyro/happyro" target="_blank" rel="noreferrer">GitHub</a>，遵循 GNU GPL v3。'

@@ -76,7 +76,8 @@ export default defineConfig({
           { text: '联系方式', link: '/community/contact' },
         ],
       },
-      { text: '在线演示', link: 'https://happyro-demo.kugarocks.com/applications/pwa/index.html' },
+      { text: '游戏演示', link: 'https://happyro-demo.kugarocks.com/applications/pwa/index.html' },
+      { text: '后台演示', link: 'https://happyro-admin.kugarocks.com' },
     ],
     sidebar: [
       {
