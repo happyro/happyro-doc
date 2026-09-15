@@ -14,9 +14,6 @@ hero:
     - theme: alt
       text: 后台演示
       link: https://happyro-admin.kugarocks.com
-    - theme: alt
-      text: GitHub
-      link: https://github.com/happyro/happyro
 features:
   - icon: 🚀
     title: 简单易用
