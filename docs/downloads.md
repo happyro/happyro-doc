@@ -33,4 +33,4 @@ kugarocks/happyro-admin:v0.2.0
 kugarocks/happyro-database:v0.2.0
 ```
 
-> 镜像完成上传后可从 Docker Hub 获取。镜像不包含 kRO 运行资源；完整部署仍应使用离线包中的资源、Compose 和初始化工具。
+这些镜像用于同步和核对，不包含 kRO 运行资源，不能单独组成可玩环境。完整安装使用离线包。

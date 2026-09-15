@@ -1,6 +1,6 @@
-# Linux 源码安装
+# Linux 安装
 
-本页面向需要修改和编译 HappyRO 的开发者。普通部署优先使用 [Docker 离线包](/installation/docker)。
+本页面向需要修改和编译 HappyRO 的开发者。玩游戏请使用 [Docker 安装](/installation/docker)。
 
 ## 依赖
 
@@ -32,22 +32,12 @@ git clone https://github.com/happyro/happyro-admin.git repos/happyro-admin
 
 ## 准备运行资源
 
-源码仓库不包含 kRO 运行资源。从同版本离线包复制：
+源码仓库不包含 kRO 运行资源。从同版本[离线包](/downloads)复制：
 
 ```bash
 mkdir -p inputs/runtime/kro-20211105
 cp -a /path/to/happyro-v0.2.0/resources/kro-20211105 \
   inputs/runtime/kro-20211105/client
-```
-
-如需生成新的离线准备包，还应复制物品和魔物图片：
-
-```bash
-mkdir -p work/game-data/items work/game-data/monsters
-cp -a /path/to/happyro-v0.2.0/resources/catalog/items \
-  work/game-data/items/kro-20211105
-cp -a /path/to/happyro-v0.2.0/resources/catalog/monsters \
-  work/game-data/monsters/kro-20211105
 ```
 
 ## 构建与启动
@@ -67,7 +57,9 @@ make gateway-start
 
 浏览器打开 `http://127.0.0.1:3338/applications/pwa/index.html`。该页必须先显示“进入游戏”和各查看器入口。
 
-Admin 使用独立仓库的 Laravel 后端、Ant Design Pro 前端和 systemd 模板，具体启动与开发命令见 [happyro-admin](https://github.com/happyro/happyro-admin)。
+数据库就绪后可用 `make test-account` 创建本机测试账号，账号写入 `work/runtime/test-account.env`。
+
+Admin 使用独立仓库的 Laravel 后端、Ant Design Pro 前端和 systemd 模板，具体启动命令见 [happyro-admin](https://github.com/happyro/happyro-admin)。
 
 ## 检查与停止
 

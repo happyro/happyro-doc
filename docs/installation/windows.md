@@ -1,6 +1,6 @@
 # Windows 安装
 
-Windows 普通部署推荐使用 Docker Desktop 和 [HappyRO 离线包](/installation/docker)。需要源码开发时，在 WSL2 中使用 Linux 工具链，浏览器仍运行在 Windows 中。
+Windows 上玩游戏请使用 [Docker 安装](/installation/docker)。本页仅说明在 WSL2 中做源码开发；浏览器仍运行在 Windows 中。
 
 ## 安装 WSL2
 
@@ -32,29 +32,8 @@ sudo apt install -y git make build-essential cmake pkg-config \
 
 ## 放置源码与资源
 
-源码应放在 WSL 的 Linux 文件系统，例如 `~/src/happyro`，避免 `/mnt/c` 大量小文件访问。按照 [Linux 的五仓库步骤](/installation/linux#检出五个仓库)检出源码，再从离线包复制资源：
-
-```bash
-mkdir -p inputs/runtime/kro-20211105
-cp -a /path/to/happyro-v0.2.0/resources/kro-20211105 \
-  inputs/runtime/kro-20211105/client
-```
-
-## 构建与运行
-
-```bash
-make database-start
-make configure-server
-make build-server
-make server-start
-make configure-client
-make configure-gateway
-make configure-resources
-(cd repos/happyro-client && npm install && npm run build:pwa)
-make doctor
-make gateway-start
-```
+源码应放在 WSL 的 Linux 文件系统，例如 `~/src/happyro`，避免 `/mnt/c` 大量小文件访问。随后按 [Linux 安装](/installation/linux) 检出五个仓库、复制运行资源并构建启动。
 
 在 Windows 浏览器打开 `http://127.0.0.1:3338/applications/pwa/index.html`。
 
-如需让局域网其他设备访问，使用 Windows/WSL 对外可达地址，并同步修改客户端公开地址、Gateway 白名单和服务端来源配置，同时放行 Windows 防火墙端口。
+局域网访问时，同步修改 Gateway `.env` 与 `deploy/rathena/profile.env` 中的地址，并在 Windows 防火墙放行 `3338` 端口。

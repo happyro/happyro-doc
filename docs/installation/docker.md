@@ -1,6 +1,6 @@
 # Docker 安装
 
-Docker 是 HappyRO 的推荐部署方式。完整离线包包含应用镜像、运行资源、配置、校验清单和管理工具，可在目标机器不连接镜像仓库的情况下安装。Docker Hub 镜像适合镜像同步与检查，但不能替代离线包中的资源和配置。
+Docker 离线包是 HappyRO 的推荐安装方式。目标机器只需要 Docker 与 Python，不需要源码或镜像仓库。
 
 ## 系统要求
 
@@ -32,7 +32,7 @@ python3 tools/deployment/manage.py import-images --directory .
 python3 tools/deployment/manage.py initialize --directory .
 ```
 
-`verify` 检查配置、36,000 余个资源文件及两个架构的镜像归档；`import-images` 根据 Docker daemon 架构只导入所需的四个镜像；`initialize` 创建 `.env` 和随机运行密钥，不启动服务。
+`verify` 检查配置、资源和两个架构的镜像归档；`import-images` 根据 Docker daemon 架构只导入所需的四个镜像；`initialize` 创建 `.env` 和随机运行密钥，不启动服务。
 
 ## 配置访问地址
 
@@ -53,7 +53,7 @@ python3 tools/deployment/manage.py deploy --directory .
 docker compose ps -a
 ```
 
-部署不会从 Docker Hub 拉取镜像，也不会现场构建。启动完成后，可按下面几项检查运行状态。
+部署从包内导入镜像，不会拉取或现场构建。启动完成后，可按下面几项检查运行状态。
 
 ### 服务状态
 
@@ -69,7 +69,7 @@ docker compose ps -a
 | Gateway | `happyro-gateway` | 游戏网页、资源与 WebSocket 入口 |
 | Admin | `happyro-admin` | 游戏后台 |
 
-初始化容器 `happyro-admin-init` 应执行完成并以状态码 `0` 退出。Compose 使用 `pull_policy=never`。
+初始化容器 `happyro-admin-init` 应执行完成并以状态码 `0` 退出。
 
 ### 访问入口
 
@@ -88,19 +88,6 @@ docker compose ps -a
 | --- | --- | --- | --- |
 | 游戏 | `happyro` | `happyro` | GM |
 | 游戏后台 | `admin` | `admin` | 超级管理员 |
-
-## Docker Hub
-
-发布镜像为：
-
-```bash
-docker pull kugarocks/happyro-gateway:v0.2.0
-docker pull kugarocks/happyro-server:v0.2.0
-docker pull kugarocks/happyro-admin:v0.2.0
-docker pull kugarocks/happyro-database:v0.2.0
-```
-
-每个标签都包含 `linux/amd64` 与 `linux/arm64`。镜像不包含 kRO GRF、BGM、System、图鉴图片和部署密钥，不能只用四条 `docker run` 命令组成完整环境；Compose、资源和初始化流程以同版本离线包为准。
 
 ## 日常维护
 
