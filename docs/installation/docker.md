@@ -13,7 +13,7 @@ Docker 是 HappyRO 的推荐部署方式。完整离线包包含应用镜像、�
 
 ## 获取离线包
 
-从[下载页](/downloads)获取 `happyro-v0.2.0.zip`。下载地址公布前，本页命令可用于已经拿到离线包的环境。
+从[下载页](/downloads)获取 `happyro-v0.2.0.zip`。
 
 ```bash
 unzip happyro-v0.2.0.zip

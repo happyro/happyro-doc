@@ -1,14 +1,26 @@
 # 下载
 
-## HappyRO v0.2.0 离线包
+## 离线包
 
-离线包是推荐的完整交付物，包含双架构 Docker 镜像、kRO 2021-11-05 运行资源、物品与世界图鉴资源、Compose 配置和部署工具。无需再单独下载 kRO 客户端。
+- 文件：[`happyro-v0.2.0.zip`](https://pan.baidu.com/s/10ngCtZpASSYEyQ-wSIoJUg?pwd=kuga)
+- 提取码：`kuga`
 
-> 下载地址将在文件上传后公布。
-
-离线包文件名为 `happyro-v0.2.0.zip`，ZIP 内包含唯一的 `happyro-v0.2.0/` 根目录。
-
-完整安装步骤见 [Docker 安装](/installation/docker)。
+```text
+happyro-v0.2.0/                # 解压后的根目录
+├── README.md                  # 部署手册
+├── VERSION                    # 版本号
+├── compose.yaml               # Compose 配置
+├── .env.example               # 环境变量模板
+├── release-manifest.json      # 发布清单
+├── images/                    # Docker 镜像
+│   ├── amd64/                 # Intel / AMD
+│   └── arm64/                 # Apple Silicon / ARM
+├── resources/                 # 运行资源
+│   ├── kro-20211105/          # kRO 客户端资源
+│   └── catalog/               # 物品与世界图鉴
+├── tools/deployment/          # 部署工具
+└── data/                      # 运行数据，首次为空
+```
 
 ## Docker Hub 镜像
 
