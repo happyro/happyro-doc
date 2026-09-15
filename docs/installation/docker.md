@@ -5,7 +5,7 @@ Docker 是 HappyRO 的推荐部署方式。完整离线包包含应用镜像、�
 ## 系统要求
 
 - Docker Engine 与 Docker Compose v2；macOS、Windows 可使用 Docker Desktop。
-- Python 3.11 或更高版本。
+- Python 3.9 或更高版本。
 - 足够空间保存约数 GB 的压缩包、解压目录、Docker 镜像和数据库。
 
 ## 获取离线包
