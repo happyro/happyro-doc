@@ -2,14 +2,13 @@
 import { ref } from 'vue'
 
 const screenshots = [
-  { file: 'happyro-game-southgate.png', alt: '普隆德拉南门的游戏画面', caption: '从浏览器进入普隆德拉南门，继续熟悉的冒险。' },
-  { file: 'happyro-game-login.png', alt: 'HappyRO 游戏登录界面', caption: '打开网页，即可登录游戏。' },
-  { file: 'happyro-game-map.png', alt: '游戏内地图图鉴', caption: '查看地图和 NPC 位置，并规划前往目的地的路线。' },
-  { file: 'happyro-game-monsters.png', alt: '游戏内魔物图鉴', caption: '查找魔物的属性、掉落物品和出现地图。' },
-  { file: 'happyro-game-npc.png', alt: '游戏内 NPC 图鉴', caption: '按地图寻找 NPC，查看位置和形象。' },
-  { file: 'happyro-game-items.png', alt: '游戏内物品图鉴', caption: '查询物品图片、属性与中文说明。' },
-  { file: 'happyro-game-char.png', alt: '游戏内角色维护界面', caption: '在游戏里查看并维护角色属性。' },
-  { file: 'happyro-game-settings.png', alt: '游戏内服务器设置', caption: '在游戏中调整经验、掉落和地图设置。' },
+  { file: 'happyro-game-southgate.png', alt: '普隆德拉南门的游戏画面', caption: '普隆德拉南门，熟悉的冒险。' },
+  { file: 'happyro-game-map.png', alt: '游戏内地图图鉴', caption: '地图图鉴，支持自动寻路和传送。' },
+  { file: 'happyro-game-monsters.png', alt: '游戏内魔物图鉴', caption: '查看魔物的属性、掉落物品和出现地图。' },
+  { file: 'happyro-game-npc.png', alt: '游戏内 NPC 图鉴', caption: 'NPC 图鉴，查看位置和形象。' },
+  { file: 'happyro-game-items.png', alt: '游戏内物品图鉴', caption: '查询物品图片、属性与说明。' },
+  { file: 'happyro-game-char.png', alt: '游戏内角色维护界面', caption: '在游戏里查看并修改角色属性。' },
+  { file: 'happyro-game-settings.png', alt: '游戏内服务器设置', caption: '调整经验、掉落和相关设置。' },
 ]
 
 const viewport = ref(null)
