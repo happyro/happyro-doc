@@ -55,6 +55,6 @@ make doctor
 make gateway-start
 ```
 
-在 Windows 浏览器打开 `http://localhost:3338/applications/pwa/index.html`。
+在 Windows 浏览器打开 `http://127.0.0.1:3338/applications/pwa/index.html`。
 
 如需让局域网其他设备访问，使用 Windows/WSL 对外可达地址，并同步修改客户端公开地址、Gateway 白名单和服务端来源配置，同时放行 Windows 防火墙端口。

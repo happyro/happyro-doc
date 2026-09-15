@@ -33,12 +33,12 @@ python3 tools/deployment/manage.py initialize --directory .
 
 ## 配置访问地址
 
-编辑 `.env`，将以下值改为部署机器当前的局域网地址：
+默认仅允许部署机器本机访问。编辑 `.env`，需要局域网访问时再将以下值同步改为部署机器的局域网地址：
 
 ```dotenv
-GAME_PUBLIC_URL=http://192.168.1.20:3338
-ADMIN_PUBLIC_URL=http://192.168.1.20:8000
-ADMIN_STATEFUL_DOMAINS=192.168.1.20:8000
+GAME_PUBLIC_URL=http://127.0.0.1:3338
+ADMIN_PUBLIC_URL=http://127.0.0.1:8000
+ADMIN_STATEFUL_DOMAINS=127.0.0.1:8000
 ```
 
 不要修改包内四个镜像变量、`RELEASE_VERSION`、`RESOURCE_DIR` 或 `DATA_DIR`，除非你明确调整了对应目录。
@@ -52,10 +52,12 @@ docker compose ps -a
 
 正常状态为七个长期服务 `healthy`，`happyro-admin-init` 退出码为 `0`。Compose 使用 `pull_policy=never`，部署不会从 Docker Hub 拉取镜像，也不会现场构建。
 
-访问入口：
+默认访问入口（仅限部署机器本机）：
 
-- 游戏：`http://<主机IP>:3338/applications/pwa/index.html`
-- 后台：`http://<主机IP>:8000`
+- 游戏：`http://127.0.0.1:3338/applications/pwa/index.html`
+- 后台：`http://127.0.0.1:8000`
+
+需要让局域网其他设备访问时，将 `.env` 中的公开地址和 `ADMIN_STATEFUL_DOMAINS` 同步改为部署机器的局域网 IP。
 
 首次空库初始化会创建：
 
