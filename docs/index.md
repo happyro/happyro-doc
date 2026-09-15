@@ -20,10 +20,10 @@ features:
     details: 浏览器运行，跨平台，支持 Docker 部署，无需繁杂的客户端安装包。
   - icon: 📖
     title: 冒险工具
-    details: 在游戏内查询地图、魔物、NPC 和物品，并完成导航与角色维护。
+    details: 游戏内提供地图、魔物、NPC 和物品图鉴，支持寻路、发放物品、调整角色属性和修改游戏参数。
   - icon: ⚙️
     title: 管理后台
-    details: '统一维护游戏资料、用户、运营发放、在线控制和服务器参数。可访问 <a class="feature-github-link" href="https://happyro-admin.kugarocks.com" target="_blank" rel="noreferrer">后台演示</a>。'
+    details: 在后台查询游戏资料，管理用户，发放道具，并调整在线状态和服务器参数。
   - icon: 🆓
     title: 开放自由
     details: '项目托管在 <a class="feature-github-link" href="https://github.com/happyro/happyro" target="_blank" rel="noreferrer">GitHub</a>，遵循 GNU GPL v3。'
