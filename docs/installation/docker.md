@@ -4,7 +4,10 @@ Docker 是 HappyRO 的推荐部署方式。完整离线包包含应用镜像、�
 
 ## 系统要求
 
-- Docker Engine 与 Docker Compose v2；macOS、Windows 可使用 Docker Desktop。
+- 容器运行环境：
+  - Linux：Docker Engine 与 Docker Compose v2
+  - macOS：OrbStack 或 Docker Desktop
+  - Windows：Docker Desktop
 - Python 3.9 或更高版本。
 - 足够空间保存约数 GB 的压缩包、解压目录、Docker 镜像和数据库。
 
@@ -43,26 +46,48 @@ ADMIN_STATEFUL_DOMAINS=127.0.0.1:8000
 
 不要修改包内四个镜像变量、`RELEASE_VERSION`、`RESOURCE_DIR` 或 `DATA_DIR`，除非你明确调整了对应目录。
 
-## 启动
+## 启动游戏
 
 ```bash
 python3 tools/deployment/manage.py deploy --directory .
 docker compose ps -a
 ```
 
-正常状态为七个长期服务 `healthy`，`happyro-admin-init` 退出码为 `0`。Compose 使用 `pull_policy=never`，部署不会从 Docker Hub 拉取镜像，也不会现场构建。
+部署不会从 Docker Hub 拉取镜像，也不会现场构建。启动完成后，可按下面几项检查运行状态。
 
-默认访问入口（仅限部署机器本机）：
+### 服务状态
+
+以下七个服务应显示为 `healthy`：
+
+| 服务 | 容器 | 用途 |
+| --- | --- | --- |
+| Database | `happyro-database` | 游戏与后台数据库 |
+| Login | `happyro-login` | 游戏账号登录 |
+| Char | `happyro-char` | 角色选择与角色数据 |
+| Map | `happyro-map` | 地图、战斗和 NPC |
+| Web API | `happyro-web-api` | 游戏控制与资料接口 |
+| Gateway | `happyro-gateway` | 游戏网页、资源与 WebSocket 入口 |
+| Admin | `happyro-admin` | 游戏后台 |
+
+初始化容器 `happyro-admin-init` 应执行完成并以状态码 `0` 退出。Compose 使用 `pull_policy=never`。
+
+### 访问入口
+
+默认仅限部署机器本机访问：
 
 - 游戏：`http://127.0.0.1:3338/applications/pwa/index.html`
-- 后台：`http://127.0.0.1:8000`
+- 游戏后台：`http://127.0.0.1:8000`
 
 需要让局域网其他设备访问时，将 `.env` 中的公开地址和 `ADMIN_STATEFUL_DOMAINS` 同步改为部署机器的局域网 IP。
 
-首次空库初始化会创建：
+### 默认账号
 
-- 游戏 GM：`happyro / happyro`
-- 后台超级管理员：`admin / admin`
+首次使用空数据库启动时会创建：
+
+| 用途 | 用户名 | 密码 | 权限 |
+| --- | --- | --- | --- |
+| 游戏 | `happyro` | `happyro` | GM |
+| 游戏后台 | `admin` | `admin` | 超级管理员 |
 
 ## Docker Hub
 
