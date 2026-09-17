@@ -52,26 +52,8 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '文档', link: '/intro' },
-      { text: '资源下载', link: '/downloads' },
-      {
-        text: '安装',
-        items: [
-          {
-            text: '容器化部署',
-            items: [
-              { text: 'Docker', link: '/installation/docker' },
-            ],
-          },
-          {
-            text: '原生部署',
-            items: [
-              { text: 'Linux', link: '/installation/linux' },
-              { text: 'macOS', link: '/installation/macos' },
-              { text: 'Windows', link: '/installation/windows' },
-            ],
-          },
-        ],
-      },
+      { text: '下载', link: '/downloads' },
+      { text: '安装', link: '/installation/docker' },
       {
         text: '社区',
         items: [
