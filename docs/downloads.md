@@ -2,8 +2,8 @@
 
 ## 离线包
 
-- 文件：[`happyro-v0.2.0.zip`](https://pan.baidu.com/s/17nzS4LsuoL2YWuaAgCr2_w?pwd=kuga)
-- 提取码：`kuga`
+- 文件：[`happyro-v0.2.0.zip`](https://pan.baidu.com/s/14r8AsX4tIRQiQcMHnQSNUg?pwd=p5cd)
+- 提取码：`p5cd`
 
 ```text
 happyro-v0.2.0/                # 解压后的根目录
