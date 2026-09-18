@@ -18,7 +18,7 @@ brew install git make cmake pkg-config node@22 mariadb-connector-c pcre jq ripgr
 
 ```bash
 mkdir -p inputs/runtime/kro-20211105
-cp -a /path/to/happyro-v0.2.0/resources/kro-20211105 \
+cp -a /path/to/happyro-v0.2.1/resources/kro-20211105 \
   inputs/runtime/kro-20211105/client
 ```
 

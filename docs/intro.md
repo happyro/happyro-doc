@@ -48,4 +48,4 @@ HappyRO Gateway
 | 服务端模式 | Renewal |
 | Node.js | 22 或更高版本 |
 | MariaDB | 10.11 |
-| 当前发布版本 | `v0.2.0` |
+| 当前发布版本 | `v0.2.1` |
