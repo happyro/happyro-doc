@@ -2,8 +2,8 @@
 
 ## 离线包
 
-- 文件：[`happyro-v0.2.1.zip`](https://pan.baidu.com/s/1WpVUpIGTq8GETichgzRRZw?pwd=enaz)
-- 提取码：`enaz`
+- 文件：[`happyro-v0.2.1.zip`](https://pan.baidu.com/s/1WX80VorqxW1jWL2CDH4ycA?pwd=njzy)
+- 提取码：`njzy`
 
 ```text
 happyro-v0.2.1/                # 解压后的根目录
