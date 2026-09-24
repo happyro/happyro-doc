@@ -4,10 +4,10 @@
 
 当前离线交付版本为 `v0.3.1`，包含完整包 `happyro-v0.3.1.zip`，以及配套的 `happyro-v0.3.1-runtimes.zip`（运行资源）和 `happyro-v0.3.1-images.zip`（双架构镜像与部署文件）。使用拆分包时，将两者解压到同一目录，再按包内 README 校验和安装。
 
-`v0.3.1` 暂无公开下载链接。以下百度网盘仍为 `v0.3.0`：
+通过百度网盘下载 `v0.3.1` 完整离线包：
 
-- 文件：[`happyro-v0.3.0.zip`](https://pan.baidu.com/s/12N4tmTwvW-mcoC7JplJipw?pwd=nyz5)
-- 提取码：`nyz5`
+- 文件：[`happyro-v0.3.1.zip`](https://pan.baidu.com/s/1dbpHUthoHe5zI0i7jQGvQw?pwd=gtdd)
+- 提取码：`gtdd`
 
 ```text
 happyro-v0.3.1/                # 新版完整包或两个拆分包合并后的根目录
