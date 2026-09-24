@@ -13,14 +13,16 @@ Docker 离线包是 HappyRO 的推荐安装方式。目标机器只需要 Docker
 
 ## 获取离线包
 
-从[下载页](/guide/downloads)获取 `happyro-v0.3.0.zip`。
+以下以已取得的 `happyro-v0.3.1.zip` 为例；公开下载链接与可用版本见[下载页](/guide/downloads)。
 
 ```bash
-unzip happyro-v0.3.0.zip
-cd happyro-v0.3.0
+unzip happyro-v0.3.1.zip
+cd happyro-v0.3.1
 ```
 
-Linux 和 macOS 可以使用上述命令；Windows 可以在文件资源管理器中解压 ZIP。解压后应保留唯一的 `happyro-v0.3.0/` 根目录及其中的空 `data/` 子目录。
+Linux 和 macOS 可以使用上述命令；Windows 可以在文件资源管理器中解压 ZIP。解压后应保留唯一的 `happyro-v0.3.1/` 根目录及其中的空 `data/` 子目录。
+
+如果使用拆分交付的 `happyro-v0.3.1-runtimes.zip` 与 `happyro-v0.3.1-images.zip`，将两者解压到同一父目录，合并为上述完整目录。两个拆分包不能单独部署，也无需再与完整 ZIP 重复解压。
 
 ## 校验并导入镜像
 
