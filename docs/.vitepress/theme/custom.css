@@ -63,8 +63,9 @@ html {
   width: 100%;
 }
 
-.home-gallery-slide img {
+.home-gallery .home-gallery-slide img {
   display: block;
+  margin: 0;
   width: 100%;
   height: auto;
   border-radius: 6px;
