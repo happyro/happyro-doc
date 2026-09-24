@@ -1,6 +1,6 @@
 # macOS 安装
 
-本页面向需要在 macOS 上编译和修改 HappyRO 的开发者。玩游戏请使用 [Docker 安装](/installation/docker)。
+本页面向需要在 macOS 上编译和修改 HappyRO 的开发者。玩游戏请使用 [Docker 安装](/container/docker)。
 
 根仓库的 `make server-start` 和 `make gateway-start` 依赖 systemd，不能在 macOS 上使用。需要完整 Server、Admin、Database 时，直接用离线包。
 
@@ -14,11 +14,11 @@ brew install git make cmake pkg-config node@22 mariadb-connector-c pcre jq ripgr
 
 ## 检出源码与资源
 
-按照 [Linux 的五仓库步骤](/installation/linux#检出五个仓库)检出源码，再从同版本[离线包](/downloads)复制 kRO 运行资源：
+按照 [Linux 的五仓库步骤](/native/linux#检出五个仓库)检出源码，再从同版本[离线包](/guide/downloads)复制 kRO 运行资源：
 
 ```bash
 mkdir -p inputs/runtime/kro-20211105
-cp -a /path/to/happyro-v0.2.1/resources/kro-20211105 \
+cp -a /path/to/happyro-v0.3.0/resources/kro-20211105 \
   inputs/runtime/kro-20211105/client
 ```
 

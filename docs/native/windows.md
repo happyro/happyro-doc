@@ -1,6 +1,6 @@
 # Windows 安装
 
-Windows 上玩游戏请使用 [Docker 安装](/installation/docker)。本页仅说明在 WSL2 中做源码开发；浏览器仍运行在 Windows 中。
+Windows 上玩游戏请使用 [Docker 安装](/container/docker)。本页仅说明在 WSL2 中做源码开发；浏览器仍运行在 Windows 中。
 
 ## 安装 WSL2
 
@@ -32,7 +32,7 @@ sudo apt install -y git make build-essential cmake pkg-config \
 
 ## 放置源码与资源
 
-源码应放在 WSL 的 Linux 文件系统，例如 `~/src/happyro`，避免 `/mnt/c` 大量小文件访问。随后按 [Linux 安装](/installation/linux) 检出五个仓库、复制运行资源并构建启动。
+源码应放在 WSL 的 Linux 文件系统，例如 `~/src/happyro`，避免 `/mnt/c` 大量小文件访问。随后按 [Linux 安装](/native/linux) 检出五个仓库、复制运行资源并构建启动。
 
 在 Windows 浏览器打开 `http://127.0.0.1:3338/applications/pwa/index.html`。
 

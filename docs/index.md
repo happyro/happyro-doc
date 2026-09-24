@@ -5,7 +5,7 @@ hero:
   text: 简单易用、中文友好的《仙境传说》网页端
   tagline: 基于 rAthena、roBrowserLegacy
   image:
-    src: /images/ro-logo-1.png
+    src: /images/brand/ro-logo-1.png
     alt: Ragnarok Online 标志
   actions:
     - theme: brand
@@ -17,7 +17,7 @@ hero:
 features:
   - icon: 🚀
     title: 简单易用
-    details: 浏览器运行，跨平台，支持 Docker 部署，无需繁杂的客户端安装包。
+    details: 浏览器运行，适配电脑、手机和平板，支持 Docker 部署，无需繁杂的客户端安装包。
   - icon: 📖
     title: 冒险工具
     details: 游戏内提供地图/魔物/物品图鉴，支持寻路、发放物品等常用功能。

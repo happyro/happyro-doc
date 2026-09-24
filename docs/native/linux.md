@@ -1,6 +1,6 @@
 # Linux 安装
 
-本页面向需要修改和编译 HappyRO 的开发者。玩游戏请使用 [Docker 安装](/installation/docker)。
+本页面向需要修改和编译 HappyRO 的开发者。玩游戏请使用 [Docker 安装](/container/docker)。
 
 ## 依赖
 
@@ -32,11 +32,11 @@ git clone https://github.com/happyro/happyro-admin.git repos/happyro-admin
 
 ## 准备运行资源
 
-源码仓库不包含 kRO 运行资源。从同版本[离线包](/downloads)复制：
+源码仓库不包含 kRO 运行资源。从同版本[离线包](/guide/downloads)复制：
 
 ```bash
 mkdir -p inputs/runtime/kro-20211105
-cp -a /path/to/happyro-v0.2.1/resources/kro-20211105 \
+cp -a /path/to/happyro-v0.3.0/resources/kro-20211105 \
   inputs/runtime/kro-20211105/client
 ```
 

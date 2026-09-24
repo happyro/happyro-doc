@@ -2,11 +2,11 @@
 
 ## 离线包
 
-- 文件：[`happyro-v0.2.1.zip`](https://pan.baidu.com/s/1WX80VorqxW1jWL2CDH4ycA?pwd=njzy)
-- 提取码：`njzy`
+- 文件：[`happyro-v0.3.0.zip`](https://pan.baidu.com/s/12N4tmTwvW-mcoC7JplJipw?pwd=nyz5)
+- 提取码：`nyz5`
 
 ```text
-happyro-v0.2.1/                # 解压后的根目录
+happyro-v0.3.0/                # 解压后的根目录
 ├── README.md                  # 部署手册
 ├── VERSION                    # 版本号
 ├── compose.yaml               # Compose 配置
@@ -24,13 +24,13 @@ happyro-v0.2.1/                # 解压后的根目录
 
 ## Docker Hub 镜像
 
-`v0.2.1` 提供 `linux/amd64` 与 `linux/arm64`：
+`v0.3.0` 提供 `linux/amd64` 与 `linux/arm64`：
 
 ```text
-kugarocks/happyro-gateway:v0.2.1
-kugarocks/happyro-server:v0.2.1
-kugarocks/happyro-admin:v0.2.1
-kugarocks/happyro-database:v0.2.1
+kugarocks/happyro-gateway:v0.3.0
+kugarocks/happyro-server:v0.3.0
+kugarocks/happyro-admin:v0.3.0
+kugarocks/happyro-database:v0.3.0
 ```
 
 这些镜像用于同步和核对，不包含 kRO 运行资源，不能单独组成可玩环境。完整安装使用离线包。

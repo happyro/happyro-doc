@@ -5,6 +5,7 @@ HappyRO 是一个基于 [roBrowserLegacy](https://github.com/MrAntares/roBrowser
 ## 核心能力
 
 - 浏览器 PWA：登录、角色选择、地图渲染、音效与完整查看器启动页。
+- 多端界面：提供 [电脑桌面](/game/desktop) 与 [手机平板](/game/mobile) 界面，触屏支持移动、快捷技能和自动战斗。
 - 中文本地化：客户端 UI、系统消息、物品、技能、魔物、地图和 NPC。
 - 冒险工具：在游戏内查询地图、魔物、NPC、物品，并进行导航和角色维护。
 - 管理后台：用户管理、运营发放、在线控制、参数修改和审计记录；在线体验见 [happyro-admin.kugarocks.com](https://happyro-admin.kugarocks.com)。
@@ -48,4 +49,4 @@ HappyRO Gateway
 | 服务端模式 | Renewal |
 | Node.js | 22 或更高版本 |
 | MariaDB | 10.11 |
-| 当前发布版本 | `v0.2.1` |
+| 当前发布版本 | `v0.3.0` |

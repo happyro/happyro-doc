@@ -39,7 +39,9 @@ html {
 
 .home-gallery-viewport {
   display: flex;
+  align-items: flex-start;
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
   overscroll-behavior-x: contain;
@@ -56,11 +58,15 @@ html {
   scroll-snap-align: start;
 }
 
+.home-gallery-slide a {
+  display: block;
+  width: 100%;
+}
+
 .home-gallery-slide img {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 1024 / 830;
   border-radius: 6px;
 }
 
@@ -88,7 +94,8 @@ html {
   background: var(--vp-c-brand-1);
 }
 
-.home-gallery button:focus-visible {
+.home-gallery button:focus-visible,
+.home-gallery a:focus-visible {
   outline: 2px solid var(--vp-c-brand-1);
   outline-offset: 4px;
 }

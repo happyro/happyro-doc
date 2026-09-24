@@ -6,19 +6,19 @@ HappyRO Admin 是独立的 Laravel API 与 Ant Design Pro 应用，面向服务�
 
 ## 后台登录
 
-![HappyRO 管理后台登录](/images/features/happyro-admin-login.png)
+![HappyRO 管理后台登录](/images/admin/happyro-admin-login.png)
 
 后台不开放公开注册。离线部署首次初始化会创建 `admin / admin` 超级管理员账号；其他后台用户由管理员维护。
 
 ## 魔物资料与在线召唤
 
-![HappyRO 管理后台魔物图鉴](/images/features/happyro-admin-monsters.png)
+![HappyRO 管理后台魔物图鉴](/images/admin/happyro-admin-monsters.png)
 
 魔物图鉴支持按名称、种族、属性、体型和首领类型组合查询，集中展示形象与关键数值，并提供详情查看和在线召唤入口。
 
 ## 游戏参数
 
-![HappyRO 管理后台掉落倍率设置](/images/features/happyro-admin-drops.png)
+![HappyRO 管理后台掉落倍率设置](/images/admin/happyro-admin-drops.png)
 
 游戏参数按经验、掉落、地图传送、魔物召唤和冒险工具分组维护。每项设置标明对应 rAthena 配置来源，保存后进入统一修改记录。
 

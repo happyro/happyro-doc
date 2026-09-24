@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 
-const screenshots = [
+const desktopScreenshots = [
   { file: 'happyro-game-southgate.png', alt: '普隆德拉南门的游戏画面', caption: '普隆德拉南门，熟悉的冒险。' },
   { file: 'happyro-game-map.png', alt: '游戏内地图图鉴', caption: '地图图鉴，支持自动寻路和传送。' },
   { file: 'happyro-game-monsters.png', alt: '游戏内魔物图鉴', caption: '查看魔物的属性、掉落物品和出现地图。' },
@@ -10,6 +10,15 @@ const screenshots = [
   { file: 'happyro-game-char.png', alt: '游戏内角色维护界面', caption: '在游戏里查看并修改角色属性。' },
   { file: 'happyro-game-settings.png', alt: '游戏内服务器设置', caption: '调整经验、掉落和相关设置。' },
 ]
+
+const mobileScreenshots = [
+  { file: 'happyro-mobile-southgate.jpg', alt: '手机平板游戏主界面', caption: '触屏移动、六格快捷栏与自动战斗。', width: 2309, height: 1170 },
+  { file: 'happyro-mobile-auto-fight.jpg', alt: '手机平板自动战斗设置', caption: '多选魔物、配置攻击技能与战斗范围。', width: 2292, height: 1170 },
+]
+
+const desktop = desktopScreenshots.map(shot => ({ ...shot, image: `/images/game/desktop/${shot.file}`, platform: '电脑桌面', link: '/game/desktop', width: 2048, height: 1668 }))
+const mobile = mobileScreenshots.map(shot => ({ ...shot, image: `/images/game/mobile/${shot.file}`, platform: '手机平板', link: '/game/mobile' }))
+const screenshots = [...desktop, ...mobile]
 
 const viewport = ref(null)
 const active = ref(0)
@@ -22,7 +31,7 @@ function goTo(index) {
 
 function onScroll() {
   if (viewport.value?.clientWidth) {
-    active.value = Math.round(viewport.value.scrollLeft / viewport.value.clientWidth)
+    active.value = Math.max(0, Math.min(screenshots.length - 1, Math.round(viewport.value.scrollLeft / viewport.value.clientWidth)))
   }
 }
 </script>
@@ -43,15 +52,22 @@ function onScroll() {
         />
       </div>
     </div>
-    <div ref="viewport" class="home-gallery-viewport" @scroll.passive="onScroll">
+    <div
+      ref="viewport"
+      class="home-gallery-viewport"
+      :style="{ aspectRatio: `${screenshots[active].width} / ${screenshots[active].height}` }"
+      @scroll.passive="onScroll"
+    >
       <figure v-for="(shot, index) in screenshots" :key="shot.file" class="home-gallery-slide">
-        <img
-          :src="`/images/features/${shot.file}`"
-          :alt="shot.alt"
-          :loading="index === 0 ? 'eager' : 'lazy'"
-          width="1024"
-          height="830"
-        />
+        <a :href="shot.link" :aria-label="`${shot.alt}，查看${shot.platform}文档`">
+          <img
+            :src="shot.image"
+            :alt="shot.alt"
+            :loading="index === 0 ? 'eager' : 'lazy'"
+            :width="shot.width"
+            :height="shot.height"
+          />
+        </a>
       </figure>
     </div>
   </section>
