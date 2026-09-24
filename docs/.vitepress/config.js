@@ -5,6 +5,16 @@ const changelog = [
     text: '2026-09',
     collapsed: true,
     items: [
+      { text: '2026-09-25', link: '/changelog/2026/09/2026-09-25' },
+      { text: '2026-09-24', link: '/changelog/2026/09/2026-09-24' },
+      { text: '2026-09-23', link: '/changelog/2026/09/2026-09-23' },
+      { text: '2026-09-22', link: '/changelog/2026/09/2026-09-22' },
+      { text: '2026-09-21', link: '/changelog/2026/09/2026-09-21' },
+      { text: '2026-09-20', link: '/changelog/2026/09/2026-09-20' },
+      { text: '2026-09-18', link: '/changelog/2026/09/2026-09-18' },
+      { text: '2026-09-17', link: '/changelog/2026/09/2026-09-17' },
+      { text: '2026-09-16', link: '/changelog/2026/09/2026-09-16' },
+      { text: '2026-09-15', link: '/changelog/2026/09/2026-09-15' },
       { text: '2026-09-14', link: '/changelog/2026/09/2026-09-14' },
       { text: '2026-09-13', link: '/changelog/2026/09/2026-09-13' },
       { text: '2026-09-12', link: '/changelog/2026/09/2026-09-12' },
@@ -41,34 +51,16 @@ export default defineConfig({
   title: 'HappyRO',
   description: '开源中文《仙境传说 Online》Web 项目',
   cleanUrls: true,
-  head: [['link', { rel: 'icon', href: '/images/ro-icon-1.jpg' }]],
+  head: [['link', { rel: 'icon', href: '/images/brand/ro-icon-1.jpg' }]],
   themeConfig: {
     docFooter: { prev: false, next: false },
-    logo: '/images/ro-icon-1.jpg',
+    logo: '/images/brand/ro-icon-1.jpg',
     siteTitle: 'HappyRO',
     nav: [
       { text: '首页', link: '/' },
-      { text: '文档', link: '/intro' },
-      { text: '资源下载', link: '/downloads' },
-      {
-        text: '安装',
-        items: [
-          {
-            text: '容器化部署',
-            items: [
-              { text: 'Docker', link: '/installation/docker' },
-            ],
-          },
-          {
-            text: '原生部署',
-            items: [
-              { text: 'Linux', link: '/installation/linux' },
-              { text: 'macOS', link: '/installation/macos' },
-              { text: 'Windows', link: '/installation/windows' },
-            ],
-          },
-        ],
-      },
+      { text: '文档', link: '/guide/introduction' },
+      { text: '下载', link: '/guide/downloads' },
+      { text: '安装', link: '/container/docker' },
       {
         text: '社区',
         items: [
@@ -76,31 +68,38 @@ export default defineConfig({
           { text: '联系方式', link: '/community/contact' },
         ],
       },
-      { text: '在线演示', link: 'https://happyro-demo.kugarocks.com/applications/pwa/index.html' },
+      { text: '游戏演示', link: 'https://happyro-demo.kugarocks.com/applications/pwa/index.html' },
+      { text: '后台演示', link: 'https://happyro-admin.kugarocks.com' },
     ],
     sidebar: [
       {
         text: '文档',
         items: [
-          { text: '项目简介', link: '/intro' },
-          { text: '游戏画面', link: '/features/game' },
-          { text: '管理后台', link: '/features/admin' },
-          { text: '关于汉化', link: '/translation' },
-          { text: '资源下载', link: '/downloads' },
+          { text: '项目简介', link: '/guide/introduction' },
+          { text: '管理后台', link: '/guide/admin' },
+          { text: '关于汉化', link: '/guide/localization' },
+          { text: '资源下载', link: '/guide/downloads' },
+        ],
+      },
+      {
+        text: '游戏画面',
+        items: [
+          { text: '电脑桌面', link: '/game/desktop' },
+          { text: '手机平板', link: '/game/mobile' },
         ],
       },
       {
         text: '容器化部署',
         items: [
-          { text: 'Docker', link: '/installation/docker' },
+          { text: 'Docker', link: '/container/docker' },
         ],
       },
       {
         text: '原生部署',
         items: [
-          { text: 'Linux', link: '/installation/linux' },
-          { text: 'macOS', link: '/installation/macos' },
-          { text: 'Windows', link: '/installation/windows' },
+          { text: 'Linux', link: '/native/linux' },
+          { text: 'macOS', link: '/native/macos' },
+          { text: 'Windows', link: '/native/windows' },
         ],
       },
       {
