@@ -36,7 +36,7 @@ git clone https://github.com/happyro/happyro-admin.git repos/happyro-admin
 
 ```bash
 mkdir -p inputs/runtime/kro-20211105
-cp -a /path/to/happyro-v0.3.1/resources/kro-20211105 \
+cp -a /path/to/happyro-v0.3.2/resources/kro-20211105 \
   inputs/runtime/kro-20211105/client
 ```
 
