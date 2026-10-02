@@ -2,9 +2,22 @@ import { defineConfig } from 'vitepress'
 
 const changelog = [
   {
+    text: '2026-10',
+    collapsed: true,
+    items: [
+      { text: '2026-10-03', link: '/changelog/2026/10/2026-10-03' },
+      { text: '2026-10-02', link: '/changelog/2026/10/2026-10-02' },
+      { text: '2026-10-01', link: '/changelog/2026/10/2026-10-01' },
+    ],
+  },
+  {
     text: '2026-09',
     collapsed: true,
     items: [
+      { text: '2026-09-30', link: '/changelog/2026/09/2026-09-30' },
+      { text: '2026-09-29', link: '/changelog/2026/09/2026-09-29' },
+      { text: '2026-09-28', link: '/changelog/2026/09/2026-09-28' },
+      { text: '2026-09-27', link: '/changelog/2026/09/2026-09-27' },
       { text: '2026-09-26', link: '/changelog/2026/09/2026-09-26' },
       { text: '2026-09-25', link: '/changelog/2026/09/2026-09-25' },
       { text: '2026-09-24', link: '/changelog/2026/09/2026-09-24' },
