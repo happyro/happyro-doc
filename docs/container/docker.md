@@ -8,21 +8,21 @@ Docker 离线包是 HappyRO 的推荐安装方式。目标机器只需要 Docker
   - Linux：Docker Engine 与 Docker Compose v2
   - macOS：OrbStack 或 Docker Desktop
   - Windows：Docker Desktop
-- Python 3.9 或更高版本。
+- Python 3.11 或更高版本。
 - 足够空间保存约数 GB 的压缩包、解压目录、Docker 镜像和数据库。
 
 ## 获取离线包
 
-以下以已取得的 `happyro-v0.3.2.zip` 为例；公开下载链接与可用版本见[下载页](/guide/downloads)。
+以下以已取得的完整 `happyro-v0.4.0.zip` 为例。v0.4.0 已完成本机离线包及部分验收，尚不代表公开下载或生产环境已发布；公开可用版本以[下载页](/guide/downloads)为准。
 
 ```bash
-unzip happyro-v0.3.2.zip
-cd happyro-v0.3.2
+unzip happyro-v0.4.0.zip
+cd happyro-v0.4.0
 ```
 
-Linux 和 macOS 可以使用上述命令；Windows 可以在文件资源管理器中解压 ZIP。解压后应保留唯一的 `happyro-v0.3.2/` 根目录及其中的空 `data/` 子目录。
+Linux 和 macOS 可以使用上述命令；Windows 可以在文件资源管理器中解压 ZIP。解压后应保留唯一的 `happyro-v0.4.0/` 根目录及其中的空 `data/` 子目录。
 
-如果使用拆分交付的 `happyro-v0.3.2-runtimes.zip` 与 `happyro-v0.3.2-images.zip`，将两者解压到同一父目录，合并为上述完整目录。两个拆分包不能单独部署，也无需再与完整 ZIP 重复解压。
+旧版如有配套拆分交付包，必须合并同一版本的两部分，不能跨版本混用；本次 v0.4.0 验收产物是完整 ZIP。
 
 ## 校验并导入镜像
 
@@ -34,7 +34,7 @@ python3 tools/deployment/manage.py import-images --directory .
 python3 tools/deployment/manage.py initialize --directory .
 ```
 
-`verify` 检查配置、资源和两个架构的镜像归档；`import-images` 根据 Docker daemon 架构只导入所需的四个镜像；`initialize` 创建 `.env` 和随机运行密钥，不启动服务。
+`verify` 检查配置、资源和两个架构的镜像归档；`import-images` 根据 Docker daemon 架构只导入所需的四个镜像；`initialize` 创建 `.env`、随机运行密钥及默认 custom 目录，不启动服务。仅首次空环境运行；已有环境按[升级流程](/container/upgrade)处理。
 
 ## 配置访问地址
 
@@ -46,7 +46,13 @@ ADMIN_PUBLIC_URL=http://127.0.0.1:8000
 ADMIN_STATEFUL_DOMAINS=127.0.0.1:8000
 ```
 
-不要修改包内四个镜像变量、`RELEASE_VERSION`、`RESOURCE_DIR` 或 `DATA_DIR`，除非你明确调整了对应目录。
+镜像变量与 RELEASE_VERSION 保持包内版本。RESOURCE_DIR 指向本版资源；DATA_DIR 和 CUSTOM_DIR 可设为版本目录外的专用绝对路径。若改变 DATA_DIR，需准备完整数据子目录；改变 CUSTOM_DIR 后执行：
+
+```bash
+python3 tools/deployment/manage.py initialize-custom --directory .
+```
+
+该命令只补缺少模板，不覆盖已有定制。具体操作见[自定义 NPC、数据库与资源](/container/customization)。
 
 ## 启动游戏
 
@@ -100,4 +106,11 @@ docker compose restart
 docker compose down
 ```
 
-`docker compose down` 不删除 bind mount 到包内 `data/` 的数据库和设置。完整升级、备份和恢复流程以离线包内 `README.md` 为准。
+`docker compose down` 不删除 bind mount 到包内 `data/` 的数据库和设置。完整步骤见[升级、备份与恢复](/container/upgrade)，并核对所用离线包的 README 和勘误。首次引入 custom 必须采用完整新版配置和工具，不能只替换镜像。
+
+
+## 从源码打包
+
+构建机器另外需要 Python 3.11+、Buildx、Skopeo、完整的源码和运行资源。按根仓库的[镜像构建与交付流程](https://github.com/happyro/happyro/blob/main/docs/operations/docker-release.md)执行 prepare、verify、全量双架构 build、package 和最终 verify。全部镜像成功后才能组装；不要把自己的 .env、custom 或存档放进发行包。
+
+部署端只需完整包、Docker 和 Python，不需要现场构建。源码文档更新不会自动修改已下载的 ZIP；v0.4.0 本轮包内 README 的按文件卸载命令应更正为 `@unloadnpcfile`，原 ZIP 摘要保持不变。

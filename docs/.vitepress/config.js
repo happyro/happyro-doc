@@ -111,6 +111,8 @@ export default defineConfig({
         text: '容器化部署',
         items: [
           { text: 'Docker', link: '/container/docker' },
+          { text: '自定义功能', link: '/container/customization' },
+          { text: '升级与恢复', link: '/container/upgrade' },
         ],
       },
       {
