@@ -2,9 +2,39 @@ import { defineConfig } from 'vitepress'
 
 const changelog = [
   {
+    text: '版本摘要',
+    items: [
+      { text: 'v0.4.0 · 未发布', link: '/changelog/releases/v0.4.0' },
+      { text: 'v0.3.2', link: '/changelog/releases/v0.3.2' },
+      { text: 'v0.3.1', link: '/changelog/releases/v0.3.1' },
+      { text: 'v0.3.0', link: '/changelog/releases/v0.3.0' },
+    ],
+  },
+  {
+    text: '2026-10',
+    collapsed: true,
+    items: [
+      { text: '2026-10-12', link: '/changelog/2026/10/2026-10-12' },
+      { text: '2026-10-11', link: '/changelog/2026/10/2026-10-11' },
+      { text: '2026-10-10', link: '/changelog/2026/10/2026-10-10' },
+      { text: '2026-10-09', link: '/changelog/2026/10/2026-10-09' },
+      { text: '2026-10-08', link: '/changelog/2026/10/2026-10-08' },
+      { text: '2026-10-07', link: '/changelog/2026/10/2026-10-07' },
+      { text: '2026-10-06', link: '/changelog/2026/10/2026-10-06' },
+      { text: '2026-10-05', link: '/changelog/2026/10/2026-10-05' },
+      { text: '2026-10-03', link: '/changelog/2026/10/2026-10-03' },
+      { text: '2026-10-02', link: '/changelog/2026/10/2026-10-02' },
+      { text: '2026-10-01', link: '/changelog/2026/10/2026-10-01' },
+    ],
+  },
+  {
     text: '2026-09',
     collapsed: true,
     items: [
+      { text: '2026-09-30', link: '/changelog/2026/09/2026-09-30' },
+      { text: '2026-09-29', link: '/changelog/2026/09/2026-09-29' },
+      { text: '2026-09-28', link: '/changelog/2026/09/2026-09-28' },
+      { text: '2026-09-27', link: '/changelog/2026/09/2026-09-27' },
       { text: '2026-09-26', link: '/changelog/2026/09/2026-09-26' },
       { text: '2026-09-25', link: '/changelog/2026/09/2026-09-25' },
       { text: '2026-09-24', link: '/changelog/2026/09/2026-09-24' },
@@ -93,6 +123,8 @@ export default defineConfig({
         text: '容器化部署',
         items: [
           { text: 'Docker', link: '/container/docker' },
+          { text: '自定义功能', link: '/container/customization' },
+          { text: '升级与恢复', link: '/container/upgrade' },
         ],
       },
       {
