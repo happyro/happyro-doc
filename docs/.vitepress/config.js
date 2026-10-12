@@ -2,9 +2,19 @@ import { defineConfig } from 'vitepress'
 
 const changelog = [
   {
+    text: '版本摘要',
+    items: [
+      { text: 'v0.4.0 · 未发布', link: '/changelog/releases/v0.4.0' },
+      { text: 'v0.3.2', link: '/changelog/releases/v0.3.2' },
+      { text: 'v0.3.1', link: '/changelog/releases/v0.3.1' },
+      { text: 'v0.3.0', link: '/changelog/releases/v0.3.0' },
+    ],
+  },
+  {
     text: '2026-10',
     collapsed: true,
     items: [
+      { text: '2026-10-12', link: '/changelog/2026/10/2026-10-12' },
       { text: '2026-10-11', link: '/changelog/2026/10/2026-10-11' },
       { text: '2026-10-10', link: '/changelog/2026/10/2026-10-10' },
       { text: '2026-10-09', link: '/changelog/2026/10/2026-10-09' },

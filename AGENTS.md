@@ -15,8 +15,10 @@
 ## 更新日志
 
 - 文档站的更新日志只记录 HappyRO 产品变更，不记录本仓库自身的文档、导航、主题或部署变更。
-- HappyRO 根仓库的 `changelog/<年>/<月>/YYYY-MM-DD.md` 是更新日志的唯一内容源。
+- HappyRO 根仓库的 `changelog/<年>/<月>/YYYY-MM-DD.md` 与 `changelog/releases/` 是日期日志和版本摘要的唯一内容源。
 - 日期文件必须原样复制到本仓库的 `docs/changelog/<年>/<月>/`，不得在文档站内单独改写内容。
+- 版本摘要原样复制到 `docs/changelog/releases/`，维护版本侧栏；未发布版本必须明确标记，不填写正式发布日期。
+- 完整历史原文只在根仓库 `changelog/archive/` 保留，不复制到文档站。
 - 侧栏按 `YYYY-MM` 分类并默认折叠；同步日期文件时必须同时维护对应的侧栏链接。
 
 ## 仓库边界
