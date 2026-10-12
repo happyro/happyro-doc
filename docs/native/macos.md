@@ -2,7 +2,7 @@
 
 本页面向需要在 macOS 上编译和修改 HappyRO 的开发者。玩游戏请使用 [Docker 安装](/container/docker)。
 
-根仓库的 `make server-start` 和 `make gateway-start` 依赖 systemd，不能在 macOS 上使用。需要完整 Server、Admin、Database 时，直接用离线包。
+根仓库的 `make server-start` 和 `make gateway-start` 依赖 systemd，不能在 macOS 上使用。完整游戏安装优先使用离线包；已有原生应用加 Docker 数据库的混合环境可用下文服务脚本管理。
 
 ## 安装依赖
 
@@ -67,3 +67,15 @@ node start-prod.js
 ```
 
 浏览器打开 `http://127.0.0.1:3338/applications/pwa/index.html`。该页必须先显示“进入游戏”和各查看器入口。
+
+## 已配置的混合开发环境
+
+根仓库另提供已配置环境的启停入口：
+
+```bash
+bash scripts/local/macos-services.sh status --no-color
+bash scripts/local/macos-services.sh start --no-color
+bash scripts/local/macos-services.sh stop --no-color
+```
+
+脚本只管理已准备的 launchd 应用和独立数据库，不负责首次安装。数据位置以本机 `work/runtime/native/hybrid-deployment.json` 为准，不与完整 Docker 游戏栈共享数据目录。此模式与上文手工终端启动二选一，不同时占用端口；配置细节见[根仓库服务说明](https://github.com/happyro/happyro/blob/main/docs/operations/services.md)。
