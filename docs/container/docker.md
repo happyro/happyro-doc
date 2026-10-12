@@ -13,7 +13,7 @@ Docker 离线包是 HappyRO 的推荐安装方式。目标机器只需要 Docker
 
 ## 获取离线包
 
-以下以已取得的完整 `happyro-v0.4.0.zip` 为例。v0.4.0 已完成本机离线包及部分验收，尚不代表公开下载或生产环境已发布；公开可用版本以[下载页](/guide/downloads)为准。
+以下以已取得的完整 `happyro-v0.4.0.zip` 为例。v0.4.0 当前待发布；以下命令供取得最终包后使用，公开可用版本以[下载页](/guide/downloads)为准。
 
 ```bash
 unzip happyro-v0.4.0.zip
@@ -22,7 +22,7 @@ cd happyro-v0.4.0
 
 Linux 和 macOS 可以使用上述命令；Windows 可以在文件资源管理器中解压 ZIP。解压后应保留唯一的 `happyro-v0.4.0/` 根目录及其中的空 `data/` 子目录。
 
-旧版如有配套拆分交付包，必须合并同一版本的两部分，不能跨版本混用；本次 v0.4.0 验收产物是完整 ZIP。
+旧版如有配套拆分交付包，必须合并同一版本的两部分，不能跨版本混用；v0.4.0 默认交付完整 ZIP，实际交付信息以正式发布记录为准。
 
 ## 校验并导入镜像
 
@@ -54,6 +54,12 @@ python3 tools/deployment/manage.py initialize-custom --directory .
 
 该命令只补缺少模板，不覆盖已有定制。具体操作见[自定义 NPC、数据库与资源](/container/customization)。
 
+## 保持登录与反向代理
+
+游戏的“保持登录”在 HTTP 与 HTTPS 均可使用，不由 `SESSION_SECURE_COOKIE` 控制。该变量仅用于 Admin 后台；游戏由 Gateway 根据请求 Origin 的协议选择 Cookie，HTTPS 设置 Secure，HTTP 使用独立名称且不设置 Secure。HTTP 与 HTTPS、不同主机入口需要分别首次登录。
+
+反向代理须将 `/api/game-session/*` 原路径转发到 Gateway，保留浏览器的 Host（包括非默认端口）、Origin、Cookie 和 Set-Cookie，不缓存该接口响应；Gateway 会返回 `Cache-Control: no-store`。Nginx 可用 `proxy_set_header Host $http_host;` 保留 Host，并传递原始协议供后台使用。仅设置 X-Forwarded-Host、把 Host 改成内部容器名，会使游戏会话接口因 Origin/Host 不匹配返回 403。独立 WebSocket 域名只影响 `/ws/`，游戏会话 API 仍走页面同源入口。
+
 ## 启动游戏
 
 ```bash
@@ -61,7 +67,7 @@ python3 tools/deployment/manage.py deploy --directory .
 docker compose ps -a
 ```
 
-部署从包内导入镜像，不会拉取或现场构建。启动完成后，可按下面几项检查运行状态。
+deploy 使用已导入的本版镜像，不会拉取或现场构建；先等待数据库健康并执行登录会话表及撤销触发器升级，成功后才启动整栈，失败则停止后续启动。客户端、Gateway、Server 与 Database 须配套更新，详见[升级流程](/container/upgrade)。启动完成后，可按下面几项检查运行状态。
 
 ### 服务状态
 
@@ -113,4 +119,4 @@ docker compose down
 
 构建机器另外需要 Python 3.11+、Buildx、Skopeo、完整的源码和运行资源。按根仓库的[镜像构建与交付流程](https://github.com/happyro/happyro/blob/main/docs/operations/docker-release.md)执行 prepare、verify、全量双架构 build、package 和最终 verify。全部镜像成功后才能组装；不要把自己的 .env、custom 或存档放进发行包。
 
-部署端只需完整包、Docker 和 Python，不需要现场构建。源码文档更新不会自动修改已下载的 ZIP；v0.4.0 本轮包内 README 的按文件卸载命令应更正为 `@unloadnpcfile`，原 ZIP 摘要保持不变。
+部署端只需完整包、Docker 和 Python，不需要现场构建。源码文档更新不会自动修改已下载的 ZIP。按文件卸载 NPC 使用 `@unloadnpcfile`，按 NPC 名称卸载使用 `@unloadnpc`。
