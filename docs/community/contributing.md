@@ -11,12 +11,13 @@ HappyRO 接受客户端、服务端、Gateway、Admin、部署、文档和中文
 | [happyro-server](https://github.com/happyro/happyro-server) | rAthena 服务端 |
 | [happyro-gateway](https://github.com/happyro/happyro-gateway) | HTTP、WebSocket 和资源网关 |
 | [happyro-admin](https://github.com/happyro/happyro-admin) | 管理后台 |
+| [happyro-doc](https://github.com/happyro/happyro-doc) | 公开文档站、玩家指南与安装说明 |
 
 ## 基本流程
 
 1. 从目标仓库 `main` 创建主题分支。
 2. 阅读目标仓库的 `AGENTS.md` 和相关设计文档。
-3. 一次提交只处理一个逻辑变更，并补充对应 changelog。
+3. 一次提交只处理一个逻辑变更；产品变更在所属仓库补充 changelog，文档站不为纯文档修改新增产品日志。
 4. 运行相关测试、构建和真实交互验收。
 5. 检查工作区，避免提交 kRO 资源、密钥、数据库、日志和中间产物。
 

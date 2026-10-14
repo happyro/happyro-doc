@@ -4,14 +4,14 @@
 
 ## 依赖
 
-需要 Git、GNU Make、CMake、C++ 编译器、Node.js 22+、npm、Docker Compose、MariaDB 客户端、OpenSSL、ripgrep、jq、curl、`ss` 和 systemd。
+需要 Git、GNU Make、CMake、C++ 编译器、Node.js 22+、npm、Python 3、Docker Compose、MariaDB 客户端、OpenSSL、ripgrep、jq、curl、`ss` 和 systemd。
 
 Debian 或 Ubuntu：
 
 ```bash
 sudo apt update
 sudo apt install -y git make build-essential cmake pkg-config \
-  libmariadb-dev libpcre3-dev zlib1g-dev \
+  libmariadb-dev libpcre3-dev zlib1g-dev libssl-dev python3 \
   curl jq ripgrep iproute2 openssl ca-certificates mariadb-client
 ```
 
@@ -54,6 +54,8 @@ make configure-resources
 make doctor
 make gateway-start
 ```
+
+`make doctor` 还会核对上游锁定基线；维护分支包含后续提交时，不能为通过检查回退产品代码。按[根仓库故障检查](https://github.com/happyro/happyro/blob/main/docs/operations/troubleshooting.md)核实具体失败项。
 
 浏览器打开 `http://127.0.0.1:3338/applications/pwa/index.html`。该页必须先显示“进入游戏”和各查看器入口。
 

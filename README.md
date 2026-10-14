@@ -30,3 +30,12 @@ npm run docs:dev
 ```bash
 npm run docs:build
 ```
+
+## 内容维护
+
+- docs 是公开站点正文；根 README 保存仓库开发说明，.vitepress 保存导航与主题。当前分类已与读者任务对应，不为减少文件数合并安装和玩家操作页。
+- changelog 日期页与版本摘要的唯一来源是 HappyRO 根仓库；在根仓库执行 `python3 tools/changelog/manage.py sync`，再执行 `check`，不要在本站单独改写镜像正文。
+- 页面移动时同步侧栏、首页、正文、图片及锚点引用；删除已过时页面前将有效规则并入当前页面，不建 archive 或保留无用转向页。
+- 已发布版本的下载和 Release 保持原事实，开发中功能明确标记未发布；旧截图不能作为最新布局验收证据。
+- 本地验证运行 docs:build，再核对生成页面的站内链接、锚点和 public 图片。生成的 dist、缓存与临时审计结果不提交。
+- 推送 main 会触发 GitHub Pages 工作流；本地构建不等于部署完成。提交与发布仍遵守 AGENTS。
