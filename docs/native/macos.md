@@ -14,13 +14,7 @@ brew install git make cmake pkg-config node@22 mariadb-connector-c pcre jq ripgr
 
 ## 检出源码与资源
 
-按照 [Linux 的五仓库步骤](/native/linux#检出五个仓库)检出源码，再从同版本[离线包](/guide/downloads)复制 kRO 运行资源：
-
-```bash
-mkdir -p inputs/runtime/kro-20211105
-cp -a /path/to/happyro-v0.3.2/resources/kro-20211105 \
-  inputs/runtime/kro-20211105/client
-```
+源码检出和运行资源布局与 [Linux 准备步骤](/native/linux#检出五个仓库)相同，完成“检出五个仓库”和“准备运行资源”后返回本页，不执行 Linux 的 systemd 启动命令。文档站是第六个维护仓库，开发游戏本身不需要检出。
 
 ## 数据库与编译
 

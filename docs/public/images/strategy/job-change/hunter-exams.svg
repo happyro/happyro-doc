@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="348" viewBox="0 0 480 348" role="img" aria-labelledby="title desc">
+<title id="title">游侠：三项实践考试</title>
+<desc id="desc">辨认波利，按名字识别目标，20 波至少 15 分；炸弹路线，用完 10 个胶囊，再交报告，约 3 秒爆炸；使用后至少撤离 6 格；战狼考试，先指挥狼靠近，再攻击蛋炸弹，20 次至少 10 分。流程示意，不代表地图路线。</desc>
+<rect width="480" height="348" rx="16" fill="#f5f7fb"/>
+<g font-family="system-ui, -apple-system, PingFang SC, Microsoft YaHei, sans-serif">
+<text x="24" y="34" fill="#202b40" font-size="19" font-weight="650">游侠：三项实践考试</text>
+<text x="24" y="56" fill="#64748b" font-size="12">流程示意 · 实际行走请按地图道路</text>
+<rect x="20" y="70" width="440" height="78" rx="10" fill="white" stroke="#dce3ee"/>
+<circle cx="43" cy="94" r="13" fill="#345ec4"/>
+<text x="43" y="99" text-anchor="middle" font-size="14" fill="white">1</text>
+<text x="67" y="94" font-size="16" font-weight="600" fill="#24334a">辨认波利</text>
+<text x="67" y="115" font-size="13" fill="#3d5c91">按名字识别目标</text>
+<text x="67" y="134" font-size="12" fill="#5e6a7e">20 波至少 15 分</text>
+<path d="M43 148v9m-4-4 4 4 4-4" stroke="#8b9bb1" stroke-width="2" fill="none"/>
+<rect x="20" y="160" width="440" height="78" rx="10" fill="white" stroke="#dce3ee"/>
+<circle cx="43" cy="184" r="13" fill="#345ec4"/>
+<text x="43" y="189" text-anchor="middle" font-size="14" fill="white">2</text>
+<text x="67" y="184" font-size="16" font-weight="600" fill="#24334a">炸弹路线</text>
+<text x="67" y="205" font-size="13" fill="#3d5c91">用完 10 个胶囊，再交报告</text>
+<text x="67" y="224" font-size="12" fill="#5e6a7e">约 3 秒爆炸；使用后至少撤离 6 格</text>
+<path d="M43 238v9m-4-4 4 4 4-4" stroke="#8b9bb1" stroke-width="2" fill="none"/>
+<rect x="20" y="250" width="440" height="78" rx="10" fill="white" stroke="#dce3ee"/>
+<circle cx="43" cy="274" r="13" fill="#345ec4"/>
+<text x="43" y="279" text-anchor="middle" font-size="14" fill="white">3</text>
+<text x="67" y="274" font-size="16" font-weight="600" fill="#24334a">战狼考试</text>
+<text x="67" y="295" font-size="13" fill="#3d5c91">先指挥狼靠近，再攻击蛋炸弹</text>
+<text x="67" y="314" font-size="12" fill="#5e6a7e">20 次至少 10 分</text>
+</g>
+</svg>

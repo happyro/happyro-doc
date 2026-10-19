@@ -1,6 +1,6 @@
 # 升级、备份与恢复
 
-适用于 v0.4.0 及后续工具。当前最终包须重新验收，并用 v0.3.2 测试存档验证真实升级与回退。首次部署见 [Docker 安装](/container/docker)，定制目录见[自定义功能](/container/customization)。
+适用于 v0.5.0 及后续工具。当前最终包须重新验收，并用 v0.3.2 测试存档验证真实升级与回退。首次部署见 [Docker 安装](/container/docker)，定制目录见[自定义功能](/container/customization)。
 
 ## 保留数据和定制升级
 

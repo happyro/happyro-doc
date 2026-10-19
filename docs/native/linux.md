@@ -28,7 +28,7 @@ git clone https://github.com/happyro/happyro-gateway.git repos/happyro-gateway
 git clone https://github.com/happyro/happyro-admin.git repos/happyro-admin
 ```
 
-根仓库与四个应用仓库维护独立 Git 历史，长期维护分支均为 `main`。
+根仓库与四个应用仓库维护独立 Git 历史，长期维护分支均为 `main`。文档站是第六个维护仓库，不是游戏构建依赖。
 
 ## 准备运行资源
 

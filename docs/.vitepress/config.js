@@ -4,7 +4,7 @@ const changelog = [
   {
     text: '版本摘要',
     items: [
-      { text: 'v0.4.0 · 未发布', link: '/changelog/releases/v0.4.0' },
+      { text: 'v0.5.0 · 未发布', link: '/changelog/releases/v0.5.0' },
       { text: 'v0.3.2', link: '/changelog/releases/v0.3.2' },
       { text: 'v0.3.1', link: '/changelog/releases/v0.3.1' },
       { text: 'v0.3.0', link: '/changelog/releases/v0.3.0' },
@@ -14,6 +14,11 @@ const changelog = [
     text: '2026-10',
     collapsed: true,
     items: [
+      { text: '2026-10-20', link: '/changelog/2026/10/2026-10-20' },
+      { text: '2026-10-19', link: '/changelog/2026/10/2026-10-19' },
+      { text: '2026-10-18', link: '/changelog/2026/10/2026-10-18' },
+      { text: '2026-10-17', link: '/changelog/2026/10/2026-10-17' },
+      { text: '2026-10-16', link: '/changelog/2026/10/2026-10-16' },
       { text: '2026-10-15', link: '/changelog/2026/10/2026-10-15' },
       { text: '2026-10-14', link: '/changelog/2026/10/2026-10-14' },
       { text: '2026-10-13', link: '/changelog/2026/10/2026-10-13' },
@@ -116,10 +121,39 @@ export default defineConfig({
         ],
       },
       {
-        text: '游戏画面',
+        text: '玩家指南',
         items: [
           { text: '电脑桌面', link: '/game/desktop' },
           { text: '手机平板', link: '/game/mobile' },
+          { text: '战斗与拾取', link: '/game/combat' },
+          { text: '职业外观与随行', link: '/game/companions' },
+        ],
+      },
+      {
+        text: '游戏攻略',
+        collapsed: true,
+        items: [
+          {
+            text: '转职',
+            collapsed: true,
+            items: [
+              { text: '选择职业线', link: '/strategy/job-change/' },
+              { text: '共用转职流程', link: '/strategy/job-change/common' },
+              { text: '骑士系（龙骑士）', link: '/strategy/job-change/knight' },
+              { text: '十字军系（帝国圣卫军）', link: '/strategy/job-change/crusader' },
+              { text: '巫师系（大法师）', link: '/strategy/job-change/wizard' },
+              { text: '贤者系（元素支配者）', link: '/strategy/job-change/sage' },
+              { text: '猎人系（风鹰）', link: '/strategy/job-change/hunter' },
+              { text: '诗人系（天籁颂者）', link: '/strategy/job-change/bard' },
+              { text: '舞娘系（乐之舞灵）', link: '/strategy/job-change/dancer' },
+              { text: '牧师系（枢机主教）', link: '/strategy/job-change/priest' },
+              { text: '武僧系（审判者）', link: '/strategy/job-change/monk' },
+              { text: '刺客系（暗影十字）', link: '/strategy/job-change/assassin' },
+              { text: '流氓系（深渊追踪者）', link: '/strategy/job-change/rogue' },
+              { text: '铁匠系（机甲大师）', link: '/strategy/job-change/blacksmith' },
+              { text: '炼金术师系（生物学者）', link: '/strategy/job-change/alchemist' },
+            ],
+          },
         ],
       },
       {

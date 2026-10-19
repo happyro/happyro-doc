@@ -1,8 +1,8 @@
 # 自定义 NPC、数据库与资源
 
-适用于包含自定义工具和挂载的 v0.4.0 及后续离线包。先完成 [Docker 安装](/container/docker)，已有旧环境按[升级与恢复](/container/upgrade)迁移。本文命令在解压后的部署包根目录执行。
+适用于包含自定义工具和挂载的 v0.5.0 及后续离线包。先完成 [Docker 安装](/container/docker)，已有旧环境按[升级与恢复](/container/upgrade)迁移。本文命令在解压后的部署包根目录执行。
 
-游戏重载与后台目录刷新需要分别执行。核心功能已在 Mac arm64 隔离环境验收，完整真机和负向边界仍需按自身环境验证。
+游戏重载与后台目录刷新需要分别执行。历史候选包曾进行 Mac arm64 隔离验收；v0.5.0 最终包仍待构建及验收，不能沿用旧候选结果。
 
 推荐将 DATA_DIR 与 CUSTOM_DIR 放在版本目录外。发行包只带 examples/custom 模板；首次 initialize 创建默认 custom/。若编辑 .env 将 CUSTOM_DIR 改到其它路径，必须执行 initialize-custom 为该位置初始化。这个命令可重复执行，只补缺少的模板，不覆盖已有文件。资源不复制原始 GRF，自定义目录初始为空。
 
@@ -118,18 +118,10 @@ python3 tools/deployment/manage.py refresh-custom-catalogs --directory .
 - 覆盖无效：确认原脚本当前被加载，路径为去掉开头 npc/ 后的相对路径；内置 `.conf` 不支持覆盖。
 - 游戏已更新但后台还是旧值：执行目录刷新；反之后台已更新不代表游戏已重载。
 - 资源无效：确认没有额外一层 data/、路径大小写和编码一致、格式受客户端支持；查看 Gateway 日志并重新进入游戏。
-- admin-init 提示缺少 `server-base/conf/import/script_conf.txt`：这是 v0.4.0 首轮候选镜像的缺陷，正式验收包已修复；使用完整修复包，不手工修改容器补文件。
+- admin-init 提示缺少 `server-base/conf/import/script_conf.txt`：这是开发阶段旧候选镜像的缺陷，源码已修复，最终发行包仍须核对；取得完整修复包后使用，不手工修改容器补文件。
 - `verify` 失败：先检查是否混用了不同包的配置、镜像或工具，不改清单哈希来掩盖损坏。用户只应编辑 `.env`、custom 和持久化数据，不编辑受清单校验的发行文件。
 
 
-## 本次功能如何接入
+## 维护实现
 
-这次通过宿主机持久目录、服务端加载规则、网关资源读取和后台目录刷新共同实现：
-
-1. 部署配置增加 CUSTOM_DIR，把 npc、db、resources 分别只读挂载到使用它们的容器；发行包只提供初始化模板，不携带用户定制。
-2. Server 在加载内置 NPC 时优先读取相同相对路径的覆盖文件，同时保留原文件身份；新增脚本只读登记清单。数据库直接沿用原生 db/import，不增加第二套数据库规则。
-3. Gateway 在缓存与内置资源前检查自定义文件，更新或删除影响后续 HTTP 请求；不需要重新制作资源镜像。
-4. Admin 从镜像内基线和有效用户声明生成三类静态资料，再执行目录导入。游戏数据重载仍独立进行，动态脚本效果不靠静态解析推测。
-5. 部署工具增加 initialize-custom 和 refresh-custom-catalogs；备份加入 custom-files.tar，恢复精确替换，移除备份外文件。已有模板不被新版自动覆盖或合并。
-
-首轮验收曾发现 Admin 快照缺少默认脚本 import 配置。修复后使用与 Server 初始化相同的版本化模板，并全量重建四类双架构镜像；最终本机包通过空库初始化。源码实现及维护说明位于 HappyRO 根仓库的 `docs/architecture/customization.md`。
+实现由 Server 的覆盖加载、Gateway 的资源优先级、Admin 的静态资料刷新及部署工具共同完成；维护源码见[跨仓库设计](https://github.com/happyro/happyro/blob/main/docs/architecture/customization.md)。源码和文档修改不会更新已有离线 ZIP，部署以实际取得的完整包为准。
