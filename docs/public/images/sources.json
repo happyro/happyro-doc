@@ -31,7 +31,10 @@
     {
       "file": "overview/happyro-responsive-skills.png",
       "source": "happyro/docs/assets/readme/happyro-responsive-skills.png",
-      "sha256": "2399e3de0514268835ee99313aefc70c1261853dbdb273135c4b7ef656400fef"
+      "sha256": "aae1ae56df6ff056f0154e5a33ff6913b6befdf2eb6d60f6abd2580785f008e6",
+      "capturedAt": "2026-10-21",
+      "build": "mvh35j2e",
+      "operation": "重拍当前技能列表并沿用既有透明背景、无阴影的设备模板合成"
     },
     {
       "file": "overview/happyro-three-devices.png",
@@ -48,7 +51,9 @@
       "deviceScaleFactor": 1,
       "zoom": 85,
       "operation": "打开快捷键并选择狂击，不保存修改",
-      "sha256": "d59022bc78261a0b2da504c9003cdc4d106e4f205f485a30102efe62609def7e"
+      "sha256": "b0f867f0b2bc2e8706f06878dad19367ea6b5579a122aefd0c7eacb53438f4b7",
+      "capturedAt": "2026-10-21",
+      "build": "mvh35j2e"
     },
     {
       "file": "game/social/tablet-chat.png",
@@ -83,8 +88,110 @@
       ],
       "deviceScaleFactor": 2,
       "operation": "打开快捷键并选择狂击，不保存修改",
-      "sha256": "5bd7dbd7c3d76d0d8a774ef9ef45cd766d07d7e16d8453a3a8e0f381f755d32e",
-      "zoom": 20
+      "sha256": "cc777ac967077fded4a3786dadbe829c9a4fcd5ef63fd78979a373f2d486ed9c",
+      "zoom": 20,
+      "capturedAt": "2026-10-21",
+      "build": "mvh35j2e"
+    },
+    {
+      "file": "game/adventure/tablet-adventure-map.png",
+      "sha256": "ea616c254b364fdcb1d46d56d7f399386f2a6534d233837e47cf69c508dd1b7e",
+      "capturedAt": "2026-10-21",
+      "build": "mvh35j2e",
+      "source": "本机真实游戏，Playwright Chromium 触屏视口",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "zoom": 85,
+      "operation": "打开冒险工具地图页，选择普隆德拉，不寻路或传送"
+    },
+    {
+      "file": "game/social/tablet-social-friend.png",
+      "sha256": "c912600831027872ec878f67123cf96579ce9a3d41def0852198509797309993",
+      "capturedAt": "2026-10-21",
+      "build": "mvh35j2e",
+      "source": "本机真实游戏，Playwright Chromium 触屏视口",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 2,
+      "zoom": 85,
+      "operation": "社交好友列表选中在线的本机测试角色 happyro4",
+      "captureNote": "触屏上下文倍率 2，截图使用 scale: css 输出 1024 × 768"
+    },
+    {
+      "file": "game/mail/tablet-mail-read.png",
+      "sha256": "f4f1cfe06c5e06ed5860be5f1a07340d9ba28a2068f6cbe86a01bba187ea98d9",
+      "capturedAt": "2026-10-21",
+      "build": "mvh35j2e",
+      "source": "本机真实游戏，Playwright Chromium 触屏视口",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "zoom": 85,
+      "operation": "阅读截图角色发给自己的真实邮件，截图后领取附件恢复药水数量"
+    },
+    {
+      "file": "game/mail/tablet-mail-compose.png",
+      "sha256": "a8314474b53dbf7c89fc411c2616171a70ccf3216c38a5ff95716b55a369d9b6",
+      "capturedAt": "2026-10-21",
+      "build": "mvh35j2e",
+      "source": "本机真实游戏，Playwright Chromium 触屏视口",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 2,
+      "zoom": 85,
+      "operation": "填写示例邮件并附加一瓶红色药水，截图后取消草稿",
+      "captureNote": "触屏上下文倍率 2，截图使用 scale: css 输出 1024 × 768"
+    },
+    {
+      "file": "game/trading/tablet-trade.png",
+      "sha256": "a51ac25ea10e55904eda73e8258f45cdeb5a025c5f0ce65129baec4df4db3dcd",
+      "capturedAt": "2026-10-21",
+      "build": "mvh35j2e",
+      "source": "本机真实游戏，Playwright Chromium 触屏视口",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "zoom": 85,
+      "operation": "与本机测试角色 happyro4 发起真实交易，双方各添加一瓶药水，我方设置 100 Zeny，截图后取消交易"
+    },
+    {
+      "file": "game/trading/phone-trade.png",
+      "sha256": "187c039c8053e3cacdf30b48dfa0e4747f802531ea55a21b8f560eb07b0026e9",
+      "capturedAt": "2026-10-21",
+      "build": "mvh35j2e",
+      "source": "本机真实游戏，Playwright Chromium 触屏视口",
+      "viewport": [
+        430,
+        860
+      ],
+      "deviceScaleFactor": 2,
+      "zoom": 20,
+      "operation": "手机竖屏展示真实交易的三行布局，截图后取消交易"
+    },
+    {
+      "file": "game/trading/tablet-trade-confirm.png",
+      "sha256": "600fec30d9e7a612a3299e54580e186dbab012d0998d3ccb5408badd33d952aa",
+      "capturedAt": "2026-10-21",
+      "build": "mvh35j2e",
+      "source": "本机真实游戏，Playwright Chromium 触屏视口",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "zoom": 85,
+      "operation": "双方锁定真实交易后打开核对弹窗，截图后取消，未执行成交"
     }
   ]
 }

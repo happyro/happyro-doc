@@ -6,7 +6,7 @@
 | --- | --- |
 | 先体验游戏 | 打开[游戏演示](https://happyro-demo.kugarocks.com/applications/pwa/index.html)，再看[登录与角色](/game/getting-started) |
 | 在手机或平板游玩 | [界面与操作](/game/controls) → [添加到主屏幕](/game/pwa) |
-| 自己部署服务器 | [下载](/guide/downloads) → [部署概览](/deploy/) → [Docker 安装](/deploy/docker) |
+| 自己部署服务器 | [资源下载](/guide/downloads) → [安装运维](/deploy/) → [Docker 安装](/deploy/docker) |
 | 管理已有服务器 | [管理后台](/admin/)与[日常维护](/deploy/maintenance) |
 | 修改源码或贡献文档 | [开发指南](/development/) |
 | 完成职业转职任务 | [转职攻略](/strategy/job-change/) |
