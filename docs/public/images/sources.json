@@ -59,9 +59,9 @@
       ],
       "deviceScaleFactor": 1,
       "zoom": 85,
-      "operation": "修复聊天分类分隔线后，打开聊天并选择私聊，不发送消息",
-      "sha256": "beee1abac7159c3ad08cf301d22ace7cdbd8fe2458bc680919bef9bbcccf6c20",
-      "build": "mvgwm7pg"
+      "operation": "聊天列表取消留白、平板私聊对象列加宽后，打开私聊入口，不发送消息",
+      "sha256": "608aeb9aec5260ca5beac7b3428260af9425e3e4e683c6fd800e1c7058b238cf",
+      "build": "mvgxoyw1"
     },
     {
       "file": "game/controls/phone-character.png",
