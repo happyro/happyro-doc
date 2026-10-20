@@ -1,0 +1,90 @@
+{
+  "character": {
+    "name": "罗安",
+    "job": "剑士",
+    "baseLevel": 99,
+    "jobLevel": 50,
+    "map": "prontera",
+    "position": [
+      164,
+      185
+    ],
+    "pet": "收回蛋中"
+  },
+  "rules": "https://github.com/happyro/happyro/tree/main/docs/development/readme-images",
+  "images": [
+    {
+      "file": "overview/happyro-admin-settings.png",
+      "source": "happyro/docs/assets/readme/happyro-admin-settings.png",
+      "sha256": "ebd29a727d06b77f1872bda10596fdbc01b1bcfd2da8eaeff8cce636c693b909"
+    },
+    {
+      "file": "overview/happyro-codex.png",
+      "source": "happyro/docs/assets/readme/happyro-codex.png",
+      "sha256": "1eefe995eb0a9efed379f4b2c7f7be5066788b0e2e62ea77fa156a066ee9f708"
+    },
+    {
+      "file": "overview/happyro-combat.png",
+      "source": "happyro/docs/assets/readme/happyro-combat.png",
+      "sha256": "f961bcce1fa89c194f23754b962d7a55965c4a5a3b22edd116cece7ebab62c37"
+    },
+    {
+      "file": "overview/happyro-responsive-skills.png",
+      "source": "happyro/docs/assets/readme/happyro-responsive-skills.png",
+      "sha256": "2399e3de0514268835ee99313aefc70c1261853dbdb273135c4b7ef656400fef"
+    },
+    {
+      "file": "overview/happyro-three-devices.png",
+      "source": "happyro/docs/assets/readme/happyro-three-devices.png",
+      "sha256": "dbf1f287704b5cc4ce65e70767339d559b821d2628fbd13975079a8b359c10a5"
+    },
+    {
+      "file": "game/controls/tablet-shortcuts.png",
+      "source": "本机真实游戏，Playwright Chromium 触屏视口",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "zoom": 85,
+      "operation": "打开快捷键并选择狂击，不保存修改",
+      "sha256": "d59022bc78261a0b2da504c9003cdc4d106e4f205f485a30102efe62609def7e"
+    },
+    {
+      "file": "game/social/tablet-chat.png",
+      "source": "本机真实游戏，Playwright Chromium 触屏视口",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "zoom": 85,
+      "operation": "修复聊天分类分隔线后，打开聊天并选择私聊，不发送消息",
+      "sha256": "beee1abac7159c3ad08cf301d22ace7cdbd8fe2458bc680919bef9bbcccf6c20",
+      "build": "mvgwm7pg"
+    },
+    {
+      "file": "game/controls/phone-character.png",
+      "source": "本机真实游戏，Playwright Chromium 触屏视口",
+      "viewport": [
+        430,
+        860
+      ],
+      "deviceScaleFactor": 2,
+      "operation": "进入选角，选择既有角色罗安",
+      "sha256": "72fd54725640abd0b6b3a8082c95a2b39775a76d690175218531a8588e0b5911"
+    },
+    {
+      "file": "game/controls/phone-shortcuts.png",
+      "source": "本机真实游戏，Playwright Chromium 触屏视口",
+      "viewport": [
+        430,
+        860
+      ],
+      "deviceScaleFactor": 2,
+      "operation": "打开快捷键并选择狂击，不保存修改",
+      "sha256": "5bd7dbd7c3d76d0d8a774ef9ef45cd766d07d7e16d8453a3a8e0f381f755d32e",
+      "zoom": 20
+    }
+  ]
+}

@@ -30,7 +30,7 @@ happyro-v0.3.2/                # 新版完整包或两个拆分包合并后的�
 
 ## Docker Hub 镜像
 
-Docker Hub 已发布 `v0.3.2`，提供 `linux/amd64` 与 `linux/arm64`；四个镜像的 `latest` 与 `v0.3.2` 指向相同的双架构内容。离线部署使用固定版本标签：
+项目发布记录中的 Docker Hub 版本为 `v0.3.2`，提供 `linux/amd64` 与 `linux/arm64`。离线部署使用包内固定版本标签，不依赖会变化的 `latest`：
 
 ```text
 kugarocks/happyro-gateway:v0.3.2

@@ -1,24 +1,14 @@
 <script setup>
 import { ref } from 'vue'
+import { withBase } from 'vitepress'
 
-const desktopScreenshots = [
-  { file: 'happyro-game-southgate.png', alt: '普隆德拉南门的游戏画面', caption: '普隆德拉南门，熟悉的冒险。' },
-  { file: 'happyro-game-map.png', alt: '游戏内地图图鉴', caption: '地图图鉴，支持自动寻路和传送。' },
-  { file: 'happyro-game-monsters.png', alt: '游戏内魔物图鉴', caption: '查看魔物的属性、掉落物品和出现地图。' },
-  { file: 'happyro-game-npc.png', alt: '游戏内 NPC 图鉴', caption: 'NPC 图鉴，查看位置和形象。' },
-  { file: 'happyro-game-items.png', alt: '游戏内物品图鉴', caption: '查询物品图片、属性与说明。' },
-  { file: 'happyro-game-char.png', alt: '游戏内角色维护界面', caption: '在游戏里查看并修改角色属性。' },
-  { file: 'happyro-game-settings.png', alt: '游戏内服务器设置', caption: '调整经验、掉落和相关设置。' },
-]
-
-const mobileScreenshots = [
-  { file: 'happyro-mobile-southgate.jpg', alt: '手机平板游戏主界面', caption: '触屏移动、六格快捷栏与自动战斗。', width: 2309, height: 1170 },
-  { file: 'happyro-mobile-auto-fight.jpg', alt: '手机平板自动战斗设置', caption: '多选魔物、配置攻击技能与战斗范围。', width: 2292, height: 1170 },
-]
-
-const desktop = desktopScreenshots.map(shot => ({ ...shot, image: `/images/game/desktop/${shot.file}`, platform: '电脑桌面', link: '/game/desktop', width: 2048, height: 1668 }))
-const mobile = mobileScreenshots.map(shot => ({ ...shot, image: `/images/game/mobile/${shot.file}`, platform: '手机平板', link: '/game/mobile' }))
-const screenshots = [...desktop, ...mobile]
+const screenshots = [
+  { file: 'happyro-three-devices.png', alt: '电脑、平板和手机三端游戏画面', caption: '同一场冒险，在电脑、平板和手机上继续。', platform: '界面操作', link: '/game/controls', width: 1600, height: 1000 },
+  { file: 'happyro-responsive-skills.png', alt: '平板与手机技能界面', caption: '平板与手机的技能界面。', platform: '界面操作', link: '/game/controls', width: 1600, height: 858 },
+  { file: 'happyro-codex.png', alt: '游戏内魔物图鉴', caption: '查看魔物的属性、掉落物品和出现地图。', platform: '冒险工具', link: '/game/adventure-tools', width: 880, height: 680 },
+  { file: 'happyro-combat.png', alt: '自动战斗设置', caption: '多选魔物、配置攻击技能与战斗范围。', platform: '战斗设置', link: '/game/combat', width: 920, height: 670 },
+  { file: 'happyro-admin-settings.png', alt: '管理后台游戏设置', caption: '调整经验、掉落和相关设置。', platform: '管理后台', link: '/admin/game-settings', width: 1280, height: 630 },
+].map(shot => ({ ...shot, image: `/images/overview/${shot.file}` }))
 
 const viewport = ref(null)
 const active = ref(0)
@@ -59,9 +49,9 @@ function onScroll() {
       @scroll.passive="onScroll"
     >
       <figure v-for="(shot, index) in screenshots" :key="shot.file" class="home-gallery-slide">
-        <a :href="shot.link" :aria-label="`${shot.alt}，查看${shot.platform}文档`">
+        <a :href="withBase(shot.link)" :aria-label="`${shot.alt}，查看${shot.platform}文档`">
           <img
-            :src="shot.image"
+            :src="withBase(shot.image)"
             :alt="shot.alt"
             :loading="index === 0 ? 'eager' : 'lazy'"
             :width="shot.width"
