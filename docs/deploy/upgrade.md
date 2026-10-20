@@ -1,7 +1,7 @@
 # 升级
 
 ::: info 适用版本
-本页按当前主分支说明，包含 v0.5.0 开发中功能；已发布离线包以[下载页](/guide/downloads)与对应版本说明为准。
+本页按当前主分支说明，对应已发布的 v0.5.0；下载与摘要以[下载页](/guide/downloads)和[版本说明](/changelog/releases/v0.5.0)为准。
 :::
 
 首次安装见 [Docker 安装](/deploy/docker)。升级前保存匹配版本的完整包与[停写备份](/deploy/backup-restore)。

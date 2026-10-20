@@ -1,18 +1,38 @@
 # 资源下载
 
-下一版本直接从 v0.3.2 升至 v0.5.0，跳过 v0.4.x。v0.5.0 尚未发布，待最终构建与验收完成后再更新下载地址。本站涉及 v0.5.0 的安装与自定义说明是待发布版本说明，不代表当前已有可下载最终包。
+当前正式发布版本为 v0.5.0，从 v0.3.x（最近历史发布为 v0.3.2）直接跃升，跳过 v0.4.x。此次跨端体验、游戏功能与部署维护的变更规模大，标志着项目达到重要里程碑；完整变化见 [v0.5.0 版本摘要](/changelog/releases/v0.5.0)。
 
 ## 离线包
 
-当前离线交付版本为 `v0.3.2`，包含完整包 `happyro-v0.3.2.zip`，以及配套的 `happyro-v0.3.2-runtimes.zip`（运行资源）和 `happyro-v0.3.2-images.zip`（双架构镜像与部署文件）。使用拆分包时，将两者解压到同一目录，再按包内 README 校验和安装。
+当前离线交付版本为 `v0.5.0`，完整包为 `happyro-v0.5.0.zip`，并配套 `happyro-v0.5.0-runtimes.zip`（运行资源）和 `happyro-v0.5.0-images.zip`（双架构镜像与部署文件）。使用拆分包时，将两者解压到同一目录，再按包内 README 校验和安装；两个拆分包不能单独部署。
 
-通过百度网盘下载 `v0.3.2` 完整离线包：
+百度网盘下载完整包：
+
+- 文件：[`happyro-v0.5.0.zip`](https://pan.baidu.com/s/1Vx3ZoOvfAm5a24K97AmuMQ?pwd=9jnb)
+- 提取码：`9jnb`
+
+完整 ZIP 的 SHA-256：
+
+```text
+7ce06652883f34d72ad2f75fa06454b47ebe7eaab117123b4a1b335ee48a3652
+```
+
+拆分包 SHA-256：
+
+```text
+happyro-v0.5.0-runtimes.zip
+1cd7735663676f723b8b7811920a63440a60939307f9937809313bf346d42184
+happyro-v0.5.0-images.zip
+01cbdfc7c140266abb96161c6e30b8b29925405fa0fa374d950151ad71e1aee1
+```
+
+历史 v0.3.2 完整包：
 
 - 文件：[`happyro-v0.3.2.zip`](https://pan.baidu.com/s/1QqR4QblxjCEUepqPPTjsvg?pwd=35yb)
 - 提取码：`35yb`
 
 ```text
-happyro-v0.3.2/                # 新版完整包或两个拆分包合并后的根目录
+happyro-v0.5.0/                # 完整包或两个拆分包合并后的根目录
 ├── README.md                  # 部署手册
 ├── VERSION                    # 版本号
 ├── compose.yaml               # Compose 配置
@@ -24,19 +44,20 @@ happyro-v0.3.2/                # 新版完整包或两个拆分包合并后的�
 ├── resources/                 # 运行资源
 │   ├── kro-20211105/          # kRO 客户端资源
 │   └── catalog/               # 物品与世界图鉴
+├── examples/custom/           # 自定义模板
 ├── tools/deployment/          # 部署工具
 └── data/                      # 运行数据，首次为空
 ```
 
 ## Docker Hub 镜像
 
-项目发布记录中的 Docker Hub 版本为 `v0.3.2`，提供 `linux/amd64` 与 `linux/arm64`。离线部署使用包内固定版本标签，不依赖会变化的 `latest`：
+项目发布记录中的 Docker Hub 版本为 `v0.5.0`，`latest` 指向同一内容，提供 `linux/amd64` 与 `linux/arm64`。离线部署使用包内固定版本标签，不依赖会变化的 `latest`：
 
 ```text
-kugarocks/happyro-gateway:v0.3.2
-kugarocks/happyro-server:v0.3.2
-kugarocks/happyro-admin:v0.3.2
-kugarocks/happyro-database:v0.3.2
+kugarocks/happyro-gateway:v0.5.0
+kugarocks/happyro-server:v0.5.0
+kugarocks/happyro-admin:v0.5.0
+kugarocks/happyro-database:v0.5.0
 ```
 
 这些镜像用于同步和核对，不包含 kRO 运行资源，不能单独组成可玩环境。完整安装使用离线包。

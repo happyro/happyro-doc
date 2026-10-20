@@ -4,7 +4,7 @@ const changelog = [
   {
     text: '版本摘要',
     items: [
-      { text: 'v0.5.0 · 未发布', link: '/changelog/releases/v0.5.0' },
+      { text: 'v0.5.0', link: '/changelog/releases/v0.5.0' },
       { text: 'v0.3.2', link: '/changelog/releases/v0.3.2' },
       { text: 'v0.3.1', link: '/changelog/releases/v0.3.1' },
       { text: 'v0.3.0', link: '/changelog/releases/v0.3.0' },
