@@ -137,7 +137,8 @@ export default defineConfig({
             text: '转职',
             collapsed: true,
             items: [
-              { text: '总览与共用流程', link: '/strategy/job-change/' },
+              { text: '选择职业线', link: '/strategy/job-change/' },
+              { text: '共用转职流程', link: '/strategy/job-change/common' },
               { text: '骑士系（龙骑士）', link: '/strategy/job-change/knight' },
               { text: '十字军系（帝国圣卫军）', link: '/strategy/job-change/crusader' },
               { text: '巫师系（大法师）', link: '/strategy/job-change/wizard' },

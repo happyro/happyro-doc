@@ -13,7 +13,7 @@
 | --- | --- |
 | `docs/guide/` | 文档：项目简介、管理后台、关于汉化、资源下载 |
 | `docs/game/` | 玩家指南：电脑桌面、手机平板、战斗与拾取、职业外观与随行 |
-| `docs/strategy/job-change/` | 游戏攻略 → 转职：共用流程与十三个职业分支 |
+| `docs/strategy/job-change/` | 游戏攻略 → 转职：职业线选择、共用流程与十三个职业分支 |
 | `docs/container/` | 容器化部署 |
 | `docs/native/` | 原生部署 |
 | `docs/community/` | 社区 |
@@ -48,3 +48,7 @@ npm run docs:build
 攻略配图放在 `docs/public/images/strategy/job-change/`。现有四张场景 WebP 来源于根仓库转职审计的 `swordman-npc.png`、`knight-npc-complete.png`、`wizard-npc-complete.png` 与 `warlock-npc-complete.png`，仅裁剪场景／对话并压缩，去除角色信息和聊天栏；四张 SVG 为按攻略步骤编排的流程示意，不代表游戏地图或可步行路线。正文使用 `job-guide-figure`，最大宽度 420px，手机端随内容缩放，点击图片可查看大图。后续新增截图先核对其对应步骤，不把管理工具截图用作原生转职操作图。
 
 NPC 定位图位于 `images/strategy/job-change/locations/`，按服务端 `db/map_cache.dat` 与 Renewal 覆盖 `db/re/map_cache.dat` 的碰撞格重绘，使用自定义地形配色，不拷贝 kRO 客户端小地图或运行资源。坐标按左下原点映射，每个红点都核对 NPC 清单或实际脚本声明；输入哈希、地图尺寸与逐图坐标保存在 `docs/strategy/job-change/location-sources.json`。二转／三转图放在各线相应章节，共用入口放总览；定位图不表示动态障碍、剧情前置或跨房间直线路径。
+
+转职攻略统一采用「阶段速查 → 关键准备 → 分阶段操作」结构，三级小节进入页面目录。共用条件与 NPC 图维护在 `common.md`，`index.md` 仅承担路线选择；各篇保留本职业线的具体导师与任务，推荐准备等级和最低报名门槛分开表达。定位图默认展开，补充场景截图及审计范围按需展开，避免打断操作步骤。
+
+职业线顶部使用共享 `JobProgression` 组件，按顺序传入五个职业名称；组件以简洁职业标签和箭头展示路线，链接到当前页的对应章节，末项轻微强调，窄屏自然换行。修改阶段标题时同步检查跳转锚点。
