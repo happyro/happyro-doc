@@ -1,0 +1,121 @@
+{
+  "/game/desktop": {
+    "to": "/game/controls",
+    "anchors": {
+      "登录游戏": "/game/getting-started",
+      "地图图鉴": "/game/adventure-tools#地图图鉴",
+      "魔物图鉴": "/game/adventure-tools#魔物图鉴",
+      "npc-图鉴": "/game/adventure-tools#npc-图鉴",
+      "物品图鉴": "/game/adventure-tools#物品图鉴",
+      "角色维护": "/admin/accounts-characters",
+      "游戏设置": "/admin/game-settings",
+      "战斗、外观与随行": "/game/appearance",
+      "电脑桌面": "/game/controls#电脑桌面"
+    }
+  },
+  "/game/mobile": {
+    "to": "/game/controls",
+    "anchors": {
+      "登录与进入游戏": "/game/getting-started",
+      "创建与选择角色": "/game/getting-started#创建与选择角色",
+      "配置快捷槽位": "/game/shortcuts",
+      "自动战斗与拾取": "/game/combat",
+      "添加到桌面-pwa": "/game/pwa",
+      "职业外观与随行": "/game/appearance",
+      "移动端适配范围": "/game/controls#功能范围与限制",
+      "游戏界面与触屏操作": "/game/controls#手机和平板",
+      "当前限制与待完善项": "/game/controls#功能范围与限制",
+      "手机平板": "/game/controls"
+    }
+  },
+  "/guide/admin": {
+    "to": "/admin/",
+    "anchors": {
+      "后台登录": "/admin/#登录与权限",
+      "魔物资料与在线召唤": "/admin/#常用操作",
+      "游戏参数": "/admin/game-settings",
+      "功能范围": "/admin/#常用操作",
+      "管理后台": "/admin/#管理后台"
+    }
+  },
+  "/container/docker": {
+    "to": "/deploy/docker",
+    "anchors": {
+      "配置访问地址": "/deploy/configuration",
+      "保持登录与反向代理": "/deploy/reverse-proxy",
+      "日常维护": "/deploy/maintenance",
+      "从源码打包": "/development/",
+      "docker-安装": "/deploy/docker#docker-安装",
+      "系统要求": "/deploy/docker#系统要求",
+      "获取离线包": "/deploy/docker#获取离线包",
+      "校验并导入镜像": "/deploy/docker#校验并导入镜像",
+      "启动游戏": "/deploy/docker#启动游戏",
+      "服务状态": "/deploy/docker#服务状态",
+      "访问入口": "/deploy/docker#访问入口",
+      "默认账号": "/deploy/docker#默认账号"
+    }
+  },
+  "/container/upgrade": {
+    "to": "/deploy/upgrade",
+    "anchors": {
+      "备份与恢复": "/deploy/backup-restore",
+      "升级、备份与恢复": "/deploy/upgrade",
+      "保留数据和定制升级": "/deploy/upgrade#保留数据和定制升级"
+    }
+  },
+  "/container/customization": {
+    "to": "/deploy/customization",
+    "anchors": {
+      "升级与另一台机器验收": "/deploy/customization#升级时保留定制",
+      "自定义-npc、数据库与资源": "/deploy/customization#自定义-npc、数据库与资源",
+      "新增及覆盖-npc": "/deploy/customization#新增及覆盖-npc",
+      "数据库扩展": "/deploy/customization#数据库扩展",
+      "自定义资源与缓存": "/deploy/customization#自定义资源与缓存",
+      "刷新冒险工具和后台资料": "/deploy/customization#刷新冒险工具和后台资料",
+      "修改后的生效顺序与撤销": "/deploy/customization#修改后的生效顺序与撤销",
+      "常见问题": "/deploy/customization#常见问题",
+      "维护实现": "/deploy/customization#维护实现"
+    }
+  },
+  "/native/linux": {
+    "to": "/development/setup/linux",
+    "anchors": {
+      "检出五个仓库": "/development/setup/#检出五个仓库",
+      "准备运行资源": "/development/setup/#准备运行资源",
+      "源码与资源": "/development/setup/",
+      "linux-安装": "/development/setup/linux",
+      "依赖": "/development/setup/linux#依赖",
+      "构建与启动": "/development/setup/linux#构建与启动",
+      "检查与停止": "/development/setup/linux#检查与停止"
+    }
+  },
+  "/native/macos": {
+    "to": "/development/setup/macos",
+    "anchors": {
+      "macos-安装": "/development/setup/macos",
+      "安装依赖": "/development/setup/macos#安装依赖",
+      "检出源码与资源": "/development/setup/macos",
+      "数据库与编译": "/development/setup/macos#数据库与编译",
+      "启动服务端": "/development/setup/macos#启动服务端",
+      "启动-gateway": "/development/setup/macos#启动-gateway",
+      "已配置的混合开发环境": "/development/setup/macos#已配置的混合开发环境"
+    }
+  },
+  "/native/windows": {
+    "to": "/development/setup/windows",
+    "anchors": {
+      "windows-安装": "/development/setup/windows",
+      "安装-wsl2": "/development/setup/windows#安装-wsl2",
+      "安装开发依赖": "/development/setup/windows#安装开发依赖",
+      "放置源码与资源": "/development/setup/windows#放置源码与资源"
+    }
+  },
+  "/community/contributing": {
+    "to": "/development/contributing",
+    "anchors": {
+      "贡献指南": "/development/contributing#贡献指南",
+      "仓库": "/development/contributing#仓库",
+      "基本流程": "/development/contributing#基本流程"
+    }
+  }
+}

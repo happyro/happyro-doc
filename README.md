@@ -1,45 +1,48 @@
 # HappyRO 文档站
 
-[HappyRO](https://github.com/happyro/happyro) 的公开产品与安装文档，使用 VitePress 构建。
+[HappyRO](https://github.com/happyro/happyro) 的公开文档站，使用 VitePress 构建。入口：[happyro.kugarocks.com](https://happyro.kugarocks.com) · [happyro.org](https://happyro.org)。
 
-- 项目站点：[happyro.kugarocks.com](https://happyro.kugarocks.com)
-- GitHub Pages：[happyro.org](https://happyro.org)
+## 内容与目录
 
-## 本地开发
-
-文档目录与侧栏分类对应；新增或移动页面时，同步维护导航、正文链接及首页轮播引用。
-
-| 目录 | 侧栏分类 |
+| 目录 | 读者与职责 |
 | --- | --- |
-| `docs/guide/` | 文档：项目简介、管理后台、关于汉化、资源下载 |
-| `docs/game/` | 玩家指南：电脑桌面、手机平板、战斗与拾取、职业外观与随行 |
-| `docs/strategy/job-change/` | 游戏攻略 → 转职：职业线选择、共用流程与十三个职业分支 |
-| `docs/container/` | 容器化部署 |
-| `docs/native/` | 原生部署 |
-| `docs/community/` | 社区 |
-| `docs/changelog/` | 更新日志，按年／月归档 |
+| `docs/index.md` | 产品主页，保留顶部标题与功能卡片文案，展示新截图 |
+| `docs/guide/` | 项目介绍、快速开始、下载与汉化范围 |
+| `docs/game/` | 玩家操作，按功能组织，平台差异在同页说明 |
+| `docs/strategy/` | 游戏任务攻略；转职按职业线组织 |
+| `docs/deploy/` | 安装、配置、反向代理、维护、备份恢复、升级及定制 |
+| `docs/admin/` | 后台账号角色、运营发放和游戏设置 |
+| `docs/development/` | 公开开发准备、平台差异、架构与贡献 |
+| `docs/community/` | 联系与反馈 |
+| `docs/changelog/` | 从根仓库同步的产品日志与版本摘要 |
 
-首页位于 `docs/index.md`。图片位于 `docs/public/images/`，按 `brand/`、`admin/`、`game/desktop/` 和 `game/mobile/` 分类。
+顶栏按读者任务分类，侧栏统一展示可折叠的栏目、主题与页面层级。旧 `container/`、`native/`、设备指南及后台入口仅保留跳转页，正文只维护新位置；迁移清单见 `docs/.vitepress/redirects.json`。该清单记录旧路径、默认目标及拆分页的旧锚点，`LegacyRedirect.vue` 在浏览器转向，禁用 JavaScript 时仍有可点击入口。跳转页标记 noindex 和 canonical，不作为新的正文或搜索内容来源。
+
+## 本地开发与验证
 
 ```bash
 npm ci
 npm run docs:dev
-```
-
-构建检查：
-
-```bash
 npm run docs:build
 ```
 
-## 内容维护
+构建后核对所有生成 HTML 的站内链接、锚点和图片，特别检查旧地址带锚点的跳转。桌面、平板和手机查看首页与代表性正文；根 README 跨站链接同样更新。生成的 dist、缓存与审计结果不提交。推送 main 会触发站点工作流；本地构建不等于发布完成，未经用户要求不提交或推送。
 
-- docs 是公开站点正文；根 README 保存仓库开发说明，.vitepress 保存导航与主题。当前分类已与读者任务对应，不为减少文件数合并安装和玩家操作页。
-- changelog 日期页与版本摘要的唯一来源是 HappyRO 根仓库；在根仓库执行 `python3 tools/changelog/manage.py sync`，再执行 `check`，不要在本站单独改写镜像正文。
-- 页面移动时同步侧栏、首页、正文、图片及锚点引用；删除已过时页面前将有效规则并入当前页面，不建 archive 或保留无用转向页。
-- 已发布版本的下载和 Release 保持原事实，开发中功能明确标记未发布；旧截图不能作为最新布局验收证据。
-- 本地验证运行 docs:build，再核对生成页面的站内链接、锚点和 public 图片。生成的 dist、缓存与临时审计结果不提交。
-- 推送 main 会触发 GitHub Pages 工作流；本地构建不等于部署完成。提交与发布仍遵守 AGENTS。
+## 单一内容来源
+
+- 玩家指南、攻略、公开安装运维及后台使用说明在本站维护；根 README 保留概要与专题链接，避免复制整篇教程。
+- 内部架构决策、实现计划、进度、测试证据及镜像发布流程在根仓库或对应应用仓库维护，本站开发页链接到权威入口。
+- 产品日期日志与版本摘要只在根仓库修改；从根仓库运行 `python3 tools/changelog/manage.py sync` 和 `check`。纯文档、导航和主题改动不写产品日志。
+- 保持发布事实；开发中功能注明未发布，不能把主分支截图当作旧离线包已交付的能力。
+- 页面移动同时更新新导航、所有维护中的正文链接、根仓库引用和重定向清单；历史日志保持原文，通过旧入口跳转承接。
+
+## 图片来源与更新
+
+主页顶部和四张功能卡片恢复 Git 原版的全部文案、字号与样式；顶部恢复 VitePress 原有响应式布局，桌面左侧显示标题与演示按钮，右侧显示原有 Logo。下方 `HomeGallery.vue` 轮播依次展示三端整合图、跨端技能、图鉴、战斗与后台的新图。`docs/public/images/overview/` 的五张 PNG 原样同步根仓库 `docs/assets/readme/`；前两张透明、无阴影，设备样式、坐标和镜头以根仓库[README 图片规范](https://github.com/happyro/happyro/tree/main/docs/development/readme-images)为准。
+
+新增教程截图用本机 99 级剑士“罗安”，不切换为管理角色或伪造职业能力。具体截图来源、视口和哈希保存在 `docs/public/images/sources.json`；凭据、账号 ID、数据库和临时输出不进入站点。剑士无法演示的摆摊或其他职业能力，用经源码核对的步骤说明，新增实际操作图须具备相应角色条件。
+
+图片按用途放入 `overview/`、`game/controls/`、`game/social/`、`strategy/job-change/` 等目录。旧图只有仍被正文引用时才保留；更新截图时同时检查界面文案与教程步骤。
 
 ## 攻略维护
 

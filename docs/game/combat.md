@@ -1,12 +1,12 @@
 # 战斗与拾取
 
-本文说明 v0.5.0 开发中功能，尚未发布；已发布版本见[下载页](/guide/downloads)。桌面、手机和平板共用运行逻辑，按键位置见[电脑桌面](/game/desktop)和[手机平板](/game/mobile)。
+本文说明 v0.5.0 开发中功能，尚未发布；已发布版本见[下载页](/guide/downloads)。桌面、手机和平板共用运行逻辑，按键位置见[界面与操作](/game/controls)。
 
 ## 开始与配置
 
 从游戏右下角打开战斗设置，桌面与手机／平板使用相同配置逻辑。配置会自动保存，关闭面板后点击「自动战斗」开始。
 
-![手机平板自动战斗设置界面](/images/game/mobile/happyro-mobile-auto-fight.jpg)
+![罗安的桌面自动战斗设置](/images/overview/happyro-combat.png)
 
 ### 选择魔物与攻击方式
 

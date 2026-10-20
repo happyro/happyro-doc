@@ -5,7 +5,7 @@ HappyRO 是一个基于 [roBrowserLegacy](https://github.com/MrAntares/roBrowser
 ## 核心能力
 
 - 浏览器 PWA：登录、角色选择、地图渲染、音效与完整查看器启动页。
-- 多端界面：提供 [电脑桌面](/game/desktop) 与 [手机平板](/game/mobile) 界面，触屏支持移动、快捷技能和自动战斗。
+- 多端界面：提供[电脑、手机和平板界面](/game/controls)，触屏支持移动、快捷技能和自动战斗。
 - 中文本地化：客户端 UI、系统消息、物品、技能、魔物、地图和 NPC。
 - 冒险工具：在游戏内查询地图、魔物、NPC、物品，并进行导航和角色维护。
 - 管理后台：用户管理、运营发放、在线控制、参数修改和审计记录；在线体验见 [happyro-admin.kugarocks.com](https://happyro-admin.kugarocks.com)。
@@ -22,24 +22,7 @@ HappyRO 是一个基于 [roBrowserLegacy](https://github.com/MrAntares/roBrowser
 | [happyro-admin](https://github.com/happyro/happyro-admin) | 管理后台、Laravel API 与 Ant Design Pro 前端 |
 | [happyro-doc](https://github.com/happyro/happyro-doc) | 公开文档站、玩家指南与安装说明 |
 
-根仓库、四个应用仓库与文档仓库维护独立 Git 历史，长期中文产品分支均为 `main`。
-
-## 运行关系
-
-```text
-浏览器 / PWA
-      │ HTTP / WebSocket
-      ▼
-HappyRO Gateway
-      ├── PWA 与 kRO 运行资源
-      ├── login / char / map / web
-      └── Admin API
-              │
-              ▼
-           MariaDB
-```
-
-浏览器只访问 Gateway。Gateway 提供 PWA 与运行资源，并将连接转发到 Server；Admin 通过受控 Game Control 通道读取和维护游戏世界；Server 与 Admin 使用 MariaDB 保存玩家、日志和管理数据。
+根仓库、四个应用仓库与文档仓库维护独立 Git 历史，长期中文产品分支均为 `main`。运行关系与开发分工见[架构与仓库边界](/development/architecture)。
 
 ## 技术基线
 
