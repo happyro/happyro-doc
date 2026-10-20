@@ -137,7 +137,7 @@ export default defineConfig({
     ],
     sidebar: [
   {
-    "text": "快速开始",
+    "text": "入门指南",
     "items": [
       {
         "text": "快速开始",

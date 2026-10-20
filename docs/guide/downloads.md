@@ -1,12 +1,10 @@
 # 资源下载
 
-当前正式发布版本为 v0.5.0，从 v0.3.x（最近历史发布为 v0.3.2）直接跃升，跳过 v0.4.x。此次跨端体验、游戏功能与部署维护的变更规模大，标志着项目达到重要里程碑；完整变化见 [v0.5.0 版本摘要](/changelog/releases/v0.5.0)。
+当前正式发布版本为 v0.5.0，从 v0.3.x 直接跃升，此次跨端体验、游戏功能与部署维护的变更规模大，完整变化见 [v0.5.0 版本摘要](/changelog/releases/v0.5.0)。
 
 ## 离线包
 
-当前离线交付版本为 `v0.5.0`，完整包为 `happyro-v0.5.0.zip`，并配套 `happyro-v0.5.0-runtimes.zip`（运行资源）和 `happyro-v0.5.0-images.zip`（双架构镜像与部署文件）。使用拆分包时，将两者解压到同一目录，再按包内 README 校验和安装；两个拆分包不能单独部署。
-
-百度网盘下载完整包：
+百度网盘下载完整离线包：
 
 - 文件：[`happyro-v0.5.0.zip`](https://pan.baidu.com/s/1Vx3ZoOvfAm5a24K97AmuMQ?pwd=9jnb)
 - 提取码：`9jnb`
@@ -16,20 +14,6 @@
 ```text
 7ce06652883f34d72ad2f75fa06454b47ebe7eaab117123b4a1b335ee48a3652
 ```
-
-拆分包 SHA-256：
-
-```text
-happyro-v0.5.0-runtimes.zip
-1cd7735663676f723b8b7811920a63440a60939307f9937809313bf346d42184
-happyro-v0.5.0-images.zip
-01cbdfc7c140266abb96161c6e30b8b29925405fa0fa374d950151ad71e1aee1
-```
-
-历史 v0.3.2 完整包：
-
-- 文件：[`happyro-v0.3.2.zip`](https://pan.baidu.com/s/1QqR4QblxjCEUepqPPTjsvg?pwd=35yb)
-- 提取码：`35yb`
 
 ```text
 happyro-v0.5.0/                # 完整包或两个拆分包合并后的根目录
