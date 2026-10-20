@@ -4,7 +4,7 @@ const changelog = [
   {
     text: '版本摘要',
     items: [
-      { text: 'v0.4.0 · 未发布', link: '/changelog/releases/v0.4.0' },
+      { text: 'v0.5.0 · 未发布', link: '/changelog/releases/v0.5.0' },
       { text: 'v0.3.2', link: '/changelog/releases/v0.3.2' },
       { text: 'v0.3.1', link: '/changelog/releases/v0.3.1' },
       { text: 'v0.3.0', link: '/changelog/releases/v0.3.0' },
@@ -14,6 +14,7 @@ const changelog = [
     text: '2026-10',
     collapsed: true,
     items: [
+      { text: '2026-10-20', link: '/changelog/2026/10/2026-10-20' },
       { text: '2026-10-19', link: '/changelog/2026/10/2026-10-19' },
       { text: '2026-10-18', link: '/changelog/2026/10/2026-10-18' },
       { text: '2026-10-17', link: '/changelog/2026/10/2026-10-17' },
@@ -120,10 +121,12 @@ export default defineConfig({
         ],
       },
       {
-        text: '游戏画面',
+        text: '玩家指南',
         items: [
           { text: '电脑桌面', link: '/game/desktop' },
           { text: '手机平板', link: '/game/mobile' },
+          { text: '战斗与拾取', link: '/game/combat' },
+          { text: '职业外观与随行', link: '/game/companions' },
         ],
       },
       {

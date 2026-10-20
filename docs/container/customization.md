@@ -1,8 +1,8 @@
 # 自定义 NPC、数据库与资源
 
-适用于包含自定义工具和挂载的 v0.4.0 及后续离线包。先完成 [Docker 安装](/container/docker)，已有旧环境按[升级与恢复](/container/upgrade)迁移。本文命令在解压后的部署包根目录执行。
+适用于包含自定义工具和挂载的 v0.5.0 及后续离线包。先完成 [Docker 安装](/container/docker)，已有旧环境按[升级与恢复](/container/upgrade)迁移。本文命令在解压后的部署包根目录执行。
 
-游戏重载与后台目录刷新需要分别执行。历史候选包曾进行 Mac arm64 隔离验收；v0.4.0 最终包仍待构建及验收，不能沿用旧候选结果。
+游戏重载与后台目录刷新需要分别执行。历史候选包曾进行 Mac arm64 隔离验收；v0.5.0 最终包仍待构建及验收，不能沿用旧候选结果。
 
 推荐将 DATA_DIR 与 CUSTOM_DIR 放在版本目录外。发行包只带 examples/custom 模板；首次 initialize 创建默认 custom/。若编辑 .env 将 CUSTOM_DIR 改到其它路径，必须执行 initialize-custom 为该位置初始化。这个命令可重复执行，只补缺少的模板，不覆盖已有文件。资源不复制原始 GRF，自定义目录初始为空。
 
@@ -118,7 +118,7 @@ python3 tools/deployment/manage.py refresh-custom-catalogs --directory .
 - 覆盖无效：确认原脚本当前被加载，路径为去掉开头 npc/ 后的相对路径；内置 `.conf` 不支持覆盖。
 - 游戏已更新但后台还是旧值：执行目录刷新；反之后台已更新不代表游戏已重载。
 - 资源无效：确认没有额外一层 data/、路径大小写和编码一致、格式受客户端支持；查看 Gateway 日志并重新进入游戏。
-- admin-init 提示缺少 `server-base/conf/import/script_conf.txt`：这是 v0.4.0 首轮候选镜像的缺陷，源码已修复，最终发行包仍须核对；取得完整修复包后使用，不手工修改容器补文件。
+- admin-init 提示缺少 `server-base/conf/import/script_conf.txt`：这是开发阶段旧候选镜像的缺陷，源码已修复，最终发行包仍须核对；取得完整修复包后使用，不手工修改容器补文件。
 - `verify` 失败：先检查是否混用了不同包的配置、镜像或工具，不改清单哈希来掩盖损坏。用户只应编辑 `.env`、custom 和持久化数据，不编辑受清单校验的发行文件。
 
 
