@@ -119,3 +119,36 @@ html {
   }
 
 }
+
+/* Compact illustrations in job-change walkthroughs. */
+.vp-doc .job-guide-figure {
+  width: 100%;
+  max-width: 420px;
+  margin: 24px auto;
+}
+
+.vp-doc .job-guide-figure a {
+  display: block;
+  border-radius: 10px;
+}
+
+.vp-doc .job-guide-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+}
+
+.vp-doc .job-guide-figure figcaption {
+  margin-top: 8px;
+  color: var(--vp-c-text-2);
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.vp-doc .job-guide-figure a:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 4px;
+}

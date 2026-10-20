@@ -1,0 +1,681 @@
+{
+  "description": "攻略定位示意：按服务端碰撞数据重绘，不含客户端小地图图片；坐标左下原点。",
+  "cacheSources": [
+    {
+      "path": "db/map_cache.dat",
+      "sha256": "00d277d00e70f476ceef9608f0b45a2a85bfc5ebf1fabf92f46e86f63648282e"
+    },
+    {
+      "path": "db/re/map_cache.dat",
+      "sha256": "e871cb73bae86d4be6e32d35ed34cc0456920203f3ffa4687bdba8eedaf627fd"
+    }
+  ],
+  "locations": [
+    {
+      "file": "knight-second.webp",
+      "map": "prt_in",
+      "x": 88,
+      "y": 101,
+      "label": "骑士团长",
+      "mapSize": [
+        300,
+        200
+      ],
+      "cache": "db/re/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/jobs/2-1/knight.txt",
+          "line": 45
+        }
+      ]
+    },
+    {
+      "file": "knight-third.webp",
+      "map": "prt_in",
+      "x": 162,
+      "y": 24,
+      "label": "曼努埃尔",
+      "mapSize": [
+        300,
+        200
+      ],
+      "cache": "db/re/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/re/jobs/3-1/rune_knight.txt",
+          "line": 23
+        }
+      ]
+    },
+    {
+      "file": "crusader-second.webp",
+      "map": "prt_cas",
+      "x": 251,
+      "y": 75,
+      "label": "高级十字军",
+      "mapSize": [
+        400,
+        356
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/re/jobs/2-2/crusader.txt",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "file": "crusader-third.webp",
+      "map": "prt_cas",
+      "x": 172,
+      "y": 275,
+      "label": "海因里希",
+      "mapSize": [
+        400,
+        356
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/re/jobs/3-2/royal_guard.txt",
+          "line": 21
+        }
+      ]
+    },
+    {
+      "file": "wizard-second.webp",
+      "map": "gef_tower",
+      "x": 111,
+      "y": 37,
+      "label": "凯瑟琳",
+      "mapSize": [
+        200,
+        200
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/jobs/2-1/wizard.txt",
+          "line": 32
+        }
+      ]
+    },
+    {
+      "file": "wizard-third.webp",
+      "map": "morocc",
+      "x": 95,
+      "y": 132,
+      "label": "扭曲区域（步行触发）",
+      "mapSize": [
+        320,
+        320
+      ],
+      "cache": "db/re/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/re/jobs/3-1/warlock.txt",
+          "line": 73
+        }
+      ]
+    },
+    {
+      "file": "sage-second.webp",
+      "map": "yuno_in03",
+      "x": 154,
+      "y": 35,
+      "label": "贤者转职报名处",
+      "mapSize": [
+        260,
+        216
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/jobs/2-2/sage.txt",
+          "line": 203
+        }
+      ]
+    },
+    {
+      "file": "sage-third.webp",
+      "map": "gef_tower",
+      "x": 102,
+      "y": 34,
+      "label": "梅里托",
+      "mapSize": [
+        200,
+        200
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/re/jobs/3-2/sorcerer.txt",
+          "line": 19
+        }
+      ]
+    },
+    {
+      "file": "hunter-second.webp",
+      "map": "hu_in01",
+      "x": 386,
+      "y": 373,
+      "label": "猎人谢琳",
+      "mapSize": [
+        400,
+        400
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/jobs/2-1/hunter.txt",
+          "line": 97
+        }
+      ]
+    },
+    {
+      "file": "hunter-third.webp",
+      "map": "tur_dun01",
+      "x": 156,
+      "y": 36,
+      "label": "生存教官",
+      "mapSize": [
+        300,
+        300
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/re/jobs/3-1/ranger.txt",
+          "line": 27
+        }
+      ]
+    },
+    {
+      "file": "bard-second.webp",
+      "map": "comodo",
+      "x": 226,
+      "y": 123,
+      "label": "流浪诗人拉洛",
+      "mapSize": [
+        360,
+        380
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/jobs/2-2/bard.txt",
+          "line": 30
+        }
+      ]
+    },
+    {
+      "file": "bard-third.webp",
+      "map": "alberta",
+      "x": 196,
+      "y": 133,
+      "label": "卡里安",
+      "mapSize": [
+        280,
+        280
+      ],
+      "cache": "db/re/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/re/jobs/3-2/minstrel.txt",
+          "line": 20
+        }
+      ]
+    },
+    {
+      "file": "dancer-second.webp",
+      "map": "comodo",
+      "x": 193,
+      "y": 151,
+      "label": "博尔·罗宾",
+      "mapSize": [
+        360,
+        380
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/jobs/2-2/dancer.txt",
+          "line": 39
+        }
+      ]
+    },
+    {
+      "file": "dancer-third.webp",
+      "map": "xmas",
+      "x": 162,
+      "y": 209,
+      "label": "索伊",
+      "mapSize": [
+        300,
+        360
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/re/jobs/3-2/wanderer.txt",
+          "line": 21
+        }
+      ]
+    },
+    {
+      "file": "priest-second.webp",
+      "map": "prt_church",
+      "x": 16,
+      "y": 41,
+      "label": "保罗主教",
+      "mapSize": [
+        200,
+        200
+      ],
+      "cache": "db/re/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/jobs/2-1/priest.txt",
+          "line": 35
+        }
+      ]
+    },
+    {
+      "file": "priest-third.webp",
+      "map": "prt_church",
+      "x": 103,
+      "y": 88,
+      "label": "祈祷中的神父",
+      "mapSize": [
+        200,
+        200
+      ],
+      "cache": "db/re/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/re/jobs/3-1/archbishop.txt",
+          "line": 41
+        }
+      ]
+    },
+    {
+      "file": "monk-second.webp",
+      "map": "prt_monk",
+      "x": 59,
+      "y": 247,
+      "label": "武僧报名处",
+      "mapSize": [
+        400,
+        300
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/jobs/2-2/monk.txt",
+          "line": 21
+        }
+      ]
+    },
+    {
+      "file": "monk-third.webp",
+      "map": "ve_in",
+      "x": 237,
+      "y": 125,
+      "label": "酒馆争执（任务入口）",
+      "mapSize": [
+        400,
+        400
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/re/jobs/3-2/sura.txt",
+          "line": 21
+        }
+      ]
+    },
+    {
+      "file": "assassin-second.webp",
+      "map": "in_moc_16",
+      "x": 19,
+      "y": 33,
+      "label": "刺客公会成员",
+      "mapSize": [
+        200,
+        200
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/jobs/2-1/assassin.txt",
+          "line": 50
+        }
+      ]
+    },
+    {
+      "file": "assassin-third.webp",
+      "map": "que_job01",
+      "x": 75,
+      "y": 96,
+      "label": "阿卡特",
+      "mapSize": [
+        160,
+        100
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/re/jobs/3-1/guillotine_cross.txt",
+          "line": 25
+        }
+      ]
+    },
+    {
+      "file": "rogue-second.webp",
+      "map": "in_rogue",
+      "x": 363,
+      "y": 122,
+      "label": "流氓公会成员",
+      "mapSize": [
+        400,
+        400
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/jobs/2-2/rogue.txt",
+          "line": 54
+        }
+      ]
+    },
+    {
+      "file": "rogue-third.webp",
+      "map": "morocc",
+      "x": 156,
+      "y": 70,
+      "label": "女孩（任务入口）",
+      "mapSize": [
+        320,
+        320
+      ],
+      "cache": "db/re/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/re/jobs/3-2/shadow_chaser.txt",
+          "line": 20
+        }
+      ]
+    },
+    {
+      "file": "blacksmith-second.webp",
+      "map": "ein_in01",
+      "x": 18,
+      "y": 28,
+      "label": "铁匠公会导师",
+      "mapSize": [
+        300,
+        300
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/jobs/2-1/blacksmith.txt",
+          "line": 46
+        }
+      ]
+    },
+    {
+      "file": "blacksmith-third.webp",
+      "map": "yuno",
+      "x": 129,
+      "y": 156,
+      "label": "Chainheart",
+      "mapSize": [
+        400,
+        400
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/re/jobs/3-1/mechanic.txt",
+          "line": 19
+        }
+      ]
+    },
+    {
+      "file": "alchemist-second.webp",
+      "map": "alde_alche",
+      "x": 27,
+      "y": 185,
+      "label": "炼金术师公会报名处",
+      "mapSize": [
+        200,
+        200
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/jobs/2-2/alchemist.txt",
+          "line": 23
+        }
+      ]
+    },
+    {
+      "file": "alchemist-third.webp",
+      "map": "alde_alche",
+      "x": 35,
+      "y": 186,
+      "label": "炼金术师公会成员",
+      "mapSize": [
+        200,
+        200
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/re/jobs/3-2/genetic.txt",
+          "line": 21
+        }
+      ]
+    },
+    {
+      "file": "swordman-first.webp",
+      "map": "izlude_in",
+      "x": 74,
+      "y": 172,
+      "label": "剑士公会职员",
+      "mapSize": [
+        200,
+        200
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/re/jobs/1-1/swordman.txt",
+          "line": 15
+        }
+      ]
+    },
+    {
+      "file": "mage-first.webp",
+      "map": "geffen_in",
+      "x": 164,
+      "y": 124,
+      "label": "魔法师公会职员",
+      "mapSize": [
+        200,
+        200
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/re/jobs/1-1/mage.txt",
+          "line": 15
+        }
+      ]
+    },
+    {
+      "file": "archer-first.webp",
+      "map": "payon_in02",
+      "x": 64,
+      "y": 71,
+      "label": "弓箭手导师",
+      "mapSize": [
+        100,
+        100
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/re/jobs/1-1/archer.txt",
+          "line": 15
+        }
+      ]
+    },
+    {
+      "file": "acolyte-first.webp",
+      "map": "prt_church",
+      "x": 184,
+      "y": 41,
+      "label": "服事导师",
+      "mapSize": [
+        200,
+        200
+      ],
+      "cache": "db/re/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/re/jobs/1-1/acolyte.txt",
+          "line": 16
+        }
+      ]
+    },
+    {
+      "file": "merchant-first.webp",
+      "map": "alberta_in",
+      "x": 53,
+      "y": 43,
+      "label": "商人公会曼苏",
+      "mapSize": [
+        200,
+        200
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/re/jobs/1-1/merchant.txt",
+          "line": 15
+        }
+      ]
+    },
+    {
+      "file": "thief-first.webp",
+      "map": "moc_prydb1",
+      "x": 39,
+      "y": 129,
+      "label": "盗贼向导",
+      "mapSize": [
+        200,
+        200
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/re/jobs/1-1/thief.txt",
+          "line": 15
+        }
+      ]
+    },
+    {
+      "file": "donation-rebirth.webp",
+      "map": "yuno_in02",
+      "x": 88,
+      "y": 164,
+      "label": "图书馆捐赠处",
+      "mapSize": [
+        200,
+        240
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/jobs/valkyrie.txt",
+          "line": 206
+        }
+      ]
+    },
+    {
+      "file": "book-rebirth.webp",
+      "map": "yuno_in02",
+      "x": 93,
+      "y": 207,
+      "label": "伊米尔之书",
+      "mapSize": [
+        200,
+        240
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/jobs/valkyrie.txt",
+          "line": 248
+        }
+      ]
+    },
+    {
+      "file": "heart-rebirth.webp",
+      "map": "yuno_in05",
+      "x": 49,
+      "y": 43,
+      "label": "伊米尔之心",
+      "mapSize": [
+        200,
+        200
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/jobs/valkyrie.txt",
+          "line": 313
+        }
+      ]
+    },
+    {
+      "file": "valkyrie-rebirth.webp",
+      "map": "valkyrie",
+      "x": 48,
+      "y": 86,
+      "label": "女武神",
+      "mapSize": [
+        100,
+        100
+      ],
+      "cache": "db/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/jobs/valkyrie.txt",
+          "line": 60
+        }
+      ]
+    },
+    {
+      "file": "fourth-common.webp",
+      "map": "prontera",
+      "x": 153,
+      "y": 193,
+      "label": "四转职业导师",
+      "mapSize": [
+        312,
+        392
+      ],
+      "cache": "db/re/map_cache.dat",
+      "npcSources": [
+        {
+          "path": "npc/custom/happyro/fourth_job.txt",
+          "line": 3
+        }
+      ]
+    }
+  ]
+}

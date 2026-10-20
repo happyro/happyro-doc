@@ -130,6 +130,32 @@ export default defineConfig({
         ],
       },
       {
+        text: '游戏攻略',
+        collapsed: true,
+        items: [
+          {
+            text: '转职',
+            collapsed: true,
+            items: [
+              { text: '总览与共用流程', link: '/strategy/job-change/' },
+              { text: '骑士系（龙骑士）', link: '/strategy/job-change/knight' },
+              { text: '十字军系（帝国圣卫军）', link: '/strategy/job-change/crusader' },
+              { text: '巫师系（大法师）', link: '/strategy/job-change/wizard' },
+              { text: '贤者系（元素支配者）', link: '/strategy/job-change/sage' },
+              { text: '猎人系（风鹰）', link: '/strategy/job-change/hunter' },
+              { text: '诗人系（天籁颂者）', link: '/strategy/job-change/bard' },
+              { text: '舞娘系（乐之舞灵）', link: '/strategy/job-change/dancer' },
+              { text: '牧师系（枢机主教）', link: '/strategy/job-change/priest' },
+              { text: '武僧系（审判者）', link: '/strategy/job-change/monk' },
+              { text: '刺客系（暗影十字）', link: '/strategy/job-change/assassin' },
+              { text: '流氓系（深渊追踪者）', link: '/strategy/job-change/rogue' },
+              { text: '铁匠系（机甲大师）', link: '/strategy/job-change/blacksmith' },
+              { text: '炼金术师系（生物学者）', link: '/strategy/job-change/alchemist' },
+            ],
+          },
+        ],
+      },
+      {
         text: '容器化部署',
         items: [
           { text: 'Docker', link: '/container/docker' },
