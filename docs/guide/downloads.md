@@ -6,13 +6,13 @@
 
 百度网盘下载完整离线包：
 
-- 文件：[`happyro-v0.5.0.zip`](https://pan.baidu.com/s/1Vx3ZoOvfAm5a24K97AmuMQ?pwd=9jnb)
-- 提取码：`9jnb`
+- 文件：[`happyro-v0.5.0.zip`](https://pan.baidu.com/s/1rg9L8yzmwOHtH1s9puMwzQ?pwd=bfnm)
+- 提取码：`bfnm`
 
 完整 ZIP 的 SHA-256：
 
 ```text
-7ce06652883f34d72ad2f75fa06454b47ebe7eaab117123b4a1b335ee48a3652
+853cfa22cd45f6a506208c690d6399931cf2a22dcae08f590ab864464cf8eeb8
 ```
 
 ```text
