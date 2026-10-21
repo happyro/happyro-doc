@@ -6,10 +6,15 @@
 
 当前离线交付版本为 `v0.5.0`，完整包为 `happyro-v0.5.0.zip`，并配套 `happyro-v0.5.0-runtimes.zip`（运行资源）和 `happyro-v0.5.0-images.zip`（双架构镜像与部署文件）。使用拆分包时，将两者解压到同一目录，再按包内 README 校验和安装；两个拆分包不能单独部署。
 
+百度网盘下载完整包：
+
+- 文件：[`happyro-v0.5.0.zip`](https://pan.baidu.com/s/1Vx3ZoOvfAm5a24K97AmuMQ?pwd=9jnb)
+- 提取码：`9jnb`
+
 完整 ZIP 的 SHA-256：
 
 ```text
-c4abc418bb00ff3a11ccc9ed2c7155d787671e6ff89e57d9ebe50752d148a2e4
+7ce06652883f34d72ad2f75fa06454b47ebe7eaab117123b4a1b335ee48a3652
 ```
 
 拆分包 SHA-256：
@@ -21,7 +26,7 @@ happyro-v0.5.0-images.zip
 01cbdfc7c140266abb96161c6e30b8b29925405fa0fa374d950151ad71e1aee1
 ```
 
-公开网盘下载地址待维护者上传后补充。历史 v0.3.2 完整包仍可通过百度网盘取得：
+历史 v0.3.2 完整包：
 
 - 文件：[`happyro-v0.3.2.zip`](https://pan.baidu.com/s/1QqR4QblxjCEUepqPPTjsvg?pwd=35yb)
 - 提取码：`35yb`
