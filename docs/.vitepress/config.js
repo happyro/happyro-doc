@@ -307,7 +307,7 @@ export default defineConfig({
     ]
   },
   {
-    "text": "部署与运维",
+    "text": "安装运维",
     "items": [
       {
         "text": "部署概览",

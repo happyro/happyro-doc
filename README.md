@@ -42,7 +42,7 @@ npm run docs:build
 
 新增教程截图用本机 99 级剑士“罗安”，不切换为管理角色或伪造职业能力。具体截图来源、视口和哈希保存在 `docs/public/images/sources.json`；凭据、账号 ID、数据库和临时输出不进入站点。剑士无法演示的摆摊或其他职业能力，用经源码核对的步骤说明，新增实际操作图须具备相应角色条件。
 
-图片按用途放入 `overview/`、`game/controls/`、`game/social/`、`strategy/job-change/` 等目录。旧图只有仍被正文引用时才保留；更新截图时同时检查界面文案与教程步骤。
+图片按用途放入 `overview/`、`game/controls/`、`game/social/`、`game/adventure/`、`game/trading/`、`game/mail/` 和 `strategy/job-change/`。旧图只有仍被正文引用时才保留；更新截图时同时检查界面文案与教程步骤。
 
 ## 攻略维护
 
