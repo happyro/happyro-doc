@@ -1,7 +1,7 @@
 # 升级
 
 ::: info 适用版本
-本页按当前主分支说明，对应已发布的 v0.5.0；下载与摘要以[下载页](/guide/downloads)和[版本说明](/changelog/releases/v0.5.0)为准。
+本页适用于已发布的 v0.5.0 PHP 离线包；当前主分支的 Go API 使用全新管理库，不能套用本页流程迁移；下载与摘要以[下载页](/guide/downloads)和[版本说明](/changelog/releases/v0.5.0)为准。
 :::
 
 首次安装见 [Docker 安装](/deploy/docker)。升级前保存匹配版本的完整包与[停写备份](/deploy/backup-restore)。

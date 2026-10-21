@@ -1,7 +1,7 @@
 # HTTPS 与反向代理
 
 ::: info 适用版本
-本页按当前主分支说明，对应已发布的 v0.5.0；下载与摘要以[下载页](/guide/downloads)和[版本说明](/changelog/releases/v0.5.0)为准。
+本页适用于已发布的 v0.5.0；下载与摘要以[下载页](/guide/downloads)和[版本说明](/changelog/releases/v0.5.0)为准。
 :::
 
 域名应指向部署主机，由反向代理提供 HTTPS。游戏入口代理到 Gateway，后台入口代理到 Admin；浏览器不能直接访问数据库或内部 Game Control 服务。

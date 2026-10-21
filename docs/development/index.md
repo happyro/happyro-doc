@@ -5,7 +5,8 @@
 1. 阅读[架构与仓库边界](/development/architecture)。
 2. 完成[源码与运行资源准备](/development/setup/)。
 3. 按 [Linux](/development/setup/linux)、[macOS](/development/setup/macos) 或 [Windows / WSL2](/development/setup/windows) 准备环境。
-4. 按[贡献指南](/development/contributing)验证改动。
+4. 使用[功能测试账号](/development/test-accounts)验收摆摊、宠物、佣兵和生命体。
+5. 按[贡献指南](/development/contributing)验证改动。
 
 ## 维护入口
 

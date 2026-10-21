@@ -19,7 +19,7 @@ sudo apt install -y git make build-essential cmake pkg-config \
 
 ## 源码与资源
 
-完成[共用准备步骤](/development/setup/#检出五个仓库)，再继续以下操作。
+完成[共用准备步骤](/development/setup/#检出六个构建仓库)，再继续以下操作。
 
 ## 构建与启动
 
@@ -42,7 +42,7 @@ make gateway-start
 
 数据库就绪后可用 `make test-account` 创建本机测试账号，账号写入 `work/runtime/test-account.env`。
 
-Admin 使用独立仓库的 Laravel 后端、Ant Design Pro 前端和 systemd 模板，具体启动命令见 [happyro-admin](https://github.com/happyro/happyro-admin)。
+管理前端与 Go API 分别启动：happyro-admin 提供 React / Umi 前端，happyro-api 提供 Go 后端与 `happyro-api.service` 模板。首次部署须准备独立的空管理库，执行迁移、管理员初始化和资料导入。配置与启动步骤见 [API 部署说明](https://github.com/happyro/happyro-api/blob/main/docs/deployment.md)和 [Admin 部署说明](https://github.com/happyro/happyro-admin/blob/main/docs/deployment.md)。
 
 ## 检查与停止
 
