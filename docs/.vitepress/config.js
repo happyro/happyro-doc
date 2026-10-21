@@ -224,6 +224,10 @@ export default defineConfig({
           {
             "text": "交易与摆摊",
             "link": "/game/trading"
+          },
+          {
+            "text": "邮件与附件",
+            "link": "/game/mail"
           }
         ]
       }
