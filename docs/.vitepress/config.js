@@ -98,47 +98,43 @@ export default defineConfig({
     siteTitle: 'HappyRO',
     nav: [
       {
-            "text": "快速开始",
-            "link": "/guide/quick-start"
+        "text": "快速开始",
+        "link": "/guide/quick-start"
       },
       {
-            "text": "玩家指南",
-            "link": "/game/"
+        "text": "玩家指南",
+        "link": "/game/"
       },
       {
-            "text": "游戏攻略",
-            "link": "/strategy/"
+        "text": "游戏攻略",
+        "link": "/strategy/"
       },
       {
-            "text": "部署运维",
-            "link": "/deploy/"
+        "text": "资源下载",
+        "link": "/guide/downloads"
       },
       {
-            "text": "管理后台",
-            "link": "/admin/"
+        "text": "安装运维",
+        "link": "/deploy/"
       },
       {
-            "text": "开发指南",
-            "link": "/development/"
+        "text": "管理后台",
+        "link": "/admin/"
       },
       {
-            "text": "更多",
-            "items": [
-                  {
-                        "text": "下载",
-                        "link": "/guide/downloads"
-                  },
-                  {
-                        "text": "更新日志",
-                        "link": "/changelog/releases/v0.5.0"
-                  },
-                  {
-                        "text": "联系与反馈",
-                        "link": "/community/contact"
-                  }
-            ]
+        "text": "更多",
+        "items": [
+          {
+            "text": "更新日志",
+            "link": "/changelog/releases/v0.5.0"
+          },
+          {
+            "text": "联系与反馈",
+            "link": "/community/contact"
+          }
+        ]
       }
-],
+    ],
     sidebar: [
   {
     "text": "快速开始",
