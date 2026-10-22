@@ -12,6 +12,7 @@
 
 | 需求 | 文档 |
 | --- | --- |
+| 查询环境变量、默认值和生效方式 | [环境变量配置参考](/deploy/environment-variables) |
 | 状态、日志、重启与停服 | [日常维护](/deploy/maintenance) |
 | 保存存档、异机恢复、回退准备 | [备份与恢复](/deploy/backup-restore) |
 | 更新完整离线包 | [升级](/deploy/upgrade) |

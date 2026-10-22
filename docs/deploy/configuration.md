@@ -27,3 +27,7 @@ python3 tools/deployment/manage.py initialize-custom --directory .
 以当前包的 `.env.example` 为准；不要将另一版本的完整环境文件直接覆盖新模板。修改地址后重新部署并检查网页、登录、选角、进图及后台接口。后台与游戏使用不同入口，局域网设备不能使用部署机器的 `127.0.0.1`。
 
 运行密码、`APP_KEY` 和控制令牌须保留在自己的环境文件中。已有存档升级时保留这些值，见[升级](/deploy/upgrade)。
+
+## 全部环境变量
+
+客户端默认设置、服务端视野、Gateway 缓存以及 API 会话等参数见[环境变量配置参考](/deploy/environment-variables)。该参考按当前源码维护，使用前核对所用版本支持情况。
