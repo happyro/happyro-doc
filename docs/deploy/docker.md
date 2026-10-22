@@ -1,3 +1,7 @@
+---
+pageClass: responsive-tables
+---
+
 # Docker 安装
 
 ::: info 适用版本
@@ -61,13 +65,13 @@ deploy 使用已导入的本版镜像，不会拉取或现场构建；先等待�
 
 | 服务 | 容器 | 用途 |
 | --- | --- | --- |
-| Database | `happyro-database` | 游戏与后台数据库 |
-| Login | `happyro-login` | 游戏账号登录 |
-| Char | `happyro-char` | 角色选择与角色数据 |
-| Map | `happyro-map` | 地图、战斗和 NPC |
-| Web API | `happyro-web-api` | 游戏控制与资料接口 |
-| Gateway | `happyro-gateway` | 游戏网页、资源与 WebSocket 入口 |
-| Admin | `happyro-admin` | 游戏后台 |
+| <span class="table-cell-label" aria-hidden="true">服务</span>Database | <span class="table-cell-label" aria-hidden="true">容器</span>`happyro-database` | <span class="table-cell-label" aria-hidden="true">用途</span>游戏与后台数据库 |
+| <span class="table-cell-label" aria-hidden="true">服务</span>Login | <span class="table-cell-label" aria-hidden="true">容器</span>`happyro-login` | <span class="table-cell-label" aria-hidden="true">用途</span>游戏账号登录 |
+| <span class="table-cell-label" aria-hidden="true">服务</span>Char | <span class="table-cell-label" aria-hidden="true">容器</span>`happyro-char` | <span class="table-cell-label" aria-hidden="true">用途</span>角色选择与角色数据 |
+| <span class="table-cell-label" aria-hidden="true">服务</span>Map | <span class="table-cell-label" aria-hidden="true">容器</span>`happyro-map` | <span class="table-cell-label" aria-hidden="true">用途</span>地图、战斗和 NPC |
+| <span class="table-cell-label" aria-hidden="true">服务</span>Web API | <span class="table-cell-label" aria-hidden="true">容器</span>`happyro-web-api` | <span class="table-cell-label" aria-hidden="true">用途</span>游戏控制与资料接口 |
+| <span class="table-cell-label" aria-hidden="true">服务</span>Gateway | <span class="table-cell-label" aria-hidden="true">容器</span>`happyro-gateway` | <span class="table-cell-label" aria-hidden="true">用途</span>游戏网页、资源与 WebSocket 入口 |
+| <span class="table-cell-label" aria-hidden="true">服务</span>Admin | <span class="table-cell-label" aria-hidden="true">容器</span>`happyro-admin` | <span class="table-cell-label" aria-hidden="true">用途</span>游戏后台 |
 
 初始化容器 `happyro-admin-init` 应执行完成并以状态码 `0` 退出。
 
@@ -86,8 +90,8 @@ deploy 使用已导入的本版镜像，不会拉取或现场构建；先等待�
 
 | 用途 | 用户名 | 密码 | 权限 |
 | --- | --- | --- | --- |
-| 游戏 | `happyro` | `happyro` | GM |
-| 游戏后台 | `admin` | `admin` | 超级管理员 |
+| <span class="table-cell-label" aria-hidden="true">用途</span>游戏 | <span class="table-cell-label" aria-hidden="true">用户名</span>`happyro` | <span class="table-cell-label" aria-hidden="true">密码</span>`happyro` | <span class="table-cell-label" aria-hidden="true">权限</span>GM |
+| <span class="table-cell-label" aria-hidden="true">用途</span>游戏后台 | <span class="table-cell-label" aria-hidden="true">用户名</span>`admin` | <span class="table-cell-label" aria-hidden="true">密码</span>`admin` | <span class="table-cell-label" aria-hidden="true">权限</span>超级管理员 |
 
 
 ### 默认角色：罗安
@@ -96,16 +100,16 @@ deploy 使用已导入的本版镜像，不会拉取或现场构建；先等待�
 
 | 项目 | 初始配置 |
 | --- | --- |
-| 性别与职业 | 男剑士，职业 ID 1，Base 99 / Job 50 |
-| 六维属性 | STR 70、AGI 60、VIT 40、INT 10、DEX 40、LUK 1 |
-| 生命与魔力 | HP 5758、SP 228，均为满值 |
-| 点数 | 剩余属性点、技能点、特性点均为 0 |
-| 金钱 | 10,000 Zeny |
-| 外观 | 发型 1、默认颜色，无头饰 |
-| 装备与物品 | 普通剑（1101，已装备）、红色药水 ×100、蓝色药水 ×100、波利蛋 ×1 |
-| 宠物 | 波利已收回蛋，亲密度 950、饥饿度 100，可正常孵化 |
-| 出生位置 | 普隆德拉 `prontera`，164,185 |
-| 存档位置 | 普隆德拉 `prontera`，159,189 |
+| <span class="table-cell-label" aria-hidden="true">项目</span>性别与职业 | <span class="table-cell-label" aria-hidden="true">初始配置</span>男剑士，职业 ID 1，Base 99 / Job 50 |
+| <span class="table-cell-label" aria-hidden="true">项目</span>六维属性 | <span class="table-cell-label" aria-hidden="true">初始配置</span>STR 70、AGI 60、VIT 40、INT 10、DEX 40、LUK 1 |
+| <span class="table-cell-label" aria-hidden="true">项目</span>生命与魔力 | <span class="table-cell-label" aria-hidden="true">初始配置</span>HP 5758、SP 228，均为满值 |
+| <span class="table-cell-label" aria-hidden="true">项目</span>点数 | <span class="table-cell-label" aria-hidden="true">初始配置</span>剩余属性点、技能点、特性点均为 0 |
+| <span class="table-cell-label" aria-hidden="true">项目</span>金钱 | <span class="table-cell-label" aria-hidden="true">初始配置</span>10,000 Zeny |
+| <span class="table-cell-label" aria-hidden="true">项目</span>外观 | <span class="table-cell-label" aria-hidden="true">初始配置</span>发型 1、默认颜色，无头饰 |
+| <span class="table-cell-label" aria-hidden="true">项目</span>装备与物品 | <span class="table-cell-label" aria-hidden="true">初始配置</span>普通剑（1101，已装备）、红色药水 ×100、蓝色药水 ×100、波利蛋 ×1 |
+| <span class="table-cell-label" aria-hidden="true">项目</span>宠物 | <span class="table-cell-label" aria-hidden="true">初始配置</span>波利已收回蛋，亲密度 950、饥饿度 100，可正常孵化 |
+| <span class="table-cell-label" aria-hidden="true">项目</span>出生位置 | <span class="table-cell-label" aria-hidden="true">初始配置</span>普隆德拉 `prontera`，164,185 |
+| <span class="table-cell-label" aria-hidden="true">项目</span>存档位置 | <span class="table-cell-label" aria-hidden="true">初始配置</span>普隆德拉 `prontera`，159,189 |
 
 已学技能：基础技能 Lv.9、剑术修炼 Lv.10、增加 HP 恢复 Lv.4、狂击 Lv.10、怒爆 Lv.10、挑衅 Lv.5、钢铁之心 Lv.10。前六个快捷栏依次配置狂击、怒爆、挑衅、钢铁之心、红色药水、蓝色药水，技能使用上述等级，桌面与移动端共用。
 
