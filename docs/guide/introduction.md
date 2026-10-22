@@ -20,10 +20,10 @@ HappyRO 是一个基于 [roBrowserLegacy](https://github.com/MrAntares/roBrowser
 | [happyro-server](https://github.com/happyro/happyro-server) | rAthena 登录、角色、地图和 Web API 服务 |
 | [happyro-gateway](https://github.com/happyro/happyro-gateway) | Node.js 网关、静态资源、HTTP 与 WebSocket 代理 |
 | [happyro-admin](https://github.com/happyro/happyro-admin) | 管理后台 React / Umi / Ant Design 前端（当前开发源码） |
-| `happyro-api` | 新增独立 Go / Gin 后端，为后台与游戏工具提供 API；尚未正式发布 |
+| [happyro-api](https://github.com/happyro/happyro-api) | 新增独立 Go / Gin 后端，为后台与游戏工具提供 API；尚未正式发布 |
 | [happyro-doc](https://github.com/happyro/happyro-doc) | 公开文档站、玩家指南与安装说明 |
 
-根仓库、四个应用仓库与文档仓库维护独立 Git 历史，长期中文产品分支均为 `main`。运行关系与开发分工见[架构与仓库边界](/development/architecture)。
+根仓库、五个应用仓库与文档仓库维护独立 Git 历史，长期中文产品分支均为 `main`。运行关系与开发分工见[架构与仓库边界](/development/architecture)。
 
 ## 技术基线
 

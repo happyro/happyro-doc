@@ -1,7 +1,7 @@
 # 日常维护
 
 ::: info 适用版本
-本页按当前主分支说明，对应已发布的 v0.5.0；下载与摘要以[下载页](/guide/downloads)和[版本说明](/changelog/releases/v0.5.0)为准。
+本页适用于已发布的 v0.5.0；下载与摘要以[下载页](/guide/downloads)和[版本说明](/changelog/releases/v0.5.0)为准。
 :::
 
 ## 日常维护

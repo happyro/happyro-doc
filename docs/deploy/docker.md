@@ -1,8 +1,10 @@
 # Docker 安装
 
 ::: info 适用版本
-本页按当前主分支说明，对应已发布的 v0.5.0 离线包；下载与摘要以[下载页](/guide/downloads)和[版本说明](/changelog/releases/v0.5.0)为准。
+本页适用于已发布的 v0.5.0 离线包；下载与摘要以[下载页](/guide/downloads)和[版本说明](/changelog/releases/v0.5.0)为准。
 :::
+
+当前开发源码已拆分为 Admin 前端与 Go API，尚未正式发布；Go 版本的管理库和服务名与本页不同，源码部署请使用 [API 部署说明](https://github.com/happyro/happyro-api/blob/main/docs/deployment.md)。
 
 推荐使用完整离线包安装。先阅读[部署概览](/deploy/)，以下操作在解压后的包根目录执行。
 

@@ -19,7 +19,7 @@ sudo apt install -y git make build-essential cmake pkg-config \
 
 ## 源码与资源
 
-完成[共用准备步骤](/development/setup/#检出五个仓库)，再继续以下操作。
+完成[共用准备步骤](/development/setup/#检出六个构建仓库)，再继续以下操作。
 
 ## 构建与启动
 
