@@ -423,6 +423,10 @@ export default defineConfig({
         ]
       },
       {
+        "text": "功能测试账号",
+        "link": "/development/test-accounts"
+      },
+      {
         "text": "贡献指南",
         "link": "/development/contributing"
       }
