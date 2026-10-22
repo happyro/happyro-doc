@@ -28,6 +28,18 @@ python3 tools/deployment/manage.py initialize-custom --directory .
 
 运行密码、`APP_KEY` 和控制令牌须保留在自己的环境文件中。已有存档升级时保留这些值，见[升级](/deploy/upgrade)。
 
+## 显示时区
+
+部署 `.env` 中的 `APP_TIMEZONE` 默认为 `Asia/Shanghai`（北京时间，UTC+8）。可以使用 `UTC`、`America/New_York` 等 IANA 时区；非法值会使服务启动失败。
+
+```dotenv
+APP_TIMEZONE=Asia/Shanghai
+```
+
+API 与 Gateway 使用同一个值。修改后重建这两个服务的容器并刷新页面，后台及游戏内日期时间都会按新时区显示，无需重新构建前端。原生部署则在 API 和 Gateway 环境文件中设置相同值并重启服务。
+
+数据库与 API 时间统一为 UTC。该配置只改变显示时区，不改写历史数据、不改变会话到期时间和服务端 NPC 日历事件；不提供旧时间格式或历史时区的兼容处理。
+
 ## 全部环境变量
 
 客户端默认设置、服务端视野、Gateway 缓存以及 API 会话等参数见[环境变量配置参考](/deploy/environment-variables)。
