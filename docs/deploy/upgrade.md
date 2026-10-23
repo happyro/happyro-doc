@@ -1,8 +1,6 @@
 # 升级
 
-::: info 适用版本
-本页适用于已发布的 v0.5.0 PHP 离线包；当前主分支的 Go API 使用全新管理库，不能套用本页流程迁移；下载与摘要以[下载页](/guide/downloads)和[版本说明](/changelog/releases/v0.5.0)为准。
-:::
+升级前核对管理库结构与目标程序、迁移工具匹配；游戏库结构要求见 [API 部署说明](https://github.com/happyro/happyro-api/blob/main/docs/deployment.md)。
 
 首次安装见 [Docker 安装](/deploy/docker)。升级前保存匹配版本的完整包与[停写备份](/deploy/backup-restore)。
 
@@ -12,21 +10,21 @@
 
 - 用旧版配套工具停写备份，保留旧完整包及旧 `.env`。新旧包不得同时连接同一份存档。
 - 记录 DATA_DIR、CUSTOM_DIR 的实际绝对路径及 custom 文件哈希；旧版无 custom 时使用新的专用目录。
-- 新目录复制旧 `.env`，保留 `APP_KEY`、数据库密码、令牌、公开 URL 和 Compose 项目名；按新版 `.env.example` 核对新增变量，仅更新版本与四个镜像引用等明确需要变更的值。
+- 新目录复制旧 `.env`，保留数据库密码、令牌、公开 URL 和 Compose 项目名；按新版 `.env.example` 核对新增变量，仅更新版本与四个镜像引用等明确需要变更的值。
 - `DATA_DIR=./data` 等相对路径会随包目录改变，须改成原数据的绝对路径；`RESOURCE_DIR` 指向新包资源。若搬迁数据，需在停写状态复制完整结构，而非只复制数据库目录。
 - 固定容器名会冲突。备份完成后在旧包目录执行 `docker compose down`，再启动新版；bind mount 数据会保留。
 
 1. 保留新版完整包并执行 verify；先在旧部署目录停止写入并备份（见[备份与恢复](/deploy/backup-restore)）。同一存档只能有一套游戏服务运行。
-2. 在新版包根目录复制旧 .env，保留 APP_KEY、数据库密码和控制令牌；从新版 .env.example 更新 RELEASE_VERSION 和四个 IMAGE 变量。
+2. 在新版包根目录复制旧 .env，保留数据库密码和控制令牌；从新版 .env.example 更新 RELEASE_VERSION 和四个 IMAGE 变量。
 3. 将 DATA_DIR 指向旧部署已停止写入的数据目录（建议绝对路径），CUSTOM_DIR 指向旧的自定义目录（同样建议绝对路径），RESOURCE_DIR 使用新版包内资源。不要把新的空 data/ 或 custom/ 当成旧内容。
 4. 执行 `python3 tools/deployment/manage.py initialize-custom --directory .`：首次引入自定义功能时建立目录；后续仅补齐新版新增的模板文件，已有文件不覆盖，不合并。旧版本备份需使用旧版本配套工具恢复，不能直接交给新工具。
-5. 导入本版四类镜像，等待 database 健康，再显式执行 Admin 迁移和目录导入；成功后运行 `deploy`，由工具升级游戏会话结构并启动整栈。以下命令逐条执行，任一步失败即停止。
+5. 导入本版四类镜像，等待 database 健康，再显式执行 Go API 管理库迁移和目录导入；成功后运行 `deploy`，由工具升级游戏会话结构并启动整栈。以下命令逐条执行，任一步失败即停止。
 
 ```bash
 python3 tools/deployment/manage.py initialize-custom --directory .
 python3 tools/deployment/manage.py import-images --directory .
 docker compose up -d --wait --pull never --no-build database
-docker compose run --rm --no-deps --pull never admin-init
+docker compose run --rm --no-deps --pull never api-init
 python3 tools/deployment/manage.py deploy --directory .
 ```
 
@@ -34,6 +32,6 @@ python3 tools/deployment/manage.py deploy --directory .
 
 保持登录需要客户端、Gateway、login-server、web-server 与会话数据库结构配套更新，`PACKETVER` 保持 `20211103`。必须导入本版 Database 镜像，不能仅替换 Server/Gateway 镜像。升级前按上文停止旧服务；`deploy` 的失败停止机制不会替你关闭此前已运行的旧服务。
 
-已有环境不要重新运行 `initialize`，只运行 `initialize-custom` 补齐模板。升级后核对七服务健康、admin-init 退出 0、角色/仓库数据、后台设置及 custom 哈希，再分别检查未覆盖 NPC 随镜像更新、覆盖文件仍优先、删除覆盖后恢复新版内置文件。只重部署同一版本应记录为流程演练。
+已有环境不要重新运行 `initialize`，只运行 `initialize-custom` 补齐模板。升级后核对七服务健康、api-init 退出 0、角色/仓库数据、后台设置及 custom 哈希，再分别检查未覆盖 NPC 随镜像更新、覆盖文件仍优先、删除覆盖后恢复新版内置文件。只重部署同一版本应记录为流程演练。
 
-上述升级流程显式运行 `admin-init`，每次执行都会重跑迁移和三条导入命令；不要只凭已存在的退出容器判断本轮导入已完成。只有跳过 `admin-init`、只对已有数据库单独执行 `migrate` 的场景才需要注意：新迁移建出的表（例如 `game_npcs`）不会自动有数据，必须单独补跑对应的 `artisan game-data:import-*` 命令，否则查询接口会一直返回空结果。
+上述流程显式运行 `api-init`，依次执行 Go 管理库迁移、初始账号检查、资料刷新及一次 `catalog import` 原子导入；不要只凭旧的退出容器判断本轮初始化已完成。仅执行 `migrate` 不会导入目录，导入源须同时包含客户端物品、服务端物品、魔物和 NPC 四份快照。
