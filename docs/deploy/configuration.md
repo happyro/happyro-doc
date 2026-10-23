@@ -30,4 +30,4 @@ python3 tools/deployment/manage.py initialize-custom --directory .
 
 ## 全部环境变量
 
-客户端默认设置、服务端视野、Gateway 缓存以及 API 会话等参数见[环境变量配置参考](/deploy/environment-variables)。该参考按当前源码维护，使用前核对所用版本支持情况。
+客户端默认设置、服务端视野、Gateway 缓存以及 API 会话等参数见[环境变量配置参考](/deploy/environment-variables)。

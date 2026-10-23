@@ -1,3 +1,7 @@
+---
+pageClass: responsive-tables
+---
+
 # 自定义 NPC、数据库与资源
 
 适用于包含自定义工具和挂载的 v0.5.0 及后续离线包。先完成 [Docker 安装](/deploy/docker)，已有旧环境按[升级与恢复](/deploy/upgrade)迁移。本文命令在解压后的部署包根目录执行。
@@ -8,10 +12,10 @@
 
 | 宿主机 | 容器 | 使用方 |
 |---|---|---|
-| CUSTOM_DIR/npc | /opt/happyro/custom/npc | Server，只读 |
-| CUSTOM_DIR/db | /opt/rathena/db/import | Server，只读 |
-| CUSTOM_DIR/resources | /opt/happyro/custom/resources | Gateway，只读 |
-| CUSTOM_DIR | /opt/happyro/custom | Admin 目录刷新任务，只读 |
+| <span class="table-cell-label" aria-hidden="true">宿主机</span>CUSTOM_DIR/npc | <span class="table-cell-label" aria-hidden="true">容器</span>/opt/happyro/custom/npc | <span class="table-cell-label" aria-hidden="true">使用方</span>Server，只读 |
+| <span class="table-cell-label" aria-hidden="true">宿主机</span>CUSTOM_DIR/db | <span class="table-cell-label" aria-hidden="true">容器</span>/opt/rathena/db/import | <span class="table-cell-label" aria-hidden="true">使用方</span>Server，只读 |
+| <span class="table-cell-label" aria-hidden="true">宿主机</span>CUSTOM_DIR/resources | <span class="table-cell-label" aria-hidden="true">容器</span>/opt/happyro/custom/resources | <span class="table-cell-label" aria-hidden="true">使用方</span>Gateway，只读 |
+| <span class="table-cell-label" aria-hidden="true">宿主机</span>CUSTOM_DIR | <span class="table-cell-label" aria-hidden="true">容器</span>/opt/happyro/custom | <span class="table-cell-label" aria-hidden="true">使用方</span>Admin 目录刷新任务，只读 |
 
 内置 npc、db、conf 仍由镜像提供。后台战斗设置仍存放 DATA_DIR/server-settings，不增加第二份配置来源。容器只读不妨碍在宿主机编辑。
 
@@ -100,10 +104,10 @@ python3 tools/deployment/manage.py refresh-custom-catalogs --directory .
 
 | 修改内容 | 游戏侧生效 | 后台/冒险工具资料 |
 | --- | --- | --- |
-| NPC additions / overrides | GM `@reloadscript` 或维护重启 map | `refresh-custom-catalogs` |
-| item_db / mob_db | 相应原生数据库重载或维护重启 map | `refresh-custom-catalogs` |
-| resources | 后续 HTTP 请求读取新文件；游戏内已解码图片需重新进入游戏 | 不自动生成缩略图或外观映射 |
-| 后台战斗设置 | 通过后台保存与现有应用流程 | 唯一持久来源为 DATA_DIR/server-settings |
+| <span class="table-cell-label" aria-hidden="true">修改内容</span>NPC additions / overrides | <span class="table-cell-label" aria-hidden="true">游戏侧生效</span>GM `@reloadscript` 或维护重启 map | <span class="table-cell-label" aria-hidden="true">后台/冒险工具资料</span>`refresh-custom-catalogs` |
+| <span class="table-cell-label" aria-hidden="true">修改内容</span>item_db / mob_db | <span class="table-cell-label" aria-hidden="true">游戏侧生效</span>相应原生数据库重载或维护重启 map | <span class="table-cell-label" aria-hidden="true">后台/冒险工具资料</span>`refresh-custom-catalogs` |
+| <span class="table-cell-label" aria-hidden="true">修改内容</span>resources | <span class="table-cell-label" aria-hidden="true">游戏侧生效</span>后续 HTTP 请求读取新文件；游戏内已解码图片需重新进入游戏 | <span class="table-cell-label" aria-hidden="true">后台/冒险工具资料</span>不自动生成缩略图或外观映射 |
+| <span class="table-cell-label" aria-hidden="true">修改内容</span>后台战斗设置 | <span class="table-cell-label" aria-hidden="true">游戏侧生效</span>通过后台保存与现有应用流程 | <span class="table-cell-label" aria-hidden="true">后台/冒险工具资料</span>唯一持久来源为 DATA_DIR/server-settings |
 
 重启 map 的命令是 `docker compose restart map`，会中断地图连接，应安排维护时间。`refresh-custom-catalogs` 不重载游戏，也不执行 NPC 动态脚本。先确保自定义文件合法，再分别完成游戏重载和目录刷新，最后核对结果。
 
