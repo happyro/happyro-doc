@@ -328,6 +328,10 @@ export default defineConfig({
             "link": "/deploy/configuration"
           },
           {
+            "text": "环境变量配置参考",
+            "link": "/deploy/environment-variables"
+          },
+          {
             "text": "HTTPS 与反向代理",
             "link": "/deploy/reverse-proxy"
           }
