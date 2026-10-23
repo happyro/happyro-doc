@@ -1,10 +1,6 @@
 # HTTPS 与反向代理
 
-::: info 适用版本
-本页适用于已发布的 v0.5.0；下载与摘要以[下载页](/guide/downloads)和[版本说明](/changelog/releases/v0.5.0)为准。
-:::
-
-域名应指向部署主机，由反向代理提供 HTTPS。游戏入口代理到 Gateway，后台入口代理到 Admin；浏览器不能直接访问数据库或内部 Game Control 服务。
+域名应指向部署主机，由反向代理提供 HTTPS。游戏入口代理到 Gateway，后台入口代理到提供前端文件的 Go API；浏览器不能直接访问数据库或内部 Game Control 服务。
 
 ## 保持登录与反向代理
 
@@ -16,7 +12,7 @@
 
 1. 游戏启动页正常显示，点击“进入游戏”后可登录、选角和进图。
 2. WebSocket 请求可以升级连接，代理超时适合长连接。
-3. 后台公开地址与允许的会话域名匹配，保存操作不出现跨域或 CSRF 错误。
+3. `ADMIN_CSRF_ORIGIN_CHECK_ENABLED=true` 时，后台实际访问来源须与 API 的 `APP_URL` 匹配；默认 `false` 不限制 Origin 与 Sec-Fetch-Site，但仍校验会话和 CSRF Token。代理须正确转发 Cookie 与请求头，并检查登录、保存和退出。
 4. 通过同一 HTTPS 入口保持登录，重新打开后进入选角。
 
 完整变量以[配置说明](/deploy/configuration)和包内模板为准。手机安装入口见 [PWA](/game/pwa)。遇到连接问题见[故障排查](/deploy/troubleshooting)。

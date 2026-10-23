@@ -34,4 +34,4 @@ HappyRO 是一个基于 [roBrowserLegacy](https://github.com/MrAntares/roBrowser
 | 服务端模式 | Renewal |
 | Node.js | 22 或更高版本 |
 | MariaDB | 10.11 |
-| 当前发布版本 | [v0.5.0](/changelog/releases/v0.5.0)（离线包与 Docker Hub），下载见[资源下载](/guide/downloads) |
+| 功能与交付 | 当前功能见 [v0.5.1](/changelog/releases/v0.5.1)；离线包与镜像的实际交付记录见[资源下载](/guide/downloads) |

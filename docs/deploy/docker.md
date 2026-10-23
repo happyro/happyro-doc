@@ -4,12 +4,6 @@ pageClass: responsive-tables
 
 # Docker 安装
 
-::: info 适用版本
-本页适用于已发布的 v0.5.0 离线包；下载与摘要以[下载页](/guide/downloads)和[版本说明](/changelog/releases/v0.5.0)为准。
-:::
-
-当前开发源码已拆分为 Admin 前端与 Go API，尚未正式发布；Go 版本的管理库和服务名与本页不同，源码部署请使用 [API 部署说明](https://github.com/happyro/happyro-api/blob/main/docs/deployment.md)。
-
 推荐使用完整离线包安装。先阅读[部署概览](/deploy/)，以下操作在解压后的包根目录执行。
 
 ## 系统要求
@@ -23,16 +17,9 @@ pageClass: responsive-tables
 
 ## 获取离线包
 
-以下以已取得的完整 `happyro-v0.5.0.zip` 为例。公开下载与 SHA-256 以[下载页](/guide/downloads)为准。
+下载完整离线 ZIP，解压后进入其中的 `happyro-<版本>/` 目录。下载地址、文件名与 SHA-256 见[下载页](/guide/downloads)，部署使用包内配套的镜像、资源和工具。
 
-```bash
-unzip happyro-v0.5.0.zip
-cd happyro-v0.5.0
-```
-
-Linux 和 macOS 可以使用上述命令；Windows 可以在文件资源管理器中解压 ZIP。解压后应保留唯一的 `happyro-v0.5.0/` 根目录及其中的空 `data/` 子目录。
-
-旧版如有配套拆分交付包，必须合并同一版本的两部分，不能跨版本混用；v0.5.0 默认交付完整 ZIP，实际交付信息以正式发布记录为准。
+解压时保留完整目录结构及空 `data/` 子目录。
 
 ## 校验并导入镜像
 
@@ -71,9 +58,9 @@ deploy 使用已导入的本版镜像，不会拉取或现场构建；先等待�
 | <span class="table-cell-label" aria-hidden="true">服务</span>Map | <span class="table-cell-label" aria-hidden="true">容器</span>`happyro-map` | <span class="table-cell-label" aria-hidden="true">用途</span>地图、战斗和 NPC |
 | <span class="table-cell-label" aria-hidden="true">服务</span>Web API | <span class="table-cell-label" aria-hidden="true">容器</span>`happyro-web-api` | <span class="table-cell-label" aria-hidden="true">用途</span>游戏控制与资料接口 |
 | <span class="table-cell-label" aria-hidden="true">服务</span>Gateway | <span class="table-cell-label" aria-hidden="true">容器</span>`happyro-gateway` | <span class="table-cell-label" aria-hidden="true">用途</span>游戏网页、资源与 WebSocket 入口 |
-| <span class="table-cell-label" aria-hidden="true">服务</span>Admin | <span class="table-cell-label" aria-hidden="true">容器</span>`happyro-admin` | <span class="table-cell-label" aria-hidden="true">用途</span>游戏后台 |
+| <span class="table-cell-label" aria-hidden="true">服务</span>API | <span class="table-cell-label" aria-hidden="true">容器</span>`happyro-api` | <span class="table-cell-label" aria-hidden="true">用途</span>Go API 与管理前端 |
 
-初始化容器 `happyro-admin-init` 应执行完成并以状态码 `0` 退出。
+初始化容器 `happyro-api-init` 应执行完成并以状态码 `0` 退出。
 
 ### 访问入口
 
@@ -82,7 +69,7 @@ deploy 使用已导入的本版镜像，不会拉取或现场构建；先等待�
 - 游戏：`http://127.0.0.1:3338/applications/pwa/index.html`
 - 游戏后台：`http://127.0.0.1:8000`
 
-需要让局域网其他设备访问时，将 `.env` 中的公开地址和 `ADMIN_STATEFUL_DOMAINS` 同步改为部署机器的局域网 IP。
+需要让局域网其他设备访问时，将 `.env` 中的GAME_PUBLIC_URL 和 ADMIN_PUBLIC_URL 改为部署机器的局域网 IP。
 
 ### 默认账号
 
@@ -91,7 +78,7 @@ deploy 使用已导入的本版镜像，不会拉取或现场构建；先等待�
 | 用途 | 用户名 | 密码 | 权限 |
 | --- | --- | --- | --- |
 | <span class="table-cell-label" aria-hidden="true">用途</span>游戏 | <span class="table-cell-label" aria-hidden="true">用户名</span>`happyro` | <span class="table-cell-label" aria-hidden="true">密码</span>`happyro` | <span class="table-cell-label" aria-hidden="true">权限</span>GM |
-| <span class="table-cell-label" aria-hidden="true">用途</span>游戏后台 | <span class="table-cell-label" aria-hidden="true">用户名</span>`admin` | <span class="table-cell-label" aria-hidden="true">密码</span>`admin` | <span class="table-cell-label" aria-hidden="true">权限</span>超级管理员 |
+| <span class="table-cell-label" aria-hidden="true">用途</span>Go API 与管理前端 | <span class="table-cell-label" aria-hidden="true">用户名</span>`admin` | <span class="table-cell-label" aria-hidden="true">密码</span>`admin` | <span class="table-cell-label" aria-hidden="true">权限</span>超级管理员 |
 
 
 ### 默认角色：罗安

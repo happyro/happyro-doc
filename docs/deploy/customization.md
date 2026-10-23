@@ -4,9 +4,9 @@ pageClass: responsive-tables
 
 # 自定义 NPC、数据库与资源
 
-适用于包含自定义工具和挂载的 v0.5.0 及后续离线包。先完成 [Docker 安装](/deploy/docker)，已有旧环境按[升级与恢复](/deploy/upgrade)迁移。本文命令在解压后的部署包根目录执行。
+先完成 [Docker 安装](/deploy/docker)，已有旧环境按[升级与恢复](/deploy/upgrade)迁移。本文命令在解压后的部署包根目录执行。
 
-游戏重载与后台目录刷新需要分别执行。本文描述 v0.5.0 正式包能力，以发布说明为准。
+游戏重载与后台目录刷新需要分别执行。
 
 推荐将 DATA_DIR 与 CUSTOM_DIR 放在版本目录外。发行包只带 examples/custom 模板；首次 initialize 创建默认 custom/。若编辑 .env 将 CUSTOM_DIR 改到其它路径，必须执行 initialize-custom 为该位置初始化。这个命令可重复执行，只补缺少的模板，不覆盖已有文件。资源不复制原始 GRF，自定义目录初始为空。
 
@@ -15,7 +15,7 @@ pageClass: responsive-tables
 | <span class="table-cell-label" aria-hidden="true">宿主机</span>CUSTOM_DIR/npc | <span class="table-cell-label" aria-hidden="true">容器</span>/opt/happyro/custom/npc | <span class="table-cell-label" aria-hidden="true">使用方</span>Server，只读 |
 | <span class="table-cell-label" aria-hidden="true">宿主机</span>CUSTOM_DIR/db | <span class="table-cell-label" aria-hidden="true">容器</span>/opt/rathena/db/import | <span class="table-cell-label" aria-hidden="true">使用方</span>Server，只读 |
 | <span class="table-cell-label" aria-hidden="true">宿主机</span>CUSTOM_DIR/resources | <span class="table-cell-label" aria-hidden="true">容器</span>/opt/happyro/custom/resources | <span class="table-cell-label" aria-hidden="true">使用方</span>Gateway，只读 |
-| <span class="table-cell-label" aria-hidden="true">宿主机</span>CUSTOM_DIR | <span class="table-cell-label" aria-hidden="true">容器</span>/opt/happyro/custom | <span class="table-cell-label" aria-hidden="true">使用方</span>Admin 目录刷新任务，只读 |
+| <span class="table-cell-label" aria-hidden="true">宿主机</span>CUSTOM_DIR | <span class="table-cell-label" aria-hidden="true">容器</span>/opt/happyro/custom | <span class="table-cell-label" aria-hidden="true">使用方</span>API 目录刷新任务，只读 |
 
 内置 npc、db、conf 仍由镜像提供。后台战斗设置仍存放 DATA_DIR/server-settings，不增加第二份配置来源。容器只读不妨碍在宿主机编辑。
 
@@ -92,7 +92,7 @@ custom/resources 的路径相对于客户端 data/，例如 `custom/resources/te
 python3 tools/deployment/manage.py refresh-custom-catalogs --directory .
 ```
 
-需要数据库已运行且已有 Admin schema；此命令使用已导入的当前镜像、不构建镜像、不重载游戏脚本。先根据内置目录快照和实际加载清单生成 NPC、物品、魔物声明资料，全部解析成功后调用原有三条导入命令。升级的 admin-init 自动执行相同流程。快照仅用于导入，不生成或替换服务端 runtime 目录。删除覆盖或自定义条目后再次刷新，会从内置基线重建，避免残留旧的用户条目。
+需要数据库已运行且已初始化 Go 管理库；此命令使用已导入的当前镜像、不构建镜像、不重载游戏脚本。先根据内置目录快照和实际加载清单生成 NPC、物品、魔物声明资料，全部解析成功后调用一次 `catalog import`，原子导入四份目录快照。升级的 api-init 自动执行相同流程。快照仅用于导入，不生成或替换服务端 runtime 目录。删除覆盖或自定义条目后再次刷新，会从内置基线重建，避免残留旧的用户条目。
 
 刷新覆盖 item_db.yml、mob_db.yml 及其 Renewal 导入、静态 NPC 定义；不执行脚本，不推断动态创建 NPC、运行时奖励或战斗倍率修正，不渲染新外观的缩略图。其它数据库仍由服务端正常加载，但不属于这三类目录资料。修改坐标的新 NPC 支持按坐标寻路；没有匹配官方导航 ID 的 NPC 不伪造 ID 开启 NPC 导航传送。原有外观可复用已发布图片，新外观需要另行准备预览资源。
 
@@ -107,7 +107,7 @@ python3 tools/deployment/manage.py refresh-custom-catalogs --directory .
 | <span class="table-cell-label" aria-hidden="true">修改内容</span>NPC additions / overrides | <span class="table-cell-label" aria-hidden="true">游戏侧生效</span>GM `@reloadscript` 或维护重启 map | <span class="table-cell-label" aria-hidden="true">后台/冒险工具资料</span>`refresh-custom-catalogs` |
 | <span class="table-cell-label" aria-hidden="true">修改内容</span>item_db / mob_db | <span class="table-cell-label" aria-hidden="true">游戏侧生效</span>相应原生数据库重载或维护重启 map | <span class="table-cell-label" aria-hidden="true">后台/冒险工具资料</span>`refresh-custom-catalogs` |
 | <span class="table-cell-label" aria-hidden="true">修改内容</span>resources | <span class="table-cell-label" aria-hidden="true">游戏侧生效</span>后续 HTTP 请求读取新文件；游戏内已解码图片需重新进入游戏 | <span class="table-cell-label" aria-hidden="true">后台/冒险工具资料</span>不自动生成缩略图或外观映射 |
-| <span class="table-cell-label" aria-hidden="true">修改内容</span>后台战斗设置 | <span class="table-cell-label" aria-hidden="true">游戏侧生效</span>通过后台保存与现有应用流程 | <span class="table-cell-label" aria-hidden="true">后台/冒险工具资料</span>唯一持久来源为 DATA_DIR/server-settings |
+| <span class="table-cell-label" aria-hidden="true">修改内容</span>后台战斗设置 | <span class="table-cell-label" aria-hidden="true">游戏侧生效</span>通过后台保存与现有应用流程 | <span class="table-cell-label" aria-hidden="true">后台/冒险工具资料</span>文件持久化于 DATA_DIR/server-settings；非空环境变量优先 |
 
 重启 map 的命令是 `docker compose restart map`，会中断地图连接，应安排维护时间。`refresh-custom-catalogs` 不重载游戏，也不执行 NPC 动态脚本。先确保自定义文件合法，再分别完成游戏重载和目录刷新，最后核对结果。
 
@@ -124,4 +124,4 @@ python3 tools/deployment/manage.py refresh-custom-catalogs --directory .
 
 ## 维护实现
 
-实现由 Server 的覆盖加载、Gateway 的资源优先级、Admin 的静态资料刷新及部署工具共同完成；维护源码见[跨仓库设计](https://github.com/happyro/happyro/blob/main/docs/architecture/customization.md)。源码和文档修改不会更新已有离线 ZIP，部署以实际取得的完整包为准。
+实现由 Server 的覆盖加载、Gateway 的资源优先级、API 的静态资料刷新及部署工具共同完成；维护源码见[跨仓库设计](https://github.com/happyro/happyro/blob/main/docs/architecture/customization.md)。源码和文档修改不会更新已有离线 ZIP，部署以实际取得的完整包为准。
