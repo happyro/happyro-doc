@@ -4,6 +4,7 @@ const changelog = [
   {
     text: '版本摘要',
     items: [
+      { text: 'v0.5.1', link: '/changelog/releases/v0.5.1' },
       { text: 'v0.5.0', link: '/changelog/releases/v0.5.0' },
       { text: 'v0.3.2', link: '/changelog/releases/v0.3.2' },
       { text: 'v0.3.1', link: '/changelog/releases/v0.3.1' },
@@ -14,6 +15,7 @@ const changelog = [
     text: '2026-10',
     collapsed: true,
     items: [
+      { text: '2026-10-24', link: '/changelog/2026/10/2026-10-24' },
       { text: '2026-10-23', link: '/changelog/2026/10/2026-10-23' },
       { text: '2026-10-22', link: '/changelog/2026/10/2026-10-22' },
       { text: '2026-10-21', link: '/changelog/2026/10/2026-10-21' },

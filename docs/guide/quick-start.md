@@ -13,7 +13,7 @@
 
 ## 更新记录
 
-产品功能变化见[更新日志](/changelog/releases/v0.5.0)，安装包下载和摘要见[资源下载](/guide/downloads)。运行配置统一查阅[环境变量参考](/deploy/environment-variables)。
+产品功能变化见[更新日志](/changelog/releases/v0.5.1)，安装包下载和摘要见[资源下载](/guide/downloads)。运行配置统一查阅[环境变量参考](/deploy/environment-variables)。
 
 ## 认识项目
 

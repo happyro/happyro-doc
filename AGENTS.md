@@ -19,7 +19,7 @@
 - 日期文件必须原样复制到本仓库的 `docs/changelog/<年>/<月>/`，不得在文档站内单独改写内容。
 - 日期日志使用根仓库 `changelog/README.md` 的中文分类、作用域与空行规范；历史 Release 与完整原文不做格式改写。
 - 在根仓库运行 `python3 tools/changelog/manage.py sync` 同步正文和侧栏，运行 `check` 核对格式、索引及两仓库一致性。生成的 changelog 侧栏不单独手改。
-- 版本摘要原样复制到 `docs/changelog/releases/`，维护版本侧栏；未发布版本必须明确标记，不填写正式发布日期。
+- 版本摘要原样复制到 `docs/changelog/releases/`，维护版本侧栏；按当前生产功能维护，不添加 Unreleased、未发布或未提交等状态标签。发布日期、下载地址和产物摘要仅按实际交付记录填写。
 - 完整历史原文只在根仓库 `changelog/archive/` 保留，不复制到文档站。
 - 侧栏按 `YYYY-MM` 分类并默认折叠；同步日期文件时必须同时维护对应的侧栏链接。
 
