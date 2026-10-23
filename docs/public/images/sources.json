@@ -26,7 +26,33 @@
     {
       "file": "overview/happyro-combat.png",
       "source": "happyro/docs/assets/readme/happyro-combat.png",
-      "sha256": "f961bcce1fa89c194f23754b962d7a55965c4a5a3b22edd116cece7ebab62c37"
+      "sha256": "5dd8fab8b1095dcf71442f8833d3a43e42617c7fe118fb81191015109564708a",
+      "capturedAt": "2026-10-23",
+      "viewport": [
+        1280,
+        800
+      ],
+      "deviceScaleFactor": 1,
+      "zoom": 125,
+      "clip": {
+        "x": 180,
+        "y": 65,
+        "width": 920,
+        "height": 670
+      },
+      "map": "prt_fild08",
+      "position": [
+        140,
+        322
+      ],
+      "character": {
+        "name": "罗安",
+        "job": "剑士",
+        "baseLevel": 99,
+        "jobLevel": 50
+      },
+      "operation": "重拍桌面战斗辅助窗口：去除总开关，保持全部魔物、仅波利候选、普通攻击、狂击 Lv.10 / 挑衅 Lv.5 未选择、搜索 20 / 活动 30、随机瞬移关闭及等待 5 秒；原尺寸与裁剪不变。",
+      "build": "mvkq1wqu"
     },
     {
       "file": "overview/happyro-responsive-skills.png",
