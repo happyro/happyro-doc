@@ -15,6 +15,7 @@ const changelog = [
     text: '2026-10',
     collapsed: true,
     items: [
+      { text: '2026-10-25', link: '/changelog/2026/10/2026-10-25' },
       { text: '2026-10-24', link: '/changelog/2026/10/2026-10-24' },
       { text: '2026-10-23', link: '/changelog/2026/10/2026-10-23' },
       { text: '2026-10-22', link: '/changelog/2026/10/2026-10-22' },

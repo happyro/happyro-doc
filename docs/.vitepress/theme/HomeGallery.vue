@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 import { withBase } from 'vitepress'
 
 const screenshots = [
@@ -12,11 +12,11 @@ const screenshots = [
 
 const viewport = ref(null)
 const active = ref(0)
+let resizeObserver
 
 function goTo(index) {
   const next = Math.max(0, Math.min(index, screenshots.length - 1))
   viewport.value?.scrollTo({ left: next * viewport.value.clientWidth, behavior: 'smooth' })
-  active.value = next
 }
 
 function onScroll() {
@@ -24,13 +24,30 @@ function onScroll() {
     active.value = Math.max(0, Math.min(screenshots.length - 1, Math.round(viewport.value.scrollLeft / viewport.value.clientWidth)))
   }
 }
+
+onMounted(() => {
+  resizeObserver = new ResizeObserver(() => {
+    const element = viewport.value
+    if (element) element.scrollTo({ left: active.value * element.clientWidth, behavior: 'instant' })
+  })
+  resizeObserver.observe(viewport.value)
+})
+
+onUnmounted(() => resizeObserver?.disconnect())
+
+function onKeydown(event) {
+  const index = { ArrowLeft: active.value - 1, ArrowRight: active.value + 1, Home: 0, End: screenshots.length - 1 }[event.key]
+  if (index === undefined) return
+  event.preventDefault()
+  goTo(index)
+}
 </script>
 
 <template>
   <section class="home-gallery" aria-label="游戏画面">
     <p class="home-gallery-caption">{{ screenshots[active].caption }}</p>
     <div class="home-gallery-controls">
-      <div class="home-gallery-pages" aria-label="选择图片">
+      <div class="home-gallery-pages" role="group" aria-label="选择图片" @keydown="onKeydown">
         <button
           v-for="(shot, index) in screenshots"
           :key="shot.file"
@@ -45,7 +62,6 @@ function onScroll() {
     <div
       ref="viewport"
       class="home-gallery-viewport"
-      :style="{ aspectRatio: `${screenshots[active].width} / ${screenshots[active].height}` }"
       @scroll.passive="onScroll"
     >
       <figure v-for="(shot, index) in screenshots" :key="shot.file" class="home-gallery-slide">
