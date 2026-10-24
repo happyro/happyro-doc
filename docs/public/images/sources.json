@@ -34,9 +34,9 @@
     {
       "file": "overview/happyro-codex.png",
       "source": "happyro/docs/assets/readme/happyro-codex.png",
-      "sha256": "3cb4f9896a0c056059efb27b8bc5ebf9f84cf58a71b09cff43dfa1027d8114a1",
+      "sha256": "e7e74b90202df228a80f70f440112e1202e441ade45224383c566d4c1059d798",
       "capturedAt": "2026-10-25",
-      "build": "mvnb019e",
+      "build": "mvnnu476",
       "viewport": [
         1280,
         800
@@ -65,7 +65,7 @@
     {
       "file": "overview/happyro-combat.png",
       "source": "happyro/docs/assets/readme/happyro-combat.png",
-      "sha256": "c98c14294a717e78ff0e606d5d729d4caa4850f5a575284a84f94710cd032a8a",
+      "sha256": "50be27b95671a8b18a9e986bd65ac67bb58df7b22b6349c3ea0810bfb9f2d35f",
       "capturedAt": "2026-10-25",
       "viewport": [
         1280,
@@ -90,8 +90,8 @@
         "baseLevel": 99,
         "jobLevel": 50
       },
-      "operation": "真实罗安剑士打开战斗辅助，展示恢复后的单列表、自动恢复标签及当前按钮尺寸；只选择已习得狂击，未开启自动战斗",
-      "build": "mvnmr2g6"
+      "operation": "真实罗安剑士打开战斗辅助，单列表显示狂击、挑衅与新支持的怒爆；只选择狂击，未开启自动战斗",
+      "build": "mvnnnznq"
     },
     {
       "file": "overview/happyro-responsive-skills.png",
@@ -103,35 +103,58 @@
       "inputs": [
         {
           "file": "tablet-skills.png",
-          "sha256": "63dc5099d65a3774dbaf5dd8c852801f70821e3b72997c319dd937a210b0ca5e"
+          "sha256": "63dc5099d65a3774dbaf5dd8c852801f70821e3b72997c319dd937a210b0ca5e",
+          "source": "work/docs-all-audit/capture/tablet-skills.png"
         },
         {
           "file": "phone-skills.png",
-          "sha256": "f4cd912a1e0b02ea7d3453b08c05cba5ff68190ac32b2e576bf015d257c50d5e"
+          "sha256": "f4cd912a1e0b02ea7d3453b08c05cba5ff68190ac32b2e576bf015d257c50d5e",
+          "source": "work/docs-all-audit/capture/phone-skills.png"
         }
       ]
     },
     {
       "file": "overview/happyro-three-devices.png",
       "source": "happyro/docs/assets/readme/happyro-three-devices.png",
-      "sha256": "2f71f1461e9e826e000c92335fd90a233a920149cad6201b79202adf800be75e",
+      "sha256": "12c98993da225079e28a56b3f050f62c0042ee9db0c79a79891a463cae16415b",
       "capturedAt": "2026-10-25",
       "operation": "当前真实游戏截图，沿用既有透明设备框模板合成",
       "inputs": [
         {
           "file": "desktop.png",
-          "sha256": "7c8f943d826a924a5ccfded440c5184abf15604cef839933d5ea4ec33b686f74"
+          "source": "work/docs-preflight-20261025/capture/desktop.png",
+          "sha256": "9165ede095d9c52866bb963a258ed85cb35689e06c0a42e0a1bdcd9ab81dac6a",
+          "viewport": [
+            1024,
+            768
+          ],
+          "deviceScaleFactor": 1,
+          "zoom": 90
         },
         {
           "file": "tablet.png",
-          "sha256": "d72f9cc6b168887dd690d3215196e071b15411192c1f60876029499e2936e61c"
+          "source": "work/docs-preflight-20261025/capture/tablet.png",
+          "sha256": "9e70d7329e6f4ff5b5bc618e6e9cd8ec9e7698e39f26dd6ad81b45edb181960d",
+          "viewport": [
+            1024,
+            768
+          ],
+          "deviceScaleFactor": 1,
+          "zoom": 85
         },
         {
           "file": "phone.png",
-          "sha256": "592fb8697d1da779166dcbb841fcf45b585399feb38a637f0f7bfebb73bfdcf5"
+          "source": "work/docs-preflight-20261025/capture/phone.png",
+          "sha256": "3a9d54080c1648ca61f857353c9e953db4cc8d1dc9e0268af052c3aaddcf52ec",
+          "viewport": [
+            430,
+            860
+          ],
+          "deviceScaleFactor": 2,
+          "zoom": 20
         }
       ],
-      "build": "mvnb019e"
+      "build": "mvnnu476"
     },
     {
       "file": "game/controls/tablet-shortcuts.png",
@@ -190,9 +213,9 @@
     },
     {
       "file": "game/adventure/tablet-adventure-map.png",
-      "sha256": "30b3cbb8ebd52b4821f6311599d3b25c8bebafe4007b3c066a4b51a79e0b91eb",
+      "sha256": "ce4ebfb97054591b9f30fa7be50f4456bd3bca5835a76b469b78f1b301894251",
       "capturedAt": "2026-10-25",
-      "build": "mvnb019e",
+      "build": "mvnnu476",
       "source": "本机真实游戏，Playwright Chromium 触屏视口",
       "viewport": [
         1024,
@@ -200,7 +223,7 @@
       ],
       "deviceScaleFactor": 1,
       "zoom": 85,
-      "operation": "查看普隆德拉地图与当前 NPC 名称，未寻路或传送",
+      "operation": "查看普隆德拉地图短名、NPC 无数量标题及无魔物时置灰的入口，未寻路或传送",
       "map": "prontera",
       "position": [
         164,
@@ -293,9 +316,9 @@
     },
     {
       "file": "game/controls/phone-actions.png",
-      "sha256": "ca75ea898e4378999d14ddbd328b4c6407edc462318baa72d792ab27949c01fc",
+      "sha256": "28240e30e07f4aafe89d6ff373da322599d6ac0f193d74166ba3050e8a0de123",
       "capturedAt": "2026-10-25",
-      "build": "mvnb019e",
+      "build": "mvnnu476",
       "source": "本机真实游戏，Playwright Chromium 浏览器视口",
       "viewport": [
         430,
@@ -996,7 +1019,7 @@
         768
       ],
       "deviceScaleFactor": 1,
-      "build": "mvnb019e",
+      "build": "mvnnu476",
       "capturedAt": "2026-10-25",
       "character": {
         "name": "罗安",
@@ -1004,7 +1027,7 @@
         "baseLevel": 99
       },
       "zoom": 85,
-      "sha256": "02ac34684ed4e9e50ecab2d7c3e48cd2e1afa37476a2621b97ea11a1b016f4b1",
+      "sha256": "d09e2ad60ddd0b2547bd1c70d300b5c6e5950747f33c839c3f84834afc7c610f",
       "source": "本机真实游戏，Playwright Chromium 触屏视口"
     },
     {
@@ -1034,7 +1057,7 @@
         768
       ],
       "deviceScaleFactor": 1,
-      "build": "mvnb019e",
+      "build": "mvnnu476",
       "capturedAt": "2026-10-25",
       "character": {
         "name": "罗安",
@@ -1042,7 +1065,7 @@
         "baseLevel": 99
       },
       "zoom": 85,
-      "sha256": "78fef0565939baaf1ee5babf635961268bdf999250d6087743a75a20d6c71ea7",
+      "sha256": "f097f8b158a3925676d5c13afb6dd6c29e045ce65581d39a246cbf3cdfaaffd5",
       "source": "本机真实游戏，Playwright Chromium 触屏视口"
     },
     {
@@ -1091,7 +1114,7 @@
         768
       ],
       "deviceScaleFactor": 1,
-      "build": "mvnb019e",
+      "build": "mvnnu476",
       "capturedAt": "2026-10-25",
       "character": {
         "name": "罗安",
@@ -1099,18 +1122,18 @@
         "baseLevel": 99
       },
       "zoom": 85,
-      "sha256": "426d3cd0eb0ef74a4c9db81afe1d59a58a1a564cfdd45df9c9c49d79420c7af2",
+      "sha256": "2a9e42c8bb2b06d1215aae2b14d12ff832ce2b8deae22ad92095984745ff3279",
       "source": "本机真实游戏，Playwright Chromium 触屏视口"
     },
     {
       "file": "game/adventure/tablet-adventure-monster.png",
-      "operation": "查看波利的属性、掉落和分布，未召唤或传送",
+      "operation": "搜索 1002 并查看波利的属性、掉落和当前地图短名；关闭当前地图筛选，未召唤或传送",
       "viewport": [
         1024,
         768
       ],
       "deviceScaleFactor": 1,
-      "build": "mvnb019e",
+      "build": "mvnnu476",
       "capturedAt": "2026-10-25",
       "character": {
         "name": "罗安",
@@ -1118,8 +1141,33 @@
         "baseLevel": 99
       },
       "zoom": 85,
-      "sha256": "e2331d2b4b921ecacb51869cac6042beb1347320fb95be355de52ba53453c2f8",
+      "sha256": "961af219d35968b7ce5dfce15faf2676fa185a8b69f95c774d4554e2dc794fff",
       "source": "本机真实游戏，Playwright Chromium 触屏视口"
+    },
+    {
+      "file": "game/combat/tablet-recovery.png",
+      "source": "本机真实游戏，Playwright Chromium 触屏视口",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "zoom": 85,
+      "map": "prontera",
+      "position": [
+        164,
+        185
+      ],
+      "character": {
+        "name": "罗安",
+        "job": "剑士",
+        "baseLevel": 99,
+        "jobLevel": 50
+      },
+      "operation": "只读查看自动恢复默认比例与道具选择入口，未启用恢复、修改配置或使用道具",
+      "sha256": "328278682dc8376f821a08470f845378239672cb2804ffe2990d165d04a5ecf8",
+      "capturedAt": "2026-10-25",
+      "build": "mvnnu476"
     }
   ]
 }

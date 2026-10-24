@@ -104,7 +104,7 @@ outline: [2, 3]
 普通二转 → 高阶初心者 → 高阶一转 → 进阶二转，然后再进入各线三转。
 
 1. 普通二转达到 **Base 99 / Job 50**，用完技能点，准备 **1,285,000 Zeny**。
-2. 到 `yuno_in02 88,164` 找图书馆的 梅修斯·西尔芙 捐赠，再阅读 `yuno_in02 93,207` 的伊米尔之书。
+2. 到 `yuno_in02 88,164` 找图书馆的 玫泰武司 西芙 捐赠，再阅读 `yuno_in02 93,207` 的伊米尔之书。
 3. 到 `yuno_in05 49,43` 找伊米尔之心，经 NPC 进入英灵殿。
 4. 在与女武神对话前将**负重与剩余 Zeny 清零**，解除手推车、骑乘和猎鹰；有价值的物品先存仓。部分初心者装备无法丢弃或存仓，可先卸下再卖给 NPC 商店；携带的 Zeny 和出售所得可存入银行。
 5. 找 `valkyrie 48,86` 女武神完成转生，成为 Base 1 / Job 1 的高阶初心者，技能重置并领取重生礼物。
@@ -199,4 +199,4 @@ outline: [2, 3]
 
 ## 记录来源
 
-原始[转职流程与验证范围](https://github.com/happyro/happyro/blob/main/docs/development/job-change-review/README.md)保留详细证据。本组攻略讲玩家操作；测试账号、工具和临时属性不写入步骤。本轮名称与指引修正见 [v0.5.1 版本说明](/changelog/releases/v0.5.1)。
+原始[转职流程与验证范围](https://github.com/happyro/happyro/blob/main/docs/development/job-change-review/README.md)保留详细证据。本组攻略讲玩家操作；测试账号、工具和临时属性不写入步骤。本轮名称与指引修正见 [v0.6.0 版本说明](/changelog/releases/v0.6.0)。

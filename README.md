@@ -48,7 +48,7 @@ npm run docs:build
 
 仅重拍画面中可见且已变化的界面；被菜单或设备框遮挡、已裁掉的区域不触发重拍。首图可保留有可验证来源的未变化端原图，仅替换受影响的手机／平板输入再合成。
 
-图片按用途放入 `overview/`、`game/controls/`、`game/social/`、`game/adventure/`、`game/trading/`、`game/mail/` 和 `strategy/job-change/`。旧图只有仍被正文引用时才保留；更新截图时同时检查界面文案与教程步骤。
+图片按用途放入 `overview/`、`game/controls/`、`game/combat/`、`game/social/`、`game/adventure/`、`game/trading/`、`game/mail/` 和 `strategy/job-change/`。旧图只有仍被正文引用时才保留；更新截图时同时检查界面文案与教程步骤。
 
 ## 攻略维护
 

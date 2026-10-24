@@ -117,5 +117,8 @@
       "仓库": "/development/contributing#仓库",
       "基本流程": "/development/contributing#基本流程"
     }
+  },
+  "/changelog/releases/v0.5.1": {
+    "to": "/changelog/releases/v0.6.0"
   }
 }

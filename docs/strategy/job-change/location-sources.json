@@ -619,7 +619,7 @@
       "npcSources": [
         {
           "path": "npc/jobs/valkyrie.txt",
-          "line": 248
+          "line": 256
         }
       ]
     },
