@@ -78,6 +78,10 @@ Gateway 重启会断开其承载的游戏 WebSocket；地图服重启会影响�
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动战斗 · 无目标随机瞬移<br>`CLIENT_AUTO_TELEPORT_ENABLED` | <span class="table-cell-label" aria-hidden="true">默认值</span>`true` | <span class="table-cell-label" aria-hidden="true">允许范围</span>true / false |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动战斗 · 无目标等待<br>`CLIENT_AUTO_TELEPORT_WAIT_SECONDS` | <span class="table-cell-label" aria-hidden="true">默认值</span>`2` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–60，整数 |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动战斗 · 最短瞬移间隔<br>`CLIENT_AUTO_TELEPORT_INTERVAL_SECONDS` | <span class="table-cell-label" aria-hidden="true">默认值</span>`2` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–300，整数 |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动恢复 · HP 低于（%）<br>`CLIENT_AUTO_RECOVERY_HP_TRIGGER_PERCENT` | <span class="table-cell-label" aria-hidden="true">默认值</span>`50` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–99，整数 |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动恢复 · HP 恢复至（%）<br>`CLIENT_AUTO_RECOVERY_HP_TARGET_PERCENT` | <span class="table-cell-label" aria-hidden="true">默认值</span>`80` | <span class="table-cell-label" aria-hidden="true">允许范围</span>2–100，且高于触发比例，整数 |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动恢复 · SP 低于（%）<br>`CLIENT_AUTO_RECOVERY_SP_TRIGGER_PERCENT` | <span class="table-cell-label" aria-hidden="true">默认值</span>`20` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–99，整数 |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动恢复 · SP 恢复至（%）<br>`CLIENT_AUTO_RECOVERY_SP_TARGET_PERCENT` | <span class="table-cell-label" aria-hidden="true">默认值</span>`50` | <span class="table-cell-label" aria-hidden="true">允许范围</span>2–100，且高于触发比例，整数 |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动拾取 · 开关<br>`CLIENT_AUTO_PICKUP_ENABLED` | <span class="table-cell-label" aria-hidden="true">默认值</span>`false` | <span class="table-cell-label" aria-hidden="true">允许范围</span>true / false |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动拾取 · 范围<br>`CLIENT_AUTO_PICKUP_RANGE` | <span class="table-cell-label" aria-hidden="true">默认值</span>`5` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–15，整数 |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动拾取 · 每轮拾取时限<br>`CLIENT_AUTO_PICKUP_BATCH_SECONDS` | <span class="table-cell-label" aria-hidden="true">默认值</span>`5` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–30，整数 |
@@ -279,7 +283,7 @@ API 的 DB_* 与 Server 的 DB_* 不完全同义：API 连接的是后台管理�
 本文依据以下源码和模板整理；更新参数时同时更新对应文档表格：
 
 - 根仓库：`deploy/docker/.env.example`、`deploy/docker/compose.yml`、`deploy/docker/server/entrypoint.sh`、`deploy/remote-client/.env.example`、`deploy/rathena/profile.env`。
-- Client：`src/Core/ClientDefaults.schema.json`，53 项客户端字段及默认值来源。
+- Client：`src/Core/ClientDefaults.schema.json`，57 项客户端字段及默认值来源。
 - Gateway：`index.js`、`runtime-config.js`、`client-defaults.js`、`src/controllers/clientController.js`。
 - Server：`src/map/battle.cpp`、`conf/battle/client.conf`、`src/char/new_player_start.hpp`。
 - API：`internal/config/config.go`、`.env.example`。
