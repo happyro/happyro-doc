@@ -6,6 +6,8 @@ pageClass: responsive-tables
 
 推荐使用完整离线包安装。先阅读[部署概览](/deploy/)，以下操作在解压后的包根目录执行。
 
+本文按当前源码生成的 Go API 离线包说明，使用 `api`／`api-init` 服务。若使用下载页的既有 v0.5.0 文件，请执行该包随附的部署手册，不将本文服务名直接套入旧包。版本边界见[安装运维](/deploy/)。
+
 ## 系统要求
 
 - 容器运行环境：
@@ -98,7 +100,7 @@ deploy 使用已导入的本版镜像，不会拉取或现场构建；先等待�
 | <span class="table-cell-label" aria-hidden="true">项目</span>出生位置 | <span class="table-cell-label" aria-hidden="true">初始配置</span>普隆德拉 `prontera`，164,185 |
 | <span class="table-cell-label" aria-hidden="true">项目</span>存档位置 | <span class="table-cell-label" aria-hidden="true">初始配置</span>普隆德拉 `prontera`，159,189 |
 
-已学技能：基础技能 Lv.9、剑术修炼 Lv.10、增加 HP 恢复 Lv.4、狂击 Lv.10、怒爆 Lv.10、挑衅 Lv.5、钢铁之心 Lv.10。前六个快捷栏依次配置狂击、怒爆、挑衅、钢铁之心、红色药水、蓝色药水，技能使用上述等级，桌面与移动端共用。
+已学技能：基本技能 Lv.9、单手剑使用熟练度 Lv.10、快速恢复 Lv.4、狂击 Lv.10、怒爆 Lv.10、挑衅 Lv.5、霸体 Lv.10。前六个快捷栏依次配置狂击、怒爆、挑衅、霸体、红色药水、蓝色药水，技能使用上述等级，桌面与移动端共用。
 
 不带截图账号的好友、邮件、队伍、公会或测试记录。此配置仅用于新数据库，重启或升级已有数据库不会创建、替换角色或补发物品；本机专用截图账号 `readmecapture` 不受影响。
 

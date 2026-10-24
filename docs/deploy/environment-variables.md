@@ -4,6 +4,8 @@ pageClass: environment-reference
 
 # 环境变量配置参考
 
+本页以当前源码为准；已下载的离线包须以包内模板为准，不能直接套用不同版本的服务变量。
+
 本页汇总部署模板、Gateway、客户端默认设置、地图服与 Go API 的配置入口。以下均为公开默认值或占位符，不是某台运行服务器的真实环境。未列入部署 `.env.example` 的进程变量，不会仅因写进 Docker `.env` 就自动进入容器。
 
 ## 配置位置与生效方式
@@ -151,7 +153,7 @@ CLIENT_SCRIPT_TEXT_MIN_CONTRAST=4.5
 
 ### 玩法与工具权限环境变量
 
-以下 10 项是新增的地图服进程变量。未设置或留空时保留当前 battle 文件和后台管理方式；非空值在配置导入后覆盖文件。均使用十进制整数，布尔项填 `0` / `1`，不接受 `true` / `false`。
+以下 10 项由地图服进程读取。未设置或留空时保留当前 battle 文件和后台管理方式；非空值在配置导入后覆盖文件。均使用十进制整数，布尔项填 `0` / `1`，不接受 `true` / `false`。
 
 | 环境变量 | 用途 | 当前默认 | 允许范围 |
 | --- | --- | --- | --- |
@@ -166,7 +168,7 @@ CLIENT_SCRIPT_TEXT_MIN_CONTRAST=4.5
 | <span class="table-cell-label" aria-hidden="true">环境变量</span>`HAPPYRO_GAME_TOOLS_GAME_SETTINGS_POLICY` | <span class="table-cell-label" aria-hidden="true">用途</span>游戏设置工具权限 | <span class="table-cell-label" aria-hidden="true">当前默认</span>`2` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–2 |
 | <span class="table-cell-label" aria-hidden="true">环境变量</span>`HAPPYRO_GAME_TOOLS_ITEM_GRANT_POLICY` | <span class="table-cell-label" aria-hidden="true">用途</span>物品发放权限 | <span class="table-cell-label" aria-hidden="true">当前默认</span>`2` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–2 |
 
-权限值：`0` 关闭（仅支持范围含 0 的项目）、`1` 仅管理员、`2` 所有玩家。角色维护、游戏设置及物品发放仅支持 1 / 2，不支持 0。默认值沿用当前配置，本次没有改变功能开放范围。
+权限值：`0` 关闭（仅支持范围含 0 的项目）、`1` 仅管理员、`2` 所有玩家。角色维护、游戏设置及物品发放仅支持 1 / 2，不支持 0。默认值以当前配置为准。
 
 非空环境变量控制的项目，在后台或游戏内设置提交时会被 API 明确拒绝，提示具体环境变量名；检查发生在写入配置文件之前，整批请求均不执行。地图服控制接口也会在修改前拒绝含受控项的整批请求。当前表单仍可输入，限制在提交时反馈。需要恢复后台管理时清空对应变量，并重新创建地图服容器或重启原生地图服。
 
@@ -182,7 +184,7 @@ HAPPYRO_GAME_TOOLS_MONSTER_SPAWN_POLICY=1
 HAPPYRO_GAME_TOOLS_ITEM_GRANT_POLICY=1
 ```
 
-这些项目沿用地图服原有 GM 临时命令行为；GM 临时改值不等于改写部署配置，下次 battle 重载或进程重启会重新应用环境变量。经验、掉落、精炼、死亡惩罚等候选项本轮未新增环境变量，继续使用原有配置和已开放的后台入口。
+这些项目沿用地图服原有 GM 临时命令行为；GM 临时改值不等于改写部署配置，下次 battle 重载或进程重启会重新应用环境变量。经验、掉落、精炼、死亡惩罚等项目未提供对应的环境变量覆盖，继续使用原有配置和已开放的后台入口。
 
 ### 服务连接参数
 

@@ -1,6 +1,6 @@
 # 贡献指南
 
-HappyRO 接受客户端、服务端、Gateway、Admin、部署、文档和中文本地化改进。开始修改前先确认代码归属，避免把一个产品变更拆到错误仓库。
+HappyRO 接受客户端、服务端、Gateway、Admin、API、部署、文档和中文本地化改进。开始修改前先确认代码归属，避免把一个产品变更拆到错误仓库。
 
 ## 仓库
 
@@ -11,6 +11,7 @@ HappyRO 接受客户端、服务端、Gateway、Admin、部署、文档和中文
 | [happyro-server](https://github.com/happyro/happyro-server) | rAthena 服务端 |
 | [happyro-gateway](https://github.com/happyro/happyro-gateway) | HTTP、WebSocket 和资源网关 |
 | [happyro-admin](https://github.com/happyro/happyro-admin) | 管理后台 |
+| [happyro-api](https://github.com/happyro/happyro-api) | Go API、后台会话与游戏工具接口 |
 | [happyro-doc](https://github.com/happyro/happyro-doc) | 公开文档站、玩家指南与安装说明 |
 
 ## 基本流程

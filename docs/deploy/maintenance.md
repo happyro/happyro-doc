@@ -1,5 +1,7 @@
 # 日常维护
 
+以下服务名对应当前 Go API 部署模板；旧版离线包按同包 README 操作，先用 `docker compose config --services` 核对。
+
 ## 查看与启停
 
 ```bash
