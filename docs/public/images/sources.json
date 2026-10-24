@@ -65,7 +65,7 @@
     {
       "file": "overview/happyro-combat.png",
       "source": "happyro/docs/assets/readme/happyro-combat.png",
-      "sha256": "33705f32503b1fb677f272103bfe4d5866e36760ee45783b5cc0c78a579996bd",
+      "sha256": "c98c14294a717e78ff0e606d5d729d4caa4850f5a575284a84f94710cd032a8a",
       "capturedAt": "2026-10-25",
       "viewport": [
         1280,
@@ -90,8 +90,8 @@
         "baseLevel": 99,
         "jobLevel": 50
       },
-      "operation": "选择实际习得狂击 Lv.10，展示删除规则说明后的战斗辅助设置；未启动自动战斗",
-      "build": "mvnci1n2"
+      "operation": "真实罗安剑士打开战斗辅助，展示恢复后的单列表、自动恢复标签及当前按钮尺寸；只选择已习得狂击，未开启自动战斗",
+      "build": "mvnmr2g6"
     },
     {
       "file": "overview/happyro-responsive-skills.png",
