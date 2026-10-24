@@ -16,18 +16,57 @@
     {
       "file": "overview/happyro-admin-settings.png",
       "source": "happyro/docs/assets/readme/happyro-admin-settings.png",
-      "sha256": "ebd29a727d06b77f1872bda10596fdbc01b1bcfd2da8eaeff8cce636c693b909"
+      "sha256": "8f5d6d51b61d324446a2896eab51ebee8ff39a349e901c12e899e966e9351960",
+      "capturedAt": "2026-10-25",
+      "viewport": [
+        1280,
+        850
+      ],
+      "deviceScaleFactor": 1,
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 630
+      },
+      "operation": "真实后台打开游戏设置的掉落倍率页，展示查看修改记录入口；所有显示倍率为 1，未修改或保存设置"
     },
     {
       "file": "overview/happyro-codex.png",
       "source": "happyro/docs/assets/readme/happyro-codex.png",
-      "sha256": "1eefe995eb0a9efed379f4b2c7f7be5066788b0e2e62ea77fa156a066ee9f708"
+      "sha256": "3cb4f9896a0c056059efb27b8bc5ebf9f84cf58a71b09cff43dfa1027d8114a1",
+      "capturedAt": "2026-10-25",
+      "build": "mvnb019e",
+      "viewport": [
+        1280,
+        800
+      ],
+      "deviceScaleFactor": 1,
+      "zoom": 90,
+      "clip": {
+        "x": 200,
+        "y": 60,
+        "width": 880,
+        "height": 680
+      },
+      "map": "prt_fild08",
+      "position": [
+        140,
+        322
+      ],
+      "character": {
+        "name": "罗安",
+        "job": "剑士",
+        "baseLevel": 99,
+        "jobLevel": 50
+      },
+      "operation": "魔物图鉴启用当前地图筛选，选择波利，展示核实后的名称、掉落与出现地图"
     },
     {
       "file": "overview/happyro-combat.png",
       "source": "happyro/docs/assets/readme/happyro-combat.png",
-      "sha256": "5dd8fab8b1095dcf71442f8833d3a43e42617c7fe118fb81191015109564708a",
-      "capturedAt": "2026-10-23",
+      "sha256": "33705f32503b1fb677f272103bfe4d5866e36760ee45783b5cc0c78a579996bd",
+      "capturedAt": "2026-10-25",
       "viewport": [
         1280,
         800
@@ -51,21 +90,48 @@
         "baseLevel": 99,
         "jobLevel": 50
       },
-      "operation": "重拍桌面战斗辅助窗口：去除总开关，保持全部魔物、仅波利候选、普通攻击、狂击 Lv.10 / 挑衅 Lv.5 未选择、搜索 20 / 活动 30、随机瞬移关闭及等待 5 秒；原尺寸与裁剪不变。",
-      "build": "mvkq1wqu"
+      "operation": "选择实际习得狂击 Lv.10，展示删除规则说明后的战斗辅助设置；未启动自动战斗",
+      "build": "mvnci1n2"
     },
     {
       "file": "overview/happyro-responsive-skills.png",
       "source": "happyro/docs/assets/readme/happyro-responsive-skills.png",
-      "sha256": "aae1ae56df6ff056f0154e5a33ff6913b6befdf2eb6d60f6abd2580785f008e6",
-      "capturedAt": "2026-10-21",
-      "build": "mvh35j2e",
-      "operation": "重拍当前技能列表并沿用既有透明背景、无阴影的设备模板合成"
+      "sha256": "785af22870ed5cbdf6351ce813571baf584f2ad2c32a1c2a202c391eb9815343",
+      "capturedAt": "2026-10-25",
+      "build": "mvnb019e",
+      "operation": "当前真实游戏截图，沿用既有透明设备框模板合成",
+      "inputs": [
+        {
+          "file": "tablet-skills.png",
+          "sha256": "63dc5099d65a3774dbaf5dd8c852801f70821e3b72997c319dd937a210b0ca5e"
+        },
+        {
+          "file": "phone-skills.png",
+          "sha256": "f4cd912a1e0b02ea7d3453b08c05cba5ff68190ac32b2e576bf015d257c50d5e"
+        }
+      ]
     },
     {
       "file": "overview/happyro-three-devices.png",
       "source": "happyro/docs/assets/readme/happyro-three-devices.png",
-      "sha256": "dbf1f287704b5cc4ce65e70767339d559b821d2628fbd13975079a8b359c10a5"
+      "sha256": "2f71f1461e9e826e000c92335fd90a233a920149cad6201b79202adf800be75e",
+      "capturedAt": "2026-10-25",
+      "operation": "当前真实游戏截图，沿用既有透明设备框模板合成",
+      "inputs": [
+        {
+          "file": "desktop.png",
+          "sha256": "7c8f943d826a924a5ccfded440c5184abf15604cef839933d5ea4ec33b686f74"
+        },
+        {
+          "file": "tablet.png",
+          "sha256": "d72f9cc6b168887dd690d3215196e071b15411192c1f60876029499e2936e61c"
+        },
+        {
+          "file": "phone.png",
+          "sha256": "592fb8697d1da779166dcbb841fcf45b585399feb38a637f0f7bfebb73bfdcf5"
+        }
+      ],
+      "build": "mvnb019e"
     },
     {
       "file": "game/controls/tablet-shortcuts.png",
@@ -76,10 +142,10 @@
       ],
       "deviceScaleFactor": 1,
       "zoom": 85,
-      "operation": "打开快捷键并选择狂击，不保存修改",
-      "sha256": "b0f867f0b2bc2e8706f06878dad19367ea6b5579a122aefd0c7eacb53438f4b7",
-      "capturedAt": "2026-10-21",
-      "build": "mvh35j2e"
+      "operation": "查看既有第一格狂击快捷键，未保存修改",
+      "sha256": "995458f8249cae531e9ab0a13fb5753470514c7c5fa2625ed95b00d1d4bcbb11",
+      "capturedAt": "2026-10-25",
+      "build": "mvnb019e"
     },
     {
       "file": "game/social/tablet-chat.png",
@@ -90,9 +156,10 @@
       ],
       "deviceScaleFactor": 1,
       "zoom": 85,
-      "operation": "聊天列表取消留白、平板私聊对象列加宽后，打开私聊入口，不发送消息",
-      "sha256": "608aeb9aec5260ca5beac7b3428260af9425e3e4e683c6fd800e1c7058b238cf",
-      "build": "mvgxoyw1"
+      "operation": "打开私聊入口，未发送消息",
+      "sha256": "e739fa5ed240f68266a5ce6bd33f74e96beae1f81f5c97d6ec00b4295716ba11",
+      "build": "mvnb019e",
+      "capturedAt": "2026-10-25"
     },
     {
       "file": "game/controls/phone-character.png",
@@ -102,28 +169,30 @@
         860
       ],
       "deviceScaleFactor": 2,
-      "operation": "进入选角，选择既有角色罗安",
-      "sha256": "72fd54725640abd0b6b3a8082c95a2b39775a76d690175218531a8588e0b5911"
+      "operation": "当前角色选择页，罗安 Base 99 / Job 50",
+      "sha256": "c295d4549f62f8eba8951cfbebeb274457b6d60cc1bc562d55cd75095779bbe1",
+      "capturedAt": "2026-10-25",
+      "build": "mvnb019e"
     },
     {
       "file": "game/controls/phone-shortcuts.png",
-      "source": "本机真实游戏，Playwright Chromium 触屏视口",
+      "source": "本机真实游戏，Playwright Chromium 浏览器视口",
       "viewport": [
         430,
         860
       ],
       "deviceScaleFactor": 2,
-      "operation": "打开快捷键并选择狂击，不保存修改",
-      "sha256": "cc777ac967077fded4a3786dadbe829c9a4fcd5ef63fd78979a373f2d486ed9c",
+      "operation": "查看既有快捷键",
+      "sha256": "01890f226a92246131c82dc9bc7899be8b63f20eaade161136e41cef12a35432",
       "zoom": 20,
-      "capturedAt": "2026-10-21",
-      "build": "mvh35j2e"
+      "capturedAt": "2026-10-25",
+      "build": "mvnb019e"
     },
     {
       "file": "game/adventure/tablet-adventure-map.png",
-      "sha256": "ea616c254b364fdcb1d46d56d7f399386f2a6534d233837e47cf69c508dd1b7e",
-      "capturedAt": "2026-10-21",
-      "build": "mvh35j2e",
+      "sha256": "30b3cbb8ebd52b4821f6311599d3b25c8bebafe4007b3c066a4b51a79e0b91eb",
+      "capturedAt": "2026-10-25",
+      "build": "mvnb019e",
       "source": "本机真实游戏，Playwright Chromium 触屏视口",
       "viewport": [
         1024,
@@ -131,28 +200,32 @@
       ],
       "deviceScaleFactor": 1,
       "zoom": 85,
-      "operation": "打开冒险工具地图页，选择普隆德拉，不寻路或传送"
+      "operation": "查看普隆德拉地图与当前 NPC 名称，未寻路或传送",
+      "map": "prontera",
+      "position": [
+        164,
+        185
+      ]
     },
     {
       "file": "game/social/tablet-social-friend.png",
-      "sha256": "c912600831027872ec878f67123cf96579ce9a3d41def0852198509797309993",
-      "capturedAt": "2026-10-21",
-      "build": "mvh35j2e",
+      "sha256": "a0a3d086ad092c71ac03dbec42751802be257f401efff33ab14a731bb5ca8587",
+      "capturedAt": "2026-10-25",
+      "build": "mvnb019e",
       "source": "本机真实游戏，Playwright Chromium 触屏视口",
       "viewport": [
         1024,
         768
       ],
-      "deviceScaleFactor": 2,
+      "deviceScaleFactor": 1,
       "zoom": 85,
-      "operation": "社交好友列表选中在线的本机测试角色 happyro4",
-      "captureNote": "触屏上下文倍率 2，截图使用 scale: css 输出 1024 × 768"
+      "operation": "选中既有在线好友 happyro4，未发送请求或消息"
     },
     {
       "file": "game/mail/tablet-mail-read.png",
-      "sha256": "f4f1cfe06c5e06ed5860be5f1a07340d9ba28a2068f6cbe86a01bba187ea98d9",
-      "capturedAt": "2026-10-21",
-      "build": "mvh35j2e",
+      "sha256": "0f8da9fc34a65043864cdf024e79c22f1f3ec06225fb9710cffc5b29394a84aa",
+      "capturedAt": "2026-10-25",
+      "build": "mvnb019e",
       "source": "本机真实游戏，Playwright Chromium 触屏视口",
       "viewport": [
         1024,
@@ -160,28 +233,27 @@
       ],
       "deviceScaleFactor": 1,
       "zoom": 85,
-      "operation": "阅读截图角色发给自己的真实邮件，截图后领取附件恢复药水数量"
+      "operation": "阅读既有邮件正文与附件区域，未领取、发送或删除邮件"
     },
     {
       "file": "game/mail/tablet-mail-compose.png",
-      "sha256": "a8314474b53dbf7c89fc411c2616171a70ccf3216c38a5ff95716b55a369d9b6",
-      "capturedAt": "2026-10-21",
-      "build": "mvh35j2e",
-      "source": "本机真实游戏，Playwright Chromium 触屏视口",
+      "sha256": "4f416102ad2ce1d969aa04d2cb4d70b29f73a4526a9965df9043ab402e120403",
+      "capturedAt": "2026-10-25",
+      "build": "mvnb019e",
+      "source": "本机真实游戏，Playwright Chromium 浏览器视口",
       "viewport": [
         1024,
         768
       ],
-      "deviceScaleFactor": 2,
+      "deviceScaleFactor": 1,
       "zoom": 85,
-      "operation": "填写示例邮件并附加一瓶红色药水，截图后取消草稿",
-      "captureNote": "触屏上下文倍率 2，截图使用 scale: css 输出 1024 × 768"
+      "operation": "真实写信表单填写示例正文并附加红色药水 1；截图后取消，未发送"
     },
     {
       "file": "game/trading/tablet-trade.png",
-      "sha256": "a51ac25ea10e55904eda73e8258f45cdeb5a025c5f0ce65129baec4df4db3dcd",
-      "capturedAt": "2026-10-21",
-      "build": "mvh35j2e",
+      "sha256": "d2ea5aea5f8a3ab63b8c501beb22e6f9e024405bb205181646bbede7a897c0b2",
+      "capturedAt": "2026-10-25",
+      "build": "mvnb019e",
       "source": "本机真实游戏，Playwright Chromium 触屏视口",
       "viewport": [
         1024,
@@ -189,27 +261,27 @@
       ],
       "deviceScaleFactor": 1,
       "zoom": 85,
-      "operation": "与本机测试角色 happyro4 发起真实交易，双方各添加一瓶药水，我方设置 100 Zeny，截图后取消交易"
+      "operation": "与本人控制的测试角色真实交易：我方红色药水 1、100 Zeny，对方蓝色药水 1；截图后取消，未成交"
     },
     {
       "file": "game/trading/phone-trade.png",
-      "sha256": "187c039c8053e3cacdf30b48dfa0e4747f802531ea55a21b8f560eb07b0026e9",
-      "capturedAt": "2026-10-21",
-      "build": "mvh35j2e",
-      "source": "本机真实游戏，Playwright Chromium 触屏视口",
+      "sha256": "c35d2589f47c1c4f25c4a937060b665c1b53148e151aa21ebf41a0c223cb4cdf",
+      "capturedAt": "2026-10-25",
+      "build": "mvnb019e",
+      "source": "本机真实游戏，Playwright Chromium 浏览器视口",
       "viewport": [
         430,
         860
       ],
       "deviceScaleFactor": 2,
       "zoom": 20,
-      "operation": "手机竖屏展示真实交易的三行布局，截图后取消交易"
+      "operation": "本人控制的两个测试角色真实交易，展示手机三行布局，截图后取消"
     },
     {
       "file": "game/trading/tablet-trade-confirm.png",
-      "sha256": "600fec30d9e7a612a3299e54580e186dbab012d0998d3ccb5408badd33d952aa",
-      "capturedAt": "2026-10-21",
-      "build": "mvh35j2e",
+      "sha256": "571b7162bf85fc47284e6cb2a298786751afedd4d9327b06ba747c1a10ec9766",
+      "capturedAt": "2026-10-25",
+      "build": "mvnb019e",
       "source": "本机真实游戏，Playwright Chromium 触屏视口",
       "viewport": [
         1024,
@@ -217,7 +289,837 @@
       ],
       "deviceScaleFactor": 1,
       "zoom": 85,
-      "operation": "双方锁定真实交易后打开核对弹窗，截图后取消，未执行成交"
+      "operation": "双方锁定真实报价后打开核对弹窗，截图后取消，未成交"
+    },
+    {
+      "file": "game/controls/phone-actions.png",
+      "sha256": "ca75ea898e4378999d14ddbd328b4c6407edc462318baa72d792ab27949c01fc",
+      "capturedAt": "2026-10-25",
+      "build": "mvnb019e",
+      "source": "本机真实游戏，Playwright Chromium 浏览器视口",
+      "viewport": [
+        430,
+        860
+      ],
+      "deviceScaleFactor": 2,
+      "zoom": 20,
+      "map": "prontera",
+      "position": [
+        164,
+        185
+      ],
+      "operation": "展开动作，攻击提示自动隐藏"
+    },
+    {
+      "file": "strategy/job-change/archbishop-escort.svg",
+      "sha256": "89780fc16b27c7fca7efd3ffc1dae33a5f5ad08b9b855d96db49f43f1b1d9a81",
+      "auditedAt": "2026-10-25",
+      "source": "既有攻略配图",
+      "operation": "复核用途后保留；实测画面为历史流程示例，未改写拍摄时间"
+    },
+    {
+      "file": "strategy/job-change/hunter-exams.svg",
+      "sha256": "c6de9387e40f449d418052ed6716531f5eab36ac3f02ce31844340a42e187cc0",
+      "auditedAt": "2026-10-25",
+      "source": "既有攻略配图",
+      "operation": "复核用途后保留；实测画面为历史流程示例，未改写拍摄时间"
+    },
+    {
+      "file": "strategy/job-change/knight-guild.webp",
+      "sha256": "854f82b8318a62d99671f4fd502b413f7622de0aa06c3611038334ce11e70cec",
+      "auditedAt": "2026-10-25",
+      "source": "既有攻略配图",
+      "operation": "复核用途后保留；实测画面为历史流程示例，未改写拍摄时间"
+    },
+    {
+      "file": "strategy/job-change/locations/acolyte-first.webp",
+      "sha256": "049c9ba9ddd9072aae119056236dfd1b477054a46a6302e0f749f737626ceb5b",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "prt_church",
+      "position": [
+        184,
+        41
+      ],
+      "label": "圣堂 神父",
+      "npcSource": {
+        "path": "npc/re/jobs/1-1/acolyte.txt",
+        "line": 16
+      },
+      "originalSha256": "9c26b9f85ba67715e1e775db6563a34c672e7015fb60161153fdb17123738fae"
+    },
+    {
+      "file": "strategy/job-change/locations/alchemist-second.webp",
+      "sha256": "ad924ca335b20c8631dc587876e935f71054cac448206c4f975e67e366554a0b",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "alde_alche",
+      "position": [
+        27,
+        185
+      ],
+      "label": "炼金术师 组合员",
+      "npcSource": {
+        "path": "npc/jobs/2-2/alchemist.txt",
+        "line": 23
+      },
+      "originalSha256": "e1b00a2cd9d23a4d8b8678dea4bb8a1b99fef4f136ef7a391b6143dae5c1a042"
+    },
+    {
+      "file": "strategy/job-change/locations/alchemist-third.webp",
+      "sha256": "99a6f6d30a56ec41aeea9297f5b52e7a14dc8179e7fb48c1a7d9694bbc2ccac7",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "alde_alche",
+      "position": [
+        35,
+        186
+      ],
+      "label": "炼金术师公会人员",
+      "npcSource": {
+        "path": "npc/re/jobs/3-2/genetic.txt",
+        "line": 21
+      },
+      "originalSha256": "b89164bb4df7ded0dc3c81d8ac27f6dcbfaee68f4db4603815a0697eaeedee84"
+    },
+    {
+      "file": "strategy/job-change/locations/archer-first.webp",
+      "sha256": "dae0bf79c6ea7c801d3759f4005b6730c5d5d86aa51bccd939bbb0c3ff8661cc",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "payon_in02",
+      "position": [
+        64,
+        71
+      ],
+      "label": "工会服务人员",
+      "npcSource": {
+        "path": "npc/re/jobs/1-1/archer.txt",
+        "line": 15
+      },
+      "originalSha256": "539055b1afa55fd04f38592b08f5997e424e8a19cb56faf214a70794f6d4914a"
+    },
+    {
+      "file": "strategy/job-change/locations/assassin-second.webp",
+      "sha256": "2566693c6294b873c65cbec56fbb2a54ea10486471ac8c096d447894920b44d0",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "in_moc_16",
+      "position": [
+        19,
+        33
+      ],
+      "label": "工会员",
+      "npcSource": {
+        "path": "npc/jobs/2-1/assassin.txt",
+        "line": 50
+      },
+      "originalSha256": "d5b85a2a63f56a57d1e2f230df9f5797a5f38eb974e74b6ca54032a0dc2abb30"
+    },
+    {
+      "file": "strategy/job-change/locations/assassin-third.webp",
+      "sha256": "83cafa5fc54ad79bd43df441a6a12bb1f0d36a2993d34d15fdb5b886c34712c9",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "que_job01",
+      "position": [
+        75,
+        96
+      ],
+      "label": "公会成员",
+      "npcSource": {
+        "path": "npc/re/jobs/3-1/guillotine_cross.txt",
+        "line": 25
+      },
+      "originalSha256": "f9fa6629764196d38e9b62fa41387371d5315162bf2fcecf70dcb27ddc32171b"
+    },
+    {
+      "file": "strategy/job-change/locations/bard-second.webp",
+      "sha256": "767d71c1b005b4b69e0dee72e50a6307fa458a11efb8d9d9bb58f69855621ec1",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "comodo",
+      "position": [
+        226,
+        123
+      ],
+      "label": "拉洛",
+      "npcSource": {
+        "path": "npc/jobs/2-2/bard.txt",
+        "line": 30
+      },
+      "originalSha256": "ba3fd8ba648dcb635467f4328578f7fb50daa83e3f7a7f825139419934836492"
+    },
+    {
+      "file": "strategy/job-change/locations/bard-third.webp",
+      "sha256": "8e73346dfa023ddc949afee5e517cfb8fe81d61ebdd75dcb63d3881e63d6ca5b",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "alberta",
+      "position": [
+        196,
+        133
+      ],
+      "label": "诗人",
+      "npcSource": {
+        "path": "npc/re/jobs/3-2/minstrel.txt",
+        "line": 20
+      },
+      "originalSha256": "262144a95471e4aa31c5a3b6cfc73244bfc134621914c82a6d3ab65395d65c14"
+    },
+    {
+      "file": "strategy/job-change/locations/blacksmith-second.webp",
+      "sha256": "e3c3c9a553ef92040de729428ddb852cc56098186193d278123ed8db33b65eb9",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "ein_in01",
+      "position": [
+        18,
+        28
+      ],
+      "label": "工会会员",
+      "npcSource": {
+        "path": "npc/jobs/2-1/blacksmith.txt",
+        "line": 46
+      },
+      "originalSha256": "dc086d14a8efba2d4cc949dda5ce56feff296fb218a1daa0b1cd850f4c2fa342"
+    },
+    {
+      "file": "strategy/job-change/locations/blacksmith-third.webp",
+      "sha256": "3348476edb0b512e844abae9e6940577060c3d955caa755c5e2f6f690423093e",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "yuno",
+      "position": [
+        129,
+        156
+      ],
+      "label": "蔡宜辛",
+      "npcSource": {
+        "path": "npc/re/jobs/3-1/mechanic.txt",
+        "line": 19
+      },
+      "originalSha256": "655082d6d3a1ab2fc76758791c8d57eafaa36c9c6b95bc0252d49b126e02d271"
+    },
+    {
+      "file": "strategy/job-change/locations/book-rebirth.webp",
+      "sha256": "29f283e26d4126b5c30d1982b33a96331c5febc91275ec6353bf98915fc96676",
+      "auditedAt": "2026-10-25",
+      "source": "既有攻略配图",
+      "operation": "复核用途后保留；实测画面为历史流程示例，未改写拍摄时间"
+    },
+    {
+      "file": "strategy/job-change/locations/crusader-second.webp",
+      "sha256": "5f46e6359a247bf731610103747b2bf42b3cf97e50130f100c3a9c1572f2b48d",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "prt_cas",
+      "position": [
+        251,
+        75
+      ],
+      "label": "十字军 领袖",
+      "npcSource": {
+        "path": "npc/re/jobs/2-2/crusader.txt",
+        "line": 12
+      },
+      "originalSha256": "5c61c8cde16ace854e51ce3f23d243db38190f8b2940787ac93edf0a848565f6"
+    },
+    {
+      "file": "strategy/job-change/locations/crusader-third.webp",
+      "sha256": "46979bc4938389c355a2bc24d767ecedda433c98bd113fba06ae4e7db457b26c",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "prt_cas",
+      "position": [
+        172,
+        275
+      ],
+      "label": "中年绅士",
+      "npcSource": {
+        "path": "npc/re/jobs/3-2/royal_guard.txt",
+        "line": 21
+      },
+      "originalSha256": "ddd0e576944427bd217108f72a00a6ad386cc89593b68af88d014b388fcd77bf"
+    },
+    {
+      "file": "strategy/job-change/locations/dancer-second.webp",
+      "sha256": "7ca6d80a7e625ad64470d5e0c26dd5cb6996c275943ed983ef5a274e43405c63",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "comodo",
+      "position": [
+        193,
+        151
+      ],
+      "label": "柏勒 罗本",
+      "npcSource": {
+        "path": "npc/jobs/2-2/dancer.txt",
+        "line": 39
+      },
+      "originalSha256": "8bd7e3dcb4b7356e97ba205729dfbe4c68a2f31d490828a892587e2cb5fde714"
+    },
+    {
+      "file": "strategy/job-change/locations/dancer-third.webp",
+      "sha256": "6a496caed9fccc33a998094214ec9b3f8b68fdc96e6d4789d74b745643943d6b",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "xmas",
+      "position": [
+        162,
+        209
+      ],
+      "label": "漫游舞者志愿生小伊",
+      "npcSource": {
+        "path": "npc/re/jobs/3-2/wanderer.txt",
+        "line": 21
+      },
+      "originalSha256": "9eb6fd73b7fe664d3bcbb67ecca6cfb1d6a5b0f1a291f27b39d14cd62abfbbe3"
+    },
+    {
+      "file": "strategy/job-change/locations/donation-rebirth.webp",
+      "sha256": "42cca579d7ab53c186fa6aaf543f5c3e4d3ebae351af4796c25f7cfbc4d9f29c",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "yuno_in02",
+      "position": [
+        88,
+        164
+      ],
+      "label": "玫泰武司 西芙",
+      "npcSource": {
+        "path": "npc/jobs/valkyrie.txt",
+        "line": 214
+      },
+      "originalSha256": "ebf151d60f9f04d37173dc963b9eaa30039fac1869426edd3305f58dab2d3022"
+    },
+    {
+      "file": "strategy/job-change/locations/fourth-common.webp",
+      "sha256": "1234a764c4ccbb43fa079bc74a243185997937d731aa1dcb312a97fdf2092183",
+      "auditedAt": "2026-10-25",
+      "source": "既有攻略配图",
+      "operation": "复核用途后保留；实测画面为历史流程示例，未改写拍摄时间"
+    },
+    {
+      "file": "strategy/job-change/locations/heart-rebirth.webp",
+      "sha256": "3668349b976c7dbd1077dc5556c75e4cc3a89388c817c93640c8da557e6540ed",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "yuno_in05",
+      "position": [
+        49,
+        43
+      ],
+      "label": "伊米尔之心（Heart of Ymir）",
+      "npcSource": {
+        "path": "npc/jobs/valkyrie.txt",
+        "line": 321
+      },
+      "originalSha256": "3e9bd25adbcfa6623812dcd6b0a6b292ee7620aeeeb0325750d660d017c196b1"
+    },
+    {
+      "file": "strategy/job-change/locations/hunter-second.webp",
+      "sha256": "fc166ba14e0554539aa90d05e198dfb0cb2a76a3b38628cb3593295c7632e509",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "hu_in01",
+      "position": [
+        386,
+        373
+      ],
+      "label": "猎人 公会员",
+      "npcSource": {
+        "path": "npc/jobs/2-1/hunter.txt",
+        "line": 97
+      },
+      "originalSha256": "7eb33f61c3479a9df63afe3685364ad0fa7865ceb62486e8f2f6d815331b67b2"
+    },
+    {
+      "file": "strategy/job-change/locations/hunter-third.webp",
+      "sha256": "fbebab68d2c7d154e34ac61cbeaf8d9071a74575506dc67366219d352b2daa70",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "tur_dun01",
+      "position": [
+        156,
+        36
+      ],
+      "label": "生存教官瑞斯可",
+      "npcSource": {
+        "path": "npc/re/jobs/3-1/ranger.txt",
+        "line": 27
+      },
+      "originalSha256": "c22f4f5bc7ac3b6e8a98c20ada82a4e29242f577755368e645c76a5af4131eaf"
+    },
+    {
+      "file": "strategy/job-change/locations/knight-second.webp",
+      "sha256": "b9bff520fed4b01bc6f19113abc7891324399ff525ee49a5e5676c86a7d89c46",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "prt_in",
+      "position": [
+        88,
+        101
+      ],
+      "label": "普隆德拉 骑士团长",
+      "npcSource": {
+        "path": "npc/jobs/2-1/knight.txt",
+        "line": 45
+      },
+      "originalSha256": "7c9212407f41fbb7e12d446947e791ad67efa41a3bd3449c44e3ecd3d107d3b0"
+    },
+    {
+      "file": "strategy/job-change/locations/knight-third.webp",
+      "sha256": "7f08bfed2d184fd3102b071ae55b1a8c8576abe9461e5a8fdb3e15fe76828978",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "prt_in",
+      "position": [
+        162,
+        24
+      ],
+      "label": "装扮华丽的骑士",
+      "npcSource": {
+        "path": "npc/re/jobs/3-1/rune_knight.txt",
+        "line": 23
+      },
+      "originalSha256": "b4fe3936ec4d0f540a9a1aa8ab2013fd259842f08442b09c02b175a9827095ae"
+    },
+    {
+      "file": "strategy/job-change/locations/mage-first.webp",
+      "sha256": "8905f63a8235d14da508a3e06cd099dec98f6a9728227089e132ee35ab356ec8",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "geffen_in",
+      "position": [
+        164,
+        124
+      ],
+      "label": "公会服务人员",
+      "npcSource": {
+        "path": "npc/re/jobs/1-1/mage.txt",
+        "line": 15
+      },
+      "originalSha256": "38d34911b5e35d142558c54e3bb5e72270d1ce1e569ee0c96b82a750aa979767"
+    },
+    {
+      "file": "strategy/job-change/locations/merchant-first.webp",
+      "sha256": "93a7418f525871869db6ca9271a25d10103d8df5d53cbebb6a774d9d0d63e822",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "alberta_in",
+      "position": [
+        53,
+        43
+      ],
+      "label": "商人公会会员",
+      "npcSource": {
+        "path": "npc/re/jobs/1-1/merchant.txt",
+        "line": 15
+      },
+      "originalSha256": "ca2a04425b180ddeb0d019ceea37ed893994fbf6cff45a6deeeaa2fb35a04f16"
+    },
+    {
+      "file": "strategy/job-change/locations/monk-second.webp",
+      "sha256": "227cb4e373cb97e79e79016cc224dc264b2e4f2efc6d8afa574ef128de5594c6",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "prt_monk",
+      "position": [
+        59,
+        247
+      ],
+      "label": "修道僧",
+      "npcSource": {
+        "path": "npc/jobs/2-2/monk.txt",
+        "line": 21
+      },
+      "originalSha256": "6bcf84d1f0401235196aa3e8beedb07db70b490ee356eb7659e37a1783a66aca"
+    },
+    {
+      "file": "strategy/job-change/locations/monk-third.webp",
+      "sha256": "1bc351d78e8d89fd1b5aaae17d4089e5a174f8aea720136ebfbb4535d129ebed",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "ve_in",
+      "position": [
+        237,
+        125
+      ],
+      "label": "金克雷",
+      "npcSource": {
+        "path": "npc/re/jobs/3-2/sura.txt",
+        "line": 21
+      },
+      "originalSha256": "7b21020684727ecdfea9c76bd6d7088df5009e92cc9de8cd94b9376555833e74"
+    },
+    {
+      "file": "strategy/job-change/locations/priest-second.webp",
+      "sha256": "d47c6ce14c1e8f47406364cbeef3688999c9e90f0188082f6e4cde0c39abb307",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "prt_church",
+      "position": [
+        16,
+        41
+      ],
+      "label": "高等级 祭司",
+      "npcSource": {
+        "path": "npc/jobs/2-1/priest.txt",
+        "line": 35
+      },
+      "originalSha256": "303388b26feb9a15069edd26fe0f546ffeb745168fa4345ca6b28a605e686af7"
+    },
+    {
+      "file": "strategy/job-change/locations/priest-third.webp",
+      "sha256": "1d34c742353ec04bf723fa3d12e482a0bab2330568646b8fcf197f33e2a2a14e",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "prt_church",
+      "position": [
+        103,
+        88
+      ],
+      "label": "祈祷的神父",
+      "npcSource": {
+        "path": "npc/re/jobs/3-1/archbishop.txt",
+        "line": 41
+      },
+      "originalSha256": "182f54d5ff72debd5b047004beca72a530d7f778885a3fb802e130087e73c04d"
+    },
+    {
+      "file": "strategy/job-change/locations/rogue-second.webp",
+      "sha256": "3ae60f402b74251145125fb7ae30acdab916f08d88c3831092e9e6029910f04e",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "in_rogue",
+      "position": [
+        363,
+        122
+      ],
+      "label": "流氓 工会员",
+      "npcSource": {
+        "path": "npc/jobs/2-2/rogue.txt",
+        "line": 54
+      },
+      "originalSha256": "11ef605929cd8f6371e580ef763b3c56dc4ae9c70fcaf3b019a902710e5e9001"
+    },
+    {
+      "file": "strategy/job-change/locations/rogue-third.webp",
+      "sha256": "542ac1a3bccd2d5f9a7a0e3822ce2c0517f476ec17939920cba4e98810e15948",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "morocc",
+      "position": [
+        156,
+        70
+      ],
+      "label": "后街少女",
+      "npcSource": {
+        "path": "npc/re/jobs/3-2/shadow_chaser.txt",
+        "line": 20
+      },
+      "originalSha256": "f16fa2262b1446825455f15b5af0eb72b583782ab61e264c5caea67c3c233c94"
+    },
+    {
+      "file": "strategy/job-change/locations/sage-second.webp",
+      "sha256": "2abb592f7a751983a94fcbd5bc9b1199d74333374c6a2cc1ff3a29c3aa0706b0",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "yuno_in03",
+      "position": [
+        154,
+        35
+      ],
+      "label": "学院 相关人员",
+      "npcSource": {
+        "path": "npc/jobs/2-2/sage.txt",
+        "line": 203
+      },
+      "originalSha256": "cf0588ed974addd0021823dbc205029eef3791b04fc72fbc8f3b0f063a35c5e6"
+    },
+    {
+      "file": "strategy/job-change/locations/sage-third.webp",
+      "sha256": "de91dccff346bfac69e2756b3b34545a3a6c36d7c6a7b314f2dda835f0c9be07",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "gef_tower",
+      "position": [
+        102,
+        34
+      ],
+      "label": "梅利托",
+      "npcSource": {
+        "path": "npc/re/jobs/3-2/sorcerer.txt",
+        "line": 19
+      },
+      "originalSha256": "2ff0b561a2785f7926a5127f170a5c49bfd0613e0d42ef471e6a8ac1ebf8a1b4"
+    },
+    {
+      "file": "strategy/job-change/locations/swordman-first.webp",
+      "sha256": "459c5504c49e7cc0133e3b4204a6bd31d7fcdcbc364b1a6200b4532c8d2c838c",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "izlude_in",
+      "position": [
+        74,
+        172
+      ],
+      "label": "剑士公会服务人员",
+      "npcSource": {
+        "path": "npc/re/jobs/1-1/swordman.txt",
+        "line": 15
+      },
+      "originalSha256": "dba5be25c98cd315235efc09e17d7ae079f77a76768450bfb2ed2b433599d416"
+    },
+    {
+      "file": "strategy/job-change/locations/thief-first.webp",
+      "sha256": "1b5a900b1cd2ef260b06f04a7eb8f30682fdfaeb5307565d89753e1f5a539148",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "moc_prydb1",
+      "position": [
+        39,
+        129
+      ],
+      "label": "公会服务人员",
+      "npcSource": {
+        "path": "npc/re/jobs/1-1/thief.txt",
+        "line": 15
+      },
+      "originalSha256": "06f1a9a854df32c517d835bbfd158ae63325439947c969fae070bb19e4546d7b"
+    },
+    {
+      "file": "strategy/job-change/locations/valkyrie-rebirth.webp",
+      "sha256": "5a07d8d5882445f7e1647b5f9a47030fffa79c3df011b937ee578d798051b065",
+      "auditedAt": "2026-10-25",
+      "source": "既有攻略配图",
+      "operation": "复核用途后保留；实测画面为历史流程示例，未改写拍摄时间"
+    },
+    {
+      "file": "strategy/job-change/locations/wizard-second.webp",
+      "sha256": "c68aaa6e7c9bf0514f84e50152b498ec49d51d74b06a2d998fad8cdcd0599812",
+      "auditedAt": "2026-10-25",
+      "source": "当前 NPC 目录与原地形定位图",
+      "operation": "更新图题，保留地图地形与坐标",
+      "map": "gef_tower",
+      "position": [
+        111,
+        37
+      ],
+      "label": "魔法工会 相关人员",
+      "npcSource": {
+        "path": "npc/jobs/2-1/wizard.txt",
+        "line": 32
+      },
+      "originalSha256": "5961e85838c072b0dc8636444b6098f435167d3f53e1cd37fefe68739c2bb1bc"
+    },
+    {
+      "file": "strategy/job-change/locations/wizard-third.webp",
+      "sha256": "afd3a766d528e5f84ab5ce5c39e87988b176565b08fc0a9be2441e7232257218",
+      "auditedAt": "2026-10-25",
+      "source": "既有攻略配图",
+      "operation": "复核用途后保留；实测画面为历史流程示例，未改写拍摄时间"
+    },
+    {
+      "file": "strategy/job-change/rebirth-steps.svg",
+      "sha256": "50fa0bdc54833a28d406db7e29748798cde41da768c0af83c866a111ffbbe34c",
+      "auditedAt": "2026-10-25",
+      "source": "既有攻略配图",
+      "operation": "复核用途后保留；实测画面为历史流程示例，未改写拍摄时间"
+    },
+    {
+      "file": "strategy/job-change/rogue-keys.svg",
+      "sha256": "ba9681070918a9a17db783e1a46e2a7f31ea1f175ce2dc45ab6ad5b853f07c1d",
+      "auditedAt": "2026-10-25",
+      "source": "既有攻略配图",
+      "operation": "复核用途后保留；实测画面为历史流程示例，未改写拍摄时间"
+    },
+    {
+      "file": "strategy/job-change/swordman-npc.webp",
+      "sha256": "87d3e2853890c7880063b33a6bcc417ebea339a7b455ce2c784de2bcb9fe41dc",
+      "auditedAt": "2026-10-25",
+      "source": "既有攻略配图",
+      "operation": "复核用途后保留；实测画面为历史流程示例，未改写拍摄时间"
+    },
+    {
+      "file": "strategy/job-change/warlock-guild.webp",
+      "sha256": "7dd0a523e1bfa3fd8630370a57d5e69bef0e11b2bbfaad8a04b078e480c6213c",
+      "auditedAt": "2026-10-25",
+      "source": "既有攻略配图",
+      "operation": "复核用途后保留；实测画面为历史流程示例，未改写拍摄时间"
+    },
+    {
+      "file": "strategy/job-change/wizard-guild.webp",
+      "sha256": "acbfbd6432e8e999c864262b8e4969b077e0b38e53a89137300b3e3ad5738f7a",
+      "auditedAt": "2026-10-25",
+      "source": "既有攻略配图",
+      "operation": "复核用途后保留；实测画面为历史流程示例，未改写拍摄时间"
+    },
+    {
+      "file": "game/adventure/tablet-adventure-npc.png",
+      "operation": "搜索并查看当前地图卡普拉 NPC，未传送",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "build": "mvnb019e",
+      "capturedAt": "2026-10-25",
+      "character": {
+        "name": "罗安",
+        "job": "剑士",
+        "baseLevel": 99
+      },
+      "zoom": 85,
+      "sha256": "02ac34684ed4e9e50ecab2d7c3e48cd2e1afa37476a2621b97ea11a1b016f4b1",
+      "source": "本机真实游戏，Playwright Chromium 触屏视口"
+    },
+    {
+      "file": "game/adventure/tablet-adventure-item.png",
+      "operation": "查看红色药水资料，未发放物品或 Zeny",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "build": "mvnb019e",
+      "capturedAt": "2026-10-25",
+      "character": {
+        "name": "罗安",
+        "job": "剑士",
+        "baseLevel": 99
+      },
+      "zoom": 85,
+      "sha256": "713b1f141e8f0f8a188dc84a1461822684aa0a562ee4fc45717979c7147b84d4",
+      "source": "本机真实游戏，Playwright Chromium 触屏视口"
+    },
+    {
+      "file": "game/adventure/tablet-adventure-character.png",
+      "operation": "查看罗安现有职业、等级与属性，未应用任何修改",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "build": "mvnb019e",
+      "capturedAt": "2026-10-25",
+      "character": {
+        "name": "罗安",
+        "job": "剑士",
+        "baseLevel": 99
+      },
+      "zoom": 85,
+      "sha256": "78fef0565939baaf1ee5babf635961268bdf999250d6087743a75a20d6c71ea7",
+      "source": "本机真实游戏，Playwright Chromium 触屏视口"
+    },
+    {
+      "file": "game/adventure/tablet-adventure-settings.png",
+      "operation": "查看当前游戏设置，未编辑、保存或修改倍率",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "build": "mvnb019e",
+      "capturedAt": "2026-10-25",
+      "character": {
+        "name": "罗安",
+        "job": "剑士",
+        "baseLevel": 99
+      },
+      "zoom": 85,
+      "sha256": "494e7237500495edd6b134d92e9b5948ac3a21f0381799946f169864cf19d662",
+      "source": "本机真实游戏，Playwright Chromium 触屏视口"
+    },
+    {
+      "file": "game/adventure/tablet-adventure-settings-rules.png",
+      "operation": "滚动查看精炼、地图导航与魔物召唤规则，未保存",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "build": "mvnb019e",
+      "capturedAt": "2026-10-25",
+      "character": {
+        "name": "罗安",
+        "job": "剑士",
+        "baseLevel": 99
+      },
+      "zoom": 85,
+      "sha256": "d9fa4addd576cabba33f794738683fe15dff816a4afdc101c213bc51ab20a34d",
+      "source": "本机真实游戏，Playwright Chromium 触屏视口"
+    },
+    {
+      "file": "game/adventure/tablet-adventure-character-stats.png",
+      "operation": "查看基础属性和四转属性的适用提示，未应用修改",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "build": "mvnb019e",
+      "capturedAt": "2026-10-25",
+      "character": {
+        "name": "罗安",
+        "job": "剑士",
+        "baseLevel": 99
+      },
+      "zoom": 85,
+      "sha256": "426d3cd0eb0ef74a4c9db81afe1d59a58a1a564cfdd45df9c9c49d79420c7af2",
+      "source": "本机真实游戏，Playwright Chromium 触屏视口"
+    },
+    {
+      "file": "game/adventure/tablet-adventure-monster.png",
+      "operation": "查看波利的属性、掉落和分布，未召唤或传送",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "build": "mvnb019e",
+      "capturedAt": "2026-10-25",
+      "character": {
+        "name": "罗安",
+        "job": "剑士",
+        "baseLevel": 99
+      },
+      "zoom": 85,
+      "sha256": "e2331d2b4b921ecacb51869cac6042beb1347320fb95be355de52ba53453c2f8",
+      "source": "本机真实游戏，Playwright Chromium 触屏视口"
     }
   ]
 }

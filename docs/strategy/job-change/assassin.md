@@ -12,7 +12,7 @@ outline: [2, 3]
 
 | 目标阶段 | 本篇准备条件 | 下一站 |
 | --- | --- | --- |
-| [一转：盗贼](#一转-盗贼) | Job 10，完成基础技能 | `moc_prydb1 39,129` |
+| [一转：盗贼](#一转-盗贼) | Job 10，完成基本技能 | `moc_prydb1 39,129` |
 | [二转：刺客](#二转-刺客) | 本文建议 Job 50；技能点用完 | `in_moc_16 19,33` |
 | [转生](common.md#转生与进阶二转) | 二转 Base 99 / Job 50，技能点用完 | `yuno_in02 88,164` |
 | [进阶二转：十字刺客](#转生与进阶二转-十字刺客) | 高阶一转 Job 50，技能点用完 | `valkyrie 44,58` |
@@ -26,18 +26,20 @@ outline: [2, 3]
 
 ## 一转：盗贼
 
-职业等级 Job 10、完成基础技能后，前往 `moc_prydb1 39,129`。找盗贼向导，选择「我想成为盗贼」并确认；再找同地图 `42,133` 的公会成员办理仪式。当前 Renewal 路线不需要旧版蘑菇收集考试。
+职业等级 Job 10、完成基本技能后，前往 `moc_prydb1 39,129`。找盗贼向导，选择「我想成为盗贼」并确认；再找同地图 `42,133` 的公会成员办理仪式。当前 Renewal 路线不需要旧版蘑菇收集考试。
 
 [查看一转 NPC 定位图](common.md#一转-npc-定位)。
 
 ## 二转：刺客
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/locations/assassin-second.webp" target="_blank" rel="noopener" aria-label="查看定位图：刺客公会成员 · in_moc_16 (19, 33)">
-    <img src="/images/strategy/job-change/locations/assassin-second.webp" alt="刺客公会成员 · in_moc_16 (19, 33)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/locations/assassin-second.webp" target="_blank" rel="noopener" aria-label="查看定位图：工会员 · in_moc_16 (19, 33)">
+    <img src="/images/strategy/job-change/locations/assassin-second.webp" alt="工会员 · in_moc_16 (19, 33)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
   </a>
-  <figcaption>刺客公会成员 · in_moc_16 (19, 33)<br />地形定位示意 · 点击查看大图</figcaption>
+  <figcaption>工会员 · in_moc_16 (19, 33)<br />地形定位示意 · 点击查看大图</figcaption>
 </figure>
+
+定位图使用当前场景名称「工会员」（原攻略称「刺客公会成员」），请按地图与坐标寻找。
 
 1. 盗贼用完技能点后，找 `in_moc_16 19,33` 公会成员报名，完成笔试并按考官指引进入实战。
 2. 经过 `211,61` 的提醒位置，找 `211,62` 考官进入等候室。考试中只击杀六个名字为「转职目标」的目标，避开陷阱。
@@ -47,7 +49,7 @@ outline: [2, 3]
 
 ## 转生与进阶二转：十字刺客
 
-按[共用转生流程](common.md#转生与进阶二转)成为高阶初心者。Job 10、完成基础技能后回 `moc_prydb1 39,129`，办理高阶盗贼。
+按[共用转生流程](common.md#转生与进阶二转)成为高阶初心者。Job 10、完成基本技能后回 `moc_prydb1 39,129`，办理高阶盗贼。
 
 练到 Job 50 并用完技能点，再阅读 `yuno_in02 93,207` 的伊米尔之书进入英灵殿，找 `valkyrie 44,58` 的十字刺客导师，选择「是」完成进阶二转。各分支最低门槛可能不同，本篇按 Job 50 路线继续。
 
@@ -56,11 +58,13 @@ outline: [2, 3]
 **本篇准备：**十字刺客 Base 99 / Job 70，用完技能点并留出奖励栏位。具体材料、负重与时限见下列步骤。
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/locations/assassin-third.webp" target="_blank" rel="noopener" aria-label="查看定位图：阿卡特 · que_job01 (75, 96)">
-    <img src="/images/strategy/job-change/locations/assassin-third.webp" alt="阿卡特 · que_job01 (75, 96)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/locations/assassin-third.webp" target="_blank" rel="noopener" aria-label="查看定位图：公会成员 · que_job01 (75, 96)">
+    <img src="/images/strategy/job-change/locations/assassin-third.webp" alt="公会成员 · que_job01 (75, 96)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
   </a>
-  <figcaption>阿卡特 · que_job01 (75, 96)<br />地形定位示意 · 点击查看大图</figcaption>
+  <figcaption>公会成员 · que_job01 (75, 96)<br />地形定位示意 · 点击查看大图</figcaption>
 </figure>
+
+定位图使用当前场景名称「公会成员」（原攻略称「阿卡特」），请按地图与坐标寻找。
 
 ### 调查与第一次等待
 

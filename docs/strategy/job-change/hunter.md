@@ -12,7 +12,7 @@ outline: [2, 3]
 
 | 目标阶段 | 本篇准备条件 | 下一站 |
 | --- | --- | --- |
-| [一转：弓箭手](#一转-弓箭手) | Job 10，完成基础技能 | `payon_in02 64,71` |
+| [一转：弓箭手](#一转-弓箭手) | Job 10，完成基本技能 | `payon_in02 64,71` |
 | [二转：猎人](#二转-猎人) | 本文建议 Job 50；技能点用完 | `hu_in01 386,373` |
 | [转生](common.md#转生与进阶二转) | 二转 Base 99 / Job 50，技能点用完 | `yuno_in02 88,164` |
 | [进阶二转：神射手](#转生与进阶二转-神射手) | 高阶一转 Job 50，技能点用完 | `valkyrie 44,55` |
@@ -27,18 +27,20 @@ outline: [2, 3]
 
 ## 一转：弓箭手
 
-职业等级 Job 10、完成基础技能后，前往 `payon_in02 64,71`。找弓箭手导师申请转职，完成对话并领取新手弓及箭筒。当前 Renewal 路线不需要旧版木材收集考试。
+职业等级 Job 10、完成基本技能后，前往 `payon_in02 64,71`。找弓箭手导师申请转职，完成对话并领取新手弓及箭筒。当前 Renewal 路线不需要旧版木材收集考试。
 
 [查看一转 NPC 定位图](common.md#一转-npc-定位)。
 
 ## 二转：猎人
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/locations/hunter-second.webp" target="_blank" rel="noopener" aria-label="查看定位图：猎人谢琳 · hu_in01 (386, 373)">
-    <img src="/images/strategy/job-change/locations/hunter-second.webp" alt="猎人谢琳 · hu_in01 (386, 373)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/locations/hunter-second.webp" target="_blank" rel="noopener" aria-label="查看定位图：猎人 公会员 · hu_in01 (386, 373)">
+    <img src="/images/strategy/job-change/locations/hunter-second.webp" alt="猎人 公会员 · hu_in01 (386, 373)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
   </a>
-  <figcaption>猎人谢琳 · hu_in01 (386, 373)<br />地形定位示意 · 点击查看大图</figcaption>
+  <figcaption>猎人 公会员 · hu_in01 (386, 373)<br />地形定位示意 · 点击查看大图</figcaption>
 </figure>
+
+定位图使用当前场景名称「猎人 公会员」（原攻略称「猎人谢琳」），请按地图与坐标寻找。
 
 1. 弓箭手 Job 50、用完技能点，找 `hu_in01 386,373` 谢琳报名。面试十题对应的选择为：安静询问、卡普拉服务、出售闲置物品、回城、礼貌请求治疗、开聊天室、给予物品金币、告诉方向、等求助再攻击、寻找失主。
 2. 找 `hu_in01 382,382` 接待员领取随机材料清单。已记录的一组是彩色外壳 3、动物外皮 3、红色药草 5；实际以自己的清单为准。
@@ -48,7 +50,7 @@ outline: [2, 3]
 
 ## 转生与进阶二转：神射手
 
-按[共用转生流程](common.md#转生与进阶二转)成为高阶初心者。Job 10、完成基础技能后回 `payon_in02 64,71`，办理高阶弓箭手。
+按[共用转生流程](common.md#转生与进阶二转)成为高阶初心者。Job 10、完成基本技能后回 `payon_in02 64,71`，办理高阶弓箭手。
 
 练到 Job 50 并用完技能点，再阅读 `yuno_in02 93,207` 的伊米尔之书进入英灵殿，找 `valkyrie 44,55` 的神射手导师，选择「是」完成进阶二转。各分支最低门槛可能不同，本篇按 Job 50 路线继续。
 
@@ -57,11 +59,13 @@ outline: [2, 3]
 **本篇准备：**神射手 Base 99 / Job 70，用完技能点并留出奖励栏位。具体材料、负重与时限见下列步骤。
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/locations/hunter-third.webp" target="_blank" rel="noopener" aria-label="查看定位图：生存教官 · tur_dun01 (156, 36)">
-    <img src="/images/strategy/job-change/locations/hunter-third.webp" alt="生存教官 · tur_dun01 (156, 36)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/locations/hunter-third.webp" target="_blank" rel="noopener" aria-label="查看定位图：生存教官瑞斯可 · tur_dun01 (156, 36)">
+    <img src="/images/strategy/job-change/locations/hunter-third.webp" alt="生存教官瑞斯可 · tur_dun01 (156, 36)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
   </a>
-  <figcaption>生存教官 · tur_dun01 (156, 36)<br />地形定位示意 · 点击查看大图</figcaption>
+  <figcaption>生存教官瑞斯可 · tur_dun01 (156, 36)<br />地形定位示意 · 点击查看大图</figcaption>
 </figure>
+
+定位图使用当前场景名称「生存教官瑞斯可」（原攻略称「生存教官」），请按地图与坐标寻找。
 
 ### 生存与狩猎
 

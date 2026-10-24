@@ -12,7 +12,7 @@ outline: [2, 3]
 
 | 目标阶段 | 本篇准备条件 | 下一站 |
 | --- | --- | --- |
-| [一转：剑士](#一转-剑士) | Job 10，完成基础技能 | `izlude_in 74,172` |
+| [一转：剑士](#一转-剑士) | Job 10，完成基本技能 | `izlude_in 74,172` |
 | [二转：骑士](#二转-骑士) | 本文建议 Job 50；技能点用完 | `prt_in 88,101` |
 | [转生](common.md#转生与进阶二转) | 二转 Base 99 / Job 50，技能点用完 | `yuno_in02 88,164` |
 | [进阶二转：领主骑士](#转生与进阶二转-领主骑士) | 高阶一转 Job 50，技能点用完 | `valkyrie 44,39` |
@@ -26,7 +26,7 @@ outline: [2, 3]
 
 ## 一转：剑士
 
-职业等级 Job 10、完成基础技能后，前往 `izlude_in 74,172`。找剑士公会职员，选择「我想成为剑士」→「是的」，完成对话。
+职业等级 Job 10、完成基本技能后，前往 `izlude_in 74,172`。找剑士公会职员，选择「我想成为剑士」→「是的」，完成对话。
 
 ::: details 查看游戏场景参考
 
@@ -44,11 +44,13 @@ outline: [2, 3]
 ## 二转：骑士
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/locations/knight-second.webp" target="_blank" rel="noopener" aria-label="查看定位图：骑士团长 · prt_in (88, 101)">
-    <img src="/images/strategy/job-change/locations/knight-second.webp" alt="骑士团长 · prt_in (88, 101)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/locations/knight-second.webp" target="_blank" rel="noopener" aria-label="查看定位图：普隆德拉 骑士团长 · prt_in (88, 101)">
+    <img src="/images/strategy/job-change/locations/knight-second.webp" alt="普隆德拉 骑士团长 · prt_in (88, 101)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
   </a>
-  <figcaption>骑士团长 · prt_in (88, 101)<br />地形定位示意 · 点击查看大图</figcaption>
+  <figcaption>普隆德拉 骑士团长 · prt_in (88, 101)<br />地形定位示意 · 点击查看大图</figcaption>
 </figure>
+
+定位图使用当前场景名称「普隆德拉 骑士团长」（原攻略称「骑士团长」），请按地图与坐标寻找。
 
 ### 报名与知识问答
 
@@ -80,7 +82,7 @@ outline: [2, 3]
 
 ## 转生与进阶二转：领主骑士
 
-按[共用转生流程](common.md#转生与进阶二转)成为高阶初心者。Job 10、完成基础技能后回 `izlude_in 74,172`，办理高阶剑士。
+按[共用转生流程](common.md#转生与进阶二转)成为高阶初心者。Job 10、完成基本技能后回 `izlude_in 74,172`，办理高阶剑士。
 
 练到 Job 50 并用完技能点，再阅读 `yuno_in02 93,207` 的伊米尔之书进入英灵殿，找 `valkyrie 44,39` 的领主骑士导师，选择「是」完成进阶二转。各分支最低门槛可能不同，本篇按 Job 50 路线继续。
 
@@ -89,11 +91,13 @@ outline: [2, 3]
 **本篇准备：**领主骑士 Base 99 / Job 70，用完技能点并留出奖励栏位。具体材料、负重与时限见下列步骤。
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/locations/knight-third.webp" target="_blank" rel="noopener" aria-label="查看定位图：曼努埃尔 · prt_in (162, 24)">
-    <img src="/images/strategy/job-change/locations/knight-third.webp" alt="曼努埃尔 · prt_in (162, 24)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/locations/knight-third.webp" target="_blank" rel="noopener" aria-label="查看定位图：装扮华丽的骑士 · prt_in (162, 24)">
+    <img src="/images/strategy/job-change/locations/knight-third.webp" alt="装扮华丽的骑士 · prt_in (162, 24)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
   </a>
-  <figcaption>曼努埃尔 · prt_in (162, 24)<br />地形定位示意 · 点击查看大图</figcaption>
+  <figcaption>装扮华丽的骑士 · prt_in (162, 24)<br />地形定位示意 · 点击查看大图</figcaption>
 </figure>
+
+定位图使用当前场景名称「装扮华丽的骑士」（原攻略称「曼努埃尔」），请按地图与坐标寻找。
 
 ### 推荐与第一项战斗
 

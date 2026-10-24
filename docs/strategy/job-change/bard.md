@@ -12,7 +12,7 @@ outline: [2, 3]
 
 | 目标阶段 | 本篇准备条件 | 下一站 |
 | --- | --- | --- |
-| [一转：弓箭手](#一转-弓箭手) | Job 10，完成基础技能 | `payon_in02 64,71` |
+| [一转：弓箭手](#一转-弓箭手) | Job 10，完成基本技能 | `payon_in02 64,71` |
 | [二转：诗人](#二转-诗人) | 男性弓箭手；本文建议 Job 50 | `comodo 226,123` |
 | [转生](common.md#转生与进阶二转) | 二转 Base 99 / Job 50，技能点用完 | `yuno_in02 88,164` |
 | [进阶二转：搞笑艺人](#转生与进阶二转-搞笑艺人) | 高阶一转 Job 50，技能点用完 | `valkyrie 53,54` |
@@ -26,18 +26,20 @@ outline: [2, 3]
 
 ## 一转：弓箭手
 
-职业等级 Job 10、完成基础技能后，前往 `payon_in02 64,71`。找弓箭手导师申请转职，完成对话并领取新手弓及箭筒。当前 Renewal 路线不需要旧版木材收集考试。
+职业等级 Job 10、完成基本技能后，前往 `payon_in02 64,71`。找弓箭手导师申请转职，完成对话并领取新手弓及箭筒。当前 Renewal 路线不需要旧版木材收集考试。
 
 [查看一转 NPC 定位图](common.md#一转-npc-定位)。
 
 ## 二转：诗人
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/locations/bard-second.webp" target="_blank" rel="noopener" aria-label="查看定位图：流浪诗人拉洛 · comodo (226, 123)">
-    <img src="/images/strategy/job-change/locations/bard-second.webp" alt="流浪诗人拉洛 · comodo (226, 123)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/locations/bard-second.webp" target="_blank" rel="noopener" aria-label="查看定位图：拉洛 · comodo (226, 123)">
+    <img src="/images/strategy/job-change/locations/bard-second.webp" alt="拉洛 · comodo (226, 123)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
   </a>
-  <figcaption>流浪诗人拉洛 · comodo (226, 123)<br />地形定位示意 · 点击查看大图</figcaption>
+  <figcaption>拉洛 · comodo (226, 123)<br />地形定位示意 · 点击查看大图</figcaption>
 </figure>
+
+定位图使用当前场景名称「拉洛」（原攻略称「流浪诗人拉洛」），请按地图与坐标寻找。
 
 男性弓箭手走诗人分支；女性分支见[舞娘系](dancer.md)。
 
@@ -67,7 +69,7 @@ outline: [2, 3]
 
 ## 转生与进阶二转：搞笑艺人
 
-按[共用转生流程](common.md#转生与进阶二转)成为高阶初心者。Job 10、完成基础技能后回 `payon_in02 64,71`，办理高阶弓箭手。
+按[共用转生流程](common.md#转生与进阶二转)成为高阶初心者。Job 10、完成基本技能后回 `payon_in02 64,71`，办理高阶弓箭手。
 
 练到 Job 50 并用完技能点，再阅读 `yuno_in02 93,207` 的伊米尔之书进入英灵殿，找 `valkyrie 53,54` 的搞笑艺人导师，选择「是」完成进阶二转。各分支最低门槛可能不同，本篇按 Job 50 路线继续。
 
@@ -76,11 +78,13 @@ outline: [2, 3]
 **本篇准备：**搞笑艺人 Base 99 / Job 70，用完技能点并留出奖励栏位。具体材料、负重与时限见下列步骤。
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/locations/bard-third.webp" target="_blank" rel="noopener" aria-label="查看定位图：卡里安 · alberta (196, 133)">
-    <img src="/images/strategy/job-change/locations/bard-third.webp" alt="卡里安 · alberta (196, 133)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/locations/bard-third.webp" target="_blank" rel="noopener" aria-label="查看定位图：诗人 · alberta (196, 133)">
+    <img src="/images/strategy/job-change/locations/bard-third.webp" alt="诗人 · alberta (196, 133)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
   </a>
-  <figcaption>卡里安 · alberta (196, 133)<br />地形定位示意 · 点击查看大图</figcaption>
+  <figcaption>诗人 · alberta (196, 133)<br />地形定位示意 · 点击查看大图</figcaption>
 </figure>
+
+定位图使用当前场景名称「诗人」（原攻略称「卡里安」），请按地图与坐标寻找。
 
 ### 调查与照片
 

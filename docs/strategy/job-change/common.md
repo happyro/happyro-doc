@@ -24,66 +24,78 @@ outline: [2, 3]
 ::: details 剑士公会职员 · izlude_in (74, 172)
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/locations/swordman-first.webp" target="_blank" rel="noopener" aria-label="查看定位图：剑士公会职员 · izlude_in (74, 172)">
-    <img src="/images/strategy/job-change/locations/swordman-first.webp" alt="剑士公会职员 · izlude_in (74, 172)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/locations/swordman-first.webp" target="_blank" rel="noopener" aria-label="查看定位图：剑士公会服务人员 · izlude_in (74, 172)">
+    <img src="/images/strategy/job-change/locations/swordman-first.webp" alt="剑士公会服务人员 · izlude_in (74, 172)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
   </a>
-  <figcaption>剑士公会职员 · izlude_in (74, 172)<br />地形定位示意 · 点击查看大图</figcaption>
+  <figcaption>剑士公会服务人员 · izlude_in (74, 172)<br />地形定位示意 · 点击查看大图</figcaption>
 </figure>
+
+定位图使用当前场景名称「剑士公会服务人员」（原攻略称「剑士公会职员」），请按地图与坐标寻找。
 
 :::
 
 ::: details 魔法师公会职员 · geffen_in (164, 124)
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/locations/mage-first.webp" target="_blank" rel="noopener" aria-label="查看定位图：魔法师公会职员 · geffen_in (164, 124)">
-    <img src="/images/strategy/job-change/locations/mage-first.webp" alt="魔法师公会职员 · geffen_in (164, 124)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/locations/mage-first.webp" target="_blank" rel="noopener" aria-label="查看定位图：公会服务人员 · geffen_in (164, 124)">
+    <img src="/images/strategy/job-change/locations/mage-first.webp" alt="公会服务人员 · geffen_in (164, 124)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
   </a>
-  <figcaption>魔法师公会职员 · geffen_in (164, 124)<br />地形定位示意 · 点击查看大图</figcaption>
+  <figcaption>公会服务人员 · geffen_in (164, 124)<br />地形定位示意 · 点击查看大图</figcaption>
 </figure>
+
+定位图使用当前场景名称「公会服务人员」（原攻略称「魔法师公会职员」），请按地图与坐标寻找。
 
 :::
 
 ::: details 弓箭手导师 · payon_in02 (64, 71)
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/locations/archer-first.webp" target="_blank" rel="noopener" aria-label="查看定位图：弓箭手导师 · payon_in02 (64, 71)">
-    <img src="/images/strategy/job-change/locations/archer-first.webp" alt="弓箭手导师 · payon_in02 (64, 71)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/locations/archer-first.webp" target="_blank" rel="noopener" aria-label="查看定位图：工会服务人员 · payon_in02 (64, 71)">
+    <img src="/images/strategy/job-change/locations/archer-first.webp" alt="工会服务人员 · payon_in02 (64, 71)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
   </a>
-  <figcaption>弓箭手导师 · payon_in02 (64, 71)<br />地形定位示意 · 点击查看大图</figcaption>
+  <figcaption>工会服务人员 · payon_in02 (64, 71)<br />地形定位示意 · 点击查看大图</figcaption>
 </figure>
+
+定位图使用当前场景名称「工会服务人员」（原攻略称「弓箭手导师」），请按地图与坐标寻找。
 
 :::
 
 ::: details 服事导师 · prt_church (184, 41)
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/locations/acolyte-first.webp" target="_blank" rel="noopener" aria-label="查看定位图：服事导师 · prt_church (184, 41)">
-    <img src="/images/strategy/job-change/locations/acolyte-first.webp" alt="服事导师 · prt_church (184, 41)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/locations/acolyte-first.webp" target="_blank" rel="noopener" aria-label="查看定位图：圣堂 神父 · prt_church (184, 41)">
+    <img src="/images/strategy/job-change/locations/acolyte-first.webp" alt="圣堂 神父 · prt_church (184, 41)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
   </a>
-  <figcaption>服事导师 · prt_church (184, 41)<br />地形定位示意 · 点击查看大图</figcaption>
+  <figcaption>圣堂 神父 · prt_church (184, 41)<br />地形定位示意 · 点击查看大图</figcaption>
 </figure>
+
+定位图使用当前场景名称「圣堂 神父」（原攻略称「服事导师」），请按地图与坐标寻找。
 
 :::
 
 ::: details 商人公会曼苏 · alberta_in (53, 43)
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/locations/merchant-first.webp" target="_blank" rel="noopener" aria-label="查看定位图：商人公会曼苏 · alberta_in (53, 43)">
-    <img src="/images/strategy/job-change/locations/merchant-first.webp" alt="商人公会曼苏 · alberta_in (53, 43)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/locations/merchant-first.webp" target="_blank" rel="noopener" aria-label="查看定位图：商人公会会员 · alberta_in (53, 43)">
+    <img src="/images/strategy/job-change/locations/merchant-first.webp" alt="商人公会会员 · alberta_in (53, 43)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
   </a>
-  <figcaption>商人公会曼苏 · alberta_in (53, 43)<br />地形定位示意 · 点击查看大图</figcaption>
+  <figcaption>商人公会会员 · alberta_in (53, 43)<br />地形定位示意 · 点击查看大图</figcaption>
 </figure>
+
+定位图使用当前场景名称「商人公会会员」（原攻略称「商人公会曼苏」），请按地图与坐标寻找。
 
 :::
 
 ::: details 盗贼向导 · moc_prydb1 (39, 129)
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/locations/thief-first.webp" target="_blank" rel="noopener" aria-label="查看定位图：盗贼向导 · moc_prydb1 (39, 129)">
-    <img src="/images/strategy/job-change/locations/thief-first.webp" alt="盗贼向导 · moc_prydb1 (39, 129)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/locations/thief-first.webp" target="_blank" rel="noopener" aria-label="查看定位图：公会服务人员 · moc_prydb1 (39, 129)">
+    <img src="/images/strategy/job-change/locations/thief-first.webp" alt="公会服务人员 · moc_prydb1 (39, 129)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
   </a>
-  <figcaption>盗贼向导 · moc_prydb1 (39, 129)<br />地形定位示意 · 点击查看大图</figcaption>
+  <figcaption>公会服务人员 · moc_prydb1 (39, 129)<br />地形定位示意 · 点击查看大图</figcaption>
 </figure>
+
+定位图使用当前场景名称「公会服务人员」（原攻略称「盗贼向导」），请按地图与坐标寻找。
 
 :::
 
@@ -96,7 +108,7 @@ outline: [2, 3]
 3. 到 `yuno_in05 49,43` 找伊米尔之心，经 NPC 进入英灵殿。
 4. 在与女武神对话前将**负重与剩余 Zeny 清零**，解除手推车、骑乘和猎鹰；有价值的物品先存仓。部分初心者装备无法丢弃或存仓，可先卸下再卖给 NPC 商店；携带的 Zeny 和出售所得可存入银行。
 5. 找 `valkyrie 48,86` 女武神完成转生，成为 Base 1 / Job 1 的高阶初心者，技能重置并领取重生礼物。
-6. Job 10、完成基础技能后，回原一转导师办理高阶一转。
+6. Job 10、完成基本技能后，回原一转导师办理高阶一转。
 7. 练到 Job 50、用完技能点，再经伊米尔之书进英灵殿，找各职业线指定导师成为进阶二转。各线坐标见对应攻略。
 
 有过伊米尔之书访问资格的角色，按 NPC 当前对话继续；不要把一次历史访问状态当作所有新角色免捐款的规则。
@@ -113,11 +125,13 @@ outline: [2, 3]
 ::: details 图书馆捐赠处 · yuno_in02 (88, 164)
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/locations/donation-rebirth.webp" target="_blank" rel="noopener" aria-label="查看定位图：图书馆捐赠处 · yuno_in02 (88, 164)">
-    <img src="/images/strategy/job-change/locations/donation-rebirth.webp" alt="图书馆捐赠处 · yuno_in02 (88, 164)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/locations/donation-rebirth.webp" target="_blank" rel="noopener" aria-label="查看定位图：玫泰武司 西芙 · yuno_in02 (88, 164)">
+    <img src="/images/strategy/job-change/locations/donation-rebirth.webp" alt="玫泰武司 西芙 · yuno_in02 (88, 164)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
   </a>
-  <figcaption>图书馆捐赠处 · yuno_in02 (88, 164)<br />地形定位示意 · 点击查看大图</figcaption>
+  <figcaption>玫泰武司 西芙 · yuno_in02 (88, 164)<br />地形定位示意 · 点击查看大图</figcaption>
 </figure>
+
+定位图使用当前场景名称「玫泰武司 西芙」（原攻略称「图书馆捐赠处」），请按地图与坐标寻找。
 
 :::
 
@@ -135,10 +149,10 @@ outline: [2, 3]
 ::: details 伊米尔之心 · yuno_in05 (49, 43)
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/locations/heart-rebirth.webp" target="_blank" rel="noopener" aria-label="查看定位图：伊米尔之心 · yuno_in05 (49, 43)">
-    <img src="/images/strategy/job-change/locations/heart-rebirth.webp" alt="伊米尔之心 · yuno_in05 (49, 43)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/locations/heart-rebirth.webp" target="_blank" rel="noopener" aria-label="查看定位图：伊米尔之心（Heart of Ymir） · yuno_in05 (49, 43)">
+    <img src="/images/strategy/job-change/locations/heart-rebirth.webp" alt="伊米尔之心（Heart of Ymir） · yuno_in05 (49, 43)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
   </a>
-  <figcaption>伊米尔之心 · yuno_in05 (49, 43)<br />地形定位示意 · 点击查看大图</figcaption>
+  <figcaption>伊米尔之心（Heart of Ymir） · yuno_in05 (49, 43)<br />地形定位示意 · 点击查看大图</figcaption>
 </figure>
 
 :::

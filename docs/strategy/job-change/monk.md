@@ -12,7 +12,7 @@ outline: [2, 3]
 
 | 目标阶段 | 本篇准备条件 | 下一站 |
 | --- | --- | --- |
-| [一转：服事](#一转-服事) | Job 10，完成基础技能 | `prt_church 184,41` |
+| [一转：服事](#一转-服事) | Job 10，完成基本技能 | `prt_church 184,41` |
 | [二转：武僧](#二转-武僧) | 本文建议 Job 50；技能点用完 | `prt_monk 59,247` |
 | [转生](common.md#转生与进阶二转) | 二转 Base 99 / Job 50，技能点用完 | `yuno_in02 88,164` |
 | [进阶二转：武术宗师](#转生与进阶二转-武术宗师) | 高阶一转 Job 50，技能点用完 | `valkyrie 53,42` |
@@ -26,18 +26,20 @@ outline: [2, 3]
 
 ## 一转：服事
 
-职业等级 Job 10、完成基础技能后，前往 `prt_church 184,41`。找神父，选择「转职为服事」并完成对话。
+职业等级 Job 10、完成基本技能后，前往 `prt_church 184,41`。找神父，选择「转职为服事」并完成对话。
 
 [查看一转 NPC 定位图](common.md#一转-npc-定位)。
 
 ## 二转：武僧
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/locations/monk-second.webp" target="_blank" rel="noopener" aria-label="查看定位图：武僧报名处 · prt_monk (59, 247)">
-    <img src="/images/strategy/job-change/locations/monk-second.webp" alt="武僧报名处 · prt_monk (59, 247)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/locations/monk-second.webp" target="_blank" rel="noopener" aria-label="查看定位图：修道僧 · prt_monk (59, 247)">
+    <img src="/images/strategy/job-change/locations/monk-second.webp" alt="修道僧 · prt_monk (59, 247)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
   </a>
-  <figcaption>武僧报名处 · prt_monk (59, 247)<br />地形定位示意 · 点击查看大图</figcaption>
+  <figcaption>修道僧 · prt_monk (59, 247)<br />地形定位示意 · 点击查看大图</figcaption>
 </figure>
+
+定位图使用当前场景名称「修道僧」（原攻略称「武僧报名处」），请按地图与坐标寻找。
 
 ### 报名与誓言
 
@@ -57,7 +59,7 @@ outline: [2, 3]
 
 ## 转生与进阶二转：武术宗师
 
-按[共用转生流程](common.md#转生与进阶二转)成为高阶初心者。Job 10、完成基础技能后回 `prt_church 184,41`，办理高阶服事。
+按[共用转生流程](common.md#转生与进阶二转)成为高阶初心者。Job 10、完成基本技能后回 `prt_church 184,41`，办理高阶服事。
 
 练到 Job 50 并用完技能点，再阅读 `yuno_in02 93,207` 的伊米尔之书进入英灵殿，找 `valkyrie 53,42` 的武术宗师导师，选择「是」完成进阶二转。各分支最低门槛可能不同，本篇按 Job 50 路线继续。
 
@@ -66,11 +68,13 @@ outline: [2, 3]
 **本篇准备：**武术宗师 Base 99 / Job 70，用完技能点并留出奖励栏位。具体材料、负重与时限见下列步骤。
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/locations/monk-third.webp" target="_blank" rel="noopener" aria-label="查看定位图：酒馆争执（任务入口） · ve_in (237, 125)">
-    <img src="/images/strategy/job-change/locations/monk-third.webp" alt="酒馆争执（任务入口） · ve_in (237, 125)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/locations/monk-third.webp" target="_blank" rel="noopener" aria-label="查看定位图：金克雷 · ve_in (237, 125)">
+    <img src="/images/strategy/job-change/locations/monk-third.webp" alt="金克雷 · ve_in (237, 125)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
   </a>
-  <figcaption>酒馆争执（任务入口） · ve_in (237, 125)<br />地形定位示意 · 点击查看大图</figcaption>
+  <figcaption>金克雷 · ve_in (237, 125)<br />地形定位示意 · 点击查看大图</figcaption>
 </figure>
+
+定位图使用当前场景名称「金克雷」（原攻略称「酒馆争执（任务入口）」），请按地图与坐标寻找。
 
 1. 找 `ve_in 237,125` 听酒馆争执，到 `98,149` 附近触发剧情，再找 `98,159` 斗士，选择「但我还是想知道更多」。
 2. 领取并完成击杀一百只沙漠之狼任务，看到 100/100 公告后回 NPC 交付。

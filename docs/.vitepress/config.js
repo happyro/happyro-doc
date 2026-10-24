@@ -197,6 +197,14 @@ export default defineConfig({
             "link": "/game/shortcuts"
           },
           {
+            "text": "背包与装备",
+            "link": "/game/inventory-equipment"
+          },
+          {
+            "text": "任务与目标",
+            "link": "/game/quests"
+          },
+          {
             "text": "图鉴与冒险工具",
             "link": "/game/adventure-tools"
           },

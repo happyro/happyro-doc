@@ -12,7 +12,7 @@ outline: [2, 3]
 
 | 目标阶段 | 本篇准备条件 | 下一站 |
 | --- | --- | --- |
-| [一转：魔法师](#一转-魔法师) | Job 10，完成基础技能 | `geffen_in 164,124` |
+| [一转：魔法师](#一转-魔法师) | Job 10，完成基本技能 | `geffen_in 164,124` |
 | [二转：贤者](#二转-贤者) | 本文建议 Job 50；技能点用完 | `yuno_in03 154,35` |
 | [转生](common.md#转生与进阶二转) | 二转 Base 99 / Job 50，技能点用完 | `yuno_in02 88,164` |
 | [进阶二转：智者](#转生与进阶二转-智者) | 高阶一转 Job 50，技能点用完 | `valkyrie 53,47` |
@@ -26,18 +26,20 @@ outline: [2, 3]
 
 ## 一转：魔法师
 
-职业等级 Job 10、完成基础技能后，前往 `geffen_in 164,124`。找魔法师公会职员，选择「我想成为魔法师」，继续对话完成转职。当前 Renewal 路线不需要旧版药水调配考试。
+职业等级 Job 10、完成基本技能后，前往 `geffen_in 164,124`。找魔法师公会职员，选择「我想成为魔法师」，继续对话完成转职。当前 Renewal 路线不需要旧版药水调配考试。
 
 [查看一转 NPC 定位图](common.md#一转-npc-定位)。
 
 ## 二转：贤者
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/locations/sage-second.webp" target="_blank" rel="noopener" aria-label="查看定位图：贤者转职报名处 · yuno_in03 (154, 35)">
-    <img src="/images/strategy/job-change/locations/sage-second.webp" alt="贤者转职报名处 · yuno_in03 (154, 35)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/locations/sage-second.webp" target="_blank" rel="noopener" aria-label="查看定位图：学院 相关人员 · yuno_in03 (154, 35)">
+    <img src="/images/strategy/job-change/locations/sage-second.webp" alt="学院 相关人员 · yuno_in03 (154, 35)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
   </a>
-  <figcaption>贤者转职报名处 · yuno_in03 (154, 35)<br />地形定位示意 · 点击查看大图</figcaption>
+  <figcaption>学院 相关人员 · yuno_in03 (154, 35)<br />地形定位示意 · 点击查看大图</figcaption>
 </figure>
+
+定位图使用当前场景名称「学院 相关人员」（原攻略称「贤者转职报名处」），请按地图与坐标寻找。
 
 1. 魔法师 Job 50 后到 `yuno_in03 154,35` 报名，可免报名费；完成二十题笔试。
 2. 找 `yuno_in03 169,180` 赫尔墨斯进入等候区，再从 `job_sage 50,163` 的聊天室参加考试。清理两波怪物及最终目标，自动返回教授。
@@ -49,7 +51,7 @@ outline: [2, 3]
 
 ## 转生与进阶二转：智者
 
-按[共用转生流程](common.md#转生与进阶二转)成为高阶初心者。Job 10、完成基础技能后回 `geffen_in 164,124`，办理高阶魔法师。
+按[共用转生流程](common.md#转生与进阶二转)成为高阶初心者。Job 10、完成基本技能后回 `geffen_in 164,124`，办理高阶魔法师。
 
 练到 Job 50 并用完技能点，再阅读 `yuno_in02 93,207` 的伊米尔之书进入英灵殿，找 `valkyrie 53,47` 的智者导师，选择「是」完成进阶二转。各分支最低门槛可能不同，本篇按 Job 50 路线继续。
 
@@ -58,13 +60,15 @@ outline: [2, 3]
 **本篇准备：**智者 Base 99 / Job 70，用完技能点并留出奖励栏位。具体材料、负重与时限见下列步骤。
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/locations/sage-third.webp" target="_blank" rel="noopener" aria-label="查看定位图：梅里托 · gef_tower (102, 34)">
-    <img src="/images/strategy/job-change/locations/sage-third.webp" alt="梅里托 · gef_tower (102, 34)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/locations/sage-third.webp" target="_blank" rel="noopener" aria-label="查看定位图：梅利托 · gef_tower (102, 34)">
+    <img src="/images/strategy/job-change/locations/sage-third.webp" alt="梅利托 · gef_tower (102, 34)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
   </a>
-  <figcaption>梅里托 · gef_tower (102, 34)<br />地形定位示意 · 点击查看大图</figcaption>
+  <figcaption>梅利托 · gef_tower (102, 34)<br />地形定位示意 · 点击查看大图</figcaption>
 </figure>
 
-1. 找 `gef_tower 102,34` 梅里托，询问妖术师、火精灵指引并写下名字；再次对话，确认会使用魔法、能对付精灵并参加考试。
+定位图使用当前场景名称「梅利托」（原攻略称「梅里托」），请按地图与坐标寻找。
+
+1. 找 `gef_tower 102,34` 梅利托，询问妖术师、火精灵指引并写下名字；再次对话，确认会使用魔法、能对付精灵并参加考试。
 2. 找 `gef_tower 113,161` 卡拉卡斯听说明，准备红色血液、水晶蓝、风之微风、绿色活力各至少 3 个。每次探测消耗对应属性石 3 个，建议多备。
 3. 在指定探测点尝试取得三种试剂。已完成路线先在 `ice_dun01 274,274` 取得黑色和透明试剂，再到 `mjo_dun03 200,141` 取得红色试剂。
 4. 每次等待五秒进度条，结果随机，不保证固定尝试次数。

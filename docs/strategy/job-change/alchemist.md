@@ -12,7 +12,7 @@ outline: [2, 3]
 
 | 目标阶段 | 本篇准备条件 | 下一站 |
 | --- | --- | --- |
-| [一转：商人](#一转-商人) | Job 10，完成基础技能 | `alberta_in 53,43` |
+| [一转：商人](#一转-商人) | Job 10，完成基本技能 | `alberta_in 53,43` |
 | [二转：炼金术师](#二转-炼金术师) | Job 40 以上；技能点用完 | `alde_alche 27,185` |
 | [转生](common.md#转生与进阶二转) | 二转 Base 99 / Job 50，技能点用完 | `yuno_in02 88,164` |
 | [进阶二转：创造者](#转生与进阶二转-创造者) | 高阶一转 Job 50，技能点用完 | `valkyrie 53,50` |
@@ -26,18 +26,20 @@ outline: [2, 3]
 
 ## 一转：商人
 
-职业等级 Job 10、完成基础技能后，前往 `alberta_in 53,43`。找公会职员曼苏，选择「我想成为商人」并完成对话。当前 Renewal 路线不需要旧版送货考试。
+职业等级 Job 10、完成基本技能后，前往 `alberta_in 53,43`。找公会职员曼苏，选择「我想成为商人」并完成对话。当前 Renewal 路线不需要旧版送货考试。
 
 [查看一转 NPC 定位图](common.md#一转-npc-定位)。
 
 ## 二转：炼金术师
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/locations/alchemist-second.webp" target="_blank" rel="noopener" aria-label="查看定位图：炼金术师公会报名处 · alde_alche (27, 185)">
-    <img src="/images/strategy/job-change/locations/alchemist-second.webp" alt="炼金术师公会报名处 · alde_alche (27, 185)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/locations/alchemist-second.webp" target="_blank" rel="noopener" aria-label="查看定位图：炼金术师 组合员 · alde_alche (27, 185)">
+    <img src="/images/strategy/job-change/locations/alchemist-second.webp" alt="炼金术师 组合员 · alde_alche (27, 185)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
   </a>
-  <figcaption>炼金术师公会报名处 · alde_alche (27, 185)<br />地形定位示意 · 点击查看大图</figcaption>
+  <figcaption>炼金术师 组合员 · alde_alche (27, 185)<br />地形定位示意 · 点击查看大图</figcaption>
 </figure>
+
+定位图使用当前场景名称「炼金术师 组合员」（原攻略称「炼金术师公会报名处」），请按地图与坐标寻找。
 
 ### 报名与数学考试
 
@@ -57,7 +59,7 @@ outline: [2, 3]
 
 ## 转生与进阶二转：创造者
 
-按[共用转生流程](common.md#转生与进阶二转)成为高阶初心者。Job 10、完成基础技能后回 `alberta_in 53,43`，办理高阶商人。
+按[共用转生流程](common.md#转生与进阶二转)成为高阶初心者。Job 10、完成基本技能后回 `alberta_in 53,43`，办理高阶商人。
 
 练到 Job 50 并用完技能点，再阅读 `yuno_in02 93,207` 的伊米尔之书进入英灵殿，找 `valkyrie 53,50` 的创造者导师，选择「是」完成进阶二转。各分支最低门槛可能不同，本篇按 Job 50 路线继续。
 
@@ -66,11 +68,13 @@ outline: [2, 3]
 **本篇准备：**创造者 Base 99 / Job 70，用完技能点并留出奖励栏位。具体材料、负重与时限见下列步骤。
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/locations/alchemist-third.webp" target="_blank" rel="noopener" aria-label="查看定位图：炼金术师公会成员 · alde_alche (35, 186)">
-    <img src="/images/strategy/job-change/locations/alchemist-third.webp" alt="炼金术师公会成员 · alde_alche (35, 186)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/locations/alchemist-third.webp" target="_blank" rel="noopener" aria-label="查看定位图：炼金术师公会人员 · alde_alche (35, 186)">
+    <img src="/images/strategy/job-change/locations/alchemist-third.webp" alt="炼金术师公会人员 · alde_alche (35, 186)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
   </a>
-  <figcaption>炼金术师公会成员 · alde_alche (35, 186)<br />地形定位示意 · 点击查看大图</figcaption>
+  <figcaption>炼金术师公会人员 · alde_alche (35, 186)<br />地形定位示意 · 点击查看大图</figcaption>
 </figure>
+
+定位图使用当前场景名称「炼金术师公会人员」（原攻略称「炼金术师公会成员」），请按地图与坐标寻找。
 
 ### 加入研究所
 

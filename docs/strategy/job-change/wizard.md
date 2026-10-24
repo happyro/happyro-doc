@@ -12,7 +12,7 @@ outline: [2, 3]
 
 | 目标阶段 | 本篇准备条件 | 下一站 |
 | --- | --- | --- |
-| [一转：魔法师](#一转-魔法师) | Job 10，完成基础技能 | `geffen_in 164,124` |
+| [一转：魔法师](#一转-魔法师) | Job 10，完成基本技能 | `geffen_in 164,124` |
 | [二转：巫师](#二转-巫师) | 本文建议 Job 50；技能点用完 | `gef_tower 111,37` |
 | [转生](common.md#转生与进阶二转) | 二转 Base 99 / Job 50，技能点用完 | `yuno_in02 88,164` |
 | [进阶二转：超魔导师](#转生与进阶二转-超魔导师) | 高阶一转 Job 50，技能点用完 | `valkyrie 44,47` |
@@ -26,18 +26,20 @@ outline: [2, 3]
 
 ## 一转：魔法师
 
-职业等级 Job 10、完成基础技能后，前往 `geffen_in 164,124`。找魔法师公会职员，选择「我想成为魔法师」，继续对话完成转职。当前 Renewal 路线不需要旧版药水调配考试。
+职业等级 Job 10、完成基本技能后，前往 `geffen_in 164,124`。找魔法师公会职员，选择「我想成为魔法师」，继续对话完成转职。当前 Renewal 路线不需要旧版药水调配考试。
 
 [查看一转 NPC 定位图](common.md#一转-npc-定位)。
 
 ## 二转：巫师
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/locations/wizard-second.webp" target="_blank" rel="noopener" aria-label="查看定位图：凯瑟琳 · gef_tower (111, 37)">
-    <img src="/images/strategy/job-change/locations/wizard-second.webp" alt="凯瑟琳 · gef_tower (111, 37)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/locations/wizard-second.webp" target="_blank" rel="noopener" aria-label="查看定位图：魔法工会 相关人员 · gef_tower (111, 37)">
+    <img src="/images/strategy/job-change/locations/wizard-second.webp" alt="魔法工会 相关人员 · gef_tower (111, 37)，红点标出 NPC 或触发点，浅色为可通行区域" width="640" height="570" loading="lazy" decoding="async" />
   </a>
-  <figcaption>凯瑟琳 · gef_tower (111, 37)<br />地形定位示意 · 点击查看大图</figcaption>
+  <figcaption>魔法工会 相关人员 · gef_tower (111, 37)<br />地形定位示意 · 点击查看大图</figcaption>
 </figure>
+
+定位图使用当前场景名称「魔法工会 相关人员」（原攻略称「凯瑟琳」），请按地图与坐标寻找。
 
 1. 魔法师 Job 50、用完技能点，找 `gef_tower 111,37` 凯瑟琳，选择「我想成为巫师」→「是的，我要申请」。Job 50 免材料收集。
 2. 找 `gef_tower 102,24` 劳雷尔，选择「我想继续测试」，完成随机十题笔试。按题目作答，不把题目位置当成固定答案。
@@ -60,7 +62,7 @@ outline: [2, 3]
 
 ## 转生与进阶二转：超魔导师
 
-按[共用转生流程](common.md#转生与进阶二转)成为高阶初心者。Job 10、完成基础技能后回 `geffen_in 164,124`，办理高阶魔法师。
+按[共用转生流程](common.md#转生与进阶二转)成为高阶初心者。Job 10、完成基本技能后回 `geffen_in 164,124`，办理高阶魔法师。
 
 练到 Job 50 并用完技能点，再阅读 `yuno_in02 93,207` 的伊米尔之书进入英灵殿，找 `valkyrie 44,47` 的超魔导师导师，选择「是」完成进阶二转。各分支最低门槛可能不同，本篇按 Job 50 路线继续。
 

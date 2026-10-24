@@ -6,9 +6,9 @@
 
 | 目录 | 读者与职责 |
 | --- | --- |
-| `docs/index.md` | 产品主页，保留顶部标题与功能卡片文案，展示新截图 |
+| `docs/index.md` | 产品主页、功能卡片与实际界面截图 |
 | `docs/guide/` | 项目介绍、快速开始、下载与汉化范围 |
-| `docs/game/` | 玩家操作，按功能组织，平台差异在同页说明 |
+| `docs/game/` | 玩家操作，包含背包装备、任务目标、战斗、社交等，平台差异在同页说明 |
 | `docs/strategy/` | 游戏任务攻略；转职按职业线组织 |
 | `docs/deploy/` | 安装、配置、反向代理、维护、备份恢复、升级及定制 |
 | `docs/admin/` | 后台账号角色、运营发放和游戏设置 |
@@ -26,6 +26,10 @@ npm run docs:dev
 npm run docs:build
 ```
 
+日常修改用 `docs:dev`，验收构建产物时先完成构建，再启动 `npm run docs:preview -- --host 127.0.0.1 --port 4186`。重新构建后必须停止并重新启动 preview，再刷新浏览器；运行中的预览进程可能缓存旧 HTML，继续引用已被新构建删除的带哈希脚本，导致页面看似正常但侧栏、轮播等交互失效。
+
+浏览器验收必须检查脚本和样式请求无 404、控制台无异常，并实际操作侧栏折叠、移动菜单关闭、轮播全部分页点与横向滑动。切图后检查纵向滚动位置、窗口缩放后检查当前图片；不能仅凭 HTML 链接有效、图片加载或没有横向溢出判断站点可用。
+
 构建后核对所有生成 HTML 的站内链接、锚点和图片，特别检查旧地址带锚点的跳转。桌面、平板和手机查看首页与代表性正文；根 README 跨站链接同样更新。生成的 dist、缓存与审计结果不提交。推送 main 会触发站点工作流；本地构建不等于发布完成，未经用户要求不提交或推送。
 
 ## 单一内容来源
@@ -38,9 +42,11 @@ npm run docs:build
 
 ## 图片来源与更新
 
-主页顶部和四张功能卡片恢复 Git 原版的全部文案、字号与样式；顶部恢复 VitePress 原有响应式布局，桌面左侧显示标题与演示按钮，右侧显示原有 Logo。下方 `HomeGallery.vue` 轮播依次展示三端整合图、跨端技能、图鉴、战斗与后台的新图。`docs/public/images/overview/` 的五张 PNG 原样同步根仓库 `docs/assets/readme/`；前两张透明、无阴影，设备样式、坐标和镜头以根仓库[README 图片规范](https://github.com/happyro/happyro/tree/main/docs/development/readme-images)为准。
+主页顶部采用 VitePress 响应式布局，桌面左侧显示标题与演示按钮，右侧显示 Logo。下方 `HomeGallery.vue` 轮播依次展示三端整合图、跨端技能、图鉴、战斗与后台。`docs/public/images/overview/` 的五张 PNG 原样同步根仓库 `docs/assets/readme/`；前两张透明、无阴影，设备样式、坐标和镜头以根仓库[README 图片规范](https://github.com/happyro/happyro/tree/main/docs/development/readme-images)为准。
 
 新增教程截图用本机 99 级剑士“罗安”，不切换为管理角色或伪造职业能力。具体截图来源、视口和哈希保存在 `docs/public/images/sources.json`；凭据、账号 ID、数据库和临时输出不进入站点。剑士无法演示的摆摊或其他职业能力，用经源码核对的步骤说明，新增实际操作图须具备相应角色条件。
+
+仅重拍画面中可见且已变化的界面；被菜单或设备框遮挡、已裁掉的区域不触发重拍。首图可保留有可验证来源的未变化端原图，仅替换受影响的手机／平板输入再合成。
 
 图片按用途放入 `overview/`、`game/controls/`、`game/social/`、`game/adventure/`、`game/trading/`、`game/mail/` 和 `strategy/job-change/`。旧图只有仍被正文引用时才保留；更新截图时同时检查界面文案与教程步骤。
 
