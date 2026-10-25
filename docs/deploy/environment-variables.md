@@ -73,7 +73,7 @@ Gateway 重启会断开其承载的游戏 WebSocket；地图服重启会影响�
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>镜头 · 平板/大屏横屏距离<br>`CLIENT_CAMERA_TABLET_LANDSCAPE_ZOOM` | <span class="table-cell-label" aria-hidden="true">默认值</span>`125` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–325 |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>镜头 · 平板/大屏竖屏距离<br>`CLIENT_CAMERA_TABLET_PORTRAIT_ZOOM` | <span class="table-cell-label" aria-hidden="true">默认值</span>`155` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–325 |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>镜头 · 平滑移动<br>`CLIENT_CAMERA_SMOOTH` | <span class="table-cell-label" aria-hidden="true">默认值</span>`true` | <span class="table-cell-label" aria-hidden="true">允许范围</span>true / false |
-| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动战斗 · 搜怪范围<br>`CLIENT_AUTO_COMBAT_SEARCH_RANGE` | <span class="table-cell-label" aria-hidden="true">默认值</span>`20` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–50，整数 |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动战斗 · 搜怪范围<br>`CLIENT_AUTO_COMBAT_SEARCH_RANGE` | <span class="table-cell-label" aria-hidden="true">默认值</span>`14` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–50，整数 |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动战斗 · 活动范围<br>`CLIENT_AUTO_COMBAT_ACTIVITY_RANGE` | <span class="table-cell-label" aria-hidden="true">默认值</span>`30` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–100，整数 |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动战斗 · 无目标随机瞬移<br>`CLIENT_AUTO_TELEPORT_ENABLED` | <span class="table-cell-label" aria-hidden="true">默认值</span>`true` | <span class="table-cell-label" aria-hidden="true">允许范围</span>true / false |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动战斗 · 无目标等待<br>`CLIENT_AUTO_TELEPORT_WAIT_SECONDS` | <span class="table-cell-label" aria-hidden="true">默认值</span>`2` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–60，整数 |
@@ -124,7 +124,7 @@ Gateway 重启会断开其承载的游戏 WebSocket；地图服重启会影响�
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>地图显示 · 光照平滑参数<br>`CLIENT_MAP_SMOOTH_LIGHT` | <span class="table-cell-label" aria-hidden="true">默认值</span>`0` | <span class="table-cell-label" aria-hidden="true">允许范围</span>0, 1, 2 |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>地图显示 · 光环模式<br>`CLIENT_MAP_AURA` | <span class="table-cell-label" aria-hidden="true">默认值</span>`1` | <span class="table-cell-label" aria-hidden="true">允许范围</span>0, 1, 2 |
 
-活动范围必须大于或等于寻怪范围。扩大寻怪数值不能让客户端发现服务端尚未同步的怪物；扩大视野也不会解除单次行走路径限制。当前客户端默认寻怪 20、活动 30；地图服默认视野 18、行走上限 17，四者不是同一个参数。
+活动范围必须大于或等于寻怪范围。扩大寻怪数值不能让客户端发现服务端尚未同步的怪物；扩大视野也不会解除单次行走路径限制。当前客户端默认寻怪 14、活动 30；地图服默认视野 14、行走上限 17，四者不是同一个参数。
 
 镜头和音量等设置的“恢复默认”读取本次 Gateway 下发的值。高对比度目标可能使字体偏离原色；背景无法达到指定比值时，选择黑白两端中对比度较高的颜色。
 
@@ -132,10 +132,10 @@ Gateway 重启会断开其承载的游戏 WebSocket；地图服重启会影响�
 
 ```dotenv
 # 地图服（下面一项由地图服读取）
-HAPPYRO_AREA_SIZE=18
+HAPPYRO_AREA_SIZE=14
 # 客户端默认值（下面各项由 Gateway 读取）
-CLIENT_AUTO_COMBAT_SEARCH_RANGE=18
-CLIENT_AUTO_COMBAT_ACTIVITY_RANGE=40
+CLIENT_AUTO_COMBAT_SEARCH_RANGE=14
+CLIENT_AUTO_COMBAT_ACTIVITY_RANGE=30
 CLIENT_AUTO_TELEPORT_ENABLED=true
 CLIENT_AUTO_TELEPORT_WAIT_SECONDS=2
 CLIENT_AUTO_TELEPORT_INTERVAL_SECONDS=2
@@ -148,7 +148,7 @@ CLIENT_SCRIPT_TEXT_MIN_CONTRAST=4.5
 
 | 环境变量 | 默认值 | 范围 / 用途 |
 | --- | --- | --- |
-| <span class="table-cell-label" aria-hidden="true">环境变量</span>`HAPPYRO_AREA_SIZE` | <span class="table-cell-label" aria-hidden="true">默认值</span>`18` | <span class="table-cell-label" aria-hidden="true">范围 / 用途</span>5–50 的十进制整数，覆盖 area_size；影响实体同步、广播及部分 AI / 跟随逻辑 |
+| <span class="table-cell-label" aria-hidden="true">环境变量</span>`HAPPYRO_AREA_SIZE` | <span class="table-cell-label" aria-hidden="true">默认值</span>`20` | <span class="table-cell-label" aria-hidden="true">范围 / 用途</span>5–50 的十进制整数，覆盖 area_size；影响实体同步、广播及部分 AI / 跟随逻辑 |
 | <span class="table-cell-label" aria-hidden="true">环境变量</span>`HAPPYRO_MAX_WALK_PATH` | <span class="table-cell-label" aria-hidden="true">默认值</span>`17` | <span class="table-cell-label" aria-hidden="true">范围 / 用途</span>1–32 的十进制整数，覆盖 max_walk_path；限制单次路径长度 |
 | <span class="table-cell-label" aria-hidden="true">环境变量</span>`HAPPYRO_NEW_PLAYER_START` | <span class="table-cell-label" aria-hidden="true">默认值</span>`ship` | <span class="table-cell-label" aria-hidden="true">范围 / 用途</span>`ship` 或 `classic`，新建人类角色出生策略，杜兰独立 |
 
@@ -289,3 +289,9 @@ API 的 DB_* 与 Server 的 DB_* 不完全同义：API 连接的是后台管理�
 - API：`internal/config/config.go`、`.env.example`。
 
 排障时先确认变量是否进入目标进程，再检查配置优先级、个人保存值及代码版本。不要在工单或日志中粘贴包含密码的完整环境。其他操作见[访问地址与目录](/deploy/configuration)、[日常维护](/deploy/maintenance)和[自定义配置](/deploy/customization)。
+
+### 搜怪范围与服务端同步范围
+
+服务端实体同步范围默认 14 格，客户端默认搜怪 14 格、活动 30 格。地图服务在登录、换图和范围配置变更时下发实际同步范围；搜怪步进上限随之更新（客户端支持上限 50），环境默认值与已保存值超出时按实际服务端上限执行和显示。活动范围独立，允许至 100 格，且不小于搜怪范围。
+
+尚未收到服务端范围时显示“正在获取范围”，禁用搜怪调整并等待后再自动战斗；断线清除上一连接的范围。自动限制不会清空技能、目标和活动范围等已保存设置。
