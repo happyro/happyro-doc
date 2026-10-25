@@ -12,7 +12,7 @@
 | 技能与道具绑定 | [快捷键与技能](/game/shortcuts) |
 | 说明中的导航、帮助和物品链接 | [说明链接与帮助](/game/text-links/) |
 | 查询资料与寻找 NPC | [图鉴与冒险工具](/game/adventure-tools) |
-| 自动攻击、拾取与瞬移 | [战斗与拾取](/game/combat) |
+| 自动攻击、拾取与瞬移 | [自动战斗与拾取](/game/combat) |
 | 旧阶段服装、坐骑和职业随行 | [职业外观与骑乘](/game/appearance) |
 | 宠物、生命体、佣兵 | [随行单位](/game/companions) |
 | 频道、私聊与组队 | [聊天与社交](/game/social) |

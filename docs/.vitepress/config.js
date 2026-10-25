@@ -210,7 +210,7 @@ export default defineConfig({
             "link": "/game/adventure-tools"
           },
           {
-            "text": "战斗与拾取",
+            "text": "自动战斗与拾取",
             "link": "/game/combat"
           },
           {

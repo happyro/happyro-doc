@@ -33,7 +33,7 @@ python3 tools/deployment/manage.py import-images --directory .
 python3 tools/deployment/manage.py initialize --directory .
 ```
 
-`verify` 检查配置、资源和两个架构的镜像归档；`import-images` 根据 Docker daemon 架构只导入所需的四个镜像；`initialize` 创建 `.env`、随机运行密钥及默认 custom 目录，不启动服务。仅首次空环境运行；已有环境按[升级流程](/deploy/upgrade)处理。
+`verify` 检查配置、资源和两个架构的镜像归档；`import-images` 根据 Docker daemon 架构只导入所需的五个镜像；`initialize` 创建 `.env`、随机运行密钥及默认 custom 目录，不启动服务。仅首次空环境运行；已有环境按[升级流程](/deploy/upgrade)处理。
 
 ## 配置与启动
 
@@ -50,7 +50,7 @@ deploy 使用已导入的本版镜像，不会拉取或现场构建；先等待�
 
 ### 服务状态
 
-以下七个服务应显示为 `healthy`：
+以下八个服务应显示为 `healthy`：
 
 | 服务 | 容器 | 用途 |
 | --- | --- | --- |
@@ -60,18 +60,28 @@ deploy 使用已导入的本版镜像，不会拉取或现场构建；先等待�
 | <span class="table-cell-label" aria-hidden="true">服务</span>Map | <span class="table-cell-label" aria-hidden="true">容器</span>`happyro-map` | <span class="table-cell-label" aria-hidden="true">用途</span>地图、战斗和 NPC |
 | <span class="table-cell-label" aria-hidden="true">服务</span>Web API | <span class="table-cell-label" aria-hidden="true">容器</span>`happyro-web-api` | <span class="table-cell-label" aria-hidden="true">用途</span>游戏控制与资料接口 |
 | <span class="table-cell-label" aria-hidden="true">服务</span>Gateway | <span class="table-cell-label" aria-hidden="true">容器</span>`happyro-gateway` | <span class="table-cell-label" aria-hidden="true">用途</span>游戏网页、资源与 WebSocket 入口 |
-| <span class="table-cell-label" aria-hidden="true">服务</span>API | <span class="table-cell-label" aria-hidden="true">容器</span>`happyro-api` | <span class="table-cell-label" aria-hidden="true">用途</span>Go API 与管理前端 |
+| <span class="table-cell-label" aria-hidden="true">服务</span>API | <span class="table-cell-label" aria-hidden="true">容器</span>`happyro-api` | <span class="table-cell-label" aria-hidden="true">用途</span>Go API 管理与玩家接口 |
+| <span class="table-cell-label" aria-hidden="true">服务</span>Admin | <span class="table-cell-label" aria-hidden="true">容器</span>`happyro-admin` | <span class="table-cell-label" aria-hidden="true">用途</span>Nginx 后台页面与同源 API 代理 |
 
 初始化容器 `happyro-api-init` 应执行完成并以状态码 `0` 退出。
 
+Docker 为 Admin 与 API 建立专用 `admin-proxy` 网络；`ADMIN_PROXY_SUBNET` 默认 `172.30.81.0/29`，`ADMIN_PROXY_DYNAMIC_RANGE` 默认 `172.30.81.4/30`，`ADMIN_PROXY_IP` 默认 `172.30.81.2`。动态地址池用于 API 等临时端点，不包含 Admin 固定地址，避免 API 先启动时占用该地址。API 的 `HTTP_TRUSTED_PROXIES` 只信任该 Admin 地址，Nginx 覆盖客户端传入的转发头，使登录限流、登录记录和操作审计使用代理收到的来源 IP。若与宿主机路由或已有 Docker 网段冲突，须同时调整子网、子网内的动态地址池和池外可用的 Admin 固定地址，并重新创建网络和容器。外层反向代理的真实 IP 信任链须另行配置，默认不会信任外部传入的转发头。
+
 ### 访问入口
 
-默认仅限部署机器本机访问：
+在部署机器本机可通过以下地址访问：
 
 - 游戏：`http://127.0.0.1:3338/applications/pwa/index.html`
 - 游戏后台：`http://127.0.0.1:8000`
 
-需要让局域网其他设备访问时，将 `.env` 中的GAME_PUBLIC_URL 和 ADMIN_PUBLIC_URL 改为部署机器的局域网 IP。
+Compose 默认在宿主机所有接口发布这两个端口；公开 URL 不限制监听范围。需要让局域网其他设备访问时，将 `.env` 中的 `GAME_PUBLIC_URL` 和 `ADMIN_PUBLIC_URL` 改为部署机器的局域网 IP。只允许本机访问时，在部署目录 `.env` 设置以下值，然后重新创建对应容器：
+
+```dotenv
+ADMIN_PORT=127.0.0.1:8000
+GATEWAY_PORT=127.0.0.1:3338
+```
+
+这两个变量支持 `宿主机地址:端口`；公开 URL 仍填写正常的 HTTP(S) 地址。`compose.yaml` 属于离线包校验文件，直接修改会使 `verify`／`deploy` 的哈希校验失败，端口绑定通过 `.env` 配置。
 
 ### 默认账号
 
@@ -80,7 +90,7 @@ deploy 使用已导入的本版镜像，不会拉取或现场构建；先等待�
 | 用途 | 用户名 | 密码 | 权限 |
 | --- | --- | --- | --- |
 | <span class="table-cell-label" aria-hidden="true">用途</span>游戏 | <span class="table-cell-label" aria-hidden="true">用户名</span>`happyro` | <span class="table-cell-label" aria-hidden="true">密码</span>`happyro` | <span class="table-cell-label" aria-hidden="true">权限</span>GM |
-| <span class="table-cell-label" aria-hidden="true">用途</span>Go API 与管理前端 | <span class="table-cell-label" aria-hidden="true">用户名</span>`admin` | <span class="table-cell-label" aria-hidden="true">密码</span>`admin` | <span class="table-cell-label" aria-hidden="true">权限</span>超级管理员 |
+| <span class="table-cell-label" aria-hidden="true">用途</span>管理后台 | <span class="table-cell-label" aria-hidden="true">用户名</span>`admin` | <span class="table-cell-label" aria-hidden="true">密码</span>`admin` | <span class="table-cell-label" aria-hidden="true">权限</span>超级管理员 |
 
 
 ### 默认角色：罗安

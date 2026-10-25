@@ -26,15 +26,15 @@ outline: [2, 3]
 
 ## 一转：剑士
 
-职业等级 Job 10、完成基本技能后，前往 `izlude_in 74,172`。找剑士公会职员，选择「我想成为剑士」→「是的」，完成对话。
+职业等级 Job 10、完成基本技能后，前往 `izlude_in 74,172`。找剑士公会服务人员，选择「我想成为剑士」→「是的」，完成对话。
 
 ::: details 查看游戏场景参考
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/swordman-npc.webp" target="_blank" rel="noopener" aria-label="查看大图：剑士公会职员的一转完成对话">
-    <img src="/images/strategy/job-change/swordman-npc.webp" alt="剑士公会职员的一转完成对话" width="540" height="380" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/swordman-npc.webp" target="_blank" rel="noopener" aria-label="查看大图：剑士公会服务人员的当前问候对话">
+    <img src="/images/strategy/job-change/swordman-npc.webp" alt="剑士公会服务人员的当前问候对话" width="540" height="380" loading="lazy" decoding="async" />
   </a>
-  <figcaption>剑士公会：izlude_in 74,172（实测截图裁剪） · 点击查看大图</figcaption>
+  <figcaption>剑士公会：izlude_in 74,172（当前版本问候对话，未执行转职） · 点击查看大图</figcaption>
 </figure>
 
 :::
@@ -75,7 +75,7 @@ outline: [2, 3]
   <a href="/images/strategy/job-change/knight-guild.webp" target="_blank" rel="noopener" aria-label="查看大图：骑士团内完成二转的场景">
     <img src="/images/strategy/job-change/knight-guild.webp" alt="骑士团内完成二转的场景" width="570" height="530" loading="lazy" decoding="async" />
   </a>
-  <figcaption>骑士团长附近：prt_in 88,101（实测截图裁剪） · 点击查看大图</figcaption>
+  <figcaption>骑士团长附近：prt_in 88,101（历史流程实测截图裁剪） · 点击查看大图</figcaption>
 </figure>
 
 :::

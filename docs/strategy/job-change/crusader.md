@@ -26,13 +26,13 @@ outline: [2, 3]
 
 ## 一转：剑士
 
-职业等级 Job 10、完成基本技能后，前往 `izlude_in 74,172`。找剑士公会职员，选择「我想成为剑士」→「是的」，完成对话。
+职业等级 Job 10、完成基本技能后，前往 `izlude_in 74,172`。找剑士公会服务人员，选择「我想成为剑士」→「是的」，完成对话。
 
 ::: details 查看游戏场景参考
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/swordman-npc.webp" target="_blank" rel="noopener" aria-label="查看大图：剑士公会职员的一转完成对话">
-    <img src="/images/strategy/job-change/swordman-npc.webp" alt="剑士公会职员的一转完成对话" width="540" height="380" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/swordman-npc.webp" target="_blank" rel="noopener" aria-label="查看大图：剑士公会服务人员的当前问候对话">
+    <img src="/images/strategy/job-change/swordman-npc.webp" alt="剑士公会服务人员的当前问候对话" width="540" height="380" loading="lazy" decoding="async" />
   </a>
   <figcaption>剑士系共用一转入口：izlude_in 74,172 · 点击查看大图</figcaption>
 </figure>

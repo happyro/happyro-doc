@@ -13,7 +13,7 @@
 
 ## 更新记录
 
-产品功能变化见[更新日志](/changelog/releases/v0.6.0)，安装包下载和摘要见[资源下载](/guide/downloads)。运行配置统一查阅[环境变量参考](/deploy/environment-variables)。
+v0.6.0 已完成本机离线包验证和 Docker Hub 双架构镜像发布；公开 ZIP 下载状态以资源下载页为准。产品功能变化见[更新日志](/changelog/releases/v0.6.0)，安装包下载和摘要见[资源下载](/guide/downloads)。运行配置统一查阅[环境变量参考](/deploy/environment-variables)。
 
 ## 认识项目
 

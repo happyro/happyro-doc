@@ -21,7 +21,7 @@ outline: [2, 3]
 
 以下六个入口同时用于对应的高阶一转。图中红点标出 NPC，浅色为可通行区域，深色为障碍；室内地图可能包含多个分离房间，定位点不代表跨房间直线可达。
 
-::: details 剑士公会职员 · izlude_in (74, 172)
+::: details 剑士公会服务人员 · izlude_in (74, 172)
 
 <figure class="job-guide-figure">
   <a href="/images/strategy/job-change/locations/swordman-first.webp" target="_blank" rel="noopener" aria-label="查看定位图：剑士公会服务人员 · izlude_in (74, 172)">
@@ -30,7 +30,7 @@ outline: [2, 3]
   <figcaption>剑士公会服务人员 · izlude_in (74, 172)<br />地形定位示意 · 点击查看大图</figcaption>
 </figure>
 
-定位图使用当前场景名称「剑士公会服务人员」（原攻略称「剑士公会职员」），请按地图与坐标寻找。
+定位图使用当前场景名称「剑士公会服务人员」，请按地图与坐标寻找。
 
 :::
 

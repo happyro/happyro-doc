@@ -7,7 +7,7 @@
 先确认 api-init 已完成，再停止游戏及后台写入，并暂停宿主机 custom 文件编辑，仅保留 database 运行。数据库含非事务表，不能在有写入时仅凭 single-transaction 获得一致备份。
 
 ```bash
-docker compose stop gateway api web-api map char login
+docker compose stop gateway admin api web-api map char login
 python3 tools/deployment/manage.py backup --directory . --output ../backups/before-upgrade
 ```
 
@@ -15,7 +15,18 @@ python3 tools/deployment/manage.py backup --directory . --output ../backups/befo
 
 ## 恢复到匹配版本
 
-恢复优先使用匹配版本的完整包及新的宿主机数据目录。复制备份 .env、核对 DATA_DIR、CUSTOM_DIR、资源路径和地址，保留数据库密码和控制令牌，不重新 initialize。先执行 initialize-custom 建立容器需要的挂载目录，再恢复：
+恢复优先使用匹配版本的完整包及新的宿主机数据目录。复制备份 .env、核对 DATA_DIR、CUSTOM_DIR、资源路径和地址，保留数据库密码和控制令牌，不重新 initialize。`initialize-custom` 只准备 `CUSTOM_DIR`，不会创建 `DATA_DIR`。若使用新建的外部数据目录，先在 `.env` 设置其实际路径，再创建全部五个数据子目录；Compose 的 bind mount 不会自动创建缺失路径。
+
+以下示例中的 `/srv/happyro/restore-data` 必须替换为 `.env` 中 `DATA_DIR` 指定的同一目录。使用全新解压包自带的 `./data` 时，这五个空子目录已包含在包中。
+
+```bash
+restore_data_dir=/srv/happyro/restore-data
+mkdir -p "${restore_data_dir}/database" "${restore_data_dir}/control-socket" \
+  "${restore_data_dir}/server-settings" "${restore_data_dir}/server-logs" \
+  "${restore_data_dir}/gateway-logs"
+```
+
+目录准备完成后，初始化自定义目录、导入镜像并恢复：
 
 ```bash
 python3 tools/deployment/manage.py initialize-custom --directory .
