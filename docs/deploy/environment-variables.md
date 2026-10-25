@@ -1,12 +1,35 @@
 ---
 pageClass: environment-reference
+outline: [2, 3]
 ---
 
 # 环境变量配置参考
 
-本页以当前源码为准；已下载的离线包须以包内模板为准，不能直接套用不同版本的服务变量。
+按当前代码与部署模板说明。使用配套程序、资源和配置；下列值是公开默认值或示例，不代表某台服务器的实际环境。
 
-本页汇总部署模板、Gateway、客户端默认设置、地图服与 Go API 的配置入口。以下均为公开默认值或占位符，不是某台运行服务器的真实环境。未列入部署 `.env.example` 的进程变量，不会仅因写进 Docker `.env` 就自动进入容器。
+## 常用配置
+
+- 战斗范围与随机瞬移：[客户端默认值](#自动战斗与瞬移)、[服务端同步范围](#搜怪范围与服务端同步范围)。
+- HP／SP 恢复及拾取：[自动恢复](#自动恢复)、[自动拾取](#自动拾取)。
+- 新手出生位置：[游戏服务端](#游戏服务端)中的 `HAPPYRO_NEW_PLAYER_START`。
+- 传送、召怪与工具权限：[玩法权限](#玩法与工具权限环境变量)。
+- 游戏地址、端口与后台开关：[Docker 部署入口](#docker-部署入口)。
+- 镜头、画质和声音：[客户端设置](#客户端默认设置-gateway)。
+
+### 常用示例
+
+```dotenv
+# 地图服（下面一项由地图服读取）
+HAPPYRO_AREA_SIZE=14
+# 客户端默认值（下面各项由 Gateway 读取）
+CLIENT_AUTO_COMBAT_SEARCH_RANGE=14
+CLIENT_AUTO_COMBAT_ACTIVITY_RANGE=30
+CLIENT_AUTO_TELEPORT_ENABLED=true
+CLIENT_AUTO_TELEPORT_WAIT_SECONDS=2
+CLIENT_AUTO_TELEPORT_INTERVAL_SECONDS=2
+```
+
+Docker 在部署目录 `.env` 填写；原生部署将地图服项放入 profile，`CLIENT_*` 放入 Gateway 环境。修改后按下一节生效，已有玩家偏好可能优先于默认值。
 
 ## 配置位置与生效方式
 
@@ -22,15 +45,11 @@ pageClass: environment-reference
 
 Gateway 重启会断开其承载的游戏 WebSocket；地图服重启会影响在线角色，安排在合适维护时机。只调整已支持的客户端默认值无需重新构建 PWA。
 
-### 优先级和空值
+## 完整参数
 
-- 玩家设置：浏览器保存值 > Gateway 提供的默认值 > PWA 内置默认值。自动战斗设置按服务器、账号和角色区分，不写入游戏数据库，也不跨设备同步。
-- 脚本文字对比度是部署显示策略，不保存到玩家 localStorage；自动修正始终开启。
-- 地图服覆盖：非空环境变量 > battle 配置文件及 import > 内置默认值。空值保留文件配置；battle 重载会重新应用当前进程环境。
-- 空值语义不统一：`CLIENT_*` 空值继承内置默认值；地图服覆盖空值继承文件；Compose 的 `:-` 把空值视为未配置，其他变量应按各自说明填写。
-- 环境变量没有修改玩家当前自动战斗开关的权限；默认瞬移开启不代表登录后自动开始战斗。
+表头区分**模板默认值**与**程序默认值**；地图服覆盖项留空时读取当前文件配置，并非强制采用表中内置值。
 
-## Docker 部署入口
+### Docker 部署入口
 
 本节默认值来自根仓库 `deploy/docker/.env.example` 与 Compose。相对路径以部署目录为基准。
 
@@ -60,32 +79,59 @@ Gateway 重启会断开其承载的游戏 WebSocket；地图服重启会影响�
 
 密码和令牌使用部署工具生成的值，不提交真实环境文件。Server 入口要求 DB_PASSWORD、INTERSERVER_PASSWORD、GAME_CONTROL_TOKEN 只含字母、数字、下划线或连字符。已有数据库换密码需要同步数据库账号本身；仅修改容器变量不会自动完成凭据迁移。
 
-## 客户端默认设置（Gateway）
+### 客户端默认设置（Gateway）
 
 以下表格依据 `happyro-client/src/Core/ClientDefaults.schema.json` 核对。所有条目都可在 Gateway 环境配置；Docker 模板和 Compose 已透传。留空继承表中的 PWA 默认值。布尔值使用 `true` / `false`；类别列表使用逗号分隔且不重复。镜头数值是客户端距离参数，寻怪与活动范围单位为地图格。
 
+#### 自动战斗与瞬移
+
 | 配置项与环境变量 | 默认值 | 允许范围 |
 | --- | --- | --- |
-| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>脚本文字 · 最低对比度目标<br>`CLIENT_SCRIPT_TEXT_MIN_CONTRAST` | <span class="table-cell-label" aria-hidden="true">默认值</span>`4.5` | <span class="table-cell-label" aria-hidden="true">允许范围</span>4.5–7 |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动战斗 · 搜怪范围<br>`CLIENT_AUTO_COMBAT_SEARCH_RANGE` | <span class="table-cell-label" aria-hidden="true">默认值</span>`14` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–50，整数 |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动战斗 · 活动范围<br>`CLIENT_AUTO_COMBAT_ACTIVITY_RANGE` | <span class="table-cell-label" aria-hidden="true">默认值</span>`30` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–100，整数 |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动战斗 · 无目标随机瞬移<br>`CLIENT_AUTO_TELEPORT_ENABLED` | <span class="table-cell-label" aria-hidden="true">默认值</span>`true` | <span class="table-cell-label" aria-hidden="true">允许范围</span>true / false |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动战斗 · 无目标等待<br>`CLIENT_AUTO_TELEPORT_WAIT_SECONDS` | <span class="table-cell-label" aria-hidden="true">默认值</span>`2` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–60，整数 |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动战斗 · 最短瞬移间隔<br>`CLIENT_AUTO_TELEPORT_INTERVAL_SECONDS` | <span class="table-cell-label" aria-hidden="true">默认值</span>`2` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–300，整数 |
+
+活动范围不能小于搜怪范围；实际搜怪上限还受[服务端同步范围](#搜怪范围与服务端同步范围)限制。默认随机瞬移开启不代表登录后自动开始战斗。
+
+#### 自动恢复
+
+| 配置项与环境变量 | 默认值 | 允许范围 |
+| --- | --- | --- |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动恢复 · HP 低于（%）<br>`CLIENT_AUTO_RECOVERY_HP_TRIGGER_PERCENT` | <span class="table-cell-label" aria-hidden="true">默认值</span>`50` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–99，整数 |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动恢复 · HP 恢复至（%）<br>`CLIENT_AUTO_RECOVERY_HP_TARGET_PERCENT` | <span class="table-cell-label" aria-hidden="true">默认值</span>`80` | <span class="table-cell-label" aria-hidden="true">允许范围</span>2–100，且高于触发比例，整数 |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动恢复 · SP 低于（%）<br>`CLIENT_AUTO_RECOVERY_SP_TRIGGER_PERCENT` | <span class="table-cell-label" aria-hidden="true">默认值</span>`20` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–99，整数 |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动恢复 · SP 恢复至（%）<br>`CLIENT_AUTO_RECOVERY_SP_TARGET_PERCENT` | <span class="table-cell-label" aria-hidden="true">默认值</span>`50` | <span class="table-cell-label" aria-hidden="true">允许范围</span>2–100，且高于触发比例，整数 |
+
+HP／SP 的恢复目标必须高于各自触发比例；道具选择与启停由玩家设置，见[自动恢复](/game/combat#自动恢复)。
+
+#### 自动拾取
+
+| 配置项与环境变量 | 默认值 | 允许范围 |
+| --- | --- | --- |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动拾取 · 开关<br>`CLIENT_AUTO_PICKUP_ENABLED` | <span class="table-cell-label" aria-hidden="true">默认值</span>`false` | <span class="table-cell-label" aria-hidden="true">允许范围</span>true / false |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动拾取 · 范围<br>`CLIENT_AUTO_PICKUP_RANGE` | <span class="table-cell-label" aria-hidden="true">默认值</span>`5` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–15，整数 |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动拾取 · 每轮拾取时限<br>`CLIENT_AUTO_PICKUP_BATCH_SECONDS` | <span class="table-cell-label" aria-hidden="true">默认值</span>`5` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–30，整数 |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动拾取 · 默认类别<br>`CLIENT_AUTO_PICKUP_CATEGORIES` | <span class="table-cell-label" aria-hidden="true">默认值</span>`equipment,consumable,card,other` | <span class="table-cell-label" aria-hidden="true">允许范围</span>equipment, consumable, card, other |
+
+#### 镜头
+
+| 配置项与环境变量 | 默认值 | 允许范围 |
+| --- | --- | --- |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>镜头 · 桌面距离<br>`CLIENT_CAMERA_DESKTOP_ZOOM` | <span class="table-cell-label" aria-hidden="true">默认值</span>`125` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–325 |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>镜头 · 手机横屏距离<br>`CLIENT_CAMERA_PHONE_LANDSCAPE_ZOOM` | <span class="table-cell-label" aria-hidden="true">默认值</span>`95` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–325 |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>镜头 · 手机竖屏距离<br>`CLIENT_CAMERA_PHONE_PORTRAIT_ZOOM` | <span class="table-cell-label" aria-hidden="true">默认值</span>`170` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–325 |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>镜头 · 平板/大屏横屏距离<br>`CLIENT_CAMERA_TABLET_LANDSCAPE_ZOOM` | <span class="table-cell-label" aria-hidden="true">默认值</span>`125` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–325 |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>镜头 · 平板/大屏竖屏距离<br>`CLIENT_CAMERA_TABLET_PORTRAIT_ZOOM` | <span class="table-cell-label" aria-hidden="true">默认值</span>`155` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–325 |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>镜头 · 平滑移动<br>`CLIENT_CAMERA_SMOOTH` | <span class="table-cell-label" aria-hidden="true">默认值</span>`true` | <span class="table-cell-label" aria-hidden="true">允许范围</span>true / false |
-| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动战斗 · 搜怪范围<br>`CLIENT_AUTO_COMBAT_SEARCH_RANGE` | <span class="table-cell-label" aria-hidden="true">默认值</span>`14` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–50，整数 |
-| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动战斗 · 活动范围<br>`CLIENT_AUTO_COMBAT_ACTIVITY_RANGE` | <span class="table-cell-label" aria-hidden="true">默认值</span>`30` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–100，整数 |
-| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动战斗 · 无目标随机瞬移<br>`CLIENT_AUTO_TELEPORT_ENABLED` | <span class="table-cell-label" aria-hidden="true">默认值</span>`true` | <span class="table-cell-label" aria-hidden="true">允许范围</span>true / false |
-| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动战斗 · 无目标等待<br>`CLIENT_AUTO_TELEPORT_WAIT_SECONDS` | <span class="table-cell-label" aria-hidden="true">默认值</span>`2` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–60，整数 |
-| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动战斗 · 最短瞬移间隔<br>`CLIENT_AUTO_TELEPORT_INTERVAL_SECONDS` | <span class="table-cell-label" aria-hidden="true">默认值</span>`2` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–300，整数 |
-| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动恢复 · HP 低于（%）<br>`CLIENT_AUTO_RECOVERY_HP_TRIGGER_PERCENT` | <span class="table-cell-label" aria-hidden="true">默认值</span>`50` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–99，整数 |
-| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动恢复 · HP 恢复至（%）<br>`CLIENT_AUTO_RECOVERY_HP_TARGET_PERCENT` | <span class="table-cell-label" aria-hidden="true">默认值</span>`80` | <span class="table-cell-label" aria-hidden="true">允许范围</span>2–100，且高于触发比例，整数 |
-| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动恢复 · SP 低于（%）<br>`CLIENT_AUTO_RECOVERY_SP_TRIGGER_PERCENT` | <span class="table-cell-label" aria-hidden="true">默认值</span>`20` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–99，整数 |
-| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动恢复 · SP 恢复至（%）<br>`CLIENT_AUTO_RECOVERY_SP_TARGET_PERCENT` | <span class="table-cell-label" aria-hidden="true">默认值</span>`50` | <span class="table-cell-label" aria-hidden="true">允许范围</span>2–100，且高于触发比例，整数 |
-| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动拾取 · 开关<br>`CLIENT_AUTO_PICKUP_ENABLED` | <span class="table-cell-label" aria-hidden="true">默认值</span>`false` | <span class="table-cell-label" aria-hidden="true">允许范围</span>true / false |
-| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动拾取 · 范围<br>`CLIENT_AUTO_PICKUP_RANGE` | <span class="table-cell-label" aria-hidden="true">默认值</span>`5` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–15，整数 |
-| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动拾取 · 每轮拾取时限<br>`CLIENT_AUTO_PICKUP_BATCH_SECONDS` | <span class="table-cell-label" aria-hidden="true">默认值</span>`5` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–30，整数 |
-| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>自动拾取 · 默认类别<br>`CLIENT_AUTO_PICKUP_CATEGORIES` | <span class="table-cell-label" aria-hidden="true">默认值</span>`equipment,consumable,card,other` | <span class="table-cell-label" aria-hidden="true">允许范围</span>equipment, consumable, card, other |
+
+镜头和音量等设置的「恢复默认」读取本次 Gateway 下发值。
+
+#### 画质与地图显示
+
+| 配置项与环境变量 | 默认值 | 允许范围 |
+| --- | --- | --- |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>画质 · 渲染比例<br>`CLIENT_GRAPHICS_QUALITY` | <span class="table-cell-label" aria-hidden="true">默认值</span>`100` | <span class="table-cell-label" aria-hidden="true">允许范围</span>25–100 |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>画质 · 帧率上限<br>`CLIENT_GRAPHICS_FPS_LIMIT` | <span class="table-cell-label" aria-hidden="true">默认值</span>`60` | <span class="table-cell-label" aria-hidden="true">允许范围</span>-1, 30, 60, 90, 120 |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>画质 · 性能模式<br>`CLIENT_GRAPHICS_PERFORMANCE_MODE` | <span class="table-cell-label" aria-hidden="true">默认值</span>`false` | <span class="table-cell-label" aria-hidden="true">允许范围</span>true / false |
@@ -107,14 +153,6 @@ Gateway 重启会断开其承载的游戏 WebSocket；地图服重启会影响�
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>高级画质 · 描边强度<br>`CLIENT_GRAPHICS_CARTOON_EDGE_SLOPE` | <span class="table-cell-label" aria-hidden="true">默认值</span>`1.5` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1.5–5.9 |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>高级画质 · 锐化对比度<br>`CLIENT_GRAPHICS_CAS_CONTRAST` | <span class="table-cell-label" aria-hidden="true">默认值</span>`0` | <span class="table-cell-label" aria-hidden="true">允许范围</span>0–1 |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>高级画质 · 锐化强度<br>`CLIENT_GRAPHICS_CAS_SHARPENING` | <span class="table-cell-label" aria-hidden="true">默认值</span>`1` | <span class="table-cell-label" aria-hidden="true">允许范围</span>0–1 |
-| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>音频 · 背景音乐开关<br>`CLIENT_BGM_ENABLED` | <span class="table-cell-label" aria-hidden="true">默认值</span>`true` | <span class="table-cell-label" aria-hidden="true">允许范围</span>true / false |
-| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>音频 · 背景音乐音量<br>`CLIENT_BGM_VOLUME` | <span class="table-cell-label" aria-hidden="true">默认值</span>`0.5` | <span class="table-cell-label" aria-hidden="true">允许范围</span>0–1 |
-| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>音频 · 音效开关<br>`CLIENT_SOUND_ENABLED` | <span class="table-cell-label" aria-hidden="true">默认值</span>`true` | <span class="table-cell-label" aria-hidden="true">允许范围</span>true / false |
-| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>音频 · 音效音量<br>`CLIENT_SOUND_VOLUME` | <span class="table-cell-label" aria-hidden="true">默认值</span>`0.5` | <span class="table-cell-label" aria-hidden="true">允许范围</span>0–1 |
-| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>界面 · 通知显示时长<br>`CLIENT_TOAST_DURATION_SECONDS` | <span class="table-cell-label" aria-hidden="true">默认值</span>`2` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–10，整数 |
-| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>界面 · 紧凑布局聊天预览行数<br>`CLIENT_CHAT_PREVIEW_COMPACT_LINES` | <span class="table-cell-label" aria-hidden="true">默认值</span>`3` | <span class="table-cell-label" aria-hidden="true">允许范围</span>2, 3, 4, 5, 6, 7, 8 |
-| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>界面 · 宽松布局聊天预览行数<br>`CLIENT_CHAT_PREVIEW_SPACIOUS_LINES` | <span class="table-cell-label" aria-hidden="true">默认值</span>`5` | <span class="table-cell-label" aria-hidden="true">允许范围</span>2, 3, 4, 5, 6, 7, 8 |
-| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>界面 · 聊天预览频道标签<br>`CLIENT_CHAT_PREVIEW_TABS` | <span class="table-cell-label" aria-hidden="true">默认值</span>`true` | <span class="table-cell-label" aria-hidden="true">允许范围</span>true / false |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>地图显示 · 雾<br>`CLIENT_MAP_FOG` | <span class="table-cell-label" aria-hidden="true">默认值</span>`false` | <span class="table-cell-label" aria-hidden="true">允许范围</span>true / false |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>地图显示 · 光照贴图<br>`CLIENT_MAP_LIGHTMAP` | <span class="table-cell-label" aria-hidden="true">默认值</span>`true` | <span class="table-cell-label" aria-hidden="true">允许范围</span>true / false |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>地图显示 · 技能特效<br>`CLIENT_MAP_EFFECTS` | <span class="table-cell-label" aria-hidden="true">默认值</span>`true` | <span class="table-cell-label" aria-hidden="true">允许范围</span>true / false |
@@ -124,38 +162,49 @@ Gateway 重启会断开其承载的游戏 WebSocket；地图服重启会影响�
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>地图显示 · 光照平滑参数<br>`CLIENT_MAP_SMOOTH_LIGHT` | <span class="table-cell-label" aria-hidden="true">默认值</span>`0` | <span class="table-cell-label" aria-hidden="true">允许范围</span>0, 1, 2 |
 | <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>地图显示 · 光环模式<br>`CLIENT_MAP_AURA` | <span class="table-cell-label" aria-hidden="true">默认值</span>`1` | <span class="table-cell-label" aria-hidden="true">允许范围</span>0, 1, 2 |
 
-活动范围必须大于或等于寻怪范围。扩大寻怪数值不能让客户端发现服务端尚未同步的怪物；扩大视野也不会解除单次行走路径限制。当前客户端默认寻怪 14、活动 30；地图服默认视野 14、行走上限 17，四者不是同一个参数。
+#### 声音
 
-镜头和音量等设置的“恢复默认”读取本次 Gateway 下发的值。高对比度目标可能使字体偏离原色；背景无法达到指定比值时，选择黑白两端中对比度较高的颜色。
+| 配置项与环境变量 | 默认值 | 允许范围 |
+| --- | --- | --- |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>音频 · 背景音乐开关<br>`CLIENT_BGM_ENABLED` | <span class="table-cell-label" aria-hidden="true">默认值</span>`true` | <span class="table-cell-label" aria-hidden="true">允许范围</span>true / false |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>音频 · 背景音乐音量<br>`CLIENT_BGM_VOLUME` | <span class="table-cell-label" aria-hidden="true">默认值</span>`0.5` | <span class="table-cell-label" aria-hidden="true">允许范围</span>0–1 |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>音频 · 音效开关<br>`CLIENT_SOUND_ENABLED` | <span class="table-cell-label" aria-hidden="true">默认值</span>`true` | <span class="table-cell-label" aria-hidden="true">允许范围</span>true / false |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>音频 · 音效音量<br>`CLIENT_SOUND_VOLUME` | <span class="table-cell-label" aria-hidden="true">默认值</span>`0.5` | <span class="table-cell-label" aria-hidden="true">允许范围</span>0–1 |
 
-### 常用示例
+#### 文字与界面
 
-```dotenv
-# 地图服（下面一项由地图服读取）
-HAPPYRO_AREA_SIZE=14
-# 客户端默认值（下面各项由 Gateway 读取）
-CLIENT_AUTO_COMBAT_SEARCH_RANGE=14
-CLIENT_AUTO_COMBAT_ACTIVITY_RANGE=30
-CLIENT_AUTO_TELEPORT_ENABLED=true
-CLIENT_AUTO_TELEPORT_WAIT_SECONDS=2
-CLIENT_AUTO_TELEPORT_INTERVAL_SECONDS=2
-CLIENT_SCRIPT_TEXT_MIN_CONTRAST=4.5
-```
+| 配置项与环境变量 | 默认值 | 允许范围 |
+| --- | --- | --- |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>脚本文字 · 最低对比度目标<br>`CLIENT_SCRIPT_TEXT_MIN_CONTRAST` | <span class="table-cell-label" aria-hidden="true">默认值</span>`4.5` | <span class="table-cell-label" aria-hidden="true">允许范围</span>4.5–7 |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>界面 · 通知显示时长<br>`CLIENT_TOAST_DURATION_SECONDS` | <span class="table-cell-label" aria-hidden="true">默认值</span>`2` | <span class="table-cell-label" aria-hidden="true">允许范围</span>1–10，整数 |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>界面 · 紧凑布局聊天预览行数<br>`CLIENT_CHAT_PREVIEW_COMPACT_LINES` | <span class="table-cell-label" aria-hidden="true">默认值</span>`3` | <span class="table-cell-label" aria-hidden="true">允许范围</span>2, 3, 4, 5, 6, 7, 8 |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>界面 · 宽松布局聊天预览行数<br>`CLIENT_CHAT_PREVIEW_SPACIOUS_LINES` | <span class="table-cell-label" aria-hidden="true">默认值</span>`5` | <span class="table-cell-label" aria-hidden="true">允许范围</span>2, 3, 4, 5, 6, 7, 8 |
+| <span class="table-cell-label" aria-hidden="true">配置项与环境变量</span>界面 · 聊天预览频道标签<br>`CLIENT_CHAT_PREVIEW_TABS` | <span class="table-cell-label" aria-hidden="true">默认值</span>`true` | <span class="table-cell-label" aria-hidden="true">允许范围</span>true / false |
 
-这是配置示例，不会覆盖玩家已保存的自动战斗偏好，也不是所有地形和负载的性能保证。Docker 可以在同一部署 `.env` 配置；原生部署应分别放入地图服 profile 和 Gateway `.env`。
+脚本文字对比度是部署策略，不保存到玩家偏好；自动修正始终开启。背景无法达到目标时选黑白两端中对比度更高者。
 
-## 游戏服务端
+### 游戏服务端
 
 | 环境变量 | 默认值 | 范围 / 用途 |
 | --- | --- | --- |
-| <span class="table-cell-label" aria-hidden="true">环境变量</span>`HAPPYRO_AREA_SIZE` | <span class="table-cell-label" aria-hidden="true">默认值</span>`20` | <span class="table-cell-label" aria-hidden="true">范围 / 用途</span>5–50 的十进制整数，覆盖 area_size；影响实体同步、广播及部分 AI / 跟随逻辑 |
+| <span class="table-cell-label" aria-hidden="true">环境变量</span>`HAPPYRO_AREA_SIZE` | <span class="table-cell-label" aria-hidden="true">默认值</span>`14` | <span class="table-cell-label" aria-hidden="true">范围 / 用途</span>5–50 的十进制整数，覆盖 area_size；影响实体同步、广播及部分 AI / 跟随逻辑 |
 | <span class="table-cell-label" aria-hidden="true">环境变量</span>`HAPPYRO_MAX_WALK_PATH` | <span class="table-cell-label" aria-hidden="true">默认值</span>`17` | <span class="table-cell-label" aria-hidden="true">范围 / 用途</span>1–32 的十进制整数，覆盖 max_walk_path；限制单次路径长度 |
-| <span class="table-cell-label" aria-hidden="true">环境变量</span>`HAPPYRO_NEW_PLAYER_START` | <span class="table-cell-label" aria-hidden="true">默认值</span>`ship` | <span class="table-cell-label" aria-hidden="true">范围 / 用途</span>`ship` 或 `classic`，新建人类角色出生策略，杜兰独立 |
+| <span class="table-cell-label" aria-hidden="true">环境变量</span>`HAPPYRO_NEW_PLAYER_START` | <span class="table-cell-label" aria-hidden="true">默认值</span>`classic` | <span class="table-cell-label" aria-hidden="true">范围 / 用途</span>`ship` 或 `classic`，新建人类角色出生策略，杜兰独立 |
 
-视野与行走变量为空时保留 battle 文件值；已有 import 显式设为 14 时仍会覆盖新的内置视野 18。非空变量拒绝小数、负数、空白、符号、溢出及越界，非法配置会令地图服报错退出。GM 的 `@setbattleflag` 是临时运行时修改，下次重载恢复配置优先级。环境变量覆盖同名配置后，后台写入 battle 文件不会在重载时胜过环境变量。
+同步范围与行走上限仅接受表内范围的十进制整数，非法非空值会令地图服报错退出。留空时继承文件配置，见[优先级和空值](#优先级和空值)。
 
 
-### 玩法与工具权限环境变量
+#### 搜怪范围与服务端同步范围
+
+服务端默认同步 14 格，客户端默认搜怪 14 格、活动 30 格，单次行走上限 17 格。同步范围决定收到哪些实体；搜怪范围筛选当前目标；活动范围限制目标相对起点的位置；单次行走上限限制路径长度。
+
+地图服在登录、换图和配置变化时下发实际上限，客户端同步限制搜怪设置与执行（最高 50 格）。未收到时等待；断线清除旧上限，不清空其他偏好。具体行为和范围示意见[自动战斗](/game/combat#调整战斗范围)。
+
+#### 同步范围与性能
+
+扩大同步范围通常增加服务器、网络和客户端负担，实际影响取决于玩家与魔物密度。画质里的显示范围不会扩大服务端同步范围。修改后重启对应原生地图服或重建 `map` 容器，无需重编 PWA；具体步骤见[生效方式](#配置位置与生效方式)。
+
+#### 玩法与工具权限环境变量
 
 以下 10 项由地图服进程读取。未设置或留空时保留当前 battle 文件和后台管理方式；非空值在配置导入后覆盖文件。均使用十进制整数，布尔项填 `0` / `1`，不接受 `true` / `false`。
 
@@ -176,7 +225,7 @@ CLIENT_SCRIPT_TEXT_MIN_CONTRAST=4.5
 
 非空环境变量控制的项目，在后台或游戏内设置提交时会被 API 明确拒绝，提示具体环境变量名；检查发生在写入配置文件之前，整批请求均不执行。地图服控制接口也会在修改前拒绝含受控项的整批请求。当前表单仍可输入，限制在提交时反馈。需要恢复后台管理时清空对应变量，并重新创建地图服容器或重启原生地图服。
 
-Docker Compose 已映射这些变量，调整值只需重新创建地图服容器，无须再次构建镜像。API 从地图服读取覆盖状态，不需要复制这些变量到 API 环境。
+API 从地图服读取覆盖状态，不需要复制这些变量到 API 环境。修改后的操作统一见[生效方式](#配置位置与生效方式)。
 
 示例：保持普通玩家可以导航，限制召怪和发放为管理员操作：
 
@@ -190,7 +239,7 @@ HAPPYRO_GAME_TOOLS_ITEM_GRANT_POLICY=1
 
 这些项目沿用地图服原有 GM 临时命令行为；GM 临时改值不等于改写部署配置，下次 battle 重载或进程重启会重新应用环境变量。经验、掉落、精炼、死亡惩罚等项目未提供对应的环境变量覆盖，继续使用原有配置和已开放的后台入口。
 
-### 服务连接参数
+#### 服务连接参数
 
 以下为 Docker Server 入口变量，通常由 Compose 固定或映射，不能只在部署 `.env` 随意新增同名变量。原生脚本采用 profile 生成的配置文件。
 
@@ -210,9 +259,9 @@ HAPPYRO_GAME_TOOLS_ITEM_GRANT_POLICY=1
 
 原生 `deploy/rathena/profile.env` 另有 `SERVER_LAN_IP=127.0.0.1`、`WEB_BIND_IP=127.0.0.1` 和 `WEB_ALLOWED_ORIGIN=http://127.0.0.1:3338`，由配置脚本使用，不是通用的地图服 getenv 参数。
 
-## Gateway 服务与资源
+### Gateway 服务与资源
 
-本节列程序默认值，并标明部署模板差异；修改后重启 Gateway。路径以程序约定的工作目录或项目根解析，多个 DATA_OVERRIDE_PATH 使用系统路径分隔符。
+本节列程序默认值，并标明部署模板差异。路径以程序约定的工作目录或项目根解析，多个 DATA_OVERRIDE_PATH 使用系统路径分隔符。
 
 | 变量 | 程序默认值 | 用途 / 说明 |
 | --- | --- | --- |
@@ -242,9 +291,9 @@ HAPPYRO_GAME_TOOLS_ITEM_GRANT_POLICY=1
 | <span class="table-cell-label" aria-hidden="true">变量</span>`ESRGAN_ENABLED` | <span class="table-cell-label" aria-hidden="true">程序默认值</span>未设时关闭 | <span class="table-cell-label" aria-hidden="true">用途 / 说明</span>HappyRO 模板关闭；开启需另行安装插件及准备缓存 |
 | <span class="table-cell-label" aria-hidden="true">变量</span>`ESRGAN_CACHE_DIR` | <span class="table-cell-label" aria-hidden="true">程序默认值</span>`./upscaled_cache` | <span class="table-cell-label" aria-hidden="true">用途 / 说明</span>可选放大资源缓存 |
 
-## Go API 与后台
+### Go API 与后台
 
-以下为 API 程序默认值，不是 `.env.example` 的示例值。例如程序 HTTP_LISTEN 默认 `:8080`，原生示例写为 `0.0.0.0:18081`；程序 APP_URL 默认 `http://localhost:8080`，Docker 将 ADMIN_PUBLIC_URL 映射到它。修改后重启 API；Docker 中未映射的变量须明确加入相应服务 environment。
+以下为 API 程序默认值，不是 `.env.example` 的示例值。例如程序 HTTP_LISTEN 默认 `:8080`，原生示例写为 `0.0.0.0:18081`；程序 APP_URL 默认 `http://localhost:8080`，Docker 将 ADMIN_PUBLIC_URL 映射到它。Docker 中未映射的变量须明确加入相应服务 environment。
 
 | 变量 | 程序默认值 / 要求 | 用途 / 允许值 |
 | --- | --- | --- |
@@ -278,7 +327,18 @@ HAPPYRO_GAME_TOOLS_ITEM_GRANT_POLICY=1
 
 API 的 DB_* 与 Server 的 DB_* 不完全同义：API 连接的是后台管理库，Server 连接的是游戏库。不要直接把一套服务环境复制给另一套服务。Go 时长使用 `3s`、`2h` 等格式，不能只填无单位数字。
 
-## 核对与维护
+## 注意事项
+
+### 优先级和空值
+
+- 玩家设置：浏览器保存值 > Gateway 提供的默认值 > PWA 内置默认值。自动战斗设置按服务器、账号和角色区分，不写入游戏数据库，也不跨设备同步。
+- 地图服覆盖：非空环境变量 > battle 配置文件及 import > 内置默认值。空值保留文件配置；battle 重载会重新应用当前进程环境。
+- 空值语义不统一：`CLIENT_*` 空值继承内置默认值；地图服覆盖空值继承文件；Compose 的 `:-` 把空值视为未配置，其他变量应按各自说明填写。
+- 环境变量修改默认配置，不直接切换玩家正在运行的自动战斗状态。
+
+未列入部署模板的进程变量，不会仅因写入 Docker `.env` 就进入容器，必须有 Compose `environment` 映射。不同服务的同名变量也可能用途不同，按对应表格配置。
+
+### 核对与维护
 
 本文依据以下源码和模板整理；更新参数时同时更新对应文档表格：
 
@@ -289,9 +349,3 @@ API 的 DB_* 与 Server 的 DB_* 不完全同义：API 连接的是后台管理�
 - API：`internal/config/config.go`、`.env.example`。
 
 排障时先确认变量是否进入目标进程，再检查配置优先级、个人保存值及代码版本。不要在工单或日志中粘贴包含密码的完整环境。其他操作见[访问地址与目录](/deploy/configuration)、[日常维护](/deploy/maintenance)和[自定义配置](/deploy/customization)。
-
-### 搜怪范围与服务端同步范围
-
-服务端实体同步范围默认 14 格，客户端默认搜怪 14 格、活动 30 格。地图服务在登录、换图和范围配置变更时下发实际同步范围；搜怪步进上限随之更新（客户端支持上限 50），环境默认值与已保存值超出时按实际服务端上限执行和显示。活动范围独立，允许至 100 格，且不小于搜怪范围。
-
-尚未收到服务端范围时显示“正在获取范围”，禁用搜怪调整并等待后再自动战斗；断线清除上一连接的范围。自动限制不会清空技能、目标和活动范围等已保存设置。
