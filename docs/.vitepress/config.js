@@ -97,6 +97,9 @@ export default defineConfig({
   title: 'HappyRO',
   description: '开源中文《仙境传说 Online》Web 项目',
   cleanUrls: true,
+  vite: {
+    server: { host: '127.0.0.1', port: 4178, strictPort: true },
+  },
   head: [['link', { rel: 'icon', href: '/images/brand/ro-icon-1.jpg' }]],
   themeConfig: {
     docFooter: { prev: false, next: false },
