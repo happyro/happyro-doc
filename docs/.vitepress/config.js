@@ -15,6 +15,7 @@ const changelog = [
     text: '2026-10',
     collapsed: true,
     items: [
+      { text: '2026-10-26', link: '/changelog/2026/10/2026-10-26' },
       { text: '2026-10-25', link: '/changelog/2026/10/2026-10-25' },
       { text: '2026-10-24', link: '/changelog/2026/10/2026-10-24' },
       { text: '2026-10-23', link: '/changelog/2026/10/2026-10-23' },
@@ -220,6 +221,15 @@ export default defineConfig({
             "text": "宠物、生命体与佣兵",
             "link": "/game/companions"
           }
+        ]
+      },
+      {
+        "text": "说明链接与帮助",
+        "collapsed": true,
+        "items": [
+          { "text": "说明链接总览", "link": "/game/text-links/" },
+          { "text": "地图与目标链接", "link": "/game/text-links/navigation" },
+          { "text": "帮助与物品引用", "link": "/game/text-links/help" }
         ]
       },
       {

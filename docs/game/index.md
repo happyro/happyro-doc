@@ -10,6 +10,7 @@
 | 背包操作、穿戴与资格变化 | [背包与装备](/game/inventory-equipment) |
 | 任务分类、狩猎进度与导航 | [任务与目标](/game/quests) |
 | 技能与道具绑定 | [快捷键与技能](/game/shortcuts) |
+| 说明中的导航、帮助和物品链接 | [说明链接与帮助](/game/text-links/) |
 | 查询资料与寻找 NPC | [图鉴与冒险工具](/game/adventure-tools) |
 | 自动攻击、拾取与瞬移 | [战斗与拾取](/game/combat) |
 | 旧阶段服装、坐骑和职业随行 | [职业外观与骑乘](/game/appearance) |
