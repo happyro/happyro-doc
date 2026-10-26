@@ -4,10 +4,27 @@
 
 ## 查看与启停
 
+查看服务状态：
+
 ```bash
 docker compose ps -a
+```
+
+查看最近日志：
+
+```bash
 docker compose logs --tail=100 gateway api web-api
+```
+
+重启服务：
+
+```bash
 docker compose restart
+```
+
+停止服务并移除容器：
+
+```bash
 docker compose down
 ```
 

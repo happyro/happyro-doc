@@ -11,6 +11,8 @@ ADMIN_PUBLIC_URL=http://127.0.0.1:8000
 
 镜像变量与 RELEASE_VERSION 保持包内版本。RESOURCE_DIR 指向本版资源；DATA_DIR 和 CUSTOM_DIR 可设为版本目录外的专用绝对路径。若改变 DATA_DIR，需准备完整数据子目录；改变 CUSTOM_DIR 后执行：
 
+初始化自定义目录：
+
 ```bash
 python3 tools/deployment/manage.py initialize-custom --directory .
 ```

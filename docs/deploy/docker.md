@@ -27,9 +27,21 @@ pageClass: responsive-tables
 
 所有命令都在解压后的包根目录执行：
 
+步骤 1：校验离线包：
+
 ```bash
 python3 tools/deployment/manage.py verify --directory .
+```
+
+步骤 2：导入本机架构镜像：
+
+```bash
 python3 tools/deployment/manage.py import-images --directory .
+```
+
+步骤 3：初始化配置：
+
+```bash
 python3 tools/deployment/manage.py initialize --directory .
 ```
 
@@ -41,8 +53,15 @@ python3 tools/deployment/manage.py initialize --directory .
 
 ## 启动游戏
 
+步骤 4：启动服务：
+
 ```bash
 python3 tools/deployment/manage.py deploy --directory .
+```
+
+步骤 5：查看容器状态：
+
+```bash
 docker compose ps -a
 ```
 

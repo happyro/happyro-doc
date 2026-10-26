@@ -88,6 +88,8 @@ custom/resources 的路径相对于客户端 data/，例如 `custom/resources/te
 
 ## 刷新冒险工具和后台资料
 
+刷新自定义资料目录：
+
 ```bash
 python3 tools/deployment/manage.py refresh-custom-catalogs --directory .
 ```

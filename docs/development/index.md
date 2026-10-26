@@ -8,6 +8,12 @@
 4. 使用[功能测试账号](/development/test-accounts)验收摆摊、宠物、佣兵和生命体。
 5. 按[贡献指南](/development/contributing)验证改动。
 
+## 离线包构建
+
+[构建离线包](/development/offline-package)：一键打包、同版本重建、产物清理和中断处理。
+
+[离线包运行与基础验收](/development/offline-acceptance)：隔离启动、罗安进图检查、报告与测试环境清理。
+
 ## 维护入口
 
 - [根仓库开发文档](https://github.com/happyro/happyro/tree/main/docs/development)：功能设计、进度和验收。

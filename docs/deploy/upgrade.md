@@ -20,11 +20,33 @@
 4. 执行 `python3 tools/deployment/manage.py initialize-custom --directory .`：首次引入自定义功能时建立目录；后续仅补齐新版新增的模板文件，已有文件不覆盖，不合并。旧版本备份需使用旧版本配套工具恢复，不能直接交给新工具。
 5. 导入本版五类镜像，等待 database 健康，再显式执行 Go API 管理库迁移和目录导入；成功后运行 `deploy`，由工具升级游戏会话结构并启动整栈。以下命令逐条执行，任一步失败即停止。
 
+步骤 1：补齐自定义模板：
+
 ```bash
 python3 tools/deployment/manage.py initialize-custom --directory .
+```
+
+步骤 2：导入新版镜像：
+
+```bash
 python3 tools/deployment/manage.py import-images --directory .
+```
+
+步骤 3：启动数据库：
+
+```bash
 docker compose up -d --wait --pull never --no-build database
+```
+
+步骤 4：迁移并初始化 API：
+
+```bash
 docker compose run --rm --no-deps --pull never api-init
+```
+
+步骤 5：部署新版服务：
+
+```bash
 python3 tools/deployment/manage.py deploy --directory .
 ```
 

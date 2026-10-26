@@ -6,8 +6,15 @@
 
 先确认 api-init 已完成，再停止游戏及后台写入，并暂停宿主机 custom 文件编辑，仅保留 database 运行。数据库含非事务表，不能在有写入时仅凭 single-transaction 获得一致备份。
 
+停止游戏和后台写入：
+
 ```bash
 docker compose stop gateway admin api web-api map char login
+```
+
+创建备份：
+
+```bash
 python3 tools/deployment/manage.py backup --directory . --output ../backups/before-upgrade
 ```
 
@@ -19,20 +26,47 @@ python3 tools/deployment/manage.py backup --directory . --output ../backups/befo
 
 以下示例中的 `/srv/happyro/restore-data` 必须替换为 `.env` 中 `DATA_DIR` 指定的同一目录。使用全新解压包自带的 `./data` 时，这五个空子目录已包含在包中。
 
+设置恢复数据目录：
+
 ```bash
 restore_data_dir=/srv/happyro/restore-data
-mkdir -p "${restore_data_dir}/database" "${restore_data_dir}/control-socket" \
-  "${restore_data_dir}/server-settings" "${restore_data_dir}/server-logs" \
-  "${restore_data_dir}/gateway-logs"
+```
+
+创建数据子目录：
+
+```bash
+mkdir -p "${restore_data_dir}/database" "${restore_data_dir}/control-socket"  "${restore_data_dir}/server-settings" "${restore_data_dir}/server-logs"  "${restore_data_dir}/gateway-logs"
 ```
 
 目录准备完成后，初始化自定义目录、导入镜像并恢复：
 
+准备自定义目录：
+
 ```bash
 python3 tools/deployment/manage.py initialize-custom --directory .
+```
+
+导入匹配版本镜像：
+
+```bash
 python3 tools/deployment/manage.py import-images --directory .
+```
+
+启动数据库：
+
+```bash
 docker compose up -d --wait --pull never --no-build database
+```
+
+恢复备份：
+
+```bash
 python3 tools/deployment/manage.py restore --directory . --backup ../backups/before-upgrade --confirm-replace
+```
+
+启动服务：
+
+```bash
 python3 tools/deployment/manage.py deploy --directory .
 ```
 

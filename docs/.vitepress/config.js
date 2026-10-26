@@ -15,6 +15,7 @@ const changelog = [
     text: '2026-10',
     collapsed: true,
     items: [
+      { text: '2026-10-27', link: '/changelog/2026/10/2026-10-27' },
       { text: '2026-10-26', link: '/changelog/2026/10/2026-10-26' },
       { text: '2026-10-25', link: '/changelog/2026/10/2026-10-25' },
       { text: '2026-10-24', link: '/changelog/2026/10/2026-10-24' },
@@ -450,6 +451,14 @@ export default defineConfig({
             "link": "/development/setup/windows"
           }
         ]
+      },
+      {
+        "text": "构建离线包",
+        "link": "/development/offline-package"
+      },
+      {
+        "text": "离线包运行与验收",
+        "link": "/development/offline-acceptance"
       },
       {
         "text": "功能测试账号",
