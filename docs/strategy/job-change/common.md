@@ -199,4 +199,4 @@ outline: [2, 3]
 
 ## 记录来源
 
-原始[转职流程与验证范围](https://github.com/happyro/happyro/blob/main/docs/development/job-change-review/README.md)保留详细证据。本组攻略讲玩家操作；测试账号、工具和临时属性不写入步骤。本轮名称与指引修正见 [v0.6.0 版本说明](/changelog/releases/v0.6.0)。
+原始[转职流程与验证范围](https://github.com/happyro/happyro/blob/main/docs/development/job-change-review/README.md)保留详细证据。本组攻略讲玩家操作；测试账号、工具和临时属性不写入步骤。v0.6.0 的名称与指引修正见 [v0.6.0 版本说明](/changelog/releases/v0.6.0)。

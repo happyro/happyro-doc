@@ -1,0 +1,9 @@
+flowchart TB
+  login[login：登录认证] <-->|服务间协议| char[char：角色与存档]
+  char <-->|服务间协议| map[map：游戏世界]
+  login -->|SQL| db[(MariaDB :3306)]
+  char -->|SQL| db
+  map -->|SQL| db
+  web[web-api：游戏 Web 服务] -->|SQL| db
+  api[Go API：管理与冒险工具] -->|SQL| db
+  init[api-init：一次性初始化] -.->|迁移、账号与资料导入| db

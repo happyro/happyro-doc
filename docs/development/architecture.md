@@ -16,20 +16,9 @@
 
 ## 运行关系
 
-```text
-浏览器 / PWA
-      │ HTTP / WebSocket
-      ▼
-HappyRO Gateway
-      ├── PWA 与 kRO 运行资源
-      ├── login / char / map / web
-      └── Go API ← Admin 管理前端
-              │
-              ▼
-           MariaDB
-```
+游戏与管理后台分别通过 Gateway 和 Admin 入口访问内部服务。Server 镜像运行 login、char、map、web-api 四个进程；Go API 为后台和冒险工具提供业务接口，通过 web-api 的受控接口请求 map 执行实时操作。
 
-游戏浏览器访问 Gateway，管理人员使用 Admin 前端。Gateway 提供 PWA 与运行资源，代理 Server 连接和玩家工具 API；Admin 前端调用同一 Go API 的管理接口。Go API 通过受控 Game Control 通道读取和维护游戏世界，在线状态由 Server 裁决；玩家、日志和管理数据分别存放在 MariaDB 的独立数据库中。
+完整交互图、路由分工、端口与数据库关系见[服务调用关系](/development/service-calls)。
 
 
 ## 文档归属

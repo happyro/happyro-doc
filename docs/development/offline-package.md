@@ -38,6 +38,7 @@ artifacts/releases/<版本>/
   happyro-<版本>-runtimes.zip      可选：运行资源拆分包
   happyro-<版本>-images.zip        可选：镜像与部署文件拆分包
   happyro-<版本>-split.json        可选：拆分摘要
+  happyro-<版本>-SPLIT-README.md   可选：外部合并安装说明
 work/releases/<版本>/
   state.json                      流程登记
   logs/<批次>/                    阶段日志
@@ -65,7 +66,7 @@ python3 tools/release/release.py offline status --version v0.6.0 --verify
 python3 tools/release/release.py offline split --version v0.6.0
 ```
 
-拆分包必须来自已登记且未改变的完整 ZIP。`runtimes.zip` 包含部署资源，`images.zip` 包含镜像和其余部署文件；两包都附带合并安装 README，镜像包还包含完整部署 README。工具逐项校验两包合并内容与完整包一致，并生成大小与 SHA-256 摘要。已有拆分输出拒绝覆盖，可用 `offline create --rebuild --split` 全量重建。
+拆分包必须来自已登记且未改变的完整 ZIP。`runtimes.zip` 包含部署资源，`images.zip` 包含镜像和其余部署文件；外部单独提供 `happyro-<版本>-SPLIT-README.md`，两包内各保留一份相同说明，镜像包还包含完整部署 README。三份合并说明由同一模板生成，内容一致。对外分发两个 ZIP、外部 README 和 `happyro-<版本>-split.json`；摘要报告同时记录 ZIP 与外部 README 的大小和 SHA-256。工具逐项校验两包合并内容与完整包一致，并生成大小与 SHA-256 摘要。默认清理保留外部 README；`offline clean --include-package --execute` 连同拆分包和报告一起删除它。已有拆分输出拒绝覆盖，可用 `offline create --rebuild --split` 全量重建。
 
 将两份 ZIP 解压到同一父目录，合并同名 `happyro-<版本>/` 后按 README 部署。单独一份拆分包不能部署。包内排除任意层级的 `.DS_Store`、`._*`，保留 `.env.example` 等业务文件。
 

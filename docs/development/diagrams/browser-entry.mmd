@@ -1,0 +1,10 @@
+flowchart TB
+  player[玩家浏览器 / PWA] -->|HTTP / WebSocket| gateway[Gateway :3338]
+  manager[管理员浏览器] -->|HTTP :8000| admin[Admin / Nginx :8080]
+  gateway -->|静态文件和资源读取| assets[PWA / GRF / 音效 / 自定义资源]
+  gateway -->|WebSocket 转 TCP| game["`login :6900
+char :6121
+map :5121`"]
+  gateway -->|游戏会话和原生 Web 接口| web[web-api :8889]
+  gateway -->|/api/adventure-tools/*| api[Go API :8080]
+  admin -->|/api/*| api

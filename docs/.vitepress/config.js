@@ -431,6 +431,10 @@ export default defineConfig({
         "link": "/development/architecture"
       },
       {
+        "text": "服务调用关系",
+        "link": "/development/service-calls"
+      },
+      {
         "text": "本机开发环境",
         "collapsed": false,
         "items": [

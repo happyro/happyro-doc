@@ -1,0 +1,6 @@
+flowchart LR
+  player[玩家工具 / Gateway] -->|HTTP| api[Go API]
+  manager[后台 / Admin Nginx] -->|HTTP| api
+  api -->|HTTP + Token| web[web-api]
+  web -->|Unix Socket| map[map]
+  api -->|SQL| db[(MariaDB)]

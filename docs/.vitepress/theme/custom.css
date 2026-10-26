@@ -227,3 +227,9 @@ html {
     font-weight: 600;
   }
 }
+
+/* Service reference tables keep route names from consuming the full row. */
+@media (min-width: 768px) {
+  .service-calls .vp-doc th:first-child,
+  .service-calls .vp-doc td:first-child { width: 32%; }
+}

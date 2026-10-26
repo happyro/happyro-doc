@@ -6,7 +6,9 @@ pageClass: responsive-tables
 
 推荐使用完整离线包安装。先阅读[部署概览](/deploy/)，以下操作在解压后的包根目录执行。
 
-本文按当前源码生成的 Go API 离线包说明，使用 `api`／`api-init` 服务。若使用下载页的既有 v0.5.0 文件，请执行该包随附的部署手册，不将本文服务名直接套入旧包。版本边界见[安装运维](/deploy/)。
+本文对应下载页提供的 v0.6.0 五镜像离线包：Gateway、Server、API、Admin、Database。API 与 Admin 独立部署，`api-init` 负责初始化。请使用该包随附的配置与工具；版本边界见[安装运维](/deploy/)。
+
+服务组成、入口端口与内部请求路径见[服务调用关系](/development/service-calls)。
 
 ## 系统要求
 

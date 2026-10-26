@@ -2,7 +2,7 @@
 
 公开开发文档帮助贡献者准备环境、理解仓库分工并提交修改。内部设计、实现计划和验收证据继续保留在根仓库或对应应用仓库。
 
-1. 阅读[架构与仓库边界](/development/architecture)。
+1. 阅读[架构与仓库边界](/development/architecture)和[服务调用关系](/development/service-calls)。
 2. 完成[源码与运行资源准备](/development/setup/)。
 3. 按 [Linux](/development/setup/linux)、[macOS](/development/setup/macos) 或 [Windows / WSL2](/development/setup/windows) 准备环境。
 4. 使用[功能测试账号](/development/test-accounts)验收摆摊、宠物、佣兵和生命体。
