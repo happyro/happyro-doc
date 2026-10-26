@@ -47,7 +47,7 @@ python3 tools/deployment/manage.py import-images --directory .
 python3 tools/deployment/manage.py initialize --directory .
 ```
 
-`verify` 检查配置、资源和两个架构的镜像归档；`import-images` 根据 Docker daemon 架构只导入所需的五个镜像；`initialize` 创建 `.env`、随机运行密钥及默认 custom 目录，不启动服务。仅首次空环境运行；已有环境按[升级流程](/deploy/upgrade)处理。
+`verify` 检查配置、资源和两个架构的镜像归档；`import-images` 根据 Docker daemon 架构只导入所需的五个镜像；`initialize` 创建 `.env`、随机运行密钥及默认 custom 目录，不启动服务。每次安装都使用全新环境，不复用旧存档或配置。
 
 ## 配置与启动
 
@@ -67,7 +67,7 @@ python3 tools/deployment/manage.py deploy --directory .
 docker compose ps -a
 ```
 
-deploy 使用已导入的本版镜像，不会拉取或现场构建；先等待数据库健康并执行登录会话表及撤销触发器升级，成功后才启动整栈，失败则停止后续启动。客户端、Gateway、Server 与 Database 须配套更新，详见[升级流程](/deploy/upgrade)。启动完成后，可按下面几项检查运行状态。
+deploy 使用已导入的本版镜像，不会拉取或现场构建；先等待数据库健康并执行登录会话表及撤销触发器初始化，成功后才启动整栈，失败则停止后续启动。客户端、Gateway、Server 与 Database 须来自同一完整包。启动完成后，可按下面几项检查运行状态。
 
 ### 服务状态
 
@@ -133,11 +133,11 @@ HAPPYRO_GATEWAY_PUBLISH_ADDRESS=127.0.0.1:3338
 
 已学技能：基本技能 Lv.9、单手剑使用熟练度 Lv.10、快速恢复 Lv.4、狂击 Lv.10、怒爆 Lv.10、挑衅 Lv.5、霸体 Lv.10。前六个快捷栏依次配置狂击、怒爆、挑衅、霸体、红色药水、蓝色药水，技能使用上述等级，桌面与移动端共用。
 
-不带截图账号的好友、邮件、队伍、公会或测试记录。此配置仅用于新数据库，重启或升级已有数据库不会创建、替换角色或补发物品；本机专用截图账号 `readmecapture` 不受影响。
+不带截图账号的好友、邮件、队伍、公会或测试记录。此配置仅用于新数据库，同一完整包重启不会创建、替换角色或补发物品；本机专用截图账号 `readmecapture` 不受影响。
 
 ## 下一步
 
 - [日常维护](/deploy/maintenance)
 - [备份与恢复](/deploy/backup-restore)
-- [升级](/deploy/upgrade)
+- [全新环境安装](/deploy/upgrade)
 - [自定义 NPC、数据库与资源](/deploy/customization)

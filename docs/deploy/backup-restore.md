@@ -1,6 +1,6 @@
 # 备份与恢复
 
-本文命令对应 v0.6.0 五镜像离线包的 Go API 栈（`api` / `api-init`）。操作旧版离线包时使用该包配套的工具和服务名称，不混用新旧命令。
+本文命令对应 v0.6.0 五镜像离线包的 Go API 栈（`api` / `api-init`）。仅用于同一完整包的运行维护，不用于跨版本数据迁移。
 
 ## 停写备份
 
@@ -18,7 +18,7 @@ docker compose stop gateway admin api web-api map char login
 python3 tools/deployment/manage.py backup --directory . --output ../backups/before-upgrade
 ```
 
-普通备份完成后可运行 deploy 恢复服务；准备升级时保持停写。备份包含三个数据库（happyro、happyro_log、happyro_admin）、server-settings、整个 HAPPYRO_CUSTOM_DIR（脚本、数据库扩展、资源）、.env 和部署清单。备份含密钥，应复制到异机；无 checksums.json 的部分备份不可恢复。备份输出目录必须不存在，示例路径用过后须换新目录。完整离线包另行保存，备份不会重复复制镜像和资源。
+普通备份完成后可运行 deploy 恢复服务；执行恢复时保持停写。备份包含三个数据库（happyro、happyro_log、happyro_admin）、server-settings、整个 HAPPYRO_CUSTOM_DIR（脚本、数据库扩展、资源）、.env 和部署清单。备份含密钥，应复制到异机；无 checksums.json 的部分备份不可恢复。备份输出目录必须不存在，示例路径用过后须换新目录。完整离线包另行保存，备份不会重复复制镜像和资源。
 
 ## 恢复到匹配版本
 
@@ -70,8 +70,4 @@ python3 tools/deployment/manage.py restore --directory . --backup ../backups/bef
 python3 tools/deployment/manage.py deploy --directory .
 ```
 
-restore 校验备份哈希，并拒绝其它服务仍运行的环境；它替换备份涉及的表和文件；HAPPYRO_CUSTOM_DIR 精确恢复到备份内容，移除备份中不存在的额外文件。不自动替换镜像、内置资源或密钥。覆盖已有数据前另做备份。跨数据库版本或不兼容 schema 回退，必须同时恢复配套备份。
-
-## 从源码部署迁移
-
-从现有 systemd 环境迁移需单独安排停服，导出三个库、battle_conf.txt 和自定义目录，并保留数据库密码与控制令牌，再导入新的宿主机数据目录。工具不会自动搬迁旧主机存档。
+restore 校验备份哈希，并拒绝其它服务仍运行的环境；它替换备份涉及的表和文件；HAPPYRO_CUSTOM_DIR 精确恢复到备份内容，移除备份中不存在的额外文件。不自动替换镜像、内置资源或密钥。覆盖已有数据前另做备份。只使用同一完整包及其配套备份恢复，不跨版本导入。

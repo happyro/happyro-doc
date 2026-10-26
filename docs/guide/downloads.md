@@ -6,18 +6,18 @@
 
 ## v0.6.0 离线包
 
-- 文件：[`happyro-v0.6.0.zip`](https://pan.baidu.com/s/1oCxWHoHVXM4NittJSZZj_A?pwd=e5ni)
-- 大小：4,254,547,071 字节（约 3.96 GiB）。
+- 文件：[`happyro-v0.6.0.zip`](https://pan.baidu.com/s/1p2m0YHljHGjb_n0-QEWG2g?pwd=59p4)
+- 大小：4,254,554,420 字节（约 3.96 GiB）。
 - 包含 Gateway、Server、API、Admin、Database 的 amd64／arm64 镜像和运行资源。
-- 提取码：`e5ni`
+- 提取码：`59p4`
 
 SHA-256：
 
 ```text
-cadc6cca75398d01dbb94150b93d50692d04f2775af8acc8fcfcd9dee8a273db
+3e09911db25b4d80ce6b8ec4c3fe299728d8c1475ef694da3e33001e8d274ab7
 ```
 
-2026-10-26 较早批次的验收与 Docker Hub 记录见[版本摘要](/changelog/releases/v0.6.0#交付与本机验收)，不代表当前下载包已完成同样的验收或推送。
+本次离线包验收通过。2026-10-26 较早批次的验收与 Docker Hub 记录见[版本摘要](/changelog/releases/v0.6.0#交付与本机验收)，不代表当前下载包已完成同样的验收或推送。
 
 ## 历史 v0.5.0 离线包
 

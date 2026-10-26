@@ -1,59 +1,9 @@
-# 升级
+# 全新环境安装
 
-升级前核对管理库结构与目标程序、迁移工具匹配；游戏库结构要求见 [API 部署说明](https://github.com/happyro/happyro-api/blob/main/docs/deployment.md)。
+HappyRO 每次发布都按全新环境安装，不提供兼容升级或历史数据迁移。
 
-首次安装见 [Docker 安装](/deploy/docker)。升级前保存匹配版本的完整包与[停写备份](/deploy/backup-restore)。
+下载当次完整离线包，使用独立的新目录、空数据库和新配置，按 [Docker 安装](/deploy/docker) 完成校验、导入镜像、初始化与启动。不复用旧 `.env`、旧存档、旧数据库或旧 custom 目录。
 
-## 保留数据和定制升级
+新环境使用独立的端口和 Compose 项目名，避免影响其他运行环境。不要通过删除已有数据库为新安装腾出环境。
 
-包含 custom 和登录会话升级的版本应使用完整新版包，不能沿用旧 Compose/工具而只替换镜像。运行前先完成以下准备：
-
-- 用旧版配套工具停写备份，保留旧完整包及旧 `.env`。新旧包不得同时连接同一份存档。
-- 记录 HAPPYRO_DATA_DIR、HAPPYRO_CUSTOM_DIR 的实际绝对路径及 custom 文件哈希；旧版无 custom 时使用新的专用目录。
-- 新目录复制旧 `.env`，保留数据库密码、令牌、公开 URL 和 Compose 项目名；按新版 `.env.example` 核对新增变量，仅更新版本与五个镜像引用等明确需要变更的值。新增 `HAPPYRO_ADMIN_IMAGE` 指向本版独立后台镜像，不再设置 `FRONTEND_DIR`。
-- `HAPPYRO_DATA_DIR=./data` 等相对路径会随包目录改变，须改成原数据的绝对路径；`HAPPYRO_RESOURCE_DIR` 指向新包资源。若搬迁数据，需在停写状态复制完整结构，而非只复制数据库目录。
-- 固定容器名会冲突。备份完成后在旧包目录执行 `docker compose down`，再启动新版；bind mount 数据会保留。
-
-1. 保留新版完整包并执行 verify；先在旧部署目录停止写入并备份（见[备份与恢复](/deploy/backup-restore)）。同一存档只能有一套游戏服务运行。
-2. 在新版包根目录复制旧 .env，保留数据库密码和控制令牌；从新版 .env.example 更新 HAPPYRO_RELEASE_VERSION 和五个 IMAGE 变量。
-3. 将 HAPPYRO_DATA_DIR 指向旧部署已停止写入的数据目录（建议绝对路径），HAPPYRO_CUSTOM_DIR 指向旧的自定义目录（同样建议绝对路径），HAPPYRO_RESOURCE_DIR 使用新版包内资源。不要把新的空 data/ 或 custom/ 当成旧内容。
-4. 执行 `python3 tools/deployment/manage.py initialize-custom --directory .`：首次引入自定义功能时建立目录；后续仅补齐新版新增的模板文件，已有文件不覆盖，不合并。旧版本备份需使用旧版本配套工具恢复，不能直接交给新工具。
-5. 导入本版五类镜像，等待 database 健康，再显式执行 Go API 管理库迁移和目录导入；成功后运行 `deploy`，由工具升级游戏会话结构并启动整栈。以下命令逐条执行，任一步失败即停止。
-
-步骤 1：补齐自定义模板：
-
-```bash
-python3 tools/deployment/manage.py initialize-custom --directory .
-```
-
-步骤 2：导入新版镜像：
-
-```bash
-python3 tools/deployment/manage.py import-images --directory .
-```
-
-步骤 3：启动数据库：
-
-```bash
-docker compose up -d --wait --pull never --no-build database
-```
-
-步骤 4：迁移并初始化 API：
-
-```bash
-docker compose run --rm --no-deps --pull never api-init
-```
-
-步骤 5：部署新版服务：
-
-```bash
-python3 tools/deployment/manage.py deploy --directory .
-```
-
-原有 Compose 项目名应保持一致。空库初始化会执行 `upgrade_20261012_sessions.sql`；保留旧数据库时，`deploy` 也会先启动并等待 database 健康，再从新版 Database 镜像内执行 `/opt/rathena/sql/upgrades/upgrade_20261012_sessions.sql`，成功后才执行整栈启动。SQL 可重复执行，建立登录会话表和密码、账号状态、封禁及有效期变更的撤销触发器；不会批量执行历史升级脚本。执行失败时命令停止，先检查错误并修复，再重试 `deploy`，不要绕过它直接启动新版游戏服务。
-
-保持登录需要客户端、Gateway、login-server、web-server 与会话数据库结构配套更新，`PACKETVER` 保持 `20211103`。必须导入本版 Database 镜像，不能仅替换 Server/Gateway 镜像。升级前按上文停止旧服务；`deploy` 的失败停止机制不会替你关闭此前已运行的旧服务。
-
-已有环境不要重新运行 `initialize`，只运行 `initialize-custom` 补齐模板。升级后核对八服务健康、api-init 退出 0、角色/仓库数据、后台设置及 custom 哈希，再分别检查未覆盖 NPC 随镜像更新、覆盖文件仍优先、删除覆盖后恢复新版内置文件。只重部署同一版本应记录为流程演练。
-
-上述流程显式运行 `api-init`，依次执行 Go 管理库迁移、初始账号检查、资料刷新及一次 `catalog import` 原子导入；不要只凭旧的退出容器判断本轮初始化已完成。仅执行 `migrate` 不会导入目录，导入源须同时包含客户端物品、服务端物品、魔物和 NPC 四份快照。
+同一完整包的运行数据可以按[备份与恢复](/deploy/backup-restore)维护；该流程不用于跨版本迁移。

@@ -375,7 +375,7 @@ export default defineConfig({
             "link": "/deploy/backup-restore"
           },
           {
-            "text": "升级",
+            "text": "全新环境安装",
             "link": "/deploy/upgrade"
           }
         ]
