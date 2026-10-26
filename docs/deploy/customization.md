@@ -8,20 +8,20 @@ pageClass: responsive-tables
 
 游戏重载与后台目录刷新需要分别执行。
 
-推荐将 DATA_DIR 与 CUSTOM_DIR 放在版本目录外。发行包只带 examples/custom 模板；首次 initialize 创建默认 custom/。若编辑 .env 将 CUSTOM_DIR 改到其它路径，必须执行 initialize-custom 为该位置初始化。这个命令可重复执行，只补缺少的模板，不覆盖已有文件。资源不复制原始 GRF，自定义目录初始为空。
+推荐将 HAPPYRO_DATA_DIR 与 HAPPYRO_CUSTOM_DIR 放在版本目录外。发行包只带 examples/custom 模板；首次 initialize 创建默认 custom/。若编辑 .env 将 HAPPYRO_CUSTOM_DIR 改到其它路径，必须执行 initialize-custom 为该位置初始化。这个命令可重复执行，只补缺少的模板，不覆盖已有文件。资源不复制原始 GRF，自定义目录初始为空。
 
 | 宿主机 | 容器 | 使用方 |
 |---|---|---|
-| <span class="table-cell-label" aria-hidden="true">宿主机</span>CUSTOM_DIR/npc | <span class="table-cell-label" aria-hidden="true">容器</span>/opt/happyro/custom/npc | <span class="table-cell-label" aria-hidden="true">使用方</span>Server，只读 |
-| <span class="table-cell-label" aria-hidden="true">宿主机</span>CUSTOM_DIR/db | <span class="table-cell-label" aria-hidden="true">容器</span>/opt/rathena/db/import | <span class="table-cell-label" aria-hidden="true">使用方</span>Server，只读 |
-| <span class="table-cell-label" aria-hidden="true">宿主机</span>CUSTOM_DIR/resources | <span class="table-cell-label" aria-hidden="true">容器</span>/opt/happyro/custom/resources | <span class="table-cell-label" aria-hidden="true">使用方</span>Gateway，只读 |
-| <span class="table-cell-label" aria-hidden="true">宿主机</span>CUSTOM_DIR | <span class="table-cell-label" aria-hidden="true">容器</span>/opt/happyro/custom | <span class="table-cell-label" aria-hidden="true">使用方</span>API 目录刷新任务，只读 |
+| <span class="table-cell-label" aria-hidden="true">宿主机</span>HAPPYRO_CUSTOM_DIR/npc | <span class="table-cell-label" aria-hidden="true">容器</span>/opt/happyro/custom/npc | <span class="table-cell-label" aria-hidden="true">使用方</span>Server，只读 |
+| <span class="table-cell-label" aria-hidden="true">宿主机</span>HAPPYRO_CUSTOM_DIR/db | <span class="table-cell-label" aria-hidden="true">容器</span>/opt/rathena/db/import | <span class="table-cell-label" aria-hidden="true">使用方</span>Server，只读 |
+| <span class="table-cell-label" aria-hidden="true">宿主机</span>HAPPYRO_CUSTOM_DIR/resources | <span class="table-cell-label" aria-hidden="true">容器</span>/opt/happyro/custom/resources | <span class="table-cell-label" aria-hidden="true">使用方</span>Gateway，只读 |
+| <span class="table-cell-label" aria-hidden="true">宿主机</span>HAPPYRO_CUSTOM_DIR | <span class="table-cell-label" aria-hidden="true">容器</span>/opt/happyro/custom | <span class="table-cell-label" aria-hidden="true">使用方</span>API 目录刷新任务，只读 |
 
-内置 npc、db、conf 仍由镜像提供。后台战斗设置仍存放 DATA_DIR/server-settings，不增加第二份配置来源。容器只读不妨碍在宿主机编辑。
+内置 npc、db、conf 仍由镜像提供。后台战斗设置仍存放 HAPPYRO_DATA_DIR/server-settings，不增加第二份配置来源。容器只读不妨碍在宿主机编辑。
 
 ## 新增及覆盖 NPC
 
-以下 `custom/` 指 `.env` 的实际 CUSTOM_DIR。例如在 `npc/additions/review.txt` 写入测试脚本（声明行各字段之间必须使用 Tab）：
+以下 `custom/` 指 `.env` 的实际 HAPPYRO_CUSTOM_DIR。例如在 `npc/additions/review.txt` 写入测试脚本（声明行各字段之间必须使用 Tab）：
 
 ```text
 prontera,150,180,4	script	ReviewCustom	100,{
@@ -109,7 +109,7 @@ python3 tools/deployment/manage.py refresh-custom-catalogs --directory .
 | <span class="table-cell-label" aria-hidden="true">修改内容</span>NPC additions / overrides | <span class="table-cell-label" aria-hidden="true">游戏侧生效</span>GM `@reloadscript` 或维护重启 map | <span class="table-cell-label" aria-hidden="true">后台/冒险工具资料</span>`refresh-custom-catalogs` |
 | <span class="table-cell-label" aria-hidden="true">修改内容</span>item_db / mob_db | <span class="table-cell-label" aria-hidden="true">游戏侧生效</span>相应原生数据库重载或维护重启 map | <span class="table-cell-label" aria-hidden="true">后台/冒险工具资料</span>`refresh-custom-catalogs` |
 | <span class="table-cell-label" aria-hidden="true">修改内容</span>resources | <span class="table-cell-label" aria-hidden="true">游戏侧生效</span>后续 HTTP 请求读取新文件；游戏内已解码图片需重新进入游戏 | <span class="table-cell-label" aria-hidden="true">后台/冒险工具资料</span>不自动生成缩略图或外观映射 |
-| <span class="table-cell-label" aria-hidden="true">修改内容</span>后台战斗设置 | <span class="table-cell-label" aria-hidden="true">游戏侧生效</span>通过后台保存与现有应用流程 | <span class="table-cell-label" aria-hidden="true">后台/冒险工具资料</span>文件持久化于 DATA_DIR/server-settings；非空环境变量优先 |
+| <span class="table-cell-label" aria-hidden="true">修改内容</span>后台战斗设置 | <span class="table-cell-label" aria-hidden="true">游戏侧生效</span>通过后台保存与现有应用流程 | <span class="table-cell-label" aria-hidden="true">后台/冒险工具资料</span>文件持久化于 HAPPYRO_DATA_DIR/server-settings；非空环境变量优先 |
 
 重启 map 的命令是 `docker compose restart map`，会中断地图连接，应安排维护时间。`refresh-custom-catalogs` 不重载游戏，也不执行 NPC 动态脚本。先确保自定义文件合法，再分别完成游戏重载和目录刷新，最后核对结果。
 

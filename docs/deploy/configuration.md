@@ -5,11 +5,11 @@
 默认仅允许部署机器本机访问。编辑 `.env`，需要局域网访问时再将以下值同步改为部署机器的局域网地址：
 
 ```dotenv
-GAME_PUBLIC_URL=http://127.0.0.1:3338
-ADMIN_PUBLIC_URL=http://127.0.0.1:8000
+HAPPYRO_GAME_PUBLIC_URL=http://127.0.0.1:3338
+HAPPYRO_ADMIN_PUBLIC_URL=http://127.0.0.1:8000
 ```
 
-镜像变量与 RELEASE_VERSION 保持包内版本。RESOURCE_DIR 指向本版资源；DATA_DIR 和 CUSTOM_DIR 可设为版本目录外的专用绝对路径。若改变 DATA_DIR，需准备完整数据子目录；改变 CUSTOM_DIR 后执行：
+镜像变量与 HAPPYRO_RELEASE_VERSION 保持包内版本。HAPPYRO_RESOURCE_DIR 指向本版资源；HAPPYRO_DATA_DIR 和 HAPPYRO_CUSTOM_DIR 可设为版本目录外的专用绝对路径。若改变 HAPPYRO_DATA_DIR，需准备完整数据子目录；改变 HAPPYRO_CUSTOM_DIR 后执行：
 
 初始化自定义目录：
 
@@ -27,10 +27,10 @@ python3 tools/deployment/manage.py initialize-custom --directory .
 
 ## 显示时区
 
-部署 `.env` 中的 `APP_TIMEZONE` 默认为 `Asia/Shanghai`（北京时间，UTC+8）。可以使用 `UTC`、`America/New_York` 等 IANA 时区；非法值会使服务启动失败。
+部署 `.env` 中的 `HAPPYRO_TIMEZONE` 默认为 `Asia/Shanghai`（北京时间，UTC+8）。可以使用 `UTC`、`America/New_York` 等 IANA 时区；非法值会使服务启动失败。
 
 ```dotenv
-APP_TIMEZONE=Asia/Shanghai
+HAPPYRO_TIMEZONE=Asia/Shanghai
 ```
 
 API 与 Gateway 使用同一个值。修改后重建这两个服务的容器并刷新页面，后台及游戏内日期时间都会按新时区显示，无需重新构建前端。原生部署则在 API 和 Gateway 环境文件中设置相同值并重启服务。

@@ -78,7 +78,7 @@ login 与 char、char 与 map 通过服务间协议协作。各服务按自身�
 
 当前 Compose 默认只向宿主机发布 Gateway 与 Admin 两个入口。其余端口用于 Docker 网络内通信；`web-api → map` 控制链使用共享 Unix Socket，不是 TCP 5121。图中未展开日志、自定义配置等全部文件挂载。
 
-`GATEWAY_PORT`、`ADMIN_PORT` 可调整宿主机入口端口。[隔离验收工具](./offline-acceptance)会另选本机端口并绑定回环地址，不一定使用 3338 和 8000。本机源码开发的进程地址以对应环境配置为准。
+`HAPPYRO_GATEWAY_PUBLISH_ADDRESS`、`HAPPYRO_ADMIN_PUBLISH_ADDRESS` 可调整宿主机入口端口。[隔离验收工具](./offline-acceptance)会另选本机端口并绑定回环地址，不一定使用 3338 和 8000。本机源码开发的进程地址以对应环境配置为准。
 
 ## 实现依据
 

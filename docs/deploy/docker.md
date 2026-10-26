@@ -86,7 +86,7 @@ deploy 使用已导入的本版镜像，不会拉取或现场构建；先等待�
 
 初始化容器 `happyro-api-init` 应执行完成并以状态码 `0` 退出。
 
-Docker 为 Admin 与 API 建立专用 `admin-proxy` 网络；`ADMIN_PROXY_SUBNET` 默认 `172.30.81.0/29`，`ADMIN_PROXY_DYNAMIC_RANGE` 默认 `172.30.81.4/30`，`ADMIN_PROXY_IP` 默认 `172.30.81.2`。动态地址池用于 API 等临时端点，不包含 Admin 固定地址，避免 API 先启动时占用该地址。API 的 `HTTP_TRUSTED_PROXIES` 只信任该 Admin 地址，Nginx 覆盖客户端传入的转发头，使登录限流、登录记录和操作审计使用代理收到的来源 IP。若与宿主机路由或已有 Docker 网段冲突，须同时调整子网、子网内的动态地址池和池外可用的 Admin 固定地址，并重新创建网络和容器。外层反向代理的真实 IP 信任链须另行配置，默认不会信任外部传入的转发头。
+Docker 为 Admin 与 API 建立专用 `admin-proxy` 网络；`HAPPYRO_ADMIN_PROXY_SUBNET` 默认 `172.30.81.0/29`，`HAPPYRO_ADMIN_PROXY_DYNAMIC_RANGE` 默认 `172.30.81.4/30`，`HAPPYRO_ADMIN_PROXY_IP` 默认 `172.30.81.2`。动态地址池用于 API 等临时端点，不包含 Admin 固定地址，避免 API 先启动时占用该地址。API 的 `HAPPYRO_API_TRUSTED_PROXIES` 只信任该 Admin 地址，Nginx 覆盖客户端传入的转发头，使登录限流、登录记录和操作审计使用代理收到的来源 IP。若与宿主机路由或已有 Docker 网段冲突，须同时调整子网、子网内的动态地址池和池外可用的 Admin 固定地址，并重新创建网络和容器。外层反向代理的真实 IP 信任链须另行配置，默认不会信任外部传入的转发头。
 
 ### 访问入口
 
@@ -95,11 +95,11 @@ Docker 为 Admin 与 API 建立专用 `admin-proxy` 网络；`ADMIN_PROXY_SUBNET
 - 游戏：`http://127.0.0.1:3338/applications/pwa/index.html`
 - 游戏后台：`http://127.0.0.1:8000`
 
-Compose 默认在宿主机所有接口发布这两个端口；公开 URL 不限制监听范围。需要让局域网其他设备访问时，将 `.env` 中的 `GAME_PUBLIC_URL` 和 `ADMIN_PUBLIC_URL` 改为部署机器的局域网 IP。只允许本机访问时，在部署目录 `.env` 设置以下值，然后重新创建对应容器：
+Compose 默认在宿主机所有接口发布这两个端口；公开 URL 不限制监听范围。需要让局域网其他设备访问时，将 `.env` 中的 `HAPPYRO_GAME_PUBLIC_URL` 和 `HAPPYRO_ADMIN_PUBLIC_URL` 改为部署机器的局域网 IP。只允许本机访问时，在部署目录 `.env` 设置以下值，然后重新创建对应容器：
 
 ```dotenv
-ADMIN_PORT=127.0.0.1:8000
-GATEWAY_PORT=127.0.0.1:3338
+HAPPYRO_ADMIN_PUBLISH_ADDRESS=127.0.0.1:8000
+HAPPYRO_GATEWAY_PUBLISH_ADDRESS=127.0.0.1:3338
 ```
 
 这两个变量支持 `宿主机地址:端口`；公开 URL 仍填写正常的 HTTP(S) 地址。`compose.yaml` 属于离线包校验文件，直接修改会使 `verify`／`deploy` 的哈希校验失败，端口绑定通过 `.env` 配置。

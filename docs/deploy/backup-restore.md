@@ -18,13 +18,13 @@ docker compose stop gateway admin api web-api map char login
 python3 tools/deployment/manage.py backup --directory . --output ../backups/before-upgrade
 ```
 
-普通备份完成后可运行 deploy 恢复服务；准备升级时保持停写。备份包含三个数据库（happyro、happyro_log、happyro_admin）、server-settings、整个 CUSTOM_DIR（脚本、数据库扩展、资源）、.env 和部署清单。备份含密钥，应复制到异机；无 checksums.json 的部分备份不可恢复。备份输出目录必须不存在，示例路径用过后须换新目录。完整离线包另行保存，备份不会重复复制镜像和资源。
+普通备份完成后可运行 deploy 恢复服务；准备升级时保持停写。备份包含三个数据库（happyro、happyro_log、happyro_admin）、server-settings、整个 HAPPYRO_CUSTOM_DIR（脚本、数据库扩展、资源）、.env 和部署清单。备份含密钥，应复制到异机；无 checksums.json 的部分备份不可恢复。备份输出目录必须不存在，示例路径用过后须换新目录。完整离线包另行保存，备份不会重复复制镜像和资源。
 
 ## 恢复到匹配版本
 
-恢复优先使用匹配版本的完整包及新的宿主机数据目录。复制备份 .env、核对 DATA_DIR、CUSTOM_DIR、资源路径和地址，保留数据库密码和控制令牌，不重新 initialize。`initialize-custom` 只准备 `CUSTOM_DIR`，不会创建 `DATA_DIR`。若使用新建的外部数据目录，先在 `.env` 设置其实际路径，再创建全部五个数据子目录；Compose 的 bind mount 不会自动创建缺失路径。
+恢复优先使用匹配版本的完整包及新的宿主机数据目录。复制备份 .env、核对 HAPPYRO_DATA_DIR、HAPPYRO_CUSTOM_DIR、资源路径和地址，保留数据库密码和控制令牌，不重新 initialize。`initialize-custom` 只准备 `HAPPYRO_CUSTOM_DIR`，不会创建 `HAPPYRO_DATA_DIR`。若使用新建的外部数据目录，先在 `.env` 设置其实际路径，再创建全部五个数据子目录；Compose 的 bind mount 不会自动创建缺失路径。
 
-以下示例中的 `/srv/happyro/restore-data` 必须替换为 `.env` 中 `DATA_DIR` 指定的同一目录。使用全新解压包自带的 `./data` 时，这五个空子目录已包含在包中。
+以下示例中的 `/srv/happyro/restore-data` 必须替换为 `.env` 中 `HAPPYRO_DATA_DIR` 指定的同一目录。使用全新解压包自带的 `./data` 时，这五个空子目录已包含在包中。
 
 设置恢复数据目录：
 
@@ -70,7 +70,7 @@ python3 tools/deployment/manage.py restore --directory . --backup ../backups/bef
 python3 tools/deployment/manage.py deploy --directory .
 ```
 
-restore 校验备份哈希，并拒绝其它服务仍运行的环境；它替换备份涉及的表和文件；CUSTOM_DIR 精确恢复到备份内容，移除备份中不存在的额外文件。不自动替换镜像、内置资源或密钥。覆盖已有数据前另做备份。跨数据库版本或不兼容 schema 回退，必须同时恢复配套备份。
+restore 校验备份哈希，并拒绝其它服务仍运行的环境；它替换备份涉及的表和文件；HAPPYRO_CUSTOM_DIR 精确恢复到备份内容，移除备份中不存在的额外文件。不自动替换镜像、内置资源或密钥。覆盖已有数据前另做备份。跨数据库版本或不兼容 schema 回退，必须同时恢复配套备份。
 
 ## 从源码部署迁移
 

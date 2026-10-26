@@ -12,7 +12,7 @@ HappyRO Admin 是独立的管理应用，面向服务器管理员。可以先体
 
 点击右上角头像菜单的「修改密码」，输入当前密码并确认新密码。成功后需重新登录，其他旧会话也会失效。此操作只修改自己的后台账号，不修改游戏账号。
 
-部署变量 `ADMIN_PASSWORD_CHANGE_ENABLED` 默认 `true`。共享 admin 账号的演示环境可设为 `false`，同时隐藏入口并拒绝改密请求，访客无法在后台重新开启；服务器 CLI 维护仍可用。配置生效方式见[环境变量参考](/deploy/environment-variables)。
+部署变量 `HAPPYRO_ADMIN_PASSWORD_CHANGE_ENABLED` 默认 `true`。共享 admin 账号的演示环境可设为 `false`，同时隐藏入口并拒绝改密请求，访客无法在后台重新开启；服务器 CLI 维护仍可用。配置生效方式见[环境变量参考](/deploy/environment-variables)。
 
 ## 登录尝试限制
 

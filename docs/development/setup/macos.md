@@ -72,7 +72,7 @@ mkdir -p work/build/api
 (cd repos/happyro-api && go build -mod=readonly -o ../../work/build/api/happyro-api ./cmd/happyro-api)
 ```
 
-按 [API 部署说明](https://github.com/happyro/happyro-api/blob/main/docs/deployment.md)配置独立的空管理库、游戏库、Game Control 密钥和资源路径，并依次执行 `migrate`、`init`、`catalog import`。Go 程序不自动加载 `.env`，由启动进程显式传入环境；`APP_URL` 配置公开入口；启用 `ADMIN_CSRF_ORIGIN_CHECK_ENABLED=true` 时，实际浏览器来源必须与它一致，默认关闭该来源限制但仍校验会话和 CSRF Token。
+按 [API 部署说明](https://github.com/happyro/happyro-api/blob/main/docs/deployment.md)配置独立的空管理库、游戏库、Game Control 密钥和资源路径，并依次执行 `migrate`、`init`、`catalog import`。Go 程序不自动加载 `.env`，由启动进程显式传入环境；`HAPPYRO_ADMIN_PUBLIC_URL` 配置公开入口；启用 `HAPPYRO_ADMIN_CSRF_ORIGIN_CHECK_ENABLED=true` 时，实际浏览器来源必须与它一致，默认关闭该来源限制但仍校验会话和 CSRF Token。
 
 Admin 页面由独立前端服务提供，`/api` 请求代理到 Go API；前端开发服务与代理配置见 [Admin 部署说明](https://github.com/happyro/happyro-admin/blob/main/docs/deployment.md)。使用 launchd 时，分别准备 Go API 与 Admin 前端的服务配置；API 环境变量由启动进程显式传入。
 
