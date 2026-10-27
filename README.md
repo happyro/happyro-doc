@@ -20,9 +20,21 @@
 
 ## 本地开发与验证
 
+安装依赖：
+
 ```bash
 npm ci
+```
+
+启动文档站：
+
+```bash
 npm run docs:dev
+```
+
+构建检查：
+
+```bash
 npm run docs:build
 ```
 
@@ -46,11 +58,11 @@ npm run docs:build
 
 主页顶部采用 VitePress 响应式布局，桌面左侧显示标题与演示按钮，右侧显示 Logo。下方 `HomeGallery.vue` 轮播依次展示三端整合图、跨端技能、图鉴、战斗与后台。`docs/public/images/overview/` 的五张 PNG 原样同步根仓库 `docs/assets/readme/`；前两张透明、无阴影，设备样式、坐标和镜头以根仓库[README 图片规范](https://github.com/happyro/happyro/tree/main/docs/development/readme-images)为准。
 
-新增教程截图用本机 99 级剑士“罗安”，不切换为管理角色或伪造职业能力。具体截图来源、视口和哈希保存在 `docs/public/images/sources.json`；凭据、账号 ID、数据库和临时输出不进入站点。剑士无法演示的摆摊或其他职业能力，用经源码核对的步骤说明，新增实际操作图须具备相应角色条件。
+新增教程截图用本机 99 级剑士“罗安”；双角色交互和商人功能用 99 级铁匠“玛雅”，不伪造职业能力。具体截图来源、视口和哈希保存在 `docs/public/images/sources.json`；凭据、账号 ID、数据库和临时输出不进入站点。摆摊等职业操作必须由具备真实技能和物品条件的角色完成。平板横屏为主要配图，手机竖屏和桌面按布局、操作差异补充；更新 UI 后核对所有现有截图的可见内容。
 
 仅重拍画面中可见且已变化的界面；被菜单或设备框遮挡、已裁掉的区域不触发重拍。首图可保留有可验证来源的未变化端原图，仅替换受影响的手机／平板输入再合成。
 
-图片按用途放入 `overview/`、`game/controls/`、`game/combat/`、`game/social/`、`game/adventure/`、`game/trading/`、`game/mail/` 和 `strategy/job-change/`。旧图只有仍被正文引用时才保留；更新截图时同时检查界面文案与教程步骤。
+图片按用途放入 `overview/`、`game/controls/`、`game/combat/`、`game/social/`、`game/adventure/`、`game/trading/`、`game/mail/`、`game/inventory/`、`game/npc/`、`game/storage/`、`game/settings/`、`game/companions/` 和 `strategy/job-change/`。旧图只有仍被正文引用时才保留；更新截图时同时检查界面文案与教程步骤。
 
 ## 攻略维护
 

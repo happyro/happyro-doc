@@ -6,16 +6,16 @@ NAVI 是说明中的地点或目标链接。有可用坐标并支持传送的目
 
 1. 点击对话里的地点链接，会短暂提示「已加入导航，结束对话后可传送。」
 2. 继续并正常结束对话。点击链接本身不会替你回答 NPC，也不会中断任务或发放奖励。
-3. 对话结束后，在右下角点击黄色的「打开地图」按钮查看标点；不再需要时点击「取消」。这两个按钮独立显示，显示期间隐藏战斗信息。
+3. 对话结束后，在右下角点击黄色的「打开地图」按钮查看标点；不再需要时点击「取消」。这两个按钮位于战斗操作区左侧同一行，显示期间隐藏战斗信息。
 
 ![罗安点击艾尔贝塔向导的工具店链接，出现已加入导航提示，对话仍保持打开](/images/game/text-links/desktop-npc-navi-toast.png)
 
-![正常结束对话后，桌面右下角操作按钮上方出现打开地图与取消](/images/game/text-links/desktop-npc-navi-actions.png)
+![正常结束对话后，桌面打开地图与取消位于战斗按钮左侧同一行](/images/game/text-links/desktop-npc-navi-actions.png)
 
 ::: details 手机结束对话后的导航入口
 
 <figure class="guide-device-figure">
-  <img src="/images/game/text-links/phone-npc-navi-actions.png" alt="手机正常结束对话后，黄色打开地图和取消按钮独立出现在右下角" width="860" height="1720" loading="lazy">
+  <img src="/images/game/text-links/phone-npc-navi-actions.png" alt="手机正常结束对话后，黄色打开地图和取消按钮位于战斗操作区左侧" width="860" height="1720" loading="lazy">
 </figure>
 
 :::

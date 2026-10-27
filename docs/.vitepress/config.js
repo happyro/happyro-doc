@@ -15,6 +15,7 @@ const changelog = [
     text: '2026-10',
     collapsed: true,
     items: [
+      { text: '2026-10-28', link: '/changelog/2026/10/2026-10-28' },
       { text: '2026-10-27', link: '/changelog/2026/10/2026-10-27' },
       { text: '2026-10-26', link: '/changelog/2026/10/2026-10-26' },
       { text: '2026-10-25', link: '/changelog/2026/10/2026-10-25' },
@@ -188,6 +189,10 @@ export default defineConfig({
             "link": "/game/controls"
           },
           {
+            "text": "画面、声音与镜头",
+            "link": "/game/settings"
+          },
+          {
             "text": "添加到主屏幕",
             "link": "/game/pwa"
           }
@@ -243,6 +248,14 @@ export default defineConfig({
           {
             "text": "聊天与社交",
             "link": "/game/social"
+          },
+          {
+            "text": "NPC 对话与商店",
+            "link": "/game/npc-shops"
+          },
+          {
+            "text": "仓库、手推车与银行",
+            "link": "/game/storage-bank"
           },
           {
             "text": "交易与摆摊",

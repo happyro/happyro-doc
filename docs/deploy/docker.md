@@ -111,6 +111,7 @@ HAPPYRO_GATEWAY_PUBLISH_ADDRESS=127.0.0.1:3338
 | 用途 | 用户名 | 密码 | 权限 |
 | --- | --- | --- | --- |
 | <span class="table-cell-label" aria-hidden="true">用途</span>游戏 | <span class="table-cell-label" aria-hidden="true">用户名</span>`happyro` | <span class="table-cell-label" aria-hidden="true">密码</span>`happyro` | <span class="table-cell-label" aria-hidden="true">权限</span>GM |
+| <span class="table-cell-label" aria-hidden="true">用途</span>第二游戏账号 | <span class="table-cell-label" aria-hidden="true">用户名</span>`happyro2` | <span class="table-cell-label" aria-hidden="true">密码</span>`happyro2` | <span class="table-cell-label" aria-hidden="true">权限</span>普通玩家 |
 | <span class="table-cell-label" aria-hidden="true">用途</span>管理后台 | <span class="table-cell-label" aria-hidden="true">用户名</span>`admin` | <span class="table-cell-label" aria-hidden="true">密码</span>`admin` | <span class="table-cell-label" aria-hidden="true">权限</span>超级管理员 |
 
 
@@ -134,6 +135,27 @@ HAPPYRO_GATEWAY_PUBLISH_ADDRESS=127.0.0.1:3338
 已学技能：基本技能 Lv.9、单手剑使用熟练度 Lv.10、快速恢复 Lv.4、狂击 Lv.10、怒爆 Lv.10、挑衅 Lv.5、霸体 Lv.10。前六个快捷栏依次配置狂击、怒爆、挑衅、霸体、红色药水、蓝色药水，技能使用上述等级，桌面与移动端共用。
 
 不带截图账号的好友、邮件、队伍、公会或测试记录。此配置仅用于新数据库，同一完整包重启不会创建、替换角色或补发物品；本机专用截图账号 `readmecapture` 不受影响。
+
+### 第二测试角色：玛雅
+
+使用当前源码重新构建的离线包，首次空库初始化会在 `happyro2/happyro2` 的第一个角色位创建「玛雅」。此账号配置不代表此前已发布的离线包内容已更新。
+
+| 项目 | 初始配置 |
+| --- | --- |
+| 性别与职业 | 女性铁匠（商人二转），职业 ID 10，Base 99 / Job 50 |
+| 权限 | 普通玩家，权限组 0，可与罗安分别登录，用于交易、摆摊、邮件及社交演示 |
+| 六维属性 | 与罗安相同：STR 70、AGI 60、VIT 40、INT 10、DEX 40、LUK 1 |
+| 金钱 | 10,000 Zeny |
+| 背包 | 斧（1301，已装备）、红色药水 ×100、蓝色药水 ×100、杰勒比结晶（909）×20 |
+| 手推车商品 | 红色药水 ×20、蓝色药水 ×20、杰勒比结晶 ×20；使用前通过正常游戏入口租用手推车 |
+| 出生与保存点 | 普隆德拉 `prontera` 166,185；保存点 159,189 |
+| 前六格快捷栏 | 露天商店、物品鉴定、大地之击、速度激发、红色药水、蓝色药水 |
+
+基本技能 Lv.9 与罗安一致，职业技能按商人和铁匠配置，不复制剑士技能。商人技能为负重量上升 Lv.5、低价买进 Lv.10、高价卖出 Lv.10、手推车使用 Lv.10、物品鉴定 Lv.1、露天商店 Lv.10、金钱攻击 Lv.3。
+
+铁匠技能按当前技能树的前置条件配置：铁制造 Lv.5、钢制造 Lv.5、属性石制造 Lv.3、神之金属研究 Lv.1、武器保有 Lv.1、武器研究 Lv.10、武器修理 Lv.1、强化火属性 Lv.5、大地之击 Lv.5、速度激发 Lv.5、无视体型攻击 Lv.3、凶砍 Lv.3、极限攻击 Lv.2。商人、铁匠两个阶段各使用 49 个技能点。
+
+账号之间不预设好友、邮件、队伍或成交记录；这些状态按功能演示步骤创建。初始化使用固定资料，不复制开发数据库中的临时测试物品或存档，同一包重启不会补发商品。
 
 ## 下一步
 
