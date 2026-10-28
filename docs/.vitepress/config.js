@@ -15,6 +15,7 @@ const changelog = [
     text: '2026-10',
     collapsed: true,
     items: [
+      { text: '2026-10-29', link: '/changelog/2026/10/2026-10-29' },
       { text: '2026-10-28', link: '/changelog/2026/10/2026-10-28' },
       { text: '2026-10-27', link: '/changelog/2026/10/2026-10-27' },
       { text: '2026-10-26', link: '/changelog/2026/10/2026-10-26' },
@@ -104,7 +105,7 @@ export default defineConfig({
   },
   head: [['link', { rel: 'icon', href: '/images/brand/ro-icon-1.jpg' }]],
   themeConfig: {
-    docFooter: { prev: false, next: false },
+    docFooter: { prev: '上一篇', next: '下一篇' },
     logo: '/images/brand/ro-icon-1.jpg',
     siteTitle: 'HappyRO',
     nav: [

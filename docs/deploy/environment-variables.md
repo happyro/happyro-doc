@@ -238,7 +238,7 @@ HAPPYRO_GAME_TOOLS_MONSTER_SPAWN_POLICY=1
 HAPPYRO_GAME_TOOLS_ITEM_GRANT_POLICY=1
 ```
 
-这些项目沿用地图服原有 GM 临时命令行为；GM 临时改值不等于改写部署配置，下次 battle 重载或进程重启会重新应用环境变量。经验、掉落、精炼、地图分线也支持环境覆盖，完整名称和范围见下方自动核对清单。倍率使用百分整数：100 表示 1 倍；死亡惩罚不在当前后台开放范围。
+这些项目沿用地图服原有 GM 临时命令行为；GM 临时改值不等于改写部署配置，下次 battle 重载或进程重启会重新应用环境变量。经验、掉落、精炼、升阶、地图分线也支持环境覆盖，完整名称和范围见下方自动核对清单。倍率使用百分整数：100 表示 1 倍；死亡惩罚不在当前后台开放范围。
 
 #### 服务连接参数
 
@@ -356,6 +356,10 @@ HAPPYRO_GAME_TOOLS_ITEM_GRANT_POLICY=1
 
 排障时先确认变量是否进入目标进程，再检查配置优先级、个人保存值及代码版本。不要在工单或日志中粘贴包含密码的完整环境。其他操作见[访问地址与目录](/deploy/configuration)、[日常维护](/deploy/maintenance)和[自定义配置](/deploy/customization)。
 
+### 升阶成功率
+
+`HAPPYRO_GAME_GRADE_CHANCE_RATE_PERCENT` 使用百分整数：100 为 1 倍，200 为 2 倍，范围 0–1000000。`HAPPYRO_GAME_GRADE_ALWAYS_SUCCESS_ENABLED` 使用 true/false，开启时优先于倍率，但不免除装备、精炼等级、材料和费用要求。默认倍率 100、必定成功关闭。变量留空时由 battle 配置及全服设置管理；非空时为部署覆盖，冒险工具和后台不能修改对应字段。修改环境变量后重启地图服。
+
 <!-- environment-registry:start -->
 ## 配置清单（自动核对）
 
@@ -467,6 +471,8 @@ HAPPYRO_GAME_TOOLS_ITEM_GRANT_POLICY=1
 | `HAPPYRO_GAME_BASE_EXP_RATE_PERCENT` | 地图服 | integer [0, 2147483647] | `100` | 部署覆盖，页面不能修改 |
 | `HAPPYRO_GAME_CONTROL_TOKEN` | API | string | 见用途／程序定义 | 进程配置 |
 | `HAPPYRO_GAME_ENTITY_SYNC_RANGE_CELLS` | 地图服 | integer [5, 50] | `14` | 部署覆盖，页面不能修改 |
+| `HAPPYRO_GAME_GRADE_ALWAYS_SUCCESS_ENABLED` | 地图服 | boolean [0, 1] | `false` | 部署覆盖，页面不能修改 |
+| `HAPPYRO_GAME_GRADE_CHANCE_RATE_PERCENT` | 地图服 | integer [0, 1000000] | `100` | 部署覆盖，页面不能修改 |
 | `HAPPYRO_GAME_ITEM_RATE_CARD_BOSS_PERCENT` | 地图服 | integer [0, 1000000] | `100` | 部署覆盖，页面不能修改 |
 | `HAPPYRO_GAME_ITEM_RATE_CARD_MVP_PERCENT` | 地图服 | integer [0, 1000000] | `100` | 部署覆盖，页面不能修改 |
 | `HAPPYRO_GAME_ITEM_RATE_CARD_PERCENT` | 地图服 | integer [0, 1000000] | `100` | 部署覆盖，页面不能修改 |
