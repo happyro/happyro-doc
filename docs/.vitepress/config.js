@@ -212,6 +212,17 @@ export default defineConfig({
             "link": "/game/inventory-equipment"
           },
           {
+            "text": "附魔、精炼与升阶",
+            "collapsed": false,
+            "items": [
+              { "text": "总览与数量汇总", "link": "/game/equipment-services" },
+              { "text": "装备精炼", "link": "/game/refinement" },
+              { "text": "专用窗口附魔", "link": "/game/window-enchantment" },
+              { "text": "NPC 对话附魔", "link": "/game/npc-enchantment" },
+              { "text": "装备升阶", "link": "/game/equipment-grade" }
+            ]
+          },
+          {
             "text": "任务与目标",
             "link": "/game/quests"
           },
@@ -249,6 +260,14 @@ export default defineConfig({
           {
             "text": "聊天与社交",
             "link": "/game/social"
+          },
+          {
+            "text": "公会与氏族",
+            "link": "/game/guild"
+          },
+          {
+            "text": "攻城战",
+            "link": "/game/guild-war"
           },
           {
             "text": "NPC 对话与商店",

@@ -9,6 +9,7 @@
 | 画面、特效、声音、镜头与返回选角 | [画面、声音与镜头](/game/settings) |
 | 从桌面图标全屏启动 | [PWA](/game/pwa) |
 | 背包操作、穿戴与资格变化 | [背包与装备](/game/inventory-equipment) |
+| 精炼、附魔与升阶服务 | [装备加工服务总览](/game/equipment-services) |
 | 任务分类、狩猎进度与成就 | [任务与目标](/game/quests) |
 | 技能与道具绑定 | [快捷键与技能](/game/shortcuts) |
 | 说明中的导航、帮助和物品链接 | [说明链接与帮助](/game/text-links/) |
