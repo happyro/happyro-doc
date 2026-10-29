@@ -72,8 +72,8 @@ outline: [2, 3]
 ::: details 查看游戏场景参考
 
 <figure class="job-guide-figure">
-  <a href="/images/strategy/job-change/knight-guild.webp" target="_blank" rel="noopener" aria-label="查看大图：骑士团内完成二转的场景">
-    <img src="/images/strategy/job-change/knight-guild.webp" alt="骑士团内完成二转的场景" width="570" height="530" loading="lazy" decoding="async" />
+  <a href="/images/strategy/job-change/knight-guild.webp" target="_blank" rel="noopener" aria-label="查看大图：骑士团长与公会 NPC 所在的场景">
+    <img src="/images/strategy/job-change/knight-guild.webp" alt="骑士团长与公会 NPC 所在的场景" width="570" height="530" loading="lazy" decoding="async" />
   </a>
   <figcaption>骑士团长附近：prt_in 88,101（历史流程实测截图裁剪） · 点击查看大图</figcaption>
 </figure>

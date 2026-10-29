@@ -17,22 +17,22 @@
       "file": "brand/ro-icon-1.jpg",
       "source": "既有站点品牌图片",
       "sha256": "2d745a38b20a3d54eddca1ae30962af68e5aa5dbcb4b38ed2d0678a5b8d6c161",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "auditDecision": "retain",
-      "auditReason": "品牌图标与标识未变，保留现有素材"
+      "auditReason": "本轮目视复核首页Logo及图标，品牌未变，保留原始素材，不重编码或冒充新截图"
     },
     {
       "file": "brand/ro-logo-1.png",
       "source": "既有站点品牌图片",
       "sha256": "3b0b9d934d0041c35ca9018ab029ede948bf31b926e2474d54b0e174ff19f0ee",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "auditDecision": "retain",
-      "auditReason": "品牌图标与标识未变，保留现有素材"
+      "auditReason": "本轮目视复核首页Logo及图标，品牌未变，保留原始素材，不重编码或冒充新截图"
     },
     {
       "file": "game/adventure/desktop-navigation.png",
       "operation": "桌面导航按地图代码搜索普隆德拉",
-      "build": "mvrsuglp",
+      "build": "mvtwo79r",
       "viewport": [
         1280,
         800
@@ -44,16 +44,20 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "01435e9bba337d0dc377180b8fe74158e9b2ff149743480ff345528535f5bc94",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "518746c42f4520dfd5dcc2eb6cf2c577550a3c6fa62640eb648aa0ec0df41a91",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前 PWA 实机界面重新截图并视觉复核；固化规则见 capture-rules.json",
+      "device": "desktop",
+      "entry": "状态栏 → 导航",
+      "state": "普隆德拉，导航类型默认值，未执行寻路或传送",
+      "captureRuleRef": "docs/public/images/capture-rules.json"
     },
     {
       "file": "game/adventure/desktop-world-map.png",
       "operation": "打开世界地图查看区域和地图名称",
-      "build": "mvrsuglp",
+      "build": "mvtwo79r",
       "viewport": [
         1280,
         800
@@ -65,16 +69,20 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "fbeac252a243acb59f2356721e9b7b75b82d4abca27501a9daa079d0c709414b",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "f37a47eef9af43ee6da64c9ebaa8c1c5f091c92de340a6a356a287190f098df1",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前 PWA 实机界面重新截图并视觉复核；固化规则见 capture-rules.json",
+      "device": "desktop",
+      "entry": "状态栏 → 世界地图",
+      "state": "米德加尔特大陆世界地图，未执行地图移动",
+      "captureRuleRef": "docs/public/images/capture-rules.json"
     },
     {
       "file": "game/adventure/tablet-adventure-character-stats.png",
       "operation": "向下滚动查看角色的更多选项",
-      "build": "mvrsuglp",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -86,16 +94,20 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "b753b79a1cd49e5a041367f27255db978c178d12ec26e6af8b70a18ad03f6c01",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "cd437503821006853d250dc37b754eb201d99f0f6b0aea24d957e3d8f037f6b9",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前 PWA 实机界面重新截图并视觉复核；固化规则见 capture-rules.json",
+      "device": "tablet-landscape",
+      "entry": "菜单 → 冒险工具 → 角色",
+      "state": "罗安，剑士 ID 1，滚动至基础属性区域",
+      "captureRuleRef": "docs/public/images/capture-rules.json"
     },
     {
       "file": "game/adventure/tablet-adventure-character.png",
       "operation": "冒险工具角色页",
-      "build": "mvrsuglp",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -107,16 +119,20 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "6b75c7defd49d82d9d5a9742da74c91e3a13b70fb23c4df326ddf95342b01c15",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "3425fc3a70effa9c5e9b057c975d7c7510e41d9fd6a5302effd4d844e6196266",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前 PWA 实机界面重新截图并视觉复核；固化规则见 capture-rules.json",
+      "device": "tablet-landscape",
+      "entry": "菜单 → 冒险工具 → 角色",
+      "state": "罗安，剑士 ID 1，角色详情顶部",
+      "captureRuleRef": "docs/public/images/capture-rules.json"
     },
     {
       "file": "game/adventure/tablet-adventure-item.png",
       "operation": "红色药水资料与掉落来源",
-      "build": "mvrsuglp",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -128,16 +144,20 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "647c73589e6bbdba6d8675624c9c5948713c7d24644092348fa19423d0b971c1",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "0eaa4eb12c0b96db43a92c8753704d6a007e338ad5455da9c2052a4d4fe3430b",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前 PWA 实机界面重新截图并视觉复核；固化规则见 capture-rules.json",
+      "device": "tablet-landscape",
+      "entry": "菜单 → 冒险工具 → 物品",
+      "state": "搜索并选中红色药水 ID 501",
+      "captureRuleRef": "docs/public/images/capture-rules.json"
     },
     {
       "file": "game/adventure/tablet-adventure-map.png",
-      "operation": "当前地图资料、NPC与地图魔物",
-      "build": "mvrsuglp",
+      "operation": "冒险工具地图默认状态，普隆德拉地图和 NPC 列表可见",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -149,16 +169,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "3d19392aa755fd98ed345b30ed7ab4424424006f19fee47d7bf243e399abd53b",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "958b2bd5f701891ac7989a50875aac8d8370e9e5172bd1ab562bf173e7d8b524",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前平板 PWA 实机冒险工具地图页重新截图并视觉复核"
     },
     {
       "file": "game/adventure/tablet-adventure-monster.png",
       "operation": "搜索魔物ID1002并查看波利资料",
-      "build": "mvrsuglp",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -170,16 +190,20 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "525c355f3ae5af63f3776cb331433d25f2a5e857885970e189dac98ac6e71d07",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "4b10165aab6d325b3831acbffb46285b5c9f029d0a552eb984271bdcfd5ea9db",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前 PWA 实机界面重新截图并视觉复核；固化规则见 capture-rules.json",
+      "device": "tablet-landscape",
+      "entry": "菜单 → 冒险工具 → 魔物",
+      "state": "关闭当前地图筛选，选中波利 ID 1002",
+      "captureRuleRef": "docs/public/images/capture-rules.json"
     },
     {
       "file": "game/adventure/tablet-adventure-npc.png",
       "operation": "按名称搜索卡普拉，查看位置与详情",
-      "build": "mvrsuglp",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -191,16 +215,20 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "fe6543be095ed9d8f11d03c0f6d2a68b5e2453c2d2886ee27b68b9a144a7dfea",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "fe93e465fe57788158b459ccce451cb112affaf3ef63548a12a1118aa0e28689",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前 PWA 实机界面重新截图并视觉复核；固化规则见 capture-rules.json",
+      "device": "tablet-landscape",
+      "entry": "菜单 → 冒险工具 → NPC",
+      "state": "当前地图筛选，选中普隆德拉卡普拉职员，未传送",
+      "captureRuleRef": "docs/public/images/capture-rules.json"
     },
     {
       "file": "game/adventure/tablet-adventure-settings-rules.png",
       "operation": "向下滚动查看设置的更多选项",
-      "build": "mvrsuglp",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -212,16 +240,20 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "ffabbfa6c5dd5a8417cc781cf1e145862ae295bbeeca2c87a127073fba2e530f",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "6cae1f7f2bcf90576fb38c83cc9871a0d7f3b6675b392e7be5dd0c77e372e846",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前 PWA 实机界面重新截图并视觉复核；固化规则见 capture-rules.json",
+      "device": "tablet-landscape",
+      "entry": "菜单 → 冒险工具 → 设置",
+      "state": "滚动至精炼/升阶、地图导航和魔物召唤规则区域，未修改",
+      "captureRuleRef": "docs/public/images/capture-rules.json"
     },
     {
       "file": "game/adventure/tablet-adventure-settings.png",
       "operation": "冒险工具设置页",
-      "build": "mvrsuglp",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -233,25 +265,29 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "0347490f7204529f919282ad796eaca9cdedffb94412d44633a3b9860fa0f08c",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "0782808f9a967d658bff34b0a41222043c44ef5131e4bf32f0ddecbe6e381701",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前 PWA 实机界面重新截图并视觉复核；固化规则见 capture-rules.json",
+      "device": "tablet-landscape",
+      "entry": "菜单 → 冒险工具 → 设置",
+      "state": "设置页顶部，未修改或应用全服设置",
+      "captureRuleRef": "docs/public/images/capture-rules.json"
     },
     {
       "file": "game/combat/automation-flow.svg",
       "source": "按 AutoCombatController 与当前配置绘制的 SVG 示意图，非游戏截图",
       "createdAt": "2026-10-26",
       "sha256": "30742740a6c1f67a189bb86f5df6687060ec4e84f7c38a4225797959dced761d",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "auditDecision": "retain",
-      "auditReason": "流程／范围示意与当前正文及代码规则核对；非实机场景截图"
+      "auditReason": "本轮逐图复核流程/范围示意；与对应攻略、当前服务端转职脚本及客户端战斗设置核对；无旧UI截图，保留矢量源文件"
     },
     {
       "file": "game/combat/phone-combat.png",
-      "operation": "手机竖屏战斗设置",
-      "build": "mvrsuglp",
+      "operation": "右下角战斗设置 → 战斗设置标签",
+      "build": "mvtwo79r",
       "viewport": [
         430,
         860
@@ -263,25 +299,25 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "9c36c1bf3cca19636b39c1981d35f2cbf3e89292703d3be2fcb910a1e15f3b8f",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "d497c85c7f10e6ad9929f9f6060c5ad64b20d53fd96551659bb0e16255e6b702",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/combat/search-ranges.svg",
       "source": "按 AutoCombatController 与当前配置绘制的 SVG 示意图，非游戏截图",
       "createdAt": "2026-10-26",
       "sha256": "55fdb50c83b3b1201daf99b469427c5f2e6c522919d9e598452931df6405a6c4",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "auditDecision": "retain",
-      "auditReason": "流程／范围示意与当前正文及代码规则核对；非实机场景截图"
+      "auditReason": "本轮逐图复核流程/范围示意；与对应攻略、当前服务端转职脚本及客户端战斗设置核对；无旧UI截图，保留矢量源文件"
     },
     {
       "file": "game/combat/tablet-pickup-picker.png",
       "operation": "按物品 ID 搜索杰勒比结晶，查看排除拾取候选",
-      "build": "mvrsuglp",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -293,16 +329,20 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "5cdec46bc08ec2b13eb679027734c0952089fe189a7380bb9ab5737e7c34eaaa",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "301567158030258e36d58e012f0afd28361bb12bb609fc1fff64ee957d8bc81f",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前 PWA 实机界面重新截图并视觉复核；固化规则见 capture-rules.json",
+      "device": "tablet-landscape",
+      "entry": "战斗设置 → 拾取设置 → 添加",
+      "state": "添加排除物品弹窗初始状态，未选择物品",
+      "captureRuleRef": "docs/public/images/capture-rules.json"
     },
     {
       "file": "game/combat/tablet-pickup.png",
       "operation": "拾取规则和排除物品",
-      "build": "mvrsuglp",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -314,16 +354,20 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "3ed5fe7b914c328769f590dc6af731e113a5f9f775e24fe4951351d932a70626",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "867d9ba1d841aea39f4b9fd360dfd08289f155c87d296f8cc4307fea78875934",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前 PWA 实机界面重新截图并视觉复核；固化规则见 capture-rules.json",
+      "device": "tablet-landscape",
+      "entry": "战斗设置 → 拾取设置",
+      "state": "自动拾取关闭，范围 5 格，装备/消耗品/卡片/其它开启，排除列表为空",
+      "captureRuleRef": "docs/public/images/capture-rules.json"
     },
     {
       "file": "game/combat/tablet-recovery-picker.png",
       "operation": "从真实背包选择HP恢复道具，支持输入搜索",
-      "build": "mvrsuglp",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -335,16 +379,19 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "50395990f9a4e7b06a826d8bf07b09848de6def2d7e72eb9f25d956fcbbe5404",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "57b8bc3398bac65fb687f495933fe0dbac1ae031c690bb7cdce2fb62e153bd05",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前 PWA 实机界面重新截图并视觉复核；固化规则见 capture-rules.json",
+      "device": "tablet-landscape",
+      "entry": "战斗设置 → 自动恢复 → HP 道具选择",
+      "state": "显示红色药水数量，未选择或确认"
     },
     {
       "file": "game/combat/tablet-recovery.png",
       "operation": "HP和SP独立恢复设置",
-      "build": "mvrsuglp",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -356,16 +403,20 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "508cf3d770f5763fa689cb0fc342c5a5901907cff8d81c3f9e11031a80f9ced3",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "b76c324e5cf52459d1ba4af6b3647df27d5216f0c36f50daa47e0af5ceccd4fe",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前 PWA 实机界面重新截图并视觉复核；固化规则见 capture-rules.json",
+      "device": "tablet-landscape",
+      "entry": "战斗设置 → 自动恢复",
+      "state": "HP/SP 自动恢复关闭，阈值为当前默认值，未选择道具",
+      "captureRuleRef": "docs/public/images/capture-rules.json"
     },
     {
       "file": "game/companions/tablet-pet-hatch.png",
-      "operation": "使用孵蛋器，选择波利宠物蛋并在底栏确认",
-      "build": "mvrsuglp",
+      "operation": "菜单 → 背包 → 携带用孵蛋器 → 使用 → 确认 → 点击被爱的 波利宠物蛋",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -377,16 +428,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "0779edc0eed8672b7d427a4d7022aad9dc92f564ccfa2a2ad5a4e1f9bd0643a6",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "094a2ed8d1af911d82791e2ed4ab21baaa4e3b463ada301ce59980a7863e7bde",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/companions/tablet-pet.png",
-      "operation": "罗安实际孵化波利后查看状态",
-      "build": "mvrsuglp",
+      "operation": "孵化后立即菜单 → 宠物",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -398,16 +449,19 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "c74f58dae2be68c13f52f3e6c432935fa69fe9b86566bde469c6534dd3fc7e05",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "f4dd55f1de574b158d3d0cfa3c54d20451b95ef6dfdef0f86cd26bd03524fb06",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json",
+      "device": "tablet-landscape",
+      "entry": "菜单 → 宠物",
+      "state": "未召唤宠物的当前状态，进化区域与底部操作可见"
     },
     {
       "file": "game/controls/desktop-achievements.png",
-      "operation": "成就一般分类查看当前目标、完成情况和奖励",
-      "build": "mvrsuglp",
+      "operation": "状态栏奖杯图标成就 → 一般 → 默认选中获得第一道光环！",
+      "build": "mvtwo79r",
       "viewport": [
         1280,
         800
@@ -419,16 +473,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "0dd310dc156fa2f0c86cb6a6fa96cdaa3b96421dea8d763a7f12bc13f923e4ea",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "35e8f6983d9de59962d70981fa0d2f5255987a668dc4387f6434c884a9512f69",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/controls/phone-actions.png",
-      "operation": "手机角色动作菜单",
-      "build": "mvrsuglp",
+      "operation": "右下角动作",
+      "build": "mvtwo79r",
       "viewport": [
         430,
         860
@@ -440,21 +494,21 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "d3da3b15a719c863c64cac0e7afe65b6c1788c886ba2259fab53d5eec62990da",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "1ca037ed4f565dadbe3cba36756779e9817611ddcfdc5094f1236b3b8920baec",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/controls/phone-character.png",
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "72fd54725640abd0b6b3a8082c95a2b39775a76d690175218531a8588e0b5911",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图",
-      "build": "mvrsuglp",
+      "capturedAt": "2026-10-30",
+      "sha256": "c83a3289d4f82c4d55cf9cf1ae4504d2a7a154da6005d03e88867a4cf22a0145",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json",
+      "build": "mvtwo79r",
       "viewport": [
         430,
         860
@@ -464,12 +518,13 @@
         "name": "罗安",
         "job": 1,
         "level": 99
-      }
+      },
+      "operation": "PWA 启动页 → 进入游戏 → 登录测试账号 → 选择第一个角色罗安，停留选角页"
     },
     {
       "file": "game/controls/phone-emotions.png",
-      "operation": "手机表情列表，选择后显示角色表情",
-      "build": "mvrsuglp",
+      "operation": "右下角动作 → 表情",
+      "build": "mvtwo79r",
       "viewport": [
         430,
         860
@@ -481,16 +536,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "71ad6c7609cf3278802cac14b8613435e0f77b74bdfe9f984bdab0f25e19ab41",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "a14c1b7f324648d5c168533be1510fa5836fa0956bfdede6cb66e7cfbcf7ea03",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/controls/phone-shortcuts.png",
-      "operation": "手机选择狂击技能，显示快捷键位置和保存操作",
-      "build": "mvrsuglp",
+      "operation": "右下快捷键 → 保持位置 1 → 选中狂击",
+      "build": "mvtwo79r",
       "viewport": [
         430,
         860
@@ -502,16 +557,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "67261bc17f00f58c46c4e2f1cc2ee79bd3049d43463903c9de979e034fd078e4",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "09c7d7df68c38987cae8c4b6d8f21492d7659c98ad82eaf1f207f8d7e980b5e1",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/controls/phone-sitting.png",
-      "operation": "罗安通过动作菜单坐下休息",
-      "build": "mvrsuglp",
+      "operation": "右下角动作 → 坐下，等待角色坐姿与状态图标出现",
+      "build": "mvtwo79r",
       "viewport": [
         430,
         860
@@ -523,16 +578,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "e4a5b21646bc74adc522f10e9a56f1da83ea6d8d967ab0d226c69e3d7aa66cf3",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "dcf353dd3f58c126c11661b10edcbf9a2ab33467d762dd9ec2a4c652ffaa3536",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/controls/tablet-attributes.png",
       "operation": "菜单：素质",
-      "build": "mvrsuglp",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -544,16 +599,19 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "6e405f0c7daf779cd3b72fb4a3dc13bee7860d0d01c2c2e56a77cf2f4346d084",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "161e837f9402f98a33c12e0337a7521af7d10a0e5e419567c669584bd91939f1",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前 PWA 实机界面重新截图并视觉复核；固化规则见 capture-rules.json",
+      "device": "tablet-landscape",
+      "entry": "菜单 → 素质",
+      "state": "罗安剑士，素质点 0，未增加或重置属性"
     },
     {
       "file": "game/controls/tablet-menu.png",
-      "operation": "打开全部菜单入口",
-      "build": "mvrsuglp",
+      "operation": "打开全部主菜单入口",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -565,16 +623,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "3a98b8ec954632440da502b5f6942fe49e110634b27900534f18e7323de8c4b9",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "bd2377c01cede1a14456125230a4c7739d083c8dcdca4937ca8d08f30c149f9a",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "当前实机主菜单重新截图并逐张视觉复核"
     },
     {
       "file": "game/controls/tablet-quests.png",
-      "operation": "任务显示第一次战斗的狩猎目标与进度",
-      "build": "mvrsuglp",
+      "operation": "对话任务板 → 下一步 → 龟岛 → 下一步 → 岩石龟 → 下一步 → 下一步 → 我去狩猎。 → 结束对话 → 左上角任务",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -586,16 +644,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "9a6399e036ebc4e7029c888283b068bedabfd85fe7a3158d28c5db3df82933ac",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "1ce795407b81e7ec015120a512098d2b5cbdfad2d05659a7fe379fefbf5ba867",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/controls/tablet-shortcuts.png",
-      "operation": "平板选中狂击并展示绑定位置与保存操作",
-      "build": "mvrsuglp",
+      "operation": "菜单 → 快捷键 → 位置 1 → 左侧狂击",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -607,16 +665,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "8f00ae0a006cbb7754f42a97e9496d50d09e663548434ad19ce957eaf4112091",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "962cb3f679e8937535eb2182d8592ec48c9b1c35e31c8b84563a863959f503c5",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/controls/tablet-skills.png",
-      "operation": "菜单：技能",
-      "build": "mvrsuglp",
+      "operation": "菜单 → 技能 → 狂击",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -628,16 +686,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "086eefe6308a84a1cc0622bb06f01369fc3678873cda0085014fb363239e29fb",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "4feaebeafae2c7a4f12d5080237c6c78e09bce60b67c1f0797b6703a0c344be5",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/controls/tablet-status.png",
       "operation": "施放霸体后查看正在生效的状态及说明",
-      "build": "mvrsuglp",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -649,16 +707,19 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "0a0b665f336f23e749a28be018ec03beaeda7b36cde6dd91dd11898dcd0e7fdd",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "b2230365a2e0990d41d6731bf06988624dd395861ffe3ed9d971f051b6fe2ca8",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前 PWA 实机界面重新截图并视觉复核；固化规则见 capture-rules.json",
+      "device": "tablet-landscape",
+      "entry": "菜单 → 状态",
+      "state": "当前没有状态效果，未执行技能或状态变更"
     },
     {
       "file": "game/inventory/desktop-inventory.png",
-      "operation": "桌面背包和鼠标操作入口",
-      "build": "mvrsuglp",
+      "operation": "桌面背包默认状态，显示当前消耗品",
+      "build": "mvtwo79r",
       "viewport": [
         1280,
         800
@@ -670,16 +731,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "1888bc79945c3ea3e06ab0399ad3ef19e712325b7f6bc64b5439be66f839083f",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "e06a495ade1d842165b4ba5602ce54240ecccc710f0d08342cf21ea37d74ad45",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前 PWA 实机界面重新截图并视觉复核；固化规则见 capture-rules.json"
     },
     {
       "file": "game/inventory/phone-equipment.png",
-      "operation": "手机竖屏装备布局",
-      "build": "mvrsuglp",
+      "operation": "手机装备页默认状态，显示各部位选择入口",
+      "build": "mvtwo79r",
       "viewport": [
         430,
         860
@@ -691,16 +752,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "d90d6242b0646f6be439a9753ded4356abf041d0652d363d943b88fd08c5fbd0",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "61f8d628d650cb775e3332da6a3d527ee2f14526cbef47cb4e79603b8058a9e0",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前手机 PWA 实机装备界面重新截图并视觉复核"
     },
     {
       "file": "game/inventory/phone-inventory.png",
-      "operation": "背包选择红色药水，展示手机详情与使用操作",
-      "build": "mvrsuglp",
+      "operation": "手机背包默认状态，显示当前装备与消耗品",
+      "build": "mvtwo79r",
       "viewport": [
         430,
         860
@@ -712,16 +773,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "e6ab9e228cd6d5ef665f3dda1b1cd23919ddb06d58e3dc23deac6275e3ed0d99",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "b149fb9ce3944125d6a6d46f4f3cce2a3f1080ff0113a3d6b80046269e487e5d",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前手机 PWA 实机背包界面重新截图并视觉复核"
     },
     {
       "file": "game/inventory/tablet-equipment-picker.png",
-      "operation": "卸下长剑后，从服务器筛选的右手候选中重新装备",
-      "build": "mvrsuglp",
+      "operation": "卸下长剑后打开右手/武器选择弹窗，显示可重新装备的长剑",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -733,16 +794,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "b7fd8977afb4fd97dc08c7c98d1edce93e8d0163aa9b131b47a7c17944edc24d",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "4856999d4e840e0cb0c6439a5fd28bd128a6082f84c51120c1805258079e19e8",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前 PWA 实机界面重新截图并视觉复核；固化规则见 capture-rules.json"
     },
     {
       "file": "game/inventory/tablet-equipment.png",
-      "operation": "右手装备长剑的详细说明与操作",
-      "build": "mvrsuglp",
+      "operation": "装备页默认状态，显示已装备长剑和各部位选择入口",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -754,16 +815,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "915667a4f39d325cec68564bcb61452ac103f77b64f23b72590b5517634335ce",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "9c4e2da4d371842d24656c1d7ffeffacf0757a0dae92337485e30ad335bd62cb",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前 PWA 实机界面重新截图并视觉复核；固化规则见 capture-rules.json"
     },
     {
       "file": "game/inventory/tablet-inventory.png",
-      "operation": "选择背包药水，查看说明和可用操作",
-      "build": "mvrsuglp",
+      "operation": "背包默认状态，显示当前可用装备与消耗品",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -775,16 +836,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "bb8c113ff5f0042279cfbb680c75166afe072a681b2a4e97c184475ea57c6106",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "04b69239db227f47598d4c9e64843c725713bd588d2e167a75fadb4d038eaee8",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前 PWA 实机界面重新截图并视觉复核；固化规则见 capture-rules.json"
     },
     {
       "file": "game/mail/tablet-mail-compose.png",
-      "operation": "罗安向玛雅写信并添加一瓶红色药水",
-      "build": "mvrsuglp",
+      "operation": "菜单 → 邮件 → 写信 → 输入收件人玛雅并校验 → 填写标题和正文 → 点击红色药水 → 数量 1 → 确认",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -796,16 +857,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "ac31eb175d55614c26e19dd32ba4ec97d9c9b09368f10817866a1c8f8f359b94",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "063616ef5a47a6772c2dd01c374fb6aec1b89c1f89219a47e9d496a2cda75ebf",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/mail/tablet-mail-read.png",
-      "operation": "玛雅收到罗安实际发送的信件和药水附件",
-      "build": "mvrsuglp",
+      "operation": "玛雅菜单 → 邮件 → 刷新 → 选择最新的冒险补给",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -817,16 +878,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "a018441d7b6de00b431fb656801ded0eef323cedbd4a2cb19e314f0bedcfaff2",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "f2cd235451bb26131abe535a58d74d0c12b625b71f2d39d53c26115a1ccc5b3e",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/npc/desktop-cash-shop.png",
-      "operation": "桌面商城入口显示当前点数和商品区域，本机未配置商品",
-      "build": "mvrsuglp",
+      "operation": "点击右上角 Cash Shop 商城图标",
+      "build": "mvtwo79r",
       "viewport": [
         1280,
         800
@@ -838,16 +899,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "6639cd53f46f87fe85909f1301f4bec53871ac00cfe4956b43ba17a6e630972b",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "b3f77b56e29411f9483b521cda05c696c470bc915fc5d4f706a2e6a2cd85159e",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/npc/desktop-refinement.png",
-      "operation": "从桌面背包拖入长剑，查看精炼材料与概率，未提交",
-      "build": "mvrsuglp",
+      "operation": "与忽克连对话 → 关闭介绍 → 等待精炼窗口 → Alt+E打开背包 → 装备页 → 将长剑拖至精炼槽",
+      "build": "mvtwo79r",
       "viewport": [
         1280,
         800
@@ -859,16 +920,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "11d171f9c2e58a60c060db8a8615c0671ad8d78a5c4420fecbe3c0021a968b99",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "b4a66cb57df3e26130f9e388edac4a4ed2bc70026d3e9d31eeef40b1caa9fed0",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/npc/tablet-npc-dialogue.png",
-      "operation": "与卡普拉职员交谈并选择服务",
-      "build": "mvrsuglp",
+      "operation": "普隆德拉卡普拉职员对话初始状态，显示欢迎语和下一步按钮",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -880,16 +941,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "11a5bb6dacf092524d40bcb8c8fc7ba9d74323bdfc0161631f4b15ecbdb66518",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "acd62284ff5f724b1b27365ffa7e6f466d9bbf2a612f5e688e444e2148670ea0",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前平板 PWA 实机卡普拉对话界面重新截图并视觉复核"
     },
     {
       "file": "game/npc/tablet-npc-options.png",
-      "operation": "卡普拉职员服务选项，平板上下留白均为 16px",
-      "build": "mvrxu7wc",
+      "operation": "卡普拉欢迎对话下一步的服务菜单",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -901,16 +962,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "f95c14d9517ed1fdd5be1efeb1f87e1ab0f35447f890826ec28a05f05a145217",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "平板 NPC 选项上下留白统一为 16px 后，使用最新完整 PWA 构建重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "7931b355d8fb157557f4ebc0078450f2afd3a65252b7431bba09538a38b9abd6",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "按原断点重新操作卡普拉对话，逐张视觉验收后固化"
     },
     {
       "file": "game/npc/tablet-shop-buy.png",
-      "operation": "向NPC购买牛奶，先核对数量与合计",
-      "build": "mvrsuglp",
+      "operation": "牛奶商人购买清单：牛奶 1 瓶，25 Z，未付款",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -922,16 +983,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "e1110975495ab1cdc16ffbf16b71d0dfaa5f6d26b8fbdc42b813341d109f0b5f",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "b1ba957c7c662ba315b37011029b2daf9e402f9ceb6181e474d21ab07bf649b7",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "实机购买清单逐张视觉复核，三栏与底栏完整可见"
     },
     {
       "file": "game/npc/tablet-shop-sell.png",
-      "operation": "将一瓶牛奶加入待出售清单",
-      "build": "mvrsuglp",
+      "operation": "牛奶商人出售清单：牛奶 1 瓶，12 Z，未成交",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -943,16 +1004,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "87466535362df4705162ef8355985ae23a58d867fff0570bcfa977ef278b96a9",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "a59e2b520864be9e926e38f3d2c7faf07b1597596f88a5eb815c71882e4d6267",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作出售清单并逐张视觉复核"
     },
     {
       "file": "game/settings/tablet-camera.png",
-      "operation": "镜头控制",
-      "build": "mvrsuglp",
+      "operation": "打开镜头控制面板，展示重置、旋转、拉近拉远和抬高降低操作",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -964,16 +1025,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "a01603d2bf5215c5e70d344393e92670e1442a4b363180256ec32afb7901ac81",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "e688f5617c8d70b3cd71a0c8afc28789f78bd491d4fc9c4a46c4b8f994073c9b",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前平板 PWA 实机镜头控制面板重新截图并视觉复核"
     },
     {
       "file": "game/settings/tablet-settings-audio.png",
       "operation": "音量与声音开关",
-      "build": "mvrsuglp",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -985,16 +1046,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "c53009d5ee7b9c155594c73ca4310716b3f7f35c076318b2efce62c62382d631",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "10fb32069c68a7d4d9f4788c49dc81e7b740ae4095bb75dea97e815e2343378a",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前平板 PWA 实机设置声音页重新截图并视觉复核"
     },
     {
       "file": "game/settings/tablet-settings-effects.png",
       "operation": "特效设置",
-      "build": "mvrsuglp",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -1006,16 +1067,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "079599287fcfc47db5863907f0c554ab63791bf92eac36869e18d1408916c003",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "239f6785d42ff59eb710071b26555c838416d28c041c466b89d406a6f701d117",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前平板 PWA 实机设置特效页重新截图并视觉复核"
     },
     {
       "file": "game/settings/tablet-settings.png",
       "operation": "菜单：设置",
-      "build": "mvrsuglp",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -1027,16 +1088,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "e293394303e74a59e005b8693da8b7c5a68163e8526941b84be58a98b024dcf5",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "c51fd5d954eb3997c895f14ab815429a5934f6f6c34914fdfd289e12f7d5e3d1",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前平板 PWA 实机设置画面重新截图并视觉复核"
     },
     {
       "file": "game/social/desktop-chat-room.png",
-      "operation": "Alt+C 打开聊天室创建设置，填写标题并查看人数和公开设置，未发布房间",
-      "build": "mvrsuglp",
+      "operation": "Alt+C → 标题填写普隆德拉冒险交流",
+      "build": "mvtwo79r",
       "viewport": [
         1280,
         800
@@ -1048,16 +1109,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "ac8d74d9be4dc888875ee67091fb1317be74ad698c3d65119f6b80fd62907e65",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "71282ff46ad8e067cf450b16b2285412be0ce5b3504efbd76e90f93b804b9567",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/social/tablet-chat.png",
-      "operation": "私聊频道与会话管理",
-      "build": "mvrsuglp",
+      "operation": "菜单 → 聊天 → 私聊 → + 新私聊 → 输入玛雅 → 开始私聊",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -1069,16 +1130,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "6ff4107b2725272a4804977a6cacf6c196308eb4c8a4cf6f2ad709091e95fe70",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "e5a9d526074740a7730aeb5cc9644585743b246b6b05f2cda89b331c9a6bd479",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/social/tablet-social-friend.png",
-      "operation": "罗安与玛雅互相添加好友后查看在线状态",
-      "build": "mvrsuglp",
+      "operation": "菜单 → 社交 → 好友 → 玛雅",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -1090,16 +1151,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "45bb8ab8fef6c895b8ba35b66e22fe16b9b9124df2e744d1963eb68b56102421",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "b9fea82f15ebf68cd6b3bd74f5e568a2a41a7b566577fb1ef893e581fdbb5cef",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/social/tablet-social-party.png",
-      "operation": "玛雅创建队伍并邀请罗安，罗安接受后查看两名成员和队长操作",
-      "build": "mvrsuglp",
+      "operation": "玛雅：菜单 → 社交 → 队伍 → 队伍管理",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -1111,16 +1172,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "490d3d291335449965edbd3781a5bfd9bffb3caa8087df5585c048262ac7067b",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "c41307a31e2c3c295edea87a338126ab5c0359d9f2a8cd754dc388fe185ed3f0",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/storage/tablet-bank.png",
-      "operation": "角色余额与银行余额",
-      "build": "mvrsuglp",
+      "operation": "角色余额、银行余额及存取箭头",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -1132,16 +1193,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "f69521dad5dfff1c049d1b92cd2b808bebf7f109047df19c44ddd7e6132cacd8",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "d3f9aca5e9ae9808acc6752d4bda72c02f31e35a4068d44ff0e4cb323ad40934",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "真实银行余额加载后逐张截图和视觉复核"
     },
     {
       "file": "game/storage/tablet-cart-rental.png",
-      "operation": "玛雅在服务器开放的角色维护入口租用手推车",
-      "build": "mvrsuglp",
+      "operation": "菜单 → 冒险工具 → 角色，保持当前职业铁匠，不选左侧其他职业",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -1153,16 +1214,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "cb59baa0bbc36543a22be37257562012f999985f88124689b7b66698ace4c115",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "4cb8656ea7cbca13db4b2896bc0c1efdc4c2dda5d046781ad13ba88bd989cfe9",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/storage/tablet-cart.png",
-      "operation": "玛雅选择车内红色药水，核对取出数量",
-      "build": "mvrsuglp",
+      "operation": "菜单 → 手推车 → 取出 → 红色药水",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -1174,16 +1235,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "007cb7c1aca396c5fb7fa15c6224b02195981351a6a13e1ff3f91b956288aaef",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "d34b2a75e38ab0230af9f86dd396fecea58160deff370bfdb8fdf4d20026ab81",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/storage/tablet-storage.png",
-      "operation": "在真实仓库服务中选择背包药水并存入",
-      "build": "mvrsuglp",
+      "operation": "触摸卡普拉职员 → 下一步 → 使用仓库 → 结束对话；等待标题「仓库 (0/600)」可见后操作，不以固定短延时认定打开失败；存取操作选存入 → 红色药水",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -1195,16 +1256,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "d05e08961fc4d5651dfb67b67d4ccceba1be00cd058735ed4e7ceed0dd92982d",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "55af719f3a0671b43f484cb231122375174898a8e6083edb5a901516796a472f",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/text-links/desktop-npc-navi-actions.png",
-      "operation": "结束 NPC 指路对话后，打开地图与取消显示在战斗按钮左侧同一行",
-      "build": "mvrx4xj8",
+      "operation": "点击解说员 → 继续两次 → [ 主要设施 ]并确定 → [ 工具店 ]并确定 → 点击蓝色[工具店]链接（目标alberta 98,154） → 继续 → 上一级菜单并确定 → 菜单项取消并确定 → 关闭",
+      "build": "mvtwo79r",
       "viewport": [
         1280,
         800
@@ -1216,16 +1277,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "b96a728abc28bb3efa31eaea9807f7b7097d93b1a2b391cfc9bbbe905378c65b",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "交易、摆摊与导航按钮布局调整后，使用最新完整 PWA 构建重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "8dea2019313250baf408e4d72fa42d77ab0ad4132e5115d636a96176134c8ccd",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/text-links/desktop-npc-navi-toast.png",
-      "operation": "桌面向导对话中点击工具店地点链接",
-      "build": "mvrsuglp",
+      "operation": "点击解说员 → 继续两次 → [ 主要设施 ]并确定 → [ 工具店 ]并确定 → 点击蓝色[工具店]链接（目标alberta 98,154）",
+      "build": "mvtwo79r",
       "viewport": [
         1280,
         800
@@ -1237,16 +1298,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "bcf6de803bfef968d0049b54e92b041ad08abef219ea3b7d1d3952d747f5360c",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "2b60c20ba74d1c161909d46153e952f48ace4f1794da475d6893e1e07a3df258",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/text-links/desktop-tipbox.png",
-      "operation": "桌面打开Episode14.2帮助主题",
-      "build": "mvrsuglp",
+      "operation": "Alt+F → 物品图鉴 → 搜索6081 → 说明中点击 [Episode14.2]",
+      "build": "mvtwo79r",
       "viewport": [
         1280,
         800
@@ -1258,16 +1319,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "d33866a7d1f78dcc73ff373161808986da358cd0049baeedef43925cf2763e50",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "59896800f16afac217b58901e6eeaf70873d980a5b9b5855cd4199db5be0af1a",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/text-links/phone-item-return.png",
-      "operation": "从导航切回物品页，恢复原物品资料",
-      "build": "mvrsuglp",
+      "operation": "物品说明点击 [防具商纳帕拉] 打开冒险工具地图 → 不传送 → 点击物品标签返回",
+      "build": "mvtwo79r",
       "viewport": [
         430,
         860
@@ -1279,16 +1340,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "2c5b4d3fcdb63d9afdca3902e6e8c27130c82d4af254dbd05e083461dd0450b9",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "913921ebfa8fa0d6728040d4ae8dc5013f02eafbf0324215e11fe439edabc6c1",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/text-links/phone-npc-navi-actions.png",
-      "operation": "当前手机导航按钮位于战斗操作区左侧同一行",
-      "build": "mvrx4xj8",
+      "operation": "触摸向导 → 下一步（欢迎页）→ 下一步（导航说明页）→ [ 主要设施 ] → [ 工具店 ] → 点击正文 [工具店] 链接 → 下一步 → 上一级菜单 → 取消 → 结束对话",
+      "build": "mvtwo79r",
       "viewport": [
         430,
         860
@@ -1300,16 +1361,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "b77606a98a6a73a7c67d88dee2428043061b37747c7232c7554fae591cb8f45f",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "交易、摆摊与导航按钮布局调整后，使用最新完整 PWA 构建重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "6084b114b381ed15cbd0dacf8cd647a19b17dfb798ce483404c58ab136fad718",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/text-links/phone-tipbox.png",
-      "operation": "手机帮助主题与返回关闭按钮",
-      "build": "mvrsuglp",
+      "operation": "菜单 → 冒险工具 → 物品 → 搜索 6081 → 物品说明 [Episode14.2] 链接",
+      "build": "mvtwo79r",
       "viewport": [
         430,
         860
@@ -1321,16 +1382,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "e08b4b6d7106c842a964b93fe3991f402a2b77ce6c74fa43d5a54ac84e442fcc",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "666d35a323c762cb8e68462207fc68a76971bc20b5ea975ff90922923f1723f3",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/text-links/tablet-navi-map.png",
-      "operation": "由物品说明打开NPC地图标点",
-      "build": "mvrsuglp",
+      "operation": "菜单 → 冒险工具 → 物品 → 搜索 6081 → 辉煌领域金币 → [防具商纳帕拉]",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -1342,16 +1403,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "c02cbf5c632c34be3aea5884c273155d8e0721d65d917929206d5b82381632cd",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "c28bc46f4d33ece2ea261750d073c11fac46999bf939f643f04107b817c7c9f0",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/text-links/tablet-tipbox.png",
-      "operation": "从物品说明打开实际Episode14.2帮助主题",
-      "build": "mvrsuglp",
+      "operation": "菜单 → 冒险工具 → 物品 → 搜索 6081 → 辉煌领域金币 → [Episode14.2]",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -1363,16 +1424,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "5ceb5187424715a9d46e27dc1b78ad7497d46790a5a31848b4bdea2b2cb388c1",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "88df9ec4d953a7161dd4bd75eca85934094adc9afd6ea8fecd2fd4972e9e7b0f",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/trading/phone-trade.png",
-      "operation": "当前手机交易三个等宽筛选、底栏设置金额与确认操作",
-      "build": "mvrx4xj8",
+      "operation": "触摸玛雅 → 交易 → 确认；玛雅接受；罗安放入红色药水 5；玛雅放入蓝色药水 1 并设置金额 100",
+      "build": "mvtwo79r",
       "viewport": [
         430,
         860
@@ -1384,16 +1445,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "9307c3f1f6f4f3ebbf5403897ff99247e4c2e6c037334597764736a06ea62b43",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "交易、摆摊与导航按钮布局调整后，使用最新完整 PWA 构建重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "ac0f019b9dfb231f57d34831dd2765d111a6a2328b35faa31eb443a682b5f5b8",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/trading/tablet-trade-confirm.png",
-      "operation": "当前构建交易最终核对，背景底栏包含设置金额",
-      "build": "mvrx4xj8",
+      "operation": "双方点击锁定交易 → 罗安点击确认成交",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -1405,16 +1466,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "525b628202e101214c97719f2b160aa269bf19e8378e8d17a1be606b8ee2e809",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "交易、摆摊与导航按钮布局调整后，使用最新完整 PWA 构建重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "544f2b4c0c3a05cb742214c0376a96d85518d58d85e61cc061d9652dce325f85",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/trading/tablet-trade.png",
-      "operation": "当前构建交易：三个等宽筛选对齐三栏，设置金额位于底栏",
-      "build": "mvrx4xj8",
+      "operation": "罗安触摸玛雅 → 交易 → 确认；玛雅接受请求；罗安选择红色药水放入 5；玛雅放入蓝色药水 1 并设置金额 100",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -1426,16 +1487,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "73e1bfd3d25e6d54794624045711cb47c4e1deb2871e191a8d6f9b6b196d0e4c",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "交易、摆摊与导航按钮布局调整后，使用最新完整 PWA 构建重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "cbefa2b2e53bddc7cc91aa68e8f742e151693b9d6086b0a0d4eed8294f894396",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/trading/tablet-vending-buy.png",
-      "operation": "罗安选中玛雅摊位的一瓶药水，核对单价与合计",
-      "build": "mvrsuglp",
+      "operation": "触摸玛雅角色 → 查看摊位 → 红色药水 → 右箭头 → 数量 1 → 确认",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -1447,16 +1508,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "abe3276041a5b62a79d0bc812bf693595475fb449fc4812bda275fa87d11e78c",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "依据当前 UI 和真实操作重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "92625d64f6b6deb13ad45e02c421e51f241d93aa9500e12eec2f36492557269a",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/trading/tablet-vending-owned.png",
-      "operation": "当前构建营业中摊位：单列在售商品与成交记录",
-      "build": "mvrx4xj8",
+      "operation": "开店后保留「我的售卖摊位」窗口；或菜单 → 我的摊位",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -1468,16 +1529,16 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "066eb1f54bf29076ad9a1c1c07ae546ff7a90861541eb18ad929fc8578cd5dcd",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "交易、摆摊与导航按钮布局调整后，使用最新完整 PWA 构建重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "d565a43a36287c413dabfba210102c883ea4db5262e7e0942627d1403604bd19",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "game/trading/tablet-vending-setup.png",
-      "operation": "当前构建摆摊准备：单列商品和对齐的筛选栏",
-      "build": "mvrx4xj8",
+      "operation": "菜单 → 技能 → 露天商店 → 设置快捷键（位置 1，Lv.10）→ 确认；触摸快捷栏位置 1；选择红色药水 → 右箭头 → 数量 5、单价 50 → 确认",
+      "build": "mvtwo79r",
       "viewport": [
         1024,
         768
@@ -1489,17 +1550,17 @@
         "level": 99
       },
       "source": "本机当前源码完整 PWA 构建，Playwright Chromium 实际游戏界面",
-      "capturedAt": "2026-10-28",
-      "sha256": "727053359fe6d1e283bccaa863f539fe096e8c6fd853b65b0349272be6d9f123",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "交易、摆摊与导航按钮布局调整后，使用最新完整 PWA 构建重新截图"
+      "capturedAt": "2026-10-30",
+      "sha256": "b84b920b9bfb5bc42f2c445804d5eccf1226663b380a504b4f701710e1974a2d",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "overview/happyro-admin-settings.png",
       "source": "本机当前 HappyRO Admin 源码，Playwright Chromium 实际后台页面",
-      "sha256": "c810929ac796c3b914cd5ebcad34025611637492af21057fdb4a295c4d0275f2",
-      "capturedAt": "2026-10-28",
+      "sha256": "0913f810b39c1d2a0f8deaa6a2ff9c528ea07977d84781b638a690b90562aa97",
+      "capturedAt": "2026-10-30",
       "viewport": [
         1280,
         850
@@ -1511,21 +1572,21 @@
         "width": 1280,
         "height": 630
       },
-      "operation": "真实后台打开游戏设置的掉落倍率页，展示查看修改记录入口；所有显示倍率为 1，未修改或保存设置",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "按当前后台布局重新拍摄，并同步根仓库 README 图片",
-      "revision": "055cc0502bd698d871ac79281da2dfff9076ddca"
+      "operation": "http://127.0.0.1:8000 → 系统设置 → 游戏设置 → 掉落倍率",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json",
+      "revision": "d42ec231770843209830eebe756877bad51cf747"
     },
     {
       "file": "overview/happyro-codex.png",
-      "source": "本机最新源码实际游戏截图；根 README 正式图片同步",
-      "capturedAt": "2026-10-28",
-      "build": "mvrsuglp",
-      "sha256": "2e9ef47f80b0f2eecf4950c1a6cb660980bc2311b064f5ce0abfefd90e5b4da5",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "游戏 UI 已更新，重拍受影响画面并沿用原合成模板",
+      "source": "本机最新源码实际游戏截图；桌面冒险工具魔物图鉴",
+      "capturedAt": "2026-10-30",
+      "build": "mvtwo79r",
+      "sha256": "f0061b33523a7885d9f7782a204a5cd7de47dc265684a2e542c967b13734e29c",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "逐张从当前桌面 PWA 实机魔物图鉴界面重新截图、按原 880×680 裁剪并视觉复核",
       "viewport": [
         1280,
         800
@@ -1537,17 +1598,17 @@
         "width": 880,
         "height": 680
       },
-      "operation": "普隆德拉野外查看波利属性、掉落和出现地图"
+      "operation": "桌面冒险工具魔物图鉴，查看波利属性、掉落和出现地图"
     },
     {
       "file": "overview/happyro-combat.png",
       "source": "本机最新源码实际游戏截图；根 README 正式图片同步",
-      "capturedAt": "2026-10-28",
-      "build": "mvrsuglp",
-      "sha256": "b8260e74519bd6c8da62c09cd29790ff2d786581bb7ff19d5387d19100e3a577",
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "游戏 UI 已更新，重拍受影响画面并沿用原合成模板",
+      "capturedAt": "2026-10-30",
+      "build": "mvtwo79r",
+      "sha256": "3dad2336150492279ba27b72fe9eec9f849d5fbd8d3ee2642efcb54a23a40110",
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json",
       "viewport": [
         1280,
         800
@@ -1559,14 +1620,14 @@
         "width": 920,
         "height": 670
       },
-      "operation": "当前源码真实窗口按固定取景裁剪；自动战斗未启动"
+      "operation": "右下角战斗设置齿轮 → 自动战斗 → 全部魔物 → 狂击Lv.10"
     },
     {
       "file": "overview/happyro-responsive-skills.png",
       "source": "本机最新源码实际游戏截图；根 README 正式图片同步",
-      "capturedAt": "2026-10-28",
-      "build": "mvrsuglp",
-      "sha256": "4512aa66661ce375f9c2af006344a3551a5cd4ede201c21cab91466fda102398",
+      "capturedAt": "2026-10-30",
+      "build": "mvtwo79r",
+      "sha256": "82011f50cce3e8afa0db8cfe4dcfed60929f69b5d9b49bc1d3ac06d047dbb317",
       "inputs": [
         {
           "file": "tablet-skills.png",
@@ -1587,16 +1648,22 @@
           "deviceScaleFactor": 2
         }
       ],
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "游戏 UI 已更新，重拍受影响画面并沿用原合成模板"
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json",
+      "operation": "菜单 → 技能 → 全部转职、全部技能 → 狂击Lv.10 → 固定模板#skills合成",
+      "viewport": [
+        1600,
+        858
+      ],
+      "deviceScaleFactor": 1
     },
     {
       "file": "overview/happyro-three-devices.png",
       "source": "本机最新源码实际游戏截图；根 README 正式图片同步",
-      "capturedAt": "2026-10-28",
-      "build": "mvrsuglp",
-      "sha256": "495351a27045ed09bbb430a9e25f595ab09c6935b4269dad67717889b10bd174",
+      "capturedAt": "2026-10-30",
+      "build": "mvtwo79r",
+      "sha256": "09f926ab7d4870b96ab4b2e3562957e37aa4a132d10a8251e572c934900efec1",
       "inputs": [
         {
           "file": "desktop.png",
@@ -1626,43 +1693,56 @@
           "deviceScaleFactor": 2
         }
       ],
-      "auditedAt": "2026-10-28",
-      "auditDecision": "retake",
-      "auditReason": "游戏 UI 已更新，重拍受影响画面并沿用原合成模板"
+      "auditedAt": "2026-10-30",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json",
+      "operation": "三端分别登录罗安 → prontera(164,185) → 关闭窗口，收起触屏聊天 → 朝向0 → 固定模板#hero合成",
+      "viewport": [
+        1600,
+        1000
+      ],
+      "deviceScaleFactor": 1
     },
     {
       "file": "strategy/job-change/archbishop-escort.svg",
       "sha256": "89780fc16b27c7fca7efd3ffc1dae33a5f5ad08b9b855d96db49f43f1b1d9a81",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "既有攻略配图",
       "operation": "复核用途后保留；实测画面为历史流程示例，未改写拍摄时间",
       "auditDecision": "retain",
-      "auditReason": "流程／范围示意与当前正文及代码规则核对；非实机场景截图"
+      "auditReason": "本轮逐图复核流程/范围示意；与对应攻略、当前服务端转职脚本及客户端战斗设置核对；无旧UI截图，保留矢量源文件"
     },
     {
       "file": "strategy/job-change/hunter-exams.svg",
       "sha256": "c6de9387e40f449d418052ed6716531f5eab36ac3f02ce31844340a42e187cc0",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "既有攻略配图",
       "operation": "复核用途后保留；实测画面为历史流程示例，未改写拍摄时间",
       "auditDecision": "retain",
-      "auditReason": "流程／范围示意与当前正文及代码规则核对；非实机场景截图"
+      "auditReason": "本轮逐图复核流程/范围示意；与对应攻略、当前服务端转职脚本及客户端战斗设置核对；无旧UI截图，保留矢量源文件"
     },
     {
       "file": "strategy/job-change/knight-guild.webp",
-      "sha256": "854f82b8318a62d99671f4fd502b413f7622de0aa06c3611038334ce11e70cec",
-      "auditedAt": "2026-10-28",
-      "source": "既有攻略配图",
-      "operation": "复核用途后保留；实测画面为历史流程示例，未改写拍摄时间",
-      "auditDecision": "retain",
-      "auditReason": "场景参考及桌面 NPC 对话未涉及本次菜单 UI 调整，核对图片用途后保留真实原始来源"
+      "sha256": "31621d7ede228bf5b32ba992b1f4f5fa579563005a1ea37519d034500599f0bb",
+      "auditedAt": "2026-10-30",
+      "source": "当前本机Gateway 3338真实游戏页面，Playwright Chromium实拍，PNG无损转换WebP",
+      "operation": "前往prt_in(88,99) → 等待地图加载 → 镜头125 → 裁剪骑士团长及周边NPC",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json",
+      "build": "mvtwo79r",
+      "capturedAt": "2026-10-30",
+      "viewport": [
+        1280,
+        800
+      ],
+      "deviceScaleFactor": 1
     },
     {
       "file": "strategy/job-change/locations/acolyte-first.webp",
       "sha256": "049c9ba9ddd9072aae119056236dfd1b477054a46a6302e0f749f737626ceb5b",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "prt_church",
       "position": [
         184,
@@ -1675,14 +1755,14 @@
       },
       "originalSha256": "9c26b9f85ba67715e1e775db6563a34c672e7015fb60161153fdb17123738fae",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/alchemist-second.webp",
       "sha256": "ad924ca335b20c8631dc587876e935f71054cac448206c4f975e67e366554a0b",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "alde_alche",
       "position": [
         27,
@@ -1695,14 +1775,14 @@
       },
       "originalSha256": "e1b00a2cd9d23a4d8b8678dea4bb8a1b99fef4f136ef7a391b6143dae5c1a042",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/alchemist-third.webp",
       "sha256": "99a6f6d30a56ec41aeea9297f5b52e7a14dc8179e7fb48c1a7d9694bbc2ccac7",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "alde_alche",
       "position": [
         35,
@@ -1715,14 +1795,14 @@
       },
       "originalSha256": "b89164bb4df7ded0dc3c81d8ac27f6dcbfaee68f4db4603815a0697eaeedee84",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/archer-first.webp",
       "sha256": "dae0bf79c6ea7c801d3759f4005b6730c5d5d86aa51bccd939bbb0c3ff8661cc",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "payon_in02",
       "position": [
         64,
@@ -1735,14 +1815,14 @@
       },
       "originalSha256": "539055b1afa55fd04f38592b08f5997e424e8a19cb56faf214a70794f6d4914a",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/assassin-second.webp",
       "sha256": "2566693c6294b873c65cbec56fbb2a54ea10486471ac8c096d447894920b44d0",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "in_moc_16",
       "position": [
         19,
@@ -1755,14 +1835,14 @@
       },
       "originalSha256": "d5b85a2a63f56a57d1e2f230df9f5797a5f38eb974e74b6ca54032a0dc2abb30",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/assassin-third.webp",
       "sha256": "83cafa5fc54ad79bd43df441a6a12bb1f0d36a2993d34d15fdb5b886c34712c9",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "que_job01",
       "position": [
         75,
@@ -1775,14 +1855,14 @@
       },
       "originalSha256": "f9fa6629764196d38e9b62fa41387371d5315162bf2fcecf70dcb27ddc32171b",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/bard-second.webp",
       "sha256": "767d71c1b005b4b69e0dee72e50a6307fa458a11efb8d9d9bb58f69855621ec1",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "comodo",
       "position": [
         226,
@@ -1795,14 +1875,14 @@
       },
       "originalSha256": "ba3fd8ba648dcb635467f4328578f7fb50daa83e3f7a7f825139419934836492",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/bard-third.webp",
       "sha256": "8e73346dfa023ddc949afee5e517cfb8fe81d61ebdd75dcb63d3881e63d6ca5b",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "alberta",
       "position": [
         196,
@@ -1815,14 +1895,14 @@
       },
       "originalSha256": "262144a95471e4aa31c5a3b6cfc73244bfc134621914c82a6d3ab65395d65c14",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/blacksmith-second.webp",
       "sha256": "e3c3c9a553ef92040de729428ddb852cc56098186193d278123ed8db33b65eb9",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "ein_in01",
       "position": [
         18,
@@ -1835,14 +1915,14 @@
       },
       "originalSha256": "dc086d14a8efba2d4cc949dda5ce56feff296fb218a1daa0b1cd850f4c2fa342",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/blacksmith-third.webp",
       "sha256": "3348476edb0b512e844abae9e6940577060c3d955caa755c5e2f6f690423093e",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "yuno",
       "position": [
         129,
@@ -1855,23 +1935,33 @@
       },
       "originalSha256": "655082d6d3a1ab2fc76758791c8d57eafaa36c9c6b95bc0252d49b126e02d271",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/book-rebirth.webp",
       "sha256": "29f283e26d4126b5c30d1982b33a96331c5febc91275ec6353bf98915fc96676",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "既有攻略配图",
-      "operation": "复核用途后保留；实测画面为历史流程示例，未改写拍摄时间",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。",
+      "map": "yuno_in02",
+      "position": [
+        93,
+        207
+      ],
+      "label": "伊米尔之书",
+      "npcSource": {
+        "path": "npc/jobs/valkyrie.txt",
+        "line": 256
+      }
     },
     {
       "file": "strategy/job-change/locations/crusader-second.webp",
       "sha256": "5f46e6359a247bf731610103747b2bf42b3cf97e50130f100c3a9c1572f2b48d",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "prt_cas",
       "position": [
         251,
@@ -1884,14 +1974,14 @@
       },
       "originalSha256": "5c61c8cde16ace854e51ce3f23d243db38190f8b2940787ac93edf0a848565f6",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/crusader-third.webp",
       "sha256": "46979bc4938389c355a2bc24d767ecedda433c98bd113fba06ae4e7db457b26c",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "prt_cas",
       "position": [
         172,
@@ -1904,14 +1994,14 @@
       },
       "originalSha256": "ddd0e576944427bd217108f72a00a6ad386cc89593b68af88d014b388fcd77bf",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/dancer-second.webp",
       "sha256": "7ca6d80a7e625ad64470d5e0c26dd5cb6996c275943ed983ef5a274e43405c63",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "comodo",
       "position": [
         193,
@@ -1924,14 +2014,14 @@
       },
       "originalSha256": "8bd7e3dcb4b7356e97ba205729dfbe4c68a2f31d490828a892587e2cb5fde714",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/dancer-third.webp",
       "sha256": "6a496caed9fccc33a998094214ec9b3f8b68fdc96e6d4789d74b745643943d6b",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "xmas",
       "position": [
         162,
@@ -1944,14 +2034,14 @@
       },
       "originalSha256": "9eb6fd73b7fe664d3bcbb67ecca6cfb1d6a5b0f1a291f27b39d14cd62abfbbe3",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/donation-rebirth.webp",
       "sha256": "42cca579d7ab53c186fa6aaf543f5c3e4d3ebae351af4796c25f7cfbc4d9f29c",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "yuno_in02",
       "position": [
         88,
@@ -1964,23 +2054,33 @@
       },
       "originalSha256": "ebf151d60f9f04d37173dc963b9eaa30039fac1869426edd3305f58dab2d3022",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/fourth-common.webp",
       "sha256": "1234a764c4ccbb43fa079bc74a243185997937d731aa1dcb312a97fdf2092183",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "既有攻略配图",
-      "operation": "复核用途后保留；实测画面为历史流程示例，未改写拍摄时间",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。",
+      "map": "prontera",
+      "position": [
+        153,
+        193
+      ],
+      "label": "四转职业导师",
+      "npcSource": {
+        "path": "npc/custom/jobmaster.txt",
+        "line": 19
+      }
     },
     {
       "file": "strategy/job-change/locations/heart-rebirth.webp",
       "sha256": "3668349b976c7dbd1077dc5556c75e4cc3a89388c817c93640c8da557e6540ed",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "yuno_in05",
       "position": [
         49,
@@ -1993,14 +2093,14 @@
       },
       "originalSha256": "3e9bd25adbcfa6623812dcd6b0a6b292ee7620aeeeb0325750d660d017c196b1",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/hunter-second.webp",
       "sha256": "fc166ba14e0554539aa90d05e198dfb0cb2a76a3b38628cb3593295c7632e509",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "hu_in01",
       "position": [
         386,
@@ -2013,14 +2113,14 @@
       },
       "originalSha256": "7eb33f61c3479a9df63afe3685364ad0fa7865ceb62486e8f2f6d815331b67b2",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/hunter-third.webp",
       "sha256": "fbebab68d2c7d154e34ac61cbeaf8d9071a74575506dc67366219d352b2daa70",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "tur_dun01",
       "position": [
         156,
@@ -2033,14 +2133,14 @@
       },
       "originalSha256": "c22f4f5bc7ac3b6e8a98c20ada82a4e29242f577755368e645c76a5af4131eaf",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/knight-second.webp",
       "sha256": "b9bff520fed4b01bc6f19113abc7891324399ff525ee49a5e5676c86a7d89c46",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "prt_in",
       "position": [
         88,
@@ -2053,14 +2153,14 @@
       },
       "originalSha256": "7c9212407f41fbb7e12d446947e791ad67efa41a3bd3449c44e3ecd3d107d3b0",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/knight-third.webp",
       "sha256": "7f08bfed2d184fd3102b071ae55b1a8c8576abe9461e5a8fdb3e15fe76828978",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "prt_in",
       "position": [
         162,
@@ -2073,14 +2173,14 @@
       },
       "originalSha256": "b4fe3936ec4d0f540a9a1aa8ab2013fd259842f08442b09c02b175a9827095ae",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/mage-first.webp",
       "sha256": "8905f63a8235d14da508a3e06cd099dec98f6a9728227089e132ee35ab356ec8",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "geffen_in",
       "position": [
         164,
@@ -2093,14 +2193,14 @@
       },
       "originalSha256": "38d34911b5e35d142558c54e3bb5e72270d1ce1e569ee0c96b82a750aa979767",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/merchant-first.webp",
       "sha256": "93a7418f525871869db6ca9271a25d10103d8df5d53cbebb6a774d9d0d63e822",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "alberta_in",
       "position": [
         53,
@@ -2113,14 +2213,14 @@
       },
       "originalSha256": "ca2a04425b180ddeb0d019ceea37ed893994fbf6cff45a6deeeaa2fb35a04f16",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/monk-second.webp",
       "sha256": "227cb4e373cb97e79e79016cc224dc264b2e4f2efc6d8afa574ef128de5594c6",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "prt_monk",
       "position": [
         59,
@@ -2133,14 +2233,14 @@
       },
       "originalSha256": "6bcf84d1f0401235196aa3e8beedb07db70b490ee356eb7659e37a1783a66aca",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/monk-third.webp",
       "sha256": "1bc351d78e8d89fd1b5aaae17d4089e5a174f8aea720136ebfbb4535d129ebed",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "ve_in",
       "position": [
         237,
@@ -2153,14 +2253,14 @@
       },
       "originalSha256": "7b21020684727ecdfea9c76bd6d7088df5009e92cc9de8cd94b9376555833e74",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/priest-second.webp",
       "sha256": "d47c6ce14c1e8f47406364cbeef3688999c9e90f0188082f6e4cde0c39abb307",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "prt_church",
       "position": [
         16,
@@ -2173,14 +2273,14 @@
       },
       "originalSha256": "303388b26feb9a15069edd26fe0f546ffeb745168fa4345ca6b28a605e686af7",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/priest-third.webp",
       "sha256": "1d34c742353ec04bf723fa3d12e482a0bab2330568646b8fcf197f33e2a2a14e",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "prt_church",
       "position": [
         103,
@@ -2193,14 +2293,14 @@
       },
       "originalSha256": "182f54d5ff72debd5b047004beca72a530d7f778885a3fb802e130087e73c04d",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/rogue-second.webp",
       "sha256": "3ae60f402b74251145125fb7ae30acdab916f08d88c3831092e9e6029910f04e",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "in_rogue",
       "position": [
         363,
@@ -2213,14 +2313,14 @@
       },
       "originalSha256": "11ef605929cd8f6371e580ef763b3c56dc4ae9c70fcaf3b019a902710e5e9001",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/rogue-third.webp",
       "sha256": "542ac1a3bccd2d5f9a7a0e3822ce2c0517f476ec17939920cba4e98810e15948",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "morocc",
       "position": [
         156,
@@ -2233,14 +2333,14 @@
       },
       "originalSha256": "f16fa2262b1446825455f15b5af0eb72b583782ab61e264c5caea67c3c233c94",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/sage-second.webp",
       "sha256": "2abb592f7a751983a94fcbd5bc9b1199d74333374c6a2cc1ff3a29c3aa0706b0",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "yuno_in03",
       "position": [
         154,
@@ -2253,14 +2353,14 @@
       },
       "originalSha256": "cf0588ed974addd0021823dbc205029eef3791b04fc72fbc8f3b0f063a35c5e6",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/sage-third.webp",
       "sha256": "de91dccff346bfac69e2756b3b34545a3a6c36d7c6a7b314f2dda835f0c9be07",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "gef_tower",
       "position": [
         102,
@@ -2273,14 +2373,14 @@
       },
       "originalSha256": "2ff0b561a2785f7926a5127f170a5c49bfd0613e0d42ef471e6a8ac1ebf8a1b4",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/swordman-first.webp",
       "sha256": "459c5504c49e7cc0133e3b4204a6bd31d7fcdcbc364b1a6200b4532c8d2c838c",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "izlude_in",
       "position": [
         74,
@@ -2293,14 +2393,14 @@
       },
       "originalSha256": "dba5be25c98cd315235efc09e17d7ae079f77a76768450bfb2ed2b433599d416",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/thief-first.webp",
       "sha256": "1b5a900b1cd2ef260b06f04a7eb8f30682fdfaeb5307565d89753e1f5a539148",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "moc_prydb1",
       "position": [
         39,
@@ -2313,23 +2413,33 @@
       },
       "originalSha256": "06f1a9a854df32c517d835bbfd158ae63325439947c969fae070bb19e4546d7b",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/valkyrie-rebirth.webp",
       "sha256": "5a07d8d5882445f7e1647b5f9a47030fffa79c3df011b937ee578d798051b065",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "既有攻略配图",
-      "operation": "复核用途后保留；实测画面为历史流程示例，未改写拍摄时间",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。",
+      "map": "valkyrie",
+      "position": [
+        48,
+        86
+      ],
+      "label": "女武神",
+      "npcSource": {
+        "path": "npc/jobs/valkyrie.txt",
+        "line": 60
+      }
     },
     {
       "file": "strategy/job-change/locations/wizard-second.webp",
       "sha256": "c68aaa6e7c9bf0514f84e50152b498ec49d51d74b06a2d998fad8cdcd0599812",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "当前 NPC 目录与原地形定位图",
-      "operation": "更新图题，保留地图地形与坐标",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "map": "gef_tower",
       "position": [
         111,
@@ -2342,43 +2452,53 @@
       },
       "originalSha256": "5961e85838c072b0dc8636444b6098f435167d3f53e1cd37fefe68739c2bb1bc",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。"
     },
     {
       "file": "strategy/job-change/locations/wizard-third.webp",
       "sha256": "afd3a766d528e5f84ab5ce5c39e87988b176565b08fc0a9be2441e7232257218",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "既有攻略配图",
-      "operation": "复核用途后保留；实测画面为历史流程示例，未改写拍摄时间",
+      "operation": "维护地图定位示意图；NPC移动或地形变化时重生成，不将旧图标记为新实拍",
       "auditDecision": "retain",
-      "auditReason": "逐图查看名称与标点；37 处坐标核对当前 NPC 源码，两份地图碰撞缓存哈希一致"
+      "auditReason": "本轮逐图复核图题、坐标与标点；37张全部匹配当前服务端NPC声明。定位示意图不属于游戏UI截图。",
+      "map": "morocc",
+      "position": [
+        95,
+        132
+      ],
+      "label": "扭曲区域（步行触发）",
+      "npcSource": {
+        "path": "npc/re/jobs/3-1/warlock.txt",
+        "line": 73
+      }
     },
     {
       "file": "strategy/job-change/rebirth-steps.svg",
       "sha256": "50fa0bdc54833a28d406db7e29748798cde41da768c0af83c866a111ffbbe34c",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "既有攻略配图",
       "operation": "复核用途后保留；实测画面为历史流程示例，未改写拍摄时间",
       "auditDecision": "retain",
-      "auditReason": "流程／范围示意与当前正文及代码规则核对；非实机场景截图"
+      "auditReason": "本轮逐图复核流程/范围示意；与对应攻略、当前服务端转职脚本及客户端战斗设置核对；无旧UI截图，保留矢量源文件"
     },
     {
       "file": "strategy/job-change/rogue-keys.svg",
       "sha256": "ba9681070918a9a17db783e1a46e2a7f31ea1f175ce2dc45ab6ad5b853f07c1d",
-      "auditedAt": "2026-10-28",
+      "auditedAt": "2026-10-30",
       "source": "既有攻略配图",
       "operation": "复核用途后保留；实测画面为历史流程示例，未改写拍摄时间",
       "auditDecision": "retain",
-      "auditReason": "流程／范围示意与当前正文及代码规则核对；非实机场景截图"
+      "auditReason": "本轮逐图复核流程/范围示意；与对应攻略、当前服务端转职脚本及客户端战斗设置核对；无旧UI截图，保留矢量源文件"
     },
     {
       "file": "strategy/job-change/swordman-npc.webp",
-      "sha256": "1f54eb6bd61a759e99e66d15dadb719a8562bfa70ac076fc4599e8ff9633430e",
-      "auditedAt": "2026-10-28",
-      "source": "本机 Gateway 3338，真实剑士公会问候对话截图并转换为 WebP",
-      "operation": "只查看当前剑士公会服务人员问候，选择没什么结束；未执行转职或修改角色资格",
-      "capturedAt": "2026-10-26",
-      "build": "mvomisi9",
+      "sha256": "064736838fd351fdde23c2f2d8ed905049bdf90847093be6b77ef4da8a444da9",
+      "auditedAt": "2026-10-30",
+      "source": "当前本机Gateway 3338真实游戏页面，Playwright Chromium实拍，PNG无损转换WebP",
+      "operation": "前往剑士公会 → 点击服务人员 → 保留第一屏问候",
+      "capturedAt": "2026-10-30",
+      "build": "mvtwo79r",
       "viewport": [
         1280,
         800
@@ -2401,26 +2521,40 @@
         74,
         172
       ],
-      "auditDecision": "replace",
-      "auditReason": "场景参考及桌面 NPC 对话未涉及本次菜单 UI 调整，核对图片用途后保留真实原始来源"
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json"
     },
     {
       "file": "strategy/job-change/warlock-guild.webp",
-      "sha256": "7dd0a523e1bfa3fd8630370a57d5e69bef0e11b2bbfaad8a04b078e480c6213c",
-      "auditedAt": "2026-10-28",
-      "source": "既有攻略配图",
-      "operation": "复核用途后保留；实测画面为历史流程示例，未改写拍摄时间",
-      "auditDecision": "retain",
-      "auditReason": "场景参考及桌面 NPC 对话未涉及本次菜单 UI 调整，核对图片用途后保留真实原始来源"
+      "sha256": "b3b6845955eadb926eada6a5990c68dc8dd8f480badab1e361d0195c6a89f713",
+      "auditedAt": "2026-10-30",
+      "source": "当前本机Gateway 3338真实游戏页面，Playwright Chromium实拍，PNG无损转换WebP",
+      "operation": "前往spl_in02(80,106) → 等待地图及标题稳定 → 镜头125 → 裁剪大师及助手",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json",
+      "build": "mvtwo79r",
+      "capturedAt": "2026-10-30",
+      "viewport": [
+        1280,
+        800
+      ],
+      "deviceScaleFactor": 1
     },
     {
       "file": "strategy/job-change/wizard-guild.webp",
-      "sha256": "acbfbd6432e8e999c864262b8e4969b077e0b38e53a89137300b3e3ad5738f7a",
-      "auditedAt": "2026-10-28",
-      "source": "既有攻略配图",
-      "operation": "复核用途后保留；实测画面为历史流程示例，未改写拍摄时间",
-      "auditDecision": "retain",
-      "auditReason": "场景参考及桌面 NPC 对话未涉及本次菜单 UI 调整，核对图片用途后保留真实原始来源"
+      "sha256": "951eb7b27794db1ee87bd6ff23da693fb3a71db351f003a1c44e9331282bbafa",
+      "auditedAt": "2026-10-30",
+      "source": "当前本机Gateway 3338真实游戏页面，Playwright Chromium实拍，PNG无损转换WebP",
+      "operation": "前往gef_tower(110,35) → 等待地图标题消失 → 镜头125 → 裁剪柜台与公会NPC",
+      "auditDecision": "approved",
+      "auditReason": "从当前实机重新操作、逐张截图并视觉复核；规则与前置条件见 capture-rules.json",
+      "build": "mvtwo79r",
+      "capturedAt": "2026-10-30",
+      "viewport": [
+        1280,
+        800
+      ],
+      "deviceScaleFactor": 1
     }
   ]
 }

@@ -75,3 +75,5 @@ NPC 定位图位于 `images/strategy/job-change/locations/`，按服务端 `db/m
 转职攻略统一采用「阶段速查 → 关键准备 → 分阶段操作」结构，三级小节进入页面目录。共用条件与 NPC 图维护在 `common.md`，`index.md` 仅承担路线选择；各篇保留本职业线的具体导师与任务，推荐准备等级和最低报名门槛分开表达。定位图默认展开，补充场景截图及审计范围按需展开，避免打断操作步骤。
 
 职业线顶部使用共享 `JobProgression` 组件，按顺序传入五个职业名称；组件以简洁职业标签和箭头展示路线，链接到当前页的对应章节，末项轻微强调，窄屏自然换行。修改阶段标题时同步检查跳转锚点。
+
+逐张游戏截图的可复现规则记录在 [`docs/public/images/capture-rules.json`](docs/public/images/capture-rules.json)。每个条目固定设备、视口、入口和截图前状态；重新截图时只替换对应图片和来源哈希，并先按规则复现，不得批量重新编码旧图片冒充实机截图。逐张任务的当前断点和继续步骤记录在 [`docs/development/image-capture-checkpoint.md`](docs/development/image-capture-checkpoint.md)。

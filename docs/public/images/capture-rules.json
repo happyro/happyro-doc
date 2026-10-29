@@ -1,0 +1,1279 @@
+{
+  "version": 1,
+  "character": {
+    "name": "罗安",
+    "job": "剑士",
+    "baseLevel": 99,
+    "jobLevel": 50,
+    "map": "prontera",
+    "position": [
+      164,
+      185
+    ]
+  },
+  "defaults": {
+    "browser": "Playwright Chromium",
+    "gameEntry": "http://127.0.0.1:3338/applications/pwa/index.html",
+    "waitFor": "等待地图、贴图、图标、文字和详情稳定；截图前收起无关提示和软键盘",
+    "credentials": "work/runtime/readme-capture.json（未跟踪，不写入仓库）"
+  },
+  "images": {
+    "game/adventure/desktop-navigation.png": {
+      "device": "desktop",
+      "viewport": [
+        1280,
+        800
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "状态栏 → 导航",
+      "state": "普隆德拉，导航类型默认值，未执行寻路或传送"
+    },
+    "game/adventure/desktop-world-map.png": {
+      "device": "desktop",
+      "viewport": [
+        1280,
+        800
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "状态栏 → 世界地图",
+      "state": "米德加尔特大陆世界地图，未执行地图移动"
+    },
+    "game/adventure/tablet-adventure-character-stats.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "菜单 → 冒险工具 → 角色",
+      "state": "罗安，剑士 ID 1，滚动至基础属性区域"
+    },
+    "game/adventure/tablet-adventure-character.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "菜单 → 冒险工具 → 角色",
+      "state": "罗安，剑士 ID 1，角色详情顶部"
+    },
+    "game/adventure/tablet-adventure-item.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "菜单 → 冒险工具 → 物品",
+      "state": "搜索并选中红色药水 ID 501"
+    },
+    "game/adventure/tablet-adventure-monster.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "菜单 → 冒险工具 → 魔物",
+      "state": "关闭当前地图筛选，选中波利 ID 1002"
+    },
+    "game/adventure/tablet-adventure-npc.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "菜单 → 冒险工具 → NPC",
+      "state": "当前地图筛选，选中普隆德拉卡普拉职员，未传送"
+    },
+    "game/adventure/tablet-adventure-settings.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "菜单 → 冒险工具 → 设置",
+      "state": "设置页顶部，未修改或应用全服设置"
+    },
+    "game/adventure/tablet-adventure-settings-rules.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "菜单 → 冒险工具 → 设置",
+      "state": "滚动至精炼/升阶、地图导航和魔物召唤规则区域，未修改"
+    },
+    "game/combat/tablet-pickup.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "战斗设置 → 拾取设置",
+      "state": "自动拾取关闭，范围 5 格，装备/消耗品/卡片/其它开启，排除列表为空"
+    },
+    "game/combat/tablet-pickup-picker.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "战斗设置 → 拾取设置 → 添加",
+      "state": "添加排除物品弹窗初始状态，未选择物品"
+    },
+    "game/combat/tablet-recovery.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "战斗设置 → 自动恢复",
+      "state": "HP/SP 自动恢复关闭，阈值为当前默认值，未选择道具"
+    },
+    "game/combat/tablet-recovery-picker.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "战斗设置 → 自动恢复 → HP 道具选择",
+      "state": "显示红色药水数量，未选择或确认"
+    },
+    "game/companions/tablet-pet.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "character": "罗安",
+      "map": "prontera",
+      "position": [
+        163,
+        186
+      ],
+      "prerequisites": "按 tablet-pet-hatch.png 规则选择被爱的 波利宠物蛋，点击确认选择并最终确认孵化；此测试蛋波利等级 1、亲密度 950、初始饱食度 100，未装备饰品",
+      "entry": "孵化后立即菜单 → 宠物",
+      "state": "左侧真实波利状态，右侧波利之王进化材料需求（天地树叶子 0/10、青苹果 0/3）；底栏改名、喂食、表演、收回宠物蛋等操作全显。截图尽量紧接孵化，以免饱食度随时间下降；聊天收起"
+    },
+    "game/controls/tablet-attributes.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "菜单 → 素质",
+      "state": "罗安剑士，素质点 0，未增加或重置属性"
+    },
+    "game/controls/tablet-status.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "菜单 → 状态",
+      "state": "当前没有状态效果，未执行技能或状态变更"
+    },
+    "game/inventory/tablet-inventory.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "菜单 → 背包",
+      "state": "背包默认状态，未选择物品，显示当前可用装备与消耗品"
+    },
+    "game/inventory/desktop-inventory.png": {
+      "device": "desktop",
+      "viewport": [
+        1280,
+        800
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "桌面状态栏 → 背包",
+      "state": "背包默认状态，未选择物品，显示当前消耗品"
+    },
+    "game/inventory/tablet-equipment.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "菜单 → 装备",
+      "state": "装备页默认状态，右手装备长剑，其余部位显示选择装备"
+    },
+    "game/inventory/tablet-equipment-picker.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "菜单 → 装备 → 右手/武器 → 选择装备",
+      "state": "已卸下长剑，选择装备弹窗打开，显示长剑候选，未确认装备"
+    },
+    "game/inventory/phone-inventory.png": {
+      "device": "phone-portrait",
+      "viewport": [
+        430,
+        860
+      ],
+      "deviceScaleFactor": 2,
+      "entry": "菜单 → 背包",
+      "state": "背包默认状态，未选择物品，显示长剑、红蓝药水和波利宠物蛋"
+    },
+    "game/inventory/phone-equipment.png": {
+      "device": "phone-portrait",
+      "viewport": [
+        430,
+        860
+      ],
+      "deviceScaleFactor": 2,
+      "entry": "菜单 → 装备",
+      "state": "装备页默认状态，各部位未装备，显示选择装备入口"
+    },
+    "game/settings/tablet-settings.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "菜单 → 设置 → 画面",
+      "state": "画面设置默认状态，未修改任何参数"
+    },
+    "game/settings/tablet-settings-effects.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "菜单 → 设置 → 特效",
+      "state": "特效设置默认状态，未修改任何参数"
+    },
+    "game/settings/tablet-settings-audio.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "菜单 → 设置 → 声音",
+      "state": "声音设置默认状态，背景音乐和音效均为 50% 且开启"
+    },
+    "game/settings/tablet-camera.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "主界面 → 镜头",
+      "state": "镜头控制面板打开，未执行镜头调整"
+    },
+    "game/adventure/tablet-adventure-map.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "菜单 → 冒险工具 → 地图",
+      "state": "普隆德拉默认地图，NPC 列表显示，未执行传送或寻路"
+    },
+    "overview/happyro-codex.png": {
+      "device": "desktop",
+      "viewport": [
+        1280,
+        800
+      ],
+      "deviceScaleFactor": 1,
+      "clip": {
+        "x": 200,
+        "y": 60,
+        "width": 880,
+        "height": 680
+      },
+      "entry": "状态栏 → 冒险工具 → 魔物图鉴 → 查看全部 → 波利",
+      "state": "波利 ID 1002 详情打开，显示属性、掉落物品和出现地图"
+    },
+    "game/npc/tablet-npc-dialogue.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "普隆德拉卡普拉职员 → 对话",
+      "state": "卡普拉欢迎对话初始状态，未点击下一步"
+    },
+    "game/npc/tablet-npc-options.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "map": "prontera",
+      "position": [
+        147,
+        89
+      ],
+      "cameraZoom": 85,
+      "entry": "点击普隆德拉卡普拉职员，再点击欢迎对话的下一步",
+      "state": "服务菜单完整展示保存、仓库、传送、租车、其他信息和取消；未选择服务；聊天预览收起"
+    },
+    "game/npc/tablet-shop-buy.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "map": "prontera",
+      "position": [
+        75,
+        134
+      ],
+      "npc": {
+        "name": "牛奶商人#p",
+        "position": [
+          73,
+          134
+        ]
+      },
+      "entry": "牛奶商人 → 购买 → 牛奶 → 右箭头 → 数量 1 → 确认",
+      "state": "待购买牛奶 1 瓶，单价和合计 25 Z；未提交购买；聊天收起"
+    },
+    "game/npc/tablet-shop-sell.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "map": "prontera",
+      "position": [
+        75,
+        134
+      ],
+      "npc": {
+        "name": "牛奶商人#p",
+        "position": [
+          73,
+          134
+        ]
+      },
+      "prerequisites": "背包至少有 1 瓶牛奶 ID 519",
+      "entry": "牛奶商人 → 出售 → 牛奶 → 右箭头 → 数量 1 → 确认",
+      "state": "待出售牛奶 1 瓶，单价和合计 12 Z，未提交出售；聊天收起"
+    },
+    "game/storage/tablet-bank.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "菜单 → 银行",
+      "state": "余额已从服务器加载；角色余额 4741 Z、银行余额 0，未存取；聊天收起",
+      "map": "prontera",
+      "position": [
+        147,
+        89
+      ]
+    },
+    "game/controls/tablet-menu.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "entry": "主界面 → 菜单",
+      "state": "主菜单全部 21 个入口和关闭按钮完整可见；聊天收起",
+      "map": "prontera",
+      "position": [
+        147,
+        89
+      ]
+    },
+    "game/controls/tablet-skills.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "map": "prontera",
+      "position": [
+        147,
+        89
+      ],
+      "prerequisites": "罗安为剑士，已学习狂击 Lv.10；技能点 0",
+      "entry": "菜单 → 技能 → 狂击",
+      "state": "全部转职、全部技能筛选，选中狂击，等级说明完整显示，未升级或重置技能；聊天收起"
+    },
+    "game/controls/tablet-shortcuts.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "map": "prontera",
+      "position": [
+        147,
+        89
+      ],
+      "prerequisites": "罗安剑士，狂击 Lv.10 已学习；快捷栏第 1 格已绑定狂击",
+      "entry": "菜单 → 快捷键 → 位置 1 → 左侧狂击",
+      "state": "位置 1 与狂击候选同时选中，施放等级 Lv.10；详情位于顶部，保存按钮可见但未点击；聊天收起"
+    },
+    "game/mail/tablet-mail-compose.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "character": "罗安",
+      "map": "prontera",
+      "position": [
+        147,
+        89
+      ],
+      "prerequisites": "测试收件角色玛雅存在，背包至少 1 瓶红色药水 ID 501",
+      "entry": "菜单 → 邮件 → 写信 → 输入收件人玛雅并校验 → 填写标题和正文 → 点击红色药水 → 数量 1 → 确认",
+      "state": "标题冒险补给，正文出发前记得检查装备和补给，祝冒险顺利！；附件红色药水 1 瓶；无编辑弹窗、软键盘或临时提示；未发送",
+      "inputMethod": "移动端逐个点击字段，在弹出编辑框填写后点击完成，再编辑下一字段"
+    },
+    "game/text-links/tablet-tipbox.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "map": "prontera",
+      "position": [
+        147,
+        89
+      ],
+      "entry": "菜单 → 冒险工具 → 物品 → 搜索 6081 → 辉煌领域金币 → [Episode14.2]",
+      "state": "第 14.2 章埃克拉珠帮助阅读器打开，正文从顶部显示，未点击子主题；背景保留金币详情；聊天收起",
+      "inputMethod": "点击物品搜索框，在独立编辑弹窗输入 6081 并点击完成"
+    },
+    "game/text-links/tablet-navi-map.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "map": "prontera",
+      "position": [
+        147,
+        89
+      ],
+      "entry": "菜单 → 冒险工具 → 物品 → 搜索 6081 → 辉煌领域金币 → [防具商纳帕拉]",
+      "state": "自动切换到 ecl_in01 埃克拉珠内部地图，紫色目标点可见；角色仍在普隆德拉，跨地图开始寻路按钮禁用，未传送；聊天收起"
+    },
+    "game/social/tablet-social-friend.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "character": "罗安",
+      "map": "prontera",
+      "position": [
+        147,
+        89
+      ],
+      "prerequisites": "罗安与玛雅已互为好友；玛雅为 99 级铁匠，使用独立账号同时在线且位于普隆德拉",
+      "entry": "菜单 → 社交 → 好友 → 玛雅",
+      "state": "选中玛雅，显示在线、Lv.99、普隆德拉；私聊和删除好友按钮可见，未执行；聊天收起"
+    },
+    "game/social/tablet-social-party.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "character": "玛雅",
+      "map": "prontera",
+      "position": [
+        165,
+        186
+      ],
+      "prerequisites": "99 级铁匠玛雅与 99 级剑士罗安同时在线；玛雅创建普隆德拉冒险队，邀请罗安并由罗安接受",
+      "entry": "玛雅：菜单 → 社交 → 队伍 → 队伍管理",
+      "state": "左侧两名成员均可见；队长管理页显示邀请、经验分配、拾取规则和物品分配；默认各自获得、各自拾取、拾取者获得，未退出队伍；聊天收起"
+    },
+    "game/storage/tablet-cart.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "character": "玛雅",
+      "map": "prontera",
+      "position": [
+        165,
+        186
+      ],
+      "prerequisites": "99 级铁匠玛雅已租手推车；车内红色药水 19、蓝色药水 20、杰勒比结晶 20",
+      "entry": "菜单 → 手推车 → 取出 → 红色药水",
+      "state": "3/100 种物品、负重 453/8000，红色药水详情可见，取出数量 1，未点击确认取出或卸下手推车；聊天收起"
+    },
+    "game/trading/tablet-vending-setup.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "character": "玛雅",
+      "map": "prontera",
+      "position": [
+        165,
+        186
+      ],
+      "prerequisites": "99 级铁匠玛雅，露天商店 Lv.10，已租手推车；车内红色药水 19、蓝色药水 20、杰勒比结晶 20",
+      "entry": "菜单 → 技能 → 露天商店 → 设置快捷键（位置 1，Lv.10）→ 确认；触摸快捷栏位置 1；选择红色药水 → 右箭头 → 数量 5、单价 50 → 确认",
+      "state": "设置售卖摊位页面，右侧选中红色药水 5 个、单价 50 Z；底栏 1/12、合计 250 Z；未确认开店，聊天收起。手机/平板技能快捷键使用 touchscreen.tap，不能用 mouse.click；单价需在弹出编辑框中填写并点完成"
+    },
+    "game/trading/tablet-vending-buy.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "character": "罗安",
+      "map": "prontera",
+      "position": [
+        163,
+        186
+      ],
+      "prerequisites": "玛雅在 (165,186) 使用露天商店 Lv.10 开设「玛雅的补给摊」，红色药水 5 个、单价 50 Z；罗安余额 4741 Z",
+      "entry": "触摸玛雅角色 → 查看摊位 → 红色药水 → 右箭头 → 数量 1 → 确认",
+      "state": "玩家售卖摊位三栏全显，商品与待购买清单均选中红色药水，数量 1、合计 50 Z，尚未点击购买；聊天收起"
+    },
+    "game/trading/tablet-vending-owned.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "character": "玛雅",
+      "map": "prontera",
+      "position": [
+        165,
+        186
+      ],
+      "prerequisites": "按 tablet-vending-setup 规则开店，摊名「玛雅的补给摊」；罗安从摊位实际购买红色药水 1 个，单价 50 Z",
+      "entry": "开店后保留「我的售卖摊位」窗口；或菜单 → 我的摊位",
+      "state": "在售红色药水剩余 4 个、单价 50 Z；成交记录显示红色药水×1、单价 50 Zeny；底栏摊位营业中，未关闭摊位"
+    },
+    "game/trading/tablet-trade.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "character": "罗安",
+      "map": "prontera",
+      "position": [
+        163,
+        186
+      ],
+      "prerequisites": "罗安与玛雅 (165,186) 同时在线且相邻；玛雅关闭摊位；罗安背包有红色药水至少 5，玛雅有蓝色药水至少 1 和 100 Z",
+      "entry": "罗安触摸玛雅 → 交易 → 确认；玛雅接受请求；罗安选择红色药水放入 5；玛雅放入蓝色药水 1 并设置金额 100",
+      "state": "三栏交易页：我方红色药水×5、0 Z；对方蓝色药水×1、100 Z；双方尚未锁定，确认成交禁用，搜索为空，聊天收起"
+    },
+    "game/trading/tablet-trade-confirm.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "character": "罗安",
+      "map": "prontera",
+      "position": [
+        163,
+        186
+      ],
+      "prerequisites": "先按 tablet-trade.png 规则准备真实双角色交易：罗安红色药水×5，玛雅蓝色药水×1 和 100 Z",
+      "entry": "双方点击锁定交易 → 罗安点击确认成交",
+      "state": "确认成交二次确认弹窗完整显示双方物品与金额；我方 0 Z、红色药水×5；对方 100 Z、蓝色药水×1；未点击最终确认"
+    },
+    "game/mail/tablet-mail-read.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "character": "玛雅",
+      "map": "prontera",
+      "position": [
+        165,
+        186
+      ],
+      "prerequisites": "测试角色罗安按 tablet-mail-compose.png 规则填写邮件并实际发送给玛雅：标题冒险补给，正文出发前记得检查装备和补给，祝冒险顺利！，附件红色药水 1；附件尚未领取",
+      "entry": "玛雅菜单 → 邮件 → 刷新 → 选择最新的冒险补给",
+      "state": "寄件人罗安、正文、0 Zeny 和红色药水×1 全部可见；领取物品可点击，未领取；邮箱保留较早的一封同标题无附件邮件，选中最新一封；聊天收起"
+    },
+    "game/companions/tablet-pet-hatch.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "character": "罗安",
+      "map": "prontera",
+      "position": [
+        163,
+        186
+      ],
+      "prerequisites": "罗安无出战宠物，背包有被爱的 波利宠物蛋和携带用孵蛋器 ID 643；孵蛋器可从冒险工具物品图鉴发放 1 个",
+      "entry": "菜单 → 背包 → 携带用孵蛋器 → 使用 → 确认 → 点击被爱的 波利宠物蛋",
+      "state": "选择宠物蛋页面，左侧蛋条目选中，右侧描述完整，底栏确认选择可见；未确认孵化；聊天收起"
+    },
+    "game/social/tablet-chat.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "character": "罗安",
+      "map": "prontera",
+      "position": [
+        163,
+        186
+      ],
+      "prerequisites": "新打开的游戏会话无历史私聊；测试角色玛雅存在",
+      "entry": "菜单 → 聊天 → 私聊 → + 新私聊 → 输入玛雅 → 开始私聊",
+      "state": "用于文档「私聊入口」示例：私聊分类选中，中间对象列表为玛雅，右侧标题玛雅，输入框提示输入私聊消息，表情与发送按钮可见；不发送消息，不用对象存在代表对方已收到消息"
+    },
+    "game/storage/tablet-cart-rental.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "character": "玛雅",
+      "map": "prontera",
+      "position": [
+        165,
+        186
+      ],
+      "prerequisites": "99 级铁匠玛雅，Job 50，手推车使用技能已学，当前未装备手推车；如已装备先卸下并确认，车内物品保留；测试环境开放角色维护权限",
+      "entry": "菜单 → 冒险工具 → 角色，保持当前职业铁匠，不选左侧其他职业",
+      "state": "骑乘与随行区域显示手推车和可用的租用按钮；等级与点数区域可见，职业搜索为空，滚动在顶部；无确认弹窗、操作成功提示或软键盘"
+    },
+    "game/storage/tablet-storage.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "character": "罗安",
+      "map": "prontera",
+      "position": [
+        147,
+        89
+      ],
+      "prerequisites": "卡普拉职员位于 prontera (146,89)；仓库为空 0/600，罗安背包红色药水 96、蓝色药水 99、牛奶 1、长剑[3] 1、波利蛋 1；余额足以支付仓库费用",
+      "entry": "触摸卡普拉职员 → 下一步 → 使用仓库 → 结束对话；等待标题「仓库 (0/600)」可见后操作，不以固定短延时认定打开失败；存取操作选存入 → 红色药水",
+      "state": "来源背包、方向存入，红色药水选中且详情可见；底栏数量 1，MIN/MAX/增减/确认存入完整显示；搜索为空，尚未存入"
+    },
+    "game/controls/tablet-quests.png": {
+      "device": "tablet-landscape",
+      "viewport": [
+        1024,
+        768
+      ],
+      "deviceScaleFactor": 1,
+      "character": "罗安",
+      "map": "moc_para01",
+      "position": [
+        46,
+        173
+      ],
+      "prerequisites": "99 级罗安持有伊甸园标志 ID 22508（测试账号通过冒险工具发放 1 个）；尚未领取任务 4181，无其他任务。委托 [91 - 99] 位于 moc_para01 (48,177)",
+      "entry": "对话任务板 → 下一步 → 龟岛 → 下一步 → 岩石龟 → 下一步 → 下一步 → 我去狩猎。 → 结束对话 → 左上角任务",
+      "state": "全部任务分类，仅「处理岩石龟」选中，说明和导航链接可见，岩石龟进度 0/30，暂停任务可用；尚未击杀目标。对话连续完成避免服务器对话超时；地图实际落点 (46,173)"
+    },
+    "game/controls/phone-character.png": {
+      "device": "phone-portrait",
+      "viewport": [
+        430,
+        860
+      ],
+      "deviceScaleFactor": 2,
+      "character": "罗安",
+      "map": "character-select",
+      "position": null,
+      "prerequisites": "99 级剑士罗安，账号仅一个角色；退出时所在地图 moc_para01；力量 70、敏捷 60、体力 40、智力 10、灵巧 40、幸运 1",
+      "entry": "PWA 启动页 → 进入游戏 → 登录测试账号 → 选择第一个角色罗安，停留选角页",
+      "state": "角色卡片与职业、等级、地图、HP/SP、属性和进入游戏按钮完整可见；不滚动，不进入游戏；PNG 实际尺寸 860×1720"
+    },
+    "game/controls/phone-actions.png": {
+      "device": "phone-portrait",
+      "viewport": [
+        430,
+        860
+      ],
+      "deviceScaleFactor": 2,
+      "character": "罗安",
+      "map": "prontera",
+      "position": [
+        164,
+        185
+      ],
+      "cameraZoom": 20,
+      "prerequisites": "99 级剑士、基础技能已学；站立、未自动战斗；场景无其他玩家贴近角色，玛雅移至 (180,190)",
+      "entry": "右下角动作",
+      "state": "动作展开，表情、坐下与取消按钮可见，战斗设置和自动战斗保持独立；无骑乘按钮符合剑士职业；聊天收起、方向 0；PNG 860×1720"
+    },
+    "game/controls/phone-sitting.png": {
+      "device": "phone-portrait",
+      "viewport": [
+        430,
+        860
+      ],
+      "deviceScaleFactor": 2,
+      "character": "罗安",
+      "map": "prontera",
+      "position": [
+        164,
+        185
+      ],
+      "cameraZoom": 20,
+      "prerequisites": "同 phone-actions.png；基础技能允许坐下，未自动战斗",
+      "entry": "右下角动作 → 坐下，等待角色坐姿与状态图标出现",
+      "state": "罗安坐姿清楚，动作仍展开，原坐下变为站起，右侧坐下状态图标可见；方向 0，聊天收起；PNG 860×1720"
+    },
+    "game/controls/phone-emotions.png": {
+      "device": "phone-portrait",
+      "viewport": [
+        430,
+        860
+      ],
+      "deviceScaleFactor": 2,
+      "character": "罗安",
+      "map": "prontera",
+      "position": [
+        164,
+        185
+      ],
+      "cameraZoom": 20,
+      "prerequisites": "99 级剑士、已学基础技能，站立，未自动战斗",
+      "entry": "右下角动作 → 表情",
+      "state": "表情网格浮层展开，保持顶部滚动位置，尚未选择或发送表情；角色方向 0，聊天收起；PNG 860×1720"
+    },
+    "game/controls/phone-shortcuts.png": {
+      "device": "phone-portrait",
+      "viewport": [
+        430,
+        860
+      ],
+      "deviceScaleFactor": 2,
+      "character": "罗安",
+      "map": "prontera",
+      "position": [
+        164,
+        185
+      ],
+      "cameraZoom": 20,
+      "prerequisites": "剑士已学狂击 Lv.10、怒爆 Lv.10、挑衅 Lv.5、霸体 Lv.10；快捷位置 1 为狂击 Lv.10；背包红色药水 96、蓝色药水 99、牛奶 1、乐园团徽章 1、长剑[3] 1、波利蛋 1",
+      "entry": "右下快捷键 → 保持位置 1 → 选中狂击",
+      "state": "上方完整显示狂击等级及说明，下方技能与物品候选列表，底部位置 1 选中、施放等级 Lv.10、保存和清空位置可见；未保存，聊天收起；PNG 860×1720"
+    },
+    "game/text-links/phone-tipbox.png": {
+      "device": "phone-portrait",
+      "viewport": [
+        430,
+        860
+      ],
+      "deviceScaleFactor": 2,
+      "character": "罗安",
+      "map": "prontera",
+      "position": [
+        164,
+        185
+      ],
+      "cameraZoom": 20,
+      "prerequisites": "冒险工具物品图鉴可用，搜索物品 ID 6081 辉煌领域金币",
+      "entry": "菜单 → 冒险工具 → 物品 → 搜索 6081 → 物品说明 [Episode14.2] 链接",
+      "state": "第14.2章 埃克拉珠帮助阅读器展开，滚动顶部，目录链接与右上返回/关闭可见，底层保留物品图鉴；不跳转或传送；PNG 860×1720"
+    },
+    "game/text-links/phone-item-return.png": {
+      "device": "phone-portrait",
+      "viewport": [
+        430,
+        860
+      ],
+      "deviceScaleFactor": 2,
+      "character": "罗安",
+      "map": "prontera",
+      "position": [
+        164,
+        185
+      ],
+      "cameraZoom": 20,
+      "prerequisites": "冒险工具物品图鉴搜索 6081，选中辉煌领域金币",
+      "entry": "物品说明点击 [防具商纳帕拉] 打开冒险工具地图 → 不传送 → 点击物品标签返回",
+      "state": "恢复辉煌领域金币选中状态、完整物品说明及 Episode 帮助与 NPC 导航链接；搜索仍为 6081，底栏发放按钮可见；无帮助或地图遮挡；PNG 860×1720"
+    },
+    "game/text-links/phone-npc-navi-actions.png": {
+      "device": "phone-portrait",
+      "viewport": [
+        430,
+        860
+      ],
+      "deviceScaleFactor": 2,
+      "character": "罗安",
+      "map": "alberta",
+      "position": [
+        25,
+        238
+      ],
+      "prerequisites": "艾尔贝塔向导位于 (23,238)，手机独立会话，未自动战斗，聊天收起",
+      "entry": "触摸向导 → 下一步（欢迎页）→ 下一步（导航说明页）→ [ 主要设施 ] → [ 工具店 ] → 点击正文 [工具店] 链接 → 下一步 → 上一级菜单 → 取消 → 结束对话",
+      "state": "正常结束对话后黄色打开地图、取消按钮位于右下动作/战斗设置/自动战斗左侧，同一行；目标为 alberta (98,154)，尚未打开地图；连续完成对话避免超时，各菜单等待服务器返回再点击；PNG 860×1720"
+    },
+    "game/trading/phone-trade.png": {
+      "device": "phone-portrait",
+      "viewport": [
+        430,
+        860
+      ],
+      "deviceScaleFactor": 2,
+      "character": "罗安",
+      "map": "prontera",
+      "position": [
+        163,
+        186
+      ],
+      "prerequisites": "玛雅在线且在 (165,186)，未摆摊；罗安红色药水至少 5、玛雅蓝色药水至少 1、100 Z",
+      "entry": "触摸玛雅 → 交易 → 确认；玛雅接受；罗安放入红色药水 5；玛雅放入蓝色药水 1 并设置金额 100",
+      "state": "手机竖屏依次显示对方蓝色药水×1和100 Z、我方红色药水×5和0 Z、可交易物品列表；双方未锁定，确认成交禁用；底栏设置金额/锁定/确认/取消全显，PNG 860×1720"
+    },
+    "game/combat/phone-combat.png": {
+      "device": "phone-portrait",
+      "viewport": [
+        430,
+        860
+      ],
+      "deviceScaleFactor": 2,
+      "character": "罗安",
+      "map": "prontera",
+      "position": [
+        163,
+        186
+      ],
+      "prerequisites": "99 级剑士，已学狂击10、挑衅5、怒爆10；在无魔物配置的普隆德拉；未开启自动战斗",
+      "entry": "右下角战斗设置 → 战斗设置标签",
+      "state": "全部魔物、搜怪14格/活动30格；无目标时随机瞬移开启，等待2秒、最短间隔2秒；普通攻击选中且未选技能；技能以两行卡片显示，保持两个区域滚动顶部；PNG 860×1720"
+    },
+    "game/social/desktop-chat-room.png": {
+      "device": "desktop",
+      "viewport": [
+        1280,
+        800
+      ],
+      "deviceScaleFactor": 1,
+      "character": "罗安",
+      "map": "prontera",
+      "position": [
+        164,
+        185
+      ],
+      "prerequisites": "99 级剑士，无其他弹窗；保留普通状态栏、快捷栏与聊天区",
+      "entry": "Alt+C → 标题填写普隆德拉冒险交流",
+      "state": "创建聊天室窗口：标题普隆德拉冒险交流、人数上限20、类型聊天室、公开选中、密码空；未确认创建；鼠标移至右下角"
+    },
+    "game/controls/desktop-achievements.png": {
+      "device": "desktop",
+      "viewport": [
+        1280,
+        800
+      ],
+      "deviceScaleFactor": 1,
+      "character": "罗安",
+      "map": "prontera",
+      "position": [
+        164,
+        185
+      ],
+      "prerequisites": "99 级剑士、Job50，服务器已有对应等级成就记录；本次总成就15/361、分数245、成就等级4进度74/135",
+      "entry": "状态栏奖杯图标成就 → 一般 → 默认选中获得第一道光环！",
+      "state": "全部筛选，等级成就列表顶部、Base99达成说明和COMPLETED印章可见，底部奖励及领取按钮完整；未领取任何奖励；鼠标移出窗口"
+    },
+    "game/npc/desktop-cash-shop.png": {
+      "device": "desktop",
+      "viewport": [
+        1280,
+        800
+      ],
+      "deviceScaleFactor": 1,
+      "character": "罗安",
+      "map": "prontera",
+      "position": [
+        164,
+        185
+      ],
+      "prerequisites": "本机测试服务器未配置商城商品，现金与免费点数余额均为0；不添加虚构商品或改点数",
+      "entry": "点击右上角 Cash Shop 商城图标",
+      "state": "商城默认 N 分类，商品及购买列表为空，页码0/0，现金/免费点数/总额0；搜索为空，充值与购买入口可见但未点击。对应正文明确标注的无商品示例；鼠标移出商城"
+    },
+    "game/text-links/desktop-tipbox.png": {
+      "device": "desktop",
+      "viewport": [
+        1280,
+        800
+      ],
+      "deviceScaleFactor": 1,
+      "character": "罗安",
+      "map": "prontera",
+      "position": [
+        164,
+        185
+      ],
+      "prerequisites": "冒险工具物品图鉴可用，物品6081辉煌领域金币",
+      "entry": "Alt+F → 物品图鉴 → 搜索6081 → 说明中点击 [Episode14.2]",
+      "state": "第14.2章 埃克拉珠帮助阅读器展开，目录顶部、蓝色链接、返回及关闭可见；底层物品图鉴保留；鼠标移出窗口"
+    },
+    "game/text-links/desktop-npc-navi-toast.png": {
+      "device": "desktop",
+      "viewport": [
+        1280,
+        800
+      ],
+      "deviceScaleFactor": 1,
+      "character": "罗安",
+      "map": "alberta",
+      "position": [
+        25,
+        238
+      ],
+      "prerequisites": "当前实机；解说员#01alberta位于23,238；无其它窗口。鼠标移到NPC后等待一帧再点击。",
+      "entry": "点击解说员 → 继续两次 → [ 主要设施 ]并确定 → [ 工具店 ]并确定 → 点击蓝色[工具店]链接（目标alberta 98,154）",
+      "state": "点击NAVI链接后立即截图，蓝色“已加入导航，结束对话后可传送。”提示与NPC对话同时可见"
+    },
+    "game/text-links/desktop-npc-navi-actions.png": {
+      "device": "desktop",
+      "viewport": [
+        1280,
+        800
+      ],
+      "deviceScaleFactor": 1,
+      "character": "罗安",
+      "map": "alberta",
+      "position": [
+        25,
+        238
+      ],
+      "prerequisites": "当前实机；解说员#01alberta位于23,238；无其它窗口。鼠标移到NPC后等待一帧再点击。",
+      "entry": "点击解说员 → 继续两次 → [ 主要设施 ]并确定 → [ 工具店 ]并确定 → 点击蓝色[工具店]链接（目标alberta 98,154） → 继续 → 上一级菜单并确定 → 菜单项取消并确定 → 关闭",
+      "state": "继续 → 上一级菜单并确定 → 选择菜单项取消并确定 → 关闭对话；右下角打开地图、取消按钮可见，尚未点击；鼠标移到画面右下角"
+    },
+    "game/npc/desktop-refinement.png": {
+      "device": "desktop",
+      "viewport": [
+        1280,
+        800
+      ],
+      "deviceScaleFactor": 1,
+      "character": "罗安",
+      "map": "prt_in",
+      "position": [
+        65,
+        60
+      ],
+      "prerequisites": "背包装备页有未装备的+0长剑[3]；普通及浓缩等精炼材料持有量为0。忽克连位于63,60。",
+      "entry": "与忽克连对话 → 关闭介绍 → 等待精炼窗口 → Alt+E打开背包 → 装备页 → 将长剑拖至精炼槽",
+      "state": "精炼窗口位于300,200，背包位于560,356；显示长剑[3]及三种材料0/1，尚未选择可用材料，成功率0%；不执行精炼；鼠标移出窗口"
+    },
+    "overview/happyro-combat.png": {
+      "device": "desktop",
+      "viewport": [
+        1280,
+        800
+      ],
+      "deviceScaleFactor": 1,
+      "character": "罗安",
+      "map": "prt_fild08",
+      "position": [
+        140,
+        322
+      ],
+      "cameraZoom": 125,
+      "crop": {
+        "x": 180,
+        "y": 65,
+        "width": 920,
+        "height": 670
+      },
+      "prerequisites": "实际习得狂击Lv.10，自动战斗关闭；搜索14格、活动30格；无目标随机瞬移开启，等待2秒、间隔2秒",
+      "entry": "右下角战斗设置齿轮 → 自动战斗 → 全部魔物 → 狂击Lv.10",
+      "state": "窗口820×600位于230,100；列表顶部显示当前地图魔物，技能选中狂击，普通攻击未选；保留自动恢复、自动拾取页签；不启动战斗；裁剪保留整个窗口"
+    },
+    "overview/happyro-three-devices.png": {
+      "device": "composite",
+      "viewport": [
+        1600,
+        1000
+      ],
+      "deviceScaleFactor": 1,
+      "character": "罗安",
+      "map": "prontera",
+      "position": [
+        164,
+        185
+      ],
+      "prerequisites": "同一账号顺序登录；触屏使用hasTouch/isMobile；真实游戏界面，不重绘DOM。",
+      "entry": "三端分别登录罗安 → prontera(164,185) → 关闭窗口，收起触屏聊天 → 朝向0 → 固定模板#hero合成",
+      "state": "桌面完整HUD，触屏战斗关闭；红药96、蓝药99；无宠物，无头饰；等待地图标题消失",
+      "template": "docs/development/readme-images/templates/compose.html",
+      "inputs": [
+        {
+          "file": "desktop.png",
+          "sha256": "45537918ce9d6812090dc4c2583585035145f926391060bf67fc735f9d2aefbd",
+          "viewport": [
+            1024,
+            768
+          ],
+          "deviceScaleFactor": 1,
+          "cameraZoom": 90,
+          "position": [
+            164,
+            185
+          ]
+        },
+        {
+          "file": "tablet.png",
+          "sha256": "062f91dfd72fa54554115f364abd0338ee4ec3b7309bb6db9ecc01f09e17de29",
+          "viewport": [
+            1024,
+            768
+          ],
+          "deviceScaleFactor": 1,
+          "cameraZoom": 85,
+          "position": [
+            164,
+            185
+          ]
+        },
+        {
+          "file": "phone.png",
+          "sha256": "2d87efe2570487915ee7deb1256ae105c1c34ab0b3071b0cdbe2af5896d7f1aa",
+          "viewport": [
+            430,
+            860
+          ],
+          "deviceScaleFactor": 2,
+          "cameraZoom": 20,
+          "position": [
+            164,
+            185
+          ]
+        }
+      ]
+    },
+    "overview/happyro-responsive-skills.png": {
+      "device": "composite",
+      "viewport": [
+        1600,
+        858
+      ],
+      "deviceScaleFactor": 1,
+      "character": "罗安",
+      "map": "prontera",
+      "position": [
+        164,
+        185
+      ],
+      "prerequisites": "同一账号顺序登录；触屏使用hasTouch/isMobile；真实游戏界面，不重绘DOM。",
+      "entry": "菜单 → 技能 → 全部转职、全部技能 → 狂击Lv.10 → 固定模板#skills合成",
+      "state": "平板左右分栏，手机详情在上、列表在下；不学习或重置技能",
+      "template": "docs/development/readme-images/templates/compose.html",
+      "inputs": [
+        {
+          "file": "tablet-skills.png",
+          "sha256": "cd3092ff08682a822bf4cd1ebf5315c50d16951e512e344f352388d53bba99e8",
+          "viewport": [
+            1024,
+            768
+          ],
+          "deviceScaleFactor": 1,
+          "cameraZoom": 85,
+          "position": [
+            164,
+            185
+          ]
+        },
+        {
+          "file": "phone-skills.png",
+          "sha256": "d1a208019def500058747e4c79f64c565d7ee495d7c81df673f79f8b484e89d5",
+          "viewport": [
+            430,
+            860
+          ],
+          "deviceScaleFactor": 2,
+          "cameraZoom": 20,
+          "position": [
+            163,
+            186
+          ]
+        }
+      ]
+    },
+    "overview/happyro-admin-settings.png": {
+      "device": "desktop",
+      "viewport": [
+        1280,
+        850
+      ],
+      "deviceScaleFactor": 1,
+      "character": null,
+      "prerequisites": "本机管理后台可登录，实际掉落配置均为1；不得为拍照修改或保存配置",
+      "entry": "http://127.0.0.1:8000 → 系统设置 → 游戏设置 → 掉落倍率",
+      "state": "品牌、侧栏、七个页签、五类物品×三种魔物倍率、保存及查看修改记录按钮可见；全部倍率1",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 630
+      }
+    },
+    "strategy/job-change/swordman-npc.webp": {
+      "device": "desktop",
+      "viewport": [
+        1280,
+        800
+      ],
+      "deviceScaleFactor": 1,
+      "character": "罗安",
+      "map": "izlude_in",
+      "position": [
+        73,
+        171
+      ],
+      "npcPosition": [
+        74,
+        172
+      ],
+      "cameraZoom": 125,
+      "crop": {
+        "x": 370,
+        "y": 170,
+        "width": 540,
+        "height": 380
+      },
+      "prerequisites": "99级剑士；目标NPC剑士公会服务人员；不更改职业或资格",
+      "entry": "前往剑士公会 → 点击服务人员 → 保留第一屏问候",
+      "state": "对话显示这里是剑士公会及继续按钮，柜台背景完整；鼠标移出裁剪；真实PNG以cwebp -lossless转为WebP"
+    },
+    "strategy/job-change/knight-guild.webp": {
+      "device": "desktop",
+      "viewport": [
+        1280,
+        800
+      ],
+      "deviceScaleFactor": 1,
+      "character": "罗安",
+      "map": "prt_in",
+      "position": [
+        88,
+        99
+      ],
+      "cameraZoom": 125,
+      "crop": {
+        "x": 355,
+        "y": 145,
+        "width": 570,
+        "height": 530
+      },
+      "prerequisites": "99级剑士；只展示骑士团场景，不执行转职",
+      "entry": "前往prt_in(88,99) → 等待地图加载 → 镜头125 → 裁剪骑士团长及周边NPC",
+      "state": "无对话窗口，保留真实角色与公会NPC；此图说明场景位置，不表示已完成二转；PNG用cwebp -lossless转换"
+    },
+    "strategy/job-change/wizard-guild.webp": {
+      "device": "desktop",
+      "viewport": [
+        1280,
+        800
+      ],
+      "deviceScaleFactor": 1,
+      "character": "罗安",
+      "map": "gef_tower",
+      "position": [
+        110,
+        35
+      ],
+      "cameraZoom": 125,
+      "crop": {
+        "x": 355,
+        "y": 60,
+        "width": 570,
+        "height": 530
+      },
+      "prerequisites": "罗安剑士，只查看巫师公会，不执行转职",
+      "entry": "前往gef_tower(110,35) → 等待地图标题消失 → 镜头125 → 裁剪柜台与公会NPC",
+      "state": "柜台服务人员与罗安可见，无对话和地图标题；PNG以cwebp -lossless转换"
+    },
+    "strategy/job-change/warlock-guild.webp": {
+      "device": "desktop",
+      "viewport": [
+        1280,
+        800
+      ],
+      "deviceScaleFactor": 1,
+      "character": "罗安",
+      "map": "spl_in02",
+      "position": [
+        80,
+        106
+      ],
+      "cameraZoom": 125,
+      "crop": {
+        "x": 337,
+        "y": 100,
+        "width": 605,
+        "height": 545
+      },
+      "prerequisites": "罗安剑士，只查看咒术士公会场景，不执行转职",
+      "entry": "前往spl_in02(80,106) → 等待地图及标题稳定 → 镜头125 → 裁剪大师及助手",
+      "state": "保留真实大师、助手、花朵场景和罗安；无对话；PNG用cwebp -lossless转换"
+    }
+  }
+}
